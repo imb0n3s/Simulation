@@ -1,0 +1,32 @@
+Pokémon: 21
+3 N's Zorua JTG 97
+3 N's Zoroark ex JTG 98
+3 Froakie CRI 20
+2 Frogadier CRI 21
+2 Mega Greninja ex CRI 22
+1 Greninja ex TWM 106
+2 Duskull PRE 35
+1 Dusclops PRE 36
+1 Dusknoir PRE 37
+1 Meowth ex POR 62
+1 Fezandipiti ex ASC 142
+1 Budew ASC 16
+
+Trainer: 30
+4 Lillie's Determination MEG 119
+2 Boss's Orders MEG 114
+2 Hilda WHT 84
+1 Dawn PFL 87
+4 Ultra Ball MEG 131
+4 Buddy-Buddy Poffin TEF 144
+3 Night Stretcher ASC 196
+3 Poké Pad POR 81
+2 Rare Candy MEG 125
+2 Switch MEG 130
+1 Air Balloon ASC 181
+2 N's Castle JTG 152
+
+Energy: 9
+7 Water Energy MEE 3
+1 Ignition Energy WHT 86
+1 Neo Upper Energy TEF 162

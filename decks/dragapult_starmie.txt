@@ -1,0 +1,31 @@
+Pokémon: 18
+4 Dreepy TWM 128
+3 Drakloak TWM 129
+2 Dragapult ex TWM 130
+3 Staryu POR 20
+2 Mega Starmie ex POR 21
+2 Munkidori TWM 95
+1 Fezandipiti ex ASC 142
+1 Meowth ex POR 62
+
+Trainer: 32
+4 Hilda WHT 84
+4 Lillie's Determination MEG 119
+3 Crispin SCR 133
+2 Boss's Orders MEG 114
+1 Team Rocket's Petrel DRI 176
+4 Poké Pad POR 81
+4 Buddy-Buddy Poffin TEF 144
+4 Ultra Ball MEG 131
+2 Special Red Card CRI 82
+1 Night Stretcher ASC 196
+1 Air Balloon ASC 181
+2 Risky Ruins MEG 127
+
+Energy: 10
+3 Psychic Energy MEE 5
+2 Darkness Energy MEE 7
+2 Fire Energy MEE 2
+1 Legacy Energy TWM 167
+1 Water Energy MEE 3
+1 Ignition Energy WHT 86

@@ -1,0 +1,25 @@
+Pokémon: 19
+2 Beldum TEF 113
+2 Beldum CRI 59
+4 Metang TEF 114
+1 Metagross CRI 61
+3 Minccino CRI 72
+3 Cinccino ex CRI 73
+2 Genesect ex BLK 67
+1 Meowth ex POR 62
+1 Fezandipiti ex ASC 142
+
+Trainer: 22
+4 Team Rocket's Petrel DRI 176
+2 Boss's Orders MEG 114
+1 Brock's Scouting JTG 146
+4 Ultra Ball MEG 131
+3 Night Stretcher ASC 196
+3 Team Rocket's Transceiver DRI 178
+1 Buddy-Buddy Poffin TEF 144
+1 Precious Trolley SSP 185
+1 Energy Recycler DRI 164
+2 Battle Cage PFL 85
+
+Energy: 19
+19 Metal Energy MEE 8

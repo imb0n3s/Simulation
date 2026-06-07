@@ -1,0 +1,31 @@
+Pokémon: 15
+4 Totodile TEF 39
+2 Croconaw TEF 40
+2 Mega Feraligatr ex ASC 43
+1 Feraligatr TEF 41
+2 Munkidori TWM 95
+1 Budew ASC 16
+1 Relicanth TEF 84
+1 Meowth ex POR 62
+1 Fezandipiti ex ASC 142
+
+Trainer: 36
+4 Lillie's Determination MEG 119
+3 Boss's Orders MEG 114
+3 Crispin SCR 133
+2 Hilda WHT 84
+1 Rosa's Encouragement POR 84
+4 Pokégear 3.0 SVI 186
+4 Poké Pad POR 81
+3 Night Stretcher ASC 196
+3 Ultra Ball MEG 131
+3 Buddy-Buddy Poffin TEF 144
+2 Rare Candy MEG 125
+1 Air Balloon ASC 181
+2 Surfing Beach MEG 129
+1 Risky Ruins MEG 127
+
+Energy: 9
+5 Water Energy MEE 3
+3 Darkness Energy MEE 7
+1 Neo Upper Energy TEF 162

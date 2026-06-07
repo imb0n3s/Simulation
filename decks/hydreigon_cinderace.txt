@@ -1,0 +1,29 @@
+Pokémon: 16
+3 Deino SSP 117
+2 Zweilous SSP 118
+3 Hydreigon ex SSP 119
+3 Cinderace MEG 28
+2 Dunsparce JTG 120
+2 Dudunsparce TEF 129
+1 Meowth ex POR 62
+
+Trainer: 33
+4 Lillie's Determination MEG 119
+3 Crispin SCR 133
+2 Judge POR 76
+2 Dawn PFL 87
+2 Colress's Tenacity SFA 57
+1 Boss's Orders MEG 114
+1 Team Rocket's Petrel DRI 176
+4 Poké Pad POR 81
+3 Buddy-Buddy Poffin TEF 144
+3 Rare Candy MEG 125
+2 Night Stretcher ASC 196
+2 Ultra Ball MEG 131
+2 Special Red Card CRI 82
+2 Battle Cage PFL 85
+
+Energy: 11
+5 Darkness Energy MEE 7
+3 Psychic Energy MEE 5
+3 Metal Energy MEE 8

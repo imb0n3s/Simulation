@@ -1,0 +1,29 @@
+Pokémon: 17
+3 Duskull PRE 35
+1 Dusclops PRE 36
+3 Dusknoir PRE 37
+3 Mega Diancie ex PFL 41
+2 Latias ex SSP 76
+2 Lillie's Clefairy ex JTG 56
+1 Meowth ex POR 62
+1 Fezandipiti ex ASC 142
+1 Frillish WHT 44
+
+Trainer: 31
+4 Lillie's Determination MEG 119
+2 Carmine TWM 145
+2 Boss's Orders MEG 114
+1 Jacinthe POR 75
+4 Wondrous Patch PFL 94
+3 Poké Pad POR 81
+2 Ultra Ball MEG 131
+2 Rare Candy MEG 125
+2 Night Stretcher ASC 196
+1 Special Red Card CRI 82
+1 Unfair Stamp TWM 165
+3 Powerglass SFA 63
+4 Mystery Garden MEG 122
+
+Energy: 12
+8 Psychic Energy MEE 5
+4 Telepathic Psychic Energy POR 88

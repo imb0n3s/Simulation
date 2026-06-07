@@ -1,0 +1,30 @@
+Pokémon: 19
+3 Grookey TWM 14
+3 Thwackey TWM 15
+3 Goldeen TWM 44
+2 Seaking PRE 21
+3 Froakie CRI 20
+2 Frogadier CRI 21
+2 Mega Greninja ex CRI 22
+1 Shaymin DRI 10
+
+Trainer: 32
+4 Lillie's Determination MEG 119
+2 Wally's Compassion MEG 132
+2 Boss's Orders MEG 114
+1 Rosa's Encouragement POR 84
+1 Black Belt's Training JTG 143
+4 Buddy-Buddy Poffin TEF 144
+4 Poké Pad POR 81
+2 Night Stretcher ASC 196
+2 Rare Candy MEG 125
+2 Ultra Ball MEG 131
+1 Energy Retrieval SVI 171
+2 Air Balloon ASC 181
+1 Brave Bangle WHT 80
+2 Surfing Beach MEG 129
+2 Festival Grounds TWM 149
+
+Energy: 9
+8 Water Energy MEE 3
+1 Neo Upper Energy TEF 162

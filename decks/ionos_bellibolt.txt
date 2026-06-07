@@ -1,0 +1,28 @@
+Pokémon: 15
+3 Iono's Wattrel JTG 54
+3 Iono's Kilowattrel JTG 55
+3 Iono's Tadbulb JTG 52
+3 Iono's Bellibolt ex JTG 53
+2 Raging Bolt ex TEF 123
+1 Iono's Voltorb JTG 47
+
+Trainer: 31
+3 Lillie's Determination MEG 119
+2 Judge POR 76
+2 Boss's Orders MEG 114
+2 Canari ASC 185
+3 Energy Retrieval SVI 171
+3 Energy Switch MEG 115
+3 Ultra Ball MEG 131
+3 Buddy-Buddy Poffin TEF 144
+2 Poké Pad POR 81
+2 Pokémon Catcher POR 82
+1 Prime Catcher TEF 157
+1 Switch MEG 130
+1 Energy Search POR 72
+1 Special Red Card CRI 82
+2 Levincia JTG 150
+
+Energy: 14
+11 Lightning Energy MEE 4
+3 Fighting Energy MEE 6
