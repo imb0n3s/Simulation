@@ -1,0 +1,25 @@
+Pokémon: 20
+4 Teal Mask Ogerpon ex TWM 25
+2 Smoliv DRI 21
+2 Dolliv DRI 22
+2 Arboliva ex DRI 23
+2 Chikorita MEG 8
+2 Bayleef MEG 9
+2 Meganium MEG 10
+2 Meowth ex POR 62
+1 Budew ASC 16
+1 Fezandipiti ex ASC 142
+Trainer: 26
+4 Lillie's Determination MEG 119
+3 Dawn PFL 87
+2 Boss's Orders MEG 114
+1 Briar SCR 132
+1 Lana's Aid TWM 155
+1 Judge POR 76
+4 Ultra Ball MEG 131
+4 Bug Catching Set TWM 143
+1 Tera Orb SSP 189
+1 Unfair Stamp TWM 165
+4 Forest of Vitality MEG 117
+Energy: 14
+14 Grass Energy MEE 1
