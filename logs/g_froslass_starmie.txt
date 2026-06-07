@@ -1,0 +1,269 @@
+Setup
+Left0verWAck chose tails for the opening coin flip.
+Left0verWAck won the coin toss.
+Left0verWAck decided to go first.
+Left0verWAck drew 7 cards for the opening hand.
+- 7 drawn cards.
+im_bon3z drew 7 cards for the opening hand.
+- 7 drawn cards.
+   • Wally's Compassion, Basic Water Energy, Buddy-Buddy Poffin, Basic Water Energy, Basic Water Energy, Basic Water Energy, Frogadier
+im_bon3z took a mulligan.
+- Cards revealed from Mulligan 1
+   • Wally's Compassion, Basic Water Energy, Buddy-Buddy Poffin, Basic Water Energy, Basic Water Energy, Basic Water Energy, Frogadier
+Left0verWAck drew 1 more card because im_bon3z took at least 1 mulligan.
+- Left0verWAck drew a card.
+Left0verWAck played Snorunt to the Active Spot.
+im_bon3z played Dreepy to the Active Spot.
+
+Left0verWAck's Turn
+Left0verWAck drew a card.
+Left0verWAck attached Basic Water Energy to Snorunt in the Active Spot.
+Left0verWAck ended their turn.
+
+im_bon3z's Turn
+im_bon3z drew Team Rocket's Watchtower.
+im_bon3z played Team Rocket's Watchtower to the Stadium spot.
+im_bon3z played Poké Pad.
+- im_bon3z drew Froakie.
+- im_bon3z shuffled their deck.
+im_bon3z played Froakie to the Bench.
+im_bon3z attached Basic Water Energy to Froakie on the Bench.
+im_bon3z played Lillie's Determination.
+- im_bon3z shuffled 3 cards into their deck.
+   • Frogadier, Drakloak, Drakloak
+- im_bon3z drew 8 cards.
+   • Froakie, Frogadier, Rare Candy, Ignition Energy, Buddy-Buddy Poffin, Frogadier, Surfing Beach, Drakloak
+im_bon3z played Froakie to the Bench.
+im_bon3z played Buddy-Buddy Poffin.
+- im_bon3z drew 2 cards and played them to the Bench.
+   • Dreepy, Froakie
+- im_bon3z shuffled their deck.
+im_bon3z ended their turn.
+
+Left0verWAck's Turn
+Left0verWAck drew a card.
+Left0verWAck played Surfing Beach to the Stadium spot.
+- Left0verWAck discarded Team Rocket's Watchtower.
+Left0verWAck played Lillie's Determination.
+- Left0verWAck shuffled 6 cards into their deck.
+- Left0verWAck drew 8 cards.
+Left0verWAck played Staryu to the Bench.
+Left0verWAck played Staryu to the Bench.
+Left0verWAck played Snorunt to the Bench.
+Left0verWAck evolved Snorunt to Mega Froslass ex in the Active Spot.
+Left0verWAck's Mega Froslass ex used Resentful Refrain on im_bon3z’s Dreepy for 300 damage.
+- Damage breakdown:
+   • 6 cards in hand: 300 damage
+
+im_bon3z's Dreepy was Knocked Out!
+Left0verWAck took a Prize card.
+A card was added to Left0verWAck's hand.
+im_bon3z's Froakie is now in the Active Spot.
+
+im_bon3z's Turn
+im_bon3z drew Boss's Orders.
+im_bon3z evolved Dreepy to Drakloak on the Bench.
+im_bon3z's Drakloak used Recon Directive.
+- im_bon3z drew Lillie's Determination.
+im_bon3z evolved Froakie to Frogadier in the Active Spot.
+im_bon3z evolved Froakie to Frogadier on the Bench.
+im_bon3z played Lillie's Determination.
+- im_bon3z shuffled 4 cards into their deck.
+   • Rare Candy, Ignition Energy, Surfing Beach, Boss's Orders
+- im_bon3z drew 8 cards.
+   • Hilda, Special Red Card, Basic Water Energy, Greninja ex, Mega Greninja ex, Buddy-Buddy Poffin, Hilda, Ultra Ball
+im_bon3z played Buddy-Buddy Poffin.
+- im_bon3z drew Froakie and played it to the Bench.
+- im_bon3z shuffled their deck.
+im_bon3z played Surfing Beach.
+- im_bon3z's Froakie was switched with im_bon3z's Frogadier to become the Active Pokémon.
+im_bon3z's Froakie is now in the Active Spot.
+im_bon3z ended their turn.
+
+Left0verWAck's Turn
+Left0verWAck drew a card.
+Left0verWAck evolved Snorunt to Froslass on the Bench.
+Left0verWAck played Risky Ruins to the Stadium spot.
+- Left0verWAck discarded Surfing Beach.
+Left0verWAck played Lillie's Determination.
+- Left0verWAck shuffled 3 cards into their deck.
+- Left0verWAck drew 6 cards.
+Left0verWAck played Ultra Ball.
+- Left0verWAck discarded 2 cards.
+   • Surfing Beach, Snorunt
+- Left0verWAck drew Munkidori.
+- Left0verWAck shuffled their deck.
+Left0verWAck played Munkidori to the Bench.
+Risky Ruins was activated.
+- Left0verWAck put 2 damage counters on Left0verWAck's Munkidori.
+Left0verWAck's Mega Froslass ex used Resentful Refrain on im_bon3z’s Froakie for 350 damage.
+- Damage breakdown:
+   • 7 cards in hand: 350 damage
+
+im_bon3z's Froakie was Knocked Out!
+Left0verWAck took a Prize card.
+A card was added to Left0verWAck's hand.
+im_bon3z's Frogadier is now in the Active Spot.
+
+Pokémon Checkup
+Left0verWAck's Froslass used Freezing Shroud.
+- Left0verWAck put a damage counter on Left0verWAck's Munkidori.
+- Left0verWAck put a damage counter on Left0verWAck's Drakloak.
+
+im_bon3z's Turn
+im_bon3z drew Basic Water Energy.
+im_bon3z evolved Frogadier to Mega Greninja ex in the Active Spot.
+im_bon3z's Drakloak used Recon Directive.
+- im_bon3z drew Rare Candy.
+im_bon3z's Mega Greninja ex used Mortal Shuriken.
+- im_bon3z discarded Basic Water Energy.
+- im_bon3z put 6 damage counters on im_bon3z's Munkidori.
+im_bon3z played Hilda.
+- im_bon3z drew 2 cards.
+   • Mega Greninja ex, Neo Upper Energy
+- im_bon3z shuffled their deck.
+im_bon3z played Rare Candy.
+- im_bon3z evolved Froakie to Mega Greninja ex on the Bench.
+im_bon3z retreated Mega Greninja ex to the Bench.
+- Basic Water Energy was discarded from im_bon3z's Mega Greninja ex.
+im_bon3z's Mega Greninja ex is now in the Active Spot.
+im_bon3z's Mega Greninja ex used Mortal Shuriken.
+- im_bon3z discarded Basic Water Energy.
+- im_bon3z put 6 damage counters on im_bon3z's Mega Froslass ex.
+im_bon3z evolved Frogadier to Greninja ex on the Bench.
+im_bon3z attached Neo Upper Energy to Mega Greninja ex in the Active Spot.
+im_bon3z's Mega Greninja ex used Ninja Spinner on Left0verWAck’s Mega Froslass ex for 200 damage.
+- Damage breakdown:
+   • Base damage: 120 damage
+   • Total damage: 200 damage
+
+- im_bon3z moved im_bon3z's Neo Upper Energy to their hand.
+
+Pokémon Checkup
+Left0verWAck's Froslass used Freezing Shroud.
+- im_bon3z put a damage counter on Left0verWAck's Munkidori.
+- im_bon3z put a damage counter on Left0verWAck's Mega Greninja ex.
+- im_bon3z put a damage counter on Left0verWAck's Drakloak.
+- im_bon3z put a damage counter on Left0verWAck's Mega Greninja ex.
+
+Left0verWAck's Turn
+Left0verWAck drew a card.
+Left0verWAck played Shaymin to the Bench.
+Risky Ruins was activated.
+- Left0verWAck put 2 damage counters on Left0verWAck's Shaymin.
+Left0verWAck played Hilda.
+- Left0verWAck drew 2 cards.
+   • Mega Starmie ex, Basic Darkness Energy
+- Left0verWAck shuffled their deck.
+Left0verWAck evolved Staryu to Mega Starmie ex on the Bench.
+Left0verWAck attached Basic Darkness Energy to Munkidori on the Bench.
+Left0verWAck's Munkidori used Adrena-Brain.
+- Left0verWAck moved 3 damage counters from Left0verWAck's Munkidori to Left0verWAck's Greninja ex.
+Left0verWAck's Mega Froslass ex used Resentful Refrain on im_bon3z’s Mega Greninja ex for 200 damage.
+- Damage breakdown:
+   • 4 cards in hand: 200 damage
+
+
+Pokémon Checkup
+Left0verWAck's Froslass used Freezing Shroud.
+- Left0verWAck put a damage counter on Left0verWAck's Munkidori.
+- Left0verWAck put a damage counter on Left0verWAck's Shaymin.
+- Left0verWAck put a damage counter on Left0verWAck's Mega Greninja ex.
+- Left0verWAck put a damage counter on Left0verWAck's Drakloak.
+- Left0verWAck put a damage counter on Left0verWAck's Mega Greninja ex.
+
+im_bon3z's Turn
+im_bon3z drew Buddy-Buddy Poffin.
+im_bon3z's Drakloak used Recon Directive.
+- im_bon3z drew Surfing Beach.
+im_bon3z played Hilda.
+- im_bon3z drew Basic Water Energy.
+- im_bon3z shuffled their deck.
+im_bon3z's Mega Greninja ex used Mortal Shuriken.
+- im_bon3z discarded Basic Water Energy.
+- im_bon3z put 6 damage counters on im_bon3z's Munkidori.
+Left0verWAck's Munkidori was Knocked Out!
+Basic Darkness Energy was discarded from Left0verWAck's Munkidori.
+im_bon3z took a Prize card.
+Dragapult ex was added to im_bon3z's hand.
+im_bon3z played Surfing Beach to the Stadium spot.
+- im_bon3z discarded Risky Ruins.
+im_bon3z played Surfing Beach.
+- im_bon3z's Mega Greninja ex was switched with im_bon3z's Mega Greninja ex to become the Active Pokémon.
+im_bon3z's Mega Greninja ex is now in the Active Spot.
+im_bon3z played Buddy-Buddy Poffin.
+- im_bon3z shuffled their deck.
+im_bon3z attached Neo Upper Energy to Mega Greninja ex in the Active Spot.
+im_bon3z's Mega Greninja ex used Ninja Spinner on Left0verWAck’s Mega Froslass ex for 200 damage.
+- Damage breakdown:
+   • Base damage: 120 damage
+   • Total damage: 200 damage
+
+- im_bon3z moved im_bon3z's Neo Upper Energy to their hand.
+Left0verWAck's Mega Froslass ex was Knocked Out!
+- 2 cards were discarded from Left0verWAck's Mega Froslass ex.
+   • Basic Water Energy, Snorunt
+im_bon3z took 3 Prize cards.
+Poké Pad was added to im_bon3z's hand.
+Air Balloon was added to im_bon3z's hand.
+Night Stretcher was added to im_bon3z's hand.
+Left0verWAck's Mega Starmie ex is now in the Active Spot.
+
+Pokémon Checkup
+Left0verWAck's Froslass used Freezing Shroud.
+- im_bon3z put a damage counter on Left0verWAck's Shaymin.
+- im_bon3z put a damage counter on Left0verWAck's Mega Greninja ex.
+- im_bon3z put a damage counter on Left0verWAck's Drakloak.
+- im_bon3z put a damage counter on Left0verWAck's Mega Greninja ex.
+
+Left0verWAck's Turn
+Left0verWAck drew a card.
+Left0verWAck evolved Staryu to Mega Starmie ex on the Bench.
+Left0verWAck played Lillie's Determination.
+- Left0verWAck shuffled 2 cards into their deck.
+- Left0verWAck drew 6 cards.
+Left0verWAck played Ultra Ball.
+- Left0verWAck discarded 2 cards.
+   • Buddy-Buddy Poffin, Buddy-Buddy Poffin
+- Left0verWAck drew Munkidori.
+- Left0verWAck shuffled their deck.
+Left0verWAck played Munkidori to the Bench.
+Left0verWAck attached Basic Water Energy to Mega Starmie ex in the Active Spot.
+Left0verWAck's Mega Starmie ex used Jetting Blow on im_bon3z’s Mega Greninja ex for 120 damage.
+- im_bon3z's Drakloak took 50 damage.
+im_bon3z's Drakloak was Knocked Out!
+Dreepy was discarded from im_bon3z's Drakloak.
+Left0verWAck took a Prize card.
+A card was added to Left0verWAck's hand.
+
+Pokémon Checkup
+Left0verWAck's Froslass used Freezing Shroud.
+- Left0verWAck put a damage counter on Left0verWAck's Shaymin.
+- Left0verWAck put a damage counter on Left0verWAck's Munkidori.
+- Left0verWAck put a damage counter on Left0verWAck's Mega Greninja ex.
+- Left0verWAck put a damage counter on Left0verWAck's Mega Greninja ex.
+
+im_bon3z's Turn
+im_bon3z drew Basic Water Energy.
+im_bon3z's Mega Greninja ex used Mortal Shuriken.
+- im_bon3z discarded Basic Water Energy.
+- im_bon3z put 6 damage counters on im_bon3z's Shaymin.
+Left0verWAck's Shaymin was Knocked Out!
+im_bon3z took a Prize card.
+Mega Greninja ex was added to im_bon3z's hand.
+im_bon3z played Night Stretcher.
+- im_bon3z moved im_bon3z's Basic Water Energy to their hand.
+im_bon3z played Surfing Beach.
+- im_bon3z's Mega Greninja ex was switched with im_bon3z's Mega Greninja ex to become the Active Pokémon.
+im_bon3z's Mega Greninja ex is now in the Active Spot.
+im_bon3z played Ultra Ball.
+- im_bon3z discarded 2 cards.
+   • Mega Greninja ex, Dragapult ex
+- im_bon3z drew Meowth ex.
+- im_bon3z shuffled their deck.
+im_bon3z played Meowth ex to the Bench.
+im_bon3z's Meowth ex used Last-Ditch Catch.
+- im_bon3z drew Boss's Orders.
+- im_bon3z shuffled their deck.
+Opponent conceded. im_bon3z wins.
+

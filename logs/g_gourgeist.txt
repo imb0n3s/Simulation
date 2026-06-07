@@ -1,0 +1,141 @@
+Setup
+im_bon3z chose tails for the opening coin flip.
+im_bon3z won the coin toss.
+im_bon3z decided to go first.
+im_bon3z drew 7 cards for the opening hand.
+- 7 drawn cards.
+   • Buddy-Buddy Poffin, Froakie, Ultra Ball, Basic Water Energy, Basic Water Energy, Frogadier, Neo Upper Energy
+kairomonio drew 7 cards for the opening hand.
+- 7 drawn cards.
+im_bon3z played Froakie to the Active Spot.
+kairomonio played Dunsparce to the Active Spot.
+
+im_bon3z's Turn
+im_bon3z drew Night Stretcher.
+im_bon3z played Buddy-Buddy Poffin.
+- im_bon3z drew 2 cards and played them to the Bench.
+   • Froakie, Dreepy
+- im_bon3z shuffled their deck.
+im_bon3z attached Basic Water Energy to Froakie in the Active Spot.
+im_bon3z ended their turn.
+
+kairomonio's Turn
+kairomonio drew a card.
+kairomonio played Risky Ruins to the Stadium spot.
+kairomonio played Pumpkaboo to the Bench.
+Risky Ruins was activated.
+- kairomonio put 2 damage counters on kairomonio's Pumpkaboo.
+kairomonio played Buddy-Buddy Poffin.
+- kairomonio drew 2 cards and played them to the Bench.
+   • Pumpkaboo, Dunsparce
+- kairomonio shuffled their deck.
+Risky Ruins was activated.
+- kairomonio put 2 damage counters on kairomonio's Pumpkaboo.
+- kairomonio put 2 damage counters on kairomonio's Dunsparce.
+kairomonio attached Telepathic Psychic Energy to Pumpkaboo on the Bench.
+Telepathic Psychic Energy was activated.
+- kairomonio drew 2 cards and played them to the Bench.
+   • Lillie's Clefairy ex, Pumpkaboo
+- kairomonio shuffled their deck.
+Risky Ruins was activated.
+- kairomonio put 2 damage counters on kairomonio's Lillie's Clefairy ex.
+- kairomonio put 2 damage counters on kairomonio's Pumpkaboo.
+kairomonio retreated Dunsparce to the Bench.
+kairomonio's Pumpkaboo is now in the Active Spot.
+kairomonio's Pumpkaboo used Stampede on im_bon3z’s Froakie for 20 damage.
+
+im_bon3z's Turn
+im_bon3z drew Special Red Card.
+im_bon3z evolved Froakie to Frogadier in the Active Spot.
+im_bon3z played Ultra Ball.
+- im_bon3z discarded 2 cards.
+   • Night Stretcher, Special Red Card
+- im_bon3z drew Meowth ex.
+- im_bon3z shuffled their deck.
+im_bon3z attached Basic Water Energy to Froakie on the Bench.
+im_bon3z played Meowth ex to the Bench.
+im_bon3z's Meowth ex used Last-Ditch Catch.
+- im_bon3z drew Lillie's Determination.
+- im_bon3z shuffled their deck.
+Risky Ruins was activated.
+- im_bon3z put 2 damage counters on kairomonio's Meowth ex.
+im_bon3z played Lillie's Determination.
+- im_bon3z shuffled Neo Upper Energy into their deck.
+- im_bon3z drew 8 cards.
+   • Drakloak, Greninja ex, Poké Pad, Hilda, Wally's Compassion, Basic Water Energy, Frogadier, Boss's Orders
+im_bon3z evolved Dreepy to Drakloak on the Bench.
+im_bon3z's Drakloak used Recon Directive.
+- im_bon3z drew Buddy-Buddy Poffin.
+im_bon3z played Buddy-Buddy Poffin.
+- im_bon3z drew 2 cards and played them to the Bench.
+   • Froakie, Dreepy
+- im_bon3z shuffled their deck.
+Risky Ruins was activated.
+- im_bon3z put 2 damage counters on kairomonio's Froakie.
+- im_bon3z put 2 damage counters on kairomonio's Dreepy.
+im_bon3z evolved Froakie to Frogadier on the Bench.
+im_bon3z's Frogadier used Summoning Jutsu.
+- im_bon3z drew 3 cards.
+   • Drakloak, Mega Greninja ex, Mega Greninja ex
+- im_bon3z shuffled their deck.
+
+kairomonio's Turn
+kairomonio drew a card.
+kairomonio played Ultra Ball.
+- kairomonio discarded 2 cards.
+   • Boss's Orders, Special Red Card
+- kairomonio drew Gourgeist ex.
+- kairomonio shuffled their deck.
+kairomonio evolved Pumpkaboo to Gourgeist ex in the Active Spot.
+kairomonio's Gourgeist ex used Horrifying Rondo on im_bon3z’s Frogadier for 230 damage.
+- Damage breakdown:
+   • Base damage: 30 damage
+   • 4 Benched Pokémon: 200 damage
+   • Total damage: 230 damage
+
+im_bon3z's Frogadier was Knocked Out!
+- 2 cards were discarded from im_bon3z's Frogadier.
+   • Basic Water Energy, Froakie
+kairomonio took a Prize card.
+A card was added to kairomonio's hand.
+im_bon3z's Frogadier is now in the Active Spot.
+
+im_bon3z's Turn
+im_bon3z drew Basic Water Energy.
+im_bon3z's Drakloak used Recon Directive.
+- im_bon3z drew Surfing Beach.
+im_bon3z evolved Dreepy to Drakloak on the Bench.
+im_bon3z's Drakloak used Recon Directive.
+- im_bon3z drew Air Balloon.
+im_bon3z evolved Frogadier to Mega Greninja ex in the Active Spot.
+im_bon3z's Mega Greninja ex used Mortal Shuriken.
+- im_bon3z discarded Basic Water Energy.
+- im_bon3z put 6 damage counters on im_bon3z's Gourgeist ex.
+im_bon3z attached Basic Water Energy to Mega Greninja ex in the Active Spot.
+im_bon3z attached Air Balloon to Meowth ex on the Bench.
+im_bon3z played Poké Pad.
+- im_bon3z drew Frogadier.
+- im_bon3z shuffled their deck.
+im_bon3z evolved Froakie to Frogadier on the Bench.
+im_bon3z played Hilda.
+- im_bon3z drew 2 cards.
+   • Mega Greninja ex, Neo Upper Energy
+- im_bon3z shuffled their deck.
+im_bon3z's Mega Greninja ex used Ninja Spinner on kairomonio’s Gourgeist ex for 200 damage.
+- Damage breakdown:
+   • Base damage: 120 damage
+   • Total damage: 200 damage
+
+- im_bon3z moved im_bon3z's Basic Water Energy to their hand.
+kairomonio's Gourgeist ex was Knocked Out!
+- 2 cards were discarded from kairomonio's Gourgeist ex.
+   • Telepathic Psychic Energy, Pumpkaboo
+im_bon3z took 2 Prize cards.
+Poké Pad was added to im_bon3z's hand.
+Rare Candy was added to im_bon3z's hand.
+kairomonio's Pumpkaboo is now in the Active Spot.
+
+kairomonio's Turn
+kairomonio drew a card.
+Opponent conceded. im_bon3z wins.
+

@@ -1,0 +1,159 @@
+Setup
+im_bon3z chose tails for the opening coin flip.
+im_bon3z won the coin toss.
+im_bon3z decided to go first.
+im_bon3z drew 7 cards for the opening hand.
+- 7 drawn cards.
+   • Frogadier, Team Rocket's Watchtower, Ignition Energy, Drakloak, Ultra Ball, Rare Candy, Wally's Compassion
+Asmo113 drew 7 cards for the opening hand.
+- 7 drawn cards.
+im_bon3z took a mulligan.
+- Cards revealed from Mulligan 1
+   • Frogadier, Team Rocket's Watchtower, Ignition Energy, Drakloak, Ultra Ball, Rare Candy, Wally's Compassion
+Asmo113 drew 1 more card because im_bon3z took at least 1 mulligan.
+- Asmo113 drew a card.
+im_bon3z played Froakie to the Active Spot.
+Asmo113 played Team Rocket's Articuno to the Active Spot.
+
+im_bon3z's Turn
+im_bon3z drew Mega Greninja ex.
+im_bon3z played Froakie to the Bench.
+im_bon3z played Dreepy to the Bench.
+im_bon3z attached Basic Water Energy to Froakie in the Active Spot.
+im_bon3z ended their turn.
+
+Asmo113's Turn
+Asmo113 drew a card.
+Asmo113 played Team Rocket's Proton.
+- Asmo113 drew 3 cards.
+   • Team Rocket's Murkrow, Team Rocket's Murkrow, Team Rocket's Porygon
+- Asmo113 shuffled their deck.
+Asmo113 played Team Rocket's Murkrow to the Bench.
+Asmo113 played Team Rocket's Murkrow to the Bench.
+Asmo113 played Team Rocket's Porygon to the Bench.
+Asmo113 attached Team Rocket's Energy to Team Rocket's Articuno in the Active Spot.
+Asmo113 retreated Team Rocket's Articuno to the Bench.
+- Team Rocket's Energy was discarded from Asmo113's Team Rocket's Articuno.
+Asmo113's Team Rocket's Murkrow is now in the Active Spot.
+Asmo113 ended their turn.
+
+im_bon3z's Turn
+im_bon3z drew Greninja ex.
+im_bon3z played Hilda.
+- im_bon3z drew 2 cards.
+   • Frogadier, Basic Water Energy
+- im_bon3z shuffled their deck.
+im_bon3z evolved Froakie to Frogadier in the Active Spot.
+im_bon3z attached Basic Water Energy to Froakie on the Bench.
+im_bon3z's Frogadier used Summoning Jutsu.
+- im_bon3z drew 3 cards.
+   • Drakloak, Frogadier, Mega Greninja ex
+- im_bon3z shuffled their deck.
+
+Asmo113's Turn
+Asmo113 drew a card.
+Asmo113 evolved Team Rocket's Murkrow to Team Rocket's Honchkrow in the Active Spot.
+Asmo113 evolved Team Rocket's Porygon to Team Rocket's Porygon2 on the Bench.
+Asmo113 attached Team Rocket's Energy to Team Rocket's Honchkrow in the Active Spot.
+Asmo113 played Team Rocket's Petrel.
+- Asmo113 drew Roto-Stick.
+- Asmo113 shuffled their deck.
+Asmo113 played Roto-Stick.
+- Asmo113 drew Team Rocket's Archer.
+- Asmo113 shuffled their deck.
+Asmo113's Team Rocket's Honchkrow used Rocket Feathers on im_bon3z’s Frogadier for 120 damage.
+- Damage breakdown:
+   • 2 Pokémon: 120 damage
+
+- Asmo113 discarded 2 cards.
+   • Team Rocket's Proton, Team Rocket's Archer
+im_bon3z's Frogadier was Knocked Out!
+- 2 cards were discarded from im_bon3z's Frogadier.
+   • Basic Water Energy, Froakie
+Asmo113 took a Prize card.
+A card was added to Asmo113's hand.
+im_bon3z's Froakie is now in the Active Spot.
+
+im_bon3z's Turn
+im_bon3z drew Mega Greninja ex.
+im_bon3z evolved Dreepy to Drakloak on the Bench.
+im_bon3z's Drakloak used Recon Directive.
+- im_bon3z drew Rare Candy.
+im_bon3z played Ultra Ball.
+- im_bon3z discarded 2 cards.
+   • Mega Greninja ex, Frogadier
+- im_bon3z drew Froakie.
+- im_bon3z shuffled their deck.
+im_bon3z played Froakie to the Bench.
+im_bon3z played Rare Candy.
+- im_bon3z evolved Froakie to Greninja ex in the Active Spot.
+im_bon3z played Lillie's Determination.
+- im_bon3z shuffled 2 cards into their deck.
+   • Mega Greninja ex, Mega Greninja ex
+- im_bon3z drew 8 cards.
+   • Boss's Orders, Surfing Beach, Ultra Ball, Buddy-Buddy Poffin, Special Red Card, Greninja ex, Buddy-Buddy Poffin, Dragapult ex
+im_bon3z played Buddy-Buddy Poffin.
+- im_bon3z drew Froakie and played it to the Bench.
+- im_bon3z shuffled their deck.
+im_bon3z played Buddy-Buddy Poffin.
+- im_bon3z drew Dreepy and played it to the Bench.
+- im_bon3z shuffled their deck.
+im_bon3z's Greninja ex used Shinobi Blade on Asmo113’s Team Rocket's Honchkrow for 140 damage. Asmo113's Team Rocket's Honchkrow took -30 less damage because of Fighting Resistance.
+- Damage breakdown:
+   • Base damage: 170 damage
+   • Resistance to Fighting: -30 damage
+   • Total damage: 140 damage
+
+- im_bon3z drew Hilda.
+- im_bon3z shuffled their deck.
+Asmo113's Team Rocket's Honchkrow was Knocked Out!
+- 2 cards were discarded from Asmo113's Team Rocket's Honchkrow.
+   • Team Rocket's Energy, Team Rocket's Murkrow
+im_bon3z took a Prize card.
+Drakloak was added to im_bon3z's hand.
+Asmo113's Team Rocket's Murkrow is now in the Active Spot.
+
+Asmo113's Turn
+Asmo113 drew a card.
+Asmo113 played Ultra Ball.
+- Asmo113 discarded 2 cards.
+   • Poké Pad, Sacred Ash
+- Asmo113 drew Team Rocket's Honchkrow.
+- Asmo113 shuffled their deck.
+Asmo113 evolved Team Rocket's Murkrow to Team Rocket's Honchkrow in the Active Spot.
+Asmo113 ended their turn.
+
+im_bon3z's Turn
+im_bon3z drew Buddy-Buddy Poffin.
+im_bon3z played Hilda.
+- im_bon3z drew 2 cards.
+   • Frogadier, Ignition Energy
+- im_bon3z shuffled their deck.
+im_bon3z evolved Froakie to Frogadier on the Bench.
+im_bon3z evolved Dreepy to Drakloak on the Bench.
+im_bon3z attached Ignition Energy to Greninja ex in the Active Spot.
+im_bon3z played Ultra Ball.
+- im_bon3z discarded 2 cards.
+   • Buddy-Buddy Poffin, Greninja ex
+- im_bon3z drew Mega Greninja ex.
+- im_bon3z shuffled their deck.
+im_bon3z's Drakloak used Recon Directive.
+- im_bon3z drew Basic Water Energy.
+im_bon3z's Drakloak used Recon Directive.
+- im_bon3z drew Basic Water Energy.
+im_bon3z's Greninja ex used Mirage Barrage.
+- Asmo113's Team Rocket's Porygon2 took 120 damage.
+- Asmo113's Team Rocket's Articuno took 120 damage.
+- Ignition Energy was discarded from im_bon3z's Greninja ex.
+Asmo113's Team Rocket's Articuno was Knocked Out!
+Asmo113's Team Rocket's Porygon2 was Knocked Out!
+Team Rocket's Porygon was discarded from Asmo113's Team Rocket's Porygon2.
+im_bon3z took 2 Prize cards.
+Ignition Energy was added to im_bon3z's hand.
+Dreepy was added to im_bon3z's hand.
+
+Asmo113's Turn
+Asmo113 drew a card.
+Asmo113 attached Ignition Energy to Team Rocket's Honchkrow in the Active Spot.
+Opponent conceded. im_bon3z wins.
+

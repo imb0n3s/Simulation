@@ -1,0 +1,121 @@
+Setup
+im_bon3z chose tails for the opening coin flip.
+TRX_Phoenix07 won the coin toss.
+TRX_Phoenix07 decided to go second.
+im_bon3z drew 7 cards for the opening hand.
+- 7 drawn cards.
+   • Dreepy, Drakloak, Froakie, Froakie, Poké Pad, Ultra Ball, Basic Water Energy
+TRX_Phoenix07 drew 7 cards for the opening hand.
+- 7 drawn cards.
+im_bon3z played Froakie to the Active Spot.
+TRX_Phoenix07 played Budew to the Active Spot.
+
+im_bon3z's Turn
+im_bon3z drew Surfing Beach.
+im_bon3z played Dreepy to the Bench.
+im_bon3z played Froakie to the Bench.
+im_bon3z attached Basic Water Energy to Froakie in the Active Spot.
+im_bon3z played Poké Pad.
+- im_bon3z drew Frogadier.
+- im_bon3z shuffled their deck.
+im_bon3z ended their turn.
+
+TRX_Phoenix07's Turn
+TRX_Phoenix07 drew a card.
+TRX_Phoenix07 played Poké Pad.
+- TRX_Phoenix07 drew Dreepy.
+- TRX_Phoenix07 shuffled their deck.
+TRX_Phoenix07 played Dreepy to the Bench.
+TRX_Phoenix07 played Poké Pad.
+- TRX_Phoenix07 drew Dreepy.
+- TRX_Phoenix07 shuffled their deck.
+TRX_Phoenix07 played Dreepy to the Bench.
+TRX_Phoenix07 played Crispin.
+- TRX_Phoenix07 drew Basic Darkness Energy.
+- TRX_Phoenix07 attached Basic Psychic Energy to Dreepy on the Bench.
+- TRX_Phoenix07 shuffled their deck.
+TRX_Phoenix07 attached Basic Fire Energy to Dreepy on the Bench.
+TRX_Phoenix07's Budew used Itchy Pollen on im_bon3z’s Froakie for 10 damage.
+
+im_bon3z's Turn
+im_bon3z drew Boss's Orders.
+im_bon3z evolved Dreepy to Drakloak on the Bench.
+im_bon3z's Drakloak used Recon Directive.
+- im_bon3z drew Lillie's Determination.
+im_bon3z evolved Froakie to Frogadier in the Active Spot.
+im_bon3z played Lillie's Determination.
+- im_bon3z shuffled 3 cards into their deck.
+   • Ultra Ball, Surfing Beach, Boss's Orders
+- im_bon3z drew 8 cards.
+   • Hilda, Meowth ex, Lillie's Determination, Dragapult ex, Basic Water Energy, Wally's Compassion, Ultra Ball, Frogadier
+im_bon3z evolved Froakie to Frogadier on the Bench.
+im_bon3z's Frogadier used Summoning Jutsu.
+- im_bon3z drew 3 cards.
+   • Dreepy, Drakloak, Mega Greninja ex
+- im_bon3z shuffled their deck.
+
+TRX_Phoenix07's Turn
+TRX_Phoenix07 drew a card.
+TRX_Phoenix07 played Crushing Hammer.
+- TRX_Phoenix07 flipped a coin and it landed on tails.
+TRX_Phoenix07 played Ultra Ball.
+- TRX_Phoenix07 discarded 2 cards.
+   • Basic Darkness Energy, Basic Fire Energy
+- TRX_Phoenix07 drew Meowth ex.
+- TRX_Phoenix07 shuffled their deck.
+TRX_Phoenix07 played Meowth ex to the Bench.
+TRX_Phoenix07's Meowth ex used Last-Ditch Catch.
+- TRX_Phoenix07 drew Lillie's Determination.
+- TRX_Phoenix07 shuffled their deck.
+TRX_Phoenix07 played Fezandipiti ex to the Bench.
+TRX_Phoenix07 played Lillie's Determination.
+- TRX_Phoenix07 drew 8 cards.
+TRX_Phoenix07 evolved Dreepy to Drakloak on the Bench.
+TRX_Phoenix07's Drakloak used Recon Directive.
+- TRX_Phoenix07 drew a card.
+TRX_Phoenix07 evolved Dreepy to Drakloak on the Bench.
+TRX_Phoenix07 played Buddy-Buddy Poffin.
+- TRX_Phoenix07 drew Dunsparce and played it to the Bench.
+- TRX_Phoenix07 shuffled their deck.
+TRX_Phoenix07's Drakloak used Recon Directive.
+- TRX_Phoenix07 drew a card.
+TRX_Phoenix07 played Night Stretcher.
+- TRX_Phoenix07 moved TRX_Phoenix07's Basic Fire Energy to their hand.
+TRX_Phoenix07 attached Basic Fire Energy to Drakloak on the Bench.
+TRX_Phoenix07's Budew used Itchy Pollen on im_bon3z’s Frogadier for 10 damage.
+
+im_bon3z's Turn
+im_bon3z drew Ultra Ball.
+im_bon3z played Dreepy to the Bench.
+im_bon3z's Drakloak used Recon Directive.
+- im_bon3z drew Team Rocket's Watchtower.
+im_bon3z played Hilda.
+- im_bon3z drew 2 cards.
+   • Greninja ex, Ignition Energy
+- im_bon3z shuffled their deck.
+im_bon3z played Team Rocket's Watchtower to the Stadium spot.
+im_bon3z evolved Frogadier to Greninja ex in the Active Spot.
+im_bon3z attached Ignition Energy to Greninja ex in the Active Spot.
+im_bon3z evolved Frogadier to Mega Greninja ex on the Bench.
+im_bon3z's Greninja ex used Mirage Barrage.
+- TRX_Phoenix07's Drakloak took 120 damage.
+- TRX_Phoenix07's Drakloak took 120 damage.
+- Ignition Energy was discarded from im_bon3z's Greninja ex.
+TRX_Phoenix07's Drakloak was Knocked Out!
+- 3 cards were discarded from TRX_Phoenix07's Drakloak.
+   • Basic Psychic Energy, Basic Fire Energy, Dreepy
+TRX_Phoenix07's Drakloak was Knocked Out!
+- 2 cards were discarded from TRX_Phoenix07's Drakloak.
+   • Basic Fire Energy, Dreepy
+im_bon3z took 2 Prize cards.
+Buddy-Buddy Poffin was added to im_bon3z's hand.
+Drakloak was added to im_bon3z's hand.
+
+TRX_Phoenix07's Turn
+TRX_Phoenix07 drew a card.
+TRX_Phoenix07 played Crushing Hammer.
+- TRX_Phoenix07 flipped a coin and it landed on tails.
+TRX_Phoenix07's Fezandipiti ex used Flip the Script.
+- TRX_Phoenix07 drew 3 cards.
+Opponent conceded. im_bon3z wins.
+

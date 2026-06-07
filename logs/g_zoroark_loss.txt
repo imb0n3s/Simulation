@@ -1,0 +1,333 @@
+Setup
+13jun chose heads for the opening coin flip.
+13jun won the coin toss.
+13jun decided to go first.
+13jun drew 7 cards for the opening hand.
+- 7 drawn cards.
+im_bon3z drew 7 cards for the opening hand.
+- 7 drawn cards.
+   • Energy Retrieval, Surfing Beach, Lillie's Determination, Ultra Ball, Buddy-Buddy Poffin, Basic Water Energy, Frogadier
+im_bon3z took a mulligan.
+- Cards revealed from Mulligan 1
+   • Energy Retrieval, Surfing Beach, Lillie's Determination, Ultra Ball, Buddy-Buddy Poffin, Basic Water Energy, Frogadier
+13jun drew 1 more card because im_bon3z took at least 1 mulligan.
+- 13jun drew a card.
+13jun played Dunsparce to the Active Spot.
+im_bon3z played Froakie to the Active Spot.
+
+13jun's Turn
+13jun drew a card.
+13jun played Buddy-Buddy Poffin.
+- 13jun drew 2 cards and played them to the Bench.
+   • N's Zorua, N's Zorua
+- 13jun shuffled their deck.
+13jun played Ultra Ball.
+- 13jun discarded 2 cards.
+   • Dudunsparce ex, Lillie's Determination
+- 13jun drew N's Zoroark ex.
+- 13jun shuffled their deck.
+13jun ended their turn.
+
+im_bon3z's Turn
+im_bon3z drew Meowth ex.
+im_bon3z played Poké Pad.
+- im_bon3z drew Froakie.
+- im_bon3z shuffled their deck.
+im_bon3z played Meowth ex to the Bench.
+im_bon3z's Meowth ex used Last-Ditch Catch.
+- im_bon3z drew Lillie's Determination.
+- im_bon3z shuffled their deck.
+im_bon3z played Froakie to the Bench.
+im_bon3z played Lillie's Determination.
+- im_bon3z shuffled 5 cards into their deck.
+   • Special Red Card, Frogadier, Mega Greninja ex, Hilda, Boss's Orders
+- im_bon3z drew 8 cards.
+   • Mega Greninja ex, Poké Pad, Rare Candy, Hilda, Neo Upper Energy, Drakloak, Night Stretcher, Mega Greninja ex
+im_bon3z played Poké Pad.
+- im_bon3z drew Dreepy.
+- im_bon3z shuffled their deck.
+im_bon3z played Dreepy to the Bench.
+im_bon3z ended their turn.
+
+13jun's Turn
+13jun drew a card.
+13jun evolved N's Zorua to N's Zoroark ex on the Bench.
+13jun played Risky Ruins to the Stadium spot.
+13jun played Lillie's Determination.
+- 13jun shuffled 3 cards into their deck.
+- 13jun drew 8 cards.
+13jun's N's Zoroark ex used Trade.
+- 13jun discarded Basic Darkness Energy.
+- 13jun drew 2 cards.
+13jun evolved N's Zorua to N's Zoroark ex on the Bench.
+13jun's N's Zoroark ex used Trade.
+- 13jun discarded N's Zekrom.
+- 13jun drew 2 cards.
+13jun played Night Stretcher.
+- 13jun moved 13jun's Basic Darkness Energy to their hand.
+13jun played Poké Pad.
+- 13jun drew Dudunsparce.
+- 13jun shuffled their deck.
+13jun played Poké Pad.
+- 13jun drew Yveltal.
+- 13jun shuffled their deck.
+13jun played Yveltal to the Bench.
+13jun evolved Dunsparce to Dudunsparce in the Active Spot.
+13jun played Dudunsparce.
+- 13jun drew 3 cards.
+- 13jun shuffled 2 cards into their deck.
+   • Dudunsparce, Dunsparce
+13jun's Yveltal is now in the Active Spot.
+13jun attached Basic Darkness Energy to Yveltal in the Active Spot.
+13jun's Yveltal used Clutch on im_bon3z’s Froakie for 20 damage.
+
+im_bon3z's Turn
+im_bon3z drew Buddy-Buddy Poffin.
+im_bon3z played Buddy-Buddy Poffin.
+- im_bon3z drew 2 cards and played them to the Bench.
+   • Froakie, Dreepy
+- im_bon3z shuffled their deck.
+Risky Ruins was activated.
+- im_bon3z put 2 damage counters on 13jun's Froakie.
+- im_bon3z put 2 damage counters on 13jun's Dreepy.
+im_bon3z evolved Dreepy to Drakloak on the Bench.
+im_bon3z played Rare Candy.
+- im_bon3z evolved Froakie to Mega Greninja ex in the Active Spot.
+im_bon3z attached Neo Upper Energy to Mega Greninja ex in the Active Spot.
+im_bon3z's Drakloak used Recon Directive.
+- im_bon3z drew Ignition Energy.
+im_bon3z played Hilda.
+- im_bon3z drew 2 cards.
+   • Frogadier, Basic Water Energy
+- im_bon3z shuffled their deck.
+im_bon3z evolved Froakie to Frogadier on the Bench.
+im_bon3z's Mega Greninja ex used Mortal Shuriken.
+- im_bon3z discarded Basic Water Energy.
+- im_bon3z put 6 damage counters on im_bon3z's N's Zoroark ex.
+im_bon3z's Mega Greninja ex used Ninja Spinner on 13jun’s Yveltal for 200 damage.
+- Damage breakdown:
+   • Base damage: 120 damage
+   • Total damage: 200 damage
+
+- im_bon3z moved im_bon3z's Neo Upper Energy to their hand.
+13jun's Yveltal was Knocked Out!
+Basic Darkness Energy was discarded from 13jun's Yveltal.
+im_bon3z took a Prize card.
+Rare Candy was added to im_bon3z's hand.
+13jun's N's Zoroark ex is now in the Active Spot.
+
+13jun's Turn
+13jun drew a card.
+13jun's N's Zoroark ex used Trade.
+- 13jun discarded Basic Darkness Energy.
+- 13jun drew 2 cards.
+13jun's N's Zoroark ex used Trade.
+- 13jun discarded Janine's Secret Art.
+- 13jun drew 2 cards.
+13jun played Brock's Scouting.
+- 13jun drew 2 cards.
+   • N's Zorua, N's Zekrom
+- 13jun shuffled their deck.
+13jun played N's Zorua to the Bench.
+13jun played N's Zekrom to the Bench.
+Risky Ruins was activated.
+- 13jun put 2 damage counters on 13jun's N's Zekrom.
+13jun played Pecharunt ex to the Bench.
+13jun played N's PP Up.
+- 13jun attached Basic Darkness Energy to N's Zoroark ex on the Bench.
+13jun attached Basic Darkness Energy to N's Zoroark ex on the Bench.
+13jun's Pecharunt ex used Subjugating Chains.
+- 13jun's N's Zoroark ex was switched with 13jun's N's Zoroark ex to become the Active Pokémon.
+- 13jun's N's Zoroark ex is now Poisoned.
+13jun's N's Zoroark ex is now in the Active Spot.
+13jun's N's Zoroark ex used Night Joker on im_bon3z’s Mega Greninja ex for 250 damage.
+- 13jun chose Rampaging Thunder
+
+Pokémon Checkup
+1 damage counter was placed on 13jun's N's Zoroark ex for the Special Condition Poisoned.
+
+im_bon3z's Turn
+im_bon3z drew Ultra Ball.
+im_bon3z's Drakloak used Recon Directive.
+- im_bon3z drew Basic Water Energy.
+im_bon3z evolved Frogadier to Mega Greninja ex on the Bench.
+im_bon3z's Mega Greninja ex used Mortal Shuriken.
+- im_bon3z discarded Basic Water Energy.
+- im_bon3z put 6 damage counters on im_bon3z's N's Zoroark ex.
+im_bon3z played Ultra Ball.
+- im_bon3z discarded 2 cards.
+   • Rare Candy, Ignition Energy
+- im_bon3z drew Drakloak.
+- im_bon3z shuffled their deck.
+im_bon3z evolved Dreepy to Drakloak on the Bench.
+im_bon3z's Drakloak used Recon Directive.
+- im_bon3z drew Basic Water Energy.
+im_bon3z attached Neo Upper Energy to Mega Greninja ex in the Active Spot.
+im_bon3z's Mega Greninja ex used Ninja Spinner on 13jun’s N's Zoroark ex for 200 damage.
+- Damage breakdown:
+   • Base damage: 120 damage
+   • Total damage: 200 damage
+
+- im_bon3z moved im_bon3z's Neo Upper Energy to their hand.
+
+Pokémon Checkup
+1 damage counter was placed on 13jun's N's Zoroark ex for the Special Condition Poisoned.
+13jun's N's Zoroark ex was Knocked Out!
+- 3 cards were discarded from 13jun's N's Zoroark ex.
+   • Basic Darkness Energy, Basic Darkness Energy, N's Zorua
+im_bon3z took 2 Prize cards.
+Greninja ex was added to im_bon3z's hand.
+Lillie's Determination was added to im_bon3z's hand.
+13jun's N's Zekrom is now in the Active Spot.
+
+13jun's Turn
+13jun drew a card.
+13jun played Ciphermaniac's Codebreaking.
+- 13jun shuffled their deck.
+13jun's N's Zoroark ex used Trade.
+- 13jun discarded N's Reshiram.
+- 13jun drew 2 cards.
+13jun played N's PP Up.
+- 13jun attached Basic Darkness Energy to N's Zoroark ex on the Bench.
+13jun played Munkidori to the Bench.
+Risky Ruins was activated.
+- 13jun put 2 damage counters on 13jun's Munkidori.
+13jun evolved N's Zorua to N's Zoroark ex on the Bench.
+13jun's N's Zoroark ex used Trade.
+- 13jun discarded Basic Darkness Energy.
+- 13jun drew 2 cards.
+13jun played Buddy-Buddy Poffin.
+- 13jun drew Dunsparce and played it to the Bench.
+- 13jun shuffled their deck.
+Risky Ruins was activated.
+- 13jun put 2 damage counters on 13jun's Dunsparce.
+13jun played Special Red Card.
+- im_bon3z shuffled their hand.
+- 13jun put 5 cards on the bottom of their deck.
+   • Neo Upper Energy, Basic Water Energy, Night Stretcher, Greninja ex, Lillie's Determination
+- 13jun drew 3 cards.
+   • Air Balloon, Team Rocket's Watchtower, Ignition Energy
+13jun's Pecharunt ex used Subjugating Chains.
+- 13jun's N's Zoroark ex was switched with 13jun's N's Zekrom to become the Active Pokémon.
+- 13jun's N's Zoroark ex is now Poisoned.
+13jun's N's Zoroark ex is now in the Active Spot.
+13jun attached Basic Darkness Energy to N's Zoroark ex in the Active Spot.
+13jun's N's Zoroark ex used Night Joker on im_bon3z’s Mega Greninja ex for 250 damage.
+- 13jun chose Rampaging Thunder
+im_bon3z's Mega Greninja ex was Knocked Out!
+Froakie was discarded from im_bon3z's Mega Greninja ex.
+13jun took 3 Prize cards.
+A card was added to 13jun's hand.
+A card was added to 13jun's hand.
+A card was added to 13jun's hand.
+im_bon3z's Meowth ex is now in the Active Spot.
+
+Pokémon Checkup
+1 damage counter was placed on 13jun's N's Zoroark ex for the Special Condition Poisoned.
+
+im_bon3z's Turn
+im_bon3z drew Buddy-Buddy Poffin.
+im_bon3z played Buddy-Buddy Poffin.
+- im_bon3z drew Froakie and played it to the Bench.
+- im_bon3z shuffled their deck.
+Risky Ruins was activated.
+- im_bon3z put 2 damage counters on 13jun's Froakie.
+im_bon3z's Drakloak used Recon Directive.
+- im_bon3z drew Special Red Card.
+im_bon3z's Drakloak used Recon Directive.
+- im_bon3z drew Lillie's Determination.
+im_bon3z attached Air Balloon to Meowth ex in the Active Spot.
+im_bon3z played Team Rocket's Watchtower to the Stadium spot.
+- im_bon3z discarded Risky Ruins.
+im_bon3z played Special Red Card.
+- 13jun shuffled their hand.
+- im_bon3z moved im_bon3z's 7 cards to their deck.
+- im_bon3z drew 3 cards.
+im_bon3z played Lillie's Determination.
+- im_bon3z shuffled Ignition Energy into their deck.
+- im_bon3z drew 6 cards.
+   • Surfing Beach, Mega Greninja ex, Boss's Orders, Basic Water Energy, Basic Water Energy, Buddy-Buddy Poffin
+im_bon3z retreated Meowth ex to the Bench.
+im_bon3z's Mega Greninja ex is now in the Active Spot.
+im_bon3z's Mega Greninja ex used Mortal Shuriken.
+- im_bon3z discarded Basic Water Energy.
+- im_bon3z put 6 damage counters on im_bon3z's Dunsparce.
+13jun's Dunsparce was Knocked Out!
+im_bon3z took a Prize card.
+Rare Candy was added to im_bon3z's hand.
+im_bon3z played Rare Candy.
+- im_bon3z evolved Froakie to Mega Greninja ex on the Bench.
+im_bon3z ended their turn.
+
+Pokémon Checkup
+1 damage counter was placed on 13jun's N's Zoroark ex for the Special Condition Poisoned.
+
+13jun's Turn
+13jun drew a card.
+13jun played N's PP Up.
+- 13jun attached Basic Darkness Energy to N's Zoroark ex on the Bench.
+13jun played Poké Pad.
+- 13jun shuffled their deck.
+13jun played N's Zorua to the Bench.
+13jun played Lillie's Determination.
+- 13jun drew 6 cards.
+13jun's N's Zoroark ex used Trade.
+- 13jun discarded Dudunsparce.
+- 13jun drew 2 cards.
+13jun's N's Zoroark ex used Trade.
+- 13jun discarded Risky Ruins.
+- 13jun drew 2 cards.
+13jun played N's Castle to the Stadium spot.
+- 13jun discarded Team Rocket's Watchtower.
+13jun retreated N's Zoroark ex to the Bench.
+13jun's N's Zoroark ex is now in the Active Spot.
+13jun attached Basic Darkness Energy to N's Zoroark ex in the Active Spot.
+13jun's N's Zoroark ex used Night Joker on im_bon3z’s Mega Greninja ex for 250 damage.
+- 13jun chose Rampaging Thunder
+
+im_bon3z's Turn
+im_bon3z drew Hilda.
+im_bon3z's Drakloak used Recon Directive.
+- im_bon3z drew Frogadier.
+im_bon3z's Drakloak used Recon Directive.
+- im_bon3z drew Frogadier.
+im_bon3z's Mega Greninja ex used Mortal Shuriken.
+- im_bon3z discarded Basic Water Energy.
+- im_bon3z put 6 damage counters on im_bon3z's N's Zoroark ex.
+im_bon3z played Hilda.
+- im_bon3z drew Neo Upper Energy.
+- im_bon3z shuffled their deck.
+im_bon3z played Surfing Beach to the Stadium spot.
+- im_bon3z discarded N's Castle.
+im_bon3z evolved Froakie to Frogadier on the Bench.
+im_bon3z played Surfing Beach.
+- im_bon3z's Mega Greninja ex was switched with im_bon3z's Mega Greninja ex to become the Active Pokémon.
+im_bon3z's Mega Greninja ex is now in the Active Spot.
+im_bon3z attached Neo Upper Energy to Mega Greninja ex in the Active Spot.
+im_bon3z's Mega Greninja ex used Ninja Spinner on 13jun’s N's Zoroark ex for 200 damage.
+- Damage breakdown:
+   • Base damage: 120 damage
+   • Total damage: 200 damage
+
+- im_bon3z moved im_bon3z's Neo Upper Energy to their hand.
+
+13jun's Turn
+13jun drew a card.
+13jun's Pecharunt ex used Subjugating Chains.
+- 13jun's N's Zoroark ex was switched with 13jun's N's Zoroark ex to become the Active Pokémon.
+- 13jun's N's Zoroark ex is now Poisoned.
+13jun's N's Zoroark ex is now in the Active Spot.
+13jun played Boss's Orders.
+- im_bon3z's Mega Greninja ex was switched with im_bon3z's Mega Greninja ex to become the Active Pokémon.
+im_bon3z's Mega Greninja ex is now in the Active Spot.
+13jun's N's Zoroark ex used Night Joker on im_bon3z’s Mega Greninja ex for 250 damage.
+- 13jun chose Rampaging Thunder
+im_bon3z's Mega Greninja ex was Knocked Out!
+- 2 cards were discarded from im_bon3z's Mega Greninja ex.
+   • Frogadier, Froakie
+13jun took 3 Prize cards.
+A card was added to 13jun's hand.
+A card was added to 13jun's hand.
+A card was added to 13jun's hand.
+Opponent took all of their Prize cards. 13jun wins.
+
