@@ -526,7 +526,7 @@ class DeepSearchAgent(HeuristicAgent):
     This makes *spreading damage now* valuable, because the rollout converts that
     spread into KOs on later turns."""
     import copy as _copy
-    def __init__(self, fx, depth=3, samples=2):
+    def __init__(self, fx, depth=3, samples=3):
         super().__init__(fx)
         self.depth = depth; self.samples = samples
         self._roller = HeuristicAgent(fx)   # fast policy used inside rollouts
@@ -559,12 +559,14 @@ class DeepSearchAgent(HeuristicAgent):
         board = sum(m.damage for m in opp.all_pokemon()) - sum(m.damage for m in me.all_pokemon())
         return (my_taken - opp_taken) * 1000 + board
 
-    def _eval(self, game, pi, g, a):
+    def _eval(self, game, pi, g, a, promote=None):
         vals = []
         for s in range(self.samples):
             clone = DeepSearchAgent._copy.deepcopy(game)
             cp = clone.players[pi]
             try:
+                if promote is not None:
+                    clone.retreat(cp, promote)
                 if g is not None:
                     gc = self._gust_card(cp)
                     if gc:
@@ -576,26 +578,45 @@ class DeepSearchAgent(HeuristicAgent):
             except Exception:
                 self.fx.policy._force = None
                 continue
-            vals.append(self._rollout(clone, pi, seed=(hash((g, a, s)) & 0x7fffffff)))
-        return sum(vals) / len(vals) if vals else -1e17
+            vals.append(self._rollout(clone, pi, seed=(hash((g, a, s, promote)) & 0x7fffffff)))
+        if not vals: return -1e17, -1e17
+        return sum(vals) / len(vals), min(vals)   # (mean, worst-case)
 
     def _attack_step(self, game, p):
         if not (p.active and game.turn > 1): return
         pi = game.players.index(p)
-        atks = p.active.card.data.get("attacks", [])
-        affordable = [i for i in range(len(atks)) if game._cost_met(p.active, atks[i]["cost"], atks[i])]
-        if not affordable: return
         opp = game.players[1 - pi]
+        # branch set: EVERY gust target (the "bossed the wrong Pokemon" lesson),
+        # every affordable attack, and promotion lines for ready bench attackers
         gust_opts = [None]
         if self._gust_card(p) and opp.bench:
-            gust_opts.append(max(range(len(opp.bench)), key=lambda j: opp.bench[j].damage))
-        best, bestval = None, -1e18
-        for g in gust_opts:
-            for a in affordable:
-                v = self._eval(game, pi, g, a)
-                if v > bestval: bestval, best = v, (g, a)
-        if best is None: return
-        g, a = best
+            gust_opts += list(range(len(opp.bench)))[:5]
+        promo_opts = [None]
+        ready = [j for j, m in enumerate(p.bench)
+                 if any(game._cost_met(m, x["cost"], x) and (x.get("damage") or 0) >= 60
+                        for x in m.card.data.get("attacks", []))]
+        promo_opts += sorted(ready, key=lambda j: -self._best_dmg(p.bench[j]))[:2]
+        branches = []
+        for pr in promo_opts:
+            mon = p.active if pr is None else p.bench[pr]
+            atks = mon.card.data.get("attacks", [])
+            aff = [i for i in range(len(atks)) if game._cost_met(mon, atks[i]["cost"], atks[i])]
+            for g in gust_opts:
+                for a in aff:
+                    branches.append((g, a, pr))
+        if not branches: return
+        best, bestval = None, (-1e18, -1e18)
+        for (g, a, pr) in branches:
+            mean, worst = self._eval(game, pi, g, a, promote=pr)
+            # value already encodes speed (1e6 - turn): a win NOW beats a win
+            # next turn — the "could have won a turn earlier" lesson. No early
+            # break: rank every guaranteed win and take the fastest.
+            if (worst, mean) > bestval: bestval, best = (worst, mean), (g, a, pr)
+            if worst > 9e5 and bestval[0] >= 1e6 - game.turn - 1:
+                break                        # immediate win found — nothing beats it
+        g, a, pr = best
+        if pr is not None:
+            self._try(lambda i=pr: game.retreat(p, i))
         if g is not None:
             gc = self._gust_card(p)
             if gc:

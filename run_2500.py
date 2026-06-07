@@ -12,7 +12,7 @@ from effects import Effects, SkilledPolicy
 HERE = os.path.dirname(os.path.abspath(__file__)); CAT = load_catalog()
 fx = Effects(SkilledPolicy())
 agent = HeuristicAgent(fx)
-you_agent = DeepSearchAgent(fx, depth=3, samples=2)
+you_agent = DeepSearchAgent(fx, depth=3, samples=3)
 MAXT = 60; ROUNDS = 12; FIELD = 2500; BUDGET = 34
 ST = os.path.join(HERE, "data", "event2500.json")
 

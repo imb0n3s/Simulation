@@ -59,6 +59,21 @@ class AutoPolicy:
         return player.bench[0] if player.bench else player.active
 
 
+
+def _remote_reach(game, player):
+    """Max counters/snipe damage we can deliver WITHOUT the active attack landing
+    on the target: spread ops, bench snipes, and an unused Munkidori."""
+    reach = 0
+    for m in player.all_pokemon():
+        for a in m.card.data.get("attacks", []):
+            if not game._cost_met(m, a["cost"], a): continue
+            for e in a.get("effects", []) or []:
+                if e.get("op") == "spread_counters_opponent_bench":
+                    reach = max(reach, e.get("counters", 0) * 10)
+                elif e.get("op") in ("bench_snipe", "mirage_barrage"):
+                    reach = max(reach, e.get("amount", 0))
+    return reach
+
 def _remaining(game, m):
     try: return game.effective_max_hp(m) - m.damage
     except Exception:
@@ -301,12 +316,29 @@ class Effects:
     def _op_gust_opponent_bench(self, game, player, op, source, ctx):
         opp = game.players[1 - game.players.index(player)]
         if not opp.bench: return
+        f = getattr(self.policy, "_force", None)
+        if f is not None and 0 <= f < len(opp.bench):   # planner-explored target
+            if opp.active is not None: opp.bench.append(opp.active)
+            opp.active = opp.bench.pop(f)
+            game.log(f"  gusts up {opp.active.name} to opponent's Active.")
+            return
         tgt = None
         if player.active:
             best = max(((a.get("damage") or 0) for a in player.active.card.data.get("attacks", [])), default=0)
             koable = [m for m in opp.bench if 0 < _remaining(game, m) <= best]
-            if koable:   # human line: gust up the biggest prize we can actually KO
-                tgt = max(koable, key=lambda m: (_prize(m), -_remaining(game, m)))
+            if koable:   # human line: gust up the biggest prize we can actually KO,
+                # but NEVER waste the gust on a body our counters/spread already reach
+                reach = _remote_reach(game, player)
+                for m2 in player.all_pokemon():
+                    for ab2 in m2.card.data.get("abilities", []):
+                        if any(e2.get("op") == "move_damage_counters_to_opponent"
+                               for e2 in ab2.get("effects", [])) and \
+                           any("Darkness" in x.provides() for x in m2.energy):
+                            own_dmg = max((mm.damage for mm in player.all_pokemon()), default=0)
+                            reach = max(reach, min(30, own_dmg))
+                unreachable = [m for m in koable if _remaining(game, m) > reach]
+                pool2 = unreachable or koable
+                tgt = max(pool2, key=lambda m: (_prize(m), -_remaining(game, m)))
         if tgt is None:
             # no KO available: NEVER gust up a ready attacker (the "bossed the wrong
             # Pokemon" lesson) — pull the most STRANDED body to waste their turn
@@ -562,12 +594,38 @@ class Effects:
         froms = [m for m in player.all_pokemon() if m.damage >= 10]
         opp = game.players[1 - game.players.index(player)]
         if not froms or not opp.all_pokemon(): return
-        src = froms[0]
-        move = min(op["max"] * 10, src.damage)
-        tgt = self.policy.choose_pokemon(game, opp.all_pokemon())
-        if tgt and not game.bench_counters_blocked(tgt):
-            src.damage -= move; tgt.damage += move
-            game.log(f"  moves {move//10} counters from {src.name} to {tgt.name}.")
+        cap = op["max"] * 10
+        legal = [m for m in opp.all_pokemon() if not game.bench_counters_blocked(m)]
+        if not legal: return
+        # 1) KO conversion: if moving counters FINISHES something, do exactly that
+        best = None
+        for s in froms:
+            mv_max = min(cap, s.damage)
+            for t in legal:
+                need = _remaining(game, t)
+                if 0 < need <= mv_max:
+                    key = (_prize(t), -need, s.damage)   # biggest prize, cheapest finish, heal-richest source
+                    if best is None or key > best[0]:
+                        best = (key, s, t, need)
+        if best:
+            _, s, t, need = best
+            s.damage -= need; t.damage += need
+            game.log(f"  moves {need//10} counters from {s.name} to {t.name} — Knocked Out by counters!")
+            return
+        # 2) no direct KO: set one up. Bank where our spread/snipe can FINISH it
+        # this turn (Pecharunt line: Adrena 30 onto Zoroark -> Phantom spread 60 = KO),
+        # preferring big prizes; skip their active (the attack handles that body).
+        s = max(froms, key=lambda m: m.damage)
+        move = min(cap, s.damage)
+        reach = _remote_reach(game, player)
+        opp_active = opp.active
+        def fkey(m):
+            rem_after = _remaining(game, m) - move
+            converts = 0 < rem_after <= reach
+            return (converts, _prize(m) if converts else 0, m is not opp_active, -max(rem_after, 0))
+        t = max(legal, key=fkey)
+        s.damage -= move; t.damage += move
+        game.log(f"  moves {move//10} counters from {s.name} to {t.name}.")
 
     def _op_coin_status_opponent_active(self, game, player, op, source, ctx):
         if game.rng.random() < 0.5:
