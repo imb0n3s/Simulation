@@ -1,0 +1,78 @@
+Setup
+EazyTTV chose tails for the opening coin flip.
+EazyTTV won the coin toss.
+EazyTTV decided to go second.
+EazyTTV drew 7 cards for the opening hand.
+JGB146 drew 7 cards for the opening hand.
+- 7 drawn cards.
+   • Drakloak, Ultra Ball, Dreepy, Basic Darkness Energy, Munkidori, Buddy-Buddy Poffin, Judge
+EazyTTV played Dwebble to the Active Spot.
+JGB146 played Dreepy to the Active Spot.
+JGB146's Turn
+JGB146 drew Meowth ex.
+JGB146 played Buddy-Buddy Poffin.
+- JGB146 drew 2 cards and played them to the Bench.
+   • Dreepy, Dunsparce
+JGB146 played Munkidori to the Bench.
+JGB146 attached Basic Darkness Energy to Munkidori on the Bench.
+JGB146 ended their turn.
+EazyTTV's Turn
+EazyTTV drew a card.
+EazyTTV played Pokégear 3.0.
+- EazyTTV drew Hilda.
+EazyTTV played Pokégear 3.0.
+- EazyTTV drew Lillie's Determination.
+EazyTTV played Lillie's Determination.
+- EazyTTV shuffled 6 cards into their deck.
+- EazyTTV drew 8 cards.
+EazyTTV played Buddy-Buddy Poffin.
+- EazyTTV drew Dwebble and played it to the Bench.
+EazyTTV played Crushing Hammer.
+- EazyTTV flipped a coin and it landed on tails.
+EazyTTV played Pokégear 3.0.
+- EazyTTV drew Team Rocket's Petrel.
+EazyTTV ended their turn.
+JGB146's Turn
+JGB146 drew Risky Ruins.
+JGB146 evolved Dreepy to Drakloak on the Bench.
+JGB146 played Risky Ruins to the Stadium spot.
+JGB146 played Meowth ex to the Bench.
+JGB146's Meowth ex used Last-Ditch Catch.
+- JGB146 drew Lillie's Determination.
+Risky Ruins was activated.
+- JGB146 put 2 damage counters on JGB146's Meowth ex.
+JGB146 played Lillie's Determination.
+- JGB146 shuffled 2 cards into their deck.
+   • Ultra Ball, Judge
+- JGB146 drew 8 cards.
+   • Lillie's Determination, Crushing Hammer, Basic Darkness Energy, Crispin, Dragapult ex, Basic Fire Energy, Crushing Hammer, Basic Fire Energy
+JGB146's Drakloak used Recon Directive.
+- JGB146 drew Buddy-Buddy Poffin.
+JGB146 played Buddy-Buddy Poffin.
+- JGB146 drew Dreepy and played it to the Bench.
+Risky Ruins was activated.
+- JGB146 put 2 damage counters on JGB146's Dreepy.
+JGB146 attached Basic Fire Energy to Drakloak on the Bench.
+JGB146's Munkidori used Adrena-Brain.
+- JGB146 moved 2 damage counters from JGB146's Meowth ex to JGB146's Dwebble.
+JGB146 ended their turn.
+EazyTTV's Turn
+EazyTTV drew a card.
+EazyTTV played Team Rocket's Petrel.
+- EazyTTV drew Hilda.
+EazyTTV played Team Rocket's Factory to the Stadium spot.
+- EazyTTV discarded Risky Ruins.
+EazyTTV played Team Rocket's Factory.
+- EazyTTV drew 2 cards.
+EazyTTV attached Growing Grass Energy to Dwebble on the Bench.
+EazyTTV ended their turn.
+JGB146's Turn
+JGB146 drew Crispin.
+JGB146's Drakloak used Recon Directive.
+- JGB146 drew Risky Ruins.
+JGB146 played Crushing Hammer.
+- JGB146 flipped a coin and it landed on tails.
+JGB146 played Crushing Hammer.
+- JGB146 flipped a coin and it landed on heads.
+- Growing Grass Energy was discarded from JGB146's Dwebble.
+Opponent conceded. JGB146 wins.
