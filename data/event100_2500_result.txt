@@ -1,11 +1,11 @@
 100 FULL 2500-PLAYER TOURNAMENTS — exact Swiss + Top64 cut, ALL Bo3, matchup table (~92k sims) + real-results calibration layer
 YOUR deck piloted (in its matchup measurements) by the spread-skilled DeepSearchAgent
 
-YOUR Swiss records: {'9-3': 17, '8-4': 25, '7-5': 22, '6-6': 10, '5-7': 3, '4-8': 1, '10-2': 16, '11-1': 5, '12-0': 1}
+YOUR Swiss records: {'9-3': 21, '8-4': 29, '7-5': 19, '6-6': 8, '5-7': 3, '2-10': 1, '10-2': 13, '11-1': 6}
 median placement: 256
-best: 1   worst: 2130
-25th-75th pct: 73 - 609
-made Top 64: 23/100   made Top 8: 5/100
+best: 1   worst: 2465
+25th-75th pct: 75 - 589
+made Top 64: 21/100   made Top 8: 11/100
 typical cut line (wins of 64th seed): min 9, median 9.0, max 9
 
-Event champions by archetype: {'greninja_dragapult': 6, 'dragapult_ex': 6, 'dragapult_blaziken_v2': 6, 'dragapult_blaziken': 6, 'beedrill_dudunsparce_v2': 5, 'tera_box_raging_bolt': 4, 'dragapult_dudunsparce_ex_v2': 4, 'meganium_ogerpon': 4, 'alakazam_dudunsparce_v2': 4, 'beedrill_ex_dudunsparce': 3, 'hydrapple_meganium': 3, 'dragapult_dusknoir_v2': 3, 'mega_diancie_dusknoir': 3, 'alakazam_dudunsparce': 3, 'dragapult_dusknoir_budew': 3, 'user_greninja': 3, 'froslass_lopunny': 3, 'sinistcha_ogerpon': 3, 'festival_lead': 2, 'dragapult_hammers': 2, 'user_greninja_dudunsparce': 2, 'festival_greninja': 2, 'dragapult_toolbox': 2, 'lillies_clefairy_box': 2, 'ionos_bellibolt': 2, 'dragapult_blaziken_v3': 2, 'slowking_box': 2, 'dragapult_dudunsparce_ex': 2, 'dragapult_starmie': 2, 'alakazam_v3': 1, 'user_greninja_froslass': 1, 'ns_zoroark': 1, 'mega_starmie_froslass': 1, 'dragapult_dusknoir_v3': 1, 'ns_zoroark_v2': 1}
+Event champions by archetype: {'greninja_dragapult': 10, 'dragapult_blaziken_v2': 8, 'dragapult_dusknoir_v2': 6, 'dragapult_ex': 6, 'user_greninja': 5, 'hydrapple_meganium': 5, 'dragapult_dudunsparce': 4, 'dragapult_dusknoir_budew': 4, 'dragapult_dusknoir_v3': 4, 'alakazam_dudunsparce_v2': 3, 'dragapult_dudunsparce_ex_v2': 3, 'sinistcha_ogerpon': 3, 'festival_greninja': 3, 'dragapult_toolbox': 3, 'mega_diancie_dusknoir': 3, 'froslass_lopunny': 3, 'tera_box_raging_bolt': 3, 'dragapult_dudunsparce_ex': 3, 'beedrill_ex_dudunsparce': 3, 'alakazam_v3': 2, 'festival_lead': 2, 'ns_zoroark': 2, 'dragapult_blaziken': 2, 'lillies_clefairy_box': 1, 'ogerpon_meganium_arboliva_v2': 1, 'alakazam_dudunsparce': 1, 'dragapult_dusknoir': 1, 'cynthia_garchomp': 1, 'mega_kangaskhan_crustle': 1, 'user_greninja_froslass': 1, 'dragapult_blaziken_v3': 1, 'meganium_ogerpon': 1, 'slowking_latias_v2': 1}
