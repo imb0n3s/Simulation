@@ -25,11 +25,11 @@ start=time.time(); done=0
 for d in FIELD:
     k=f"{ME}|{d}"
     if k in tab and tab[k].get("n")==30: done+=1; continue
-    if time.time()-start>36: print(f"rows done: {done}/{len(FIELD)} — RERUN"); raise SystemExit
+    if time.time()-start>30: print(f"rows done: {done}/{len(FIELD)} — RERUN"); raise SystemExit
     B=[c.card_id for c in build_deck(f"decks/{d}.txt")]
     row={"af":{"w":0,"l":0,"d":0},"bf":{"w":0,"l":0,"d":0},"n":30}
     for i in range(30):
         r=play(U,B,True,5000+i); row["af"]["w" if r=="A" else "l" if r=="B" else "d"]+=1
         r=play(U,B,False,6000+i); row["bf"]["w" if r=="A" else "l" if r=="B" else "d"]+=1
-    tab[k]=row; json.dump(tab,open(TAB,"w")); done+=1
+    tab[k]=row; json.dump(tab,open(TAB+".tmp","w")); os.replace(TAB+".tmp",TAB); done+=1
 print("ROWS COMPLETE")

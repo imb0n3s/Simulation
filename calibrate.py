@@ -96,6 +96,7 @@ m=sum(off.values())/len(off)
 off={d:round(v-m,4) for d,v in off.items()}
 # YOUR deck is piloted by YOU (DeepSearch-modeled), not the average real Greninja player:
 off["user_greninja"]=0.0
+off["starmie_froslass_munkidori"]=0.0  # user pilot decks: rows are direct planner measurements
 json.dump(off,open(os.path.join(HERE,"data","calibration_offsets.json"),"w"),indent=1)
 rk=sorted(off.items(),key=lambda kv:-kv[1])
 print("biggest boosts (under-piloted in sim):")

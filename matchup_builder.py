@@ -10,7 +10,7 @@ from engine import Game, Player, Card, load_catalog
 from simulate import build_deck, HeuristicAgent, DeepSearchAgent
 from effects import Effects, SkilledPolicy
 HERE=os.path.dirname(os.path.abspath(__file__)); CAT=load_catalog()
-MAXT=60; BUDGET=38
+MAXT=60; BUDGET=26
 TAB=os.path.join(HERE,"data","matchup_table.json")
 fx=Effects(SkilledPolicy())
 heur=HeuristicAgent(fx)
@@ -51,8 +51,8 @@ for a,b,n,mode in jobs:
         r2=game(b,a,heur,agA,rng.randint(1,10**9))
         res["bf"]["w" if r2=="B" else "l" if r2=="A" else "d"]+=1
     tab[key]=res; done_now+=1
-    json.dump(tab,open(TAB,"w"))
-json.dump(tab,open(TAB,"w"))
+    json.dump(tab,open(TAB+".tmp","w")); os.replace(TAB+".tmp",TAB)
+json.dump(tab,open(TAB+".tmp","w")); os.replace(TAB+".tmp",TAB)
 total=len([0 for i,a in enumerate(FIELD) for b in FIELD[i:]])+len(FIELD)
 print(f"pairs done: {len(tab)}/{total}")
 if len(tab)>=total: print("TABLE COMPLETE")
