@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+data/cards.db
+data/cards.db-journal
+data/event*.json
+data/*.out
+data/last_game_log.txt
+data/value_samples.csv

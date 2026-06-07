@@ -1,0 +1,7425 @@
+{
+ "MEG-54": {
+  "name": "Abra",
+  "set": "MEG",
+  "number": "54",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Psychic"
+  ],
+  "hp": 50,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Darkness",
+  "resistance": "Fighting",
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Teleportation Attack",
+    "cost": [
+     "Psychic"
+    ],
+    "damage": 10,
+    "text": "Switch this Pokémon with 1 of your Benched Pokémon.",
+    "effects": [
+     {
+      "op": "switch_self_with_bench"
+     }
+    ]
+   }
+  ]
+ },
+ "MEG-55": {
+  "name": "Kadabra",
+  "set": "MEG",
+  "number": "55",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 1"
+  ],
+  "types": [
+   "Psychic"
+  ],
+  "hp": 80,
+  "evolves_from": "Abra",
+  "retreat": 1,
+  "weakness": "Darkness",
+  "resistance": "Fighting",
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [
+   {
+    "name": "Psychic Draw",
+    "type": "on_evolve",
+    "text": "Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may use this Ability. Draw 2 cards.",
+    "effects": [
+     {
+      "op": "draw",
+      "n": 2
+     }
+    ]
+   }
+  ],
+  "attacks": [
+   {
+    "name": "Super Psy Bolt",
+    "cost": [
+     "Psychic"
+    ],
+    "damage": 30,
+    "text": "",
+    "effects": []
+   }
+  ]
+ },
+ "MEG-56": {
+  "name": "Alakazam",
+  "set": "MEG",
+  "number": "56",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 2"
+  ],
+  "types": [
+   "Psychic"
+  ],
+  "hp": 140,
+  "evolves_from": "Kadabra",
+  "retreat": 1,
+  "weakness": "Darkness",
+  "resistance": "Fighting",
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [
+   {
+    "name": "Psychic Draw",
+    "type": "on_evolve",
+    "text": "Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may use this Ability. Draw 3 cards.",
+    "effects": [
+     {
+      "op": "draw",
+      "n": 3
+     }
+    ]
+   }
+  ],
+  "attacks": [
+   {
+    "name": "Powerful Hand",
+    "cost": [
+     "Psychic"
+    ],
+    "damage": 0,
+    "text": "Place 2 damage counters on your opponent's Active Pokémon for each card in your hand.",
+    "effects": [
+     {
+      "op": "place_counters_per_hand",
+      "per_card": 2,
+      "target": "opponent_active"
+     }
+    ]
+   }
+  ]
+ },
+ "JTG-120": {
+  "name": "Dunsparce",
+  "set": "JTG",
+  "number": "120",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Colorless"
+  ],
+  "hp": 70,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Fighting",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Trading Places",
+    "cost": [
+     "Colorless"
+    ],
+    "damage": 0,
+    "text": "Switch this Pokémon with 1 of your Benched Pokémon.",
+    "effects": [
+     {
+      "op": "switch_self_with_bench"
+     }
+    ]
+   },
+   {
+    "name": "Ram",
+    "cost": [
+     "Colorless",
+     "Colorless"
+    ],
+    "damage": 20,
+    "text": "",
+    "effects": []
+   }
+  ]
+ },
+ "TEF-129": {
+  "name": "Dudunsparce",
+  "set": "TEF",
+  "number": "129",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 1"
+  ],
+  "types": [
+   "Colorless"
+  ],
+  "hp": 140,
+  "evolves_from": "Dunsparce",
+  "retreat": 3,
+  "weakness": "Fighting",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "H",
+  "abilities": [
+   {
+    "name": "Run Away Draw",
+    "type": "activated",
+    "once_per_turn": true,
+    "text": "Once during your turn, you may draw 3 cards. If you drew any cards in this way, shuffle this Pokémon and all attached cards into your deck.",
+    "effects": [
+     {
+      "op": "draw",
+      "n": 3
+     },
+     {
+      "op": "shuffle_self_into_deck"
+     }
+    ]
+   }
+  ],
+  "attacks": [
+   {
+    "name": "Land Crush",
+    "cost": [
+     "Colorless",
+     "Colorless",
+     "Colorless"
+    ],
+    "damage": 90,
+    "text": "",
+    "effects": []
+   }
+  ]
+ },
+ "ASC-142": {
+  "name": "Fezandipiti ex",
+  "set": "ASC",
+  "number": "142",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic",
+   "ex"
+  ],
+  "types": [
+   "Darkness"
+  ],
+  "hp": 210,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Fighting",
+  "resistance": null,
+  "rule_box": true,
+  "regulation_mark": "H",
+  "abilities": [
+   {
+    "name": "Flip the Script",
+    "type": "activated",
+    "once_per_turn": true,
+    "condition": "own_pokemon_ko_last_opponent_turn",
+    "text": "Once during your turn, if any of your Pokémon were Knocked Out during your opponent's last turn, you may draw 3 cards. You can't use more than 1 Flip the Script Ability each turn.",
+    "effects": [
+     {
+      "op": "draw",
+      "n": 3
+     }
+    ]
+   }
+  ],
+  "attacks": [
+   {
+    "name": "Cruel Arrow",
+    "cost": [
+     "Colorless",
+     "Colorless",
+     "Colorless"
+    ],
+    "damage": 0,
+    "text": "This attack does 100 damage to 1 of your opponent's Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+    "effects": [
+     {
+      "op": "damage_any_opponent",
+      "amount": 100,
+      "ignore_wr_bench": true
+     }
+    ]
+   }
+  ]
+ },
+ "SSP-87": {
+  "name": "Dedenne",
+  "set": "SSP",
+  "number": "87",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Psychic"
+  ],
+  "hp": 70,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Metal",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "H",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Electromagnetic Sonar",
+    "cost": [
+     "Colorless"
+    ],
+    "damage": 0,
+    "text": "Put a Trainer card from your discard pile into your hand.",
+    "effects": [
+     {
+      "op": "recover_from_discard",
+      "filter": {
+       "supertype": "Trainer"
+      },
+      "count": 1,
+      "to": "hand"
+     }
+    ]
+   },
+   {
+    "name": "Gnaw",
+    "cost": [
+     "Psychic"
+    ],
+    "damage": 30,
+    "text": "",
+    "effects": []
+   }
+  ]
+ },
+ "BLK-40": {
+  "name": "Elgyem",
+  "set": "BLK",
+  "number": "40",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Psychic"
+  ],
+  "hp": 60,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Darkness",
+  "resistance": "Fighting",
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Slight Shift",
+    "cost": [
+     "Psychic"
+    ],
+    "damage": 0,
+    "text": "Move an Energy from 1 of your opponent's Pokémon to another of their Pokémon.",
+    "effects": [
+     {
+      "op": "move_energy_opponent_to_opponent"
+     }
+    ]
+   },
+   {
+    "name": "Beam",
+    "cost": [
+     "Colorless",
+     "Colorless",
+     "Colorless"
+    ],
+    "damage": 40,
+    "text": "",
+    "effects": []
+   }
+  ]
+ },
+ "SFA-40": {
+  "name": "Genesect",
+  "set": "SFA",
+  "number": "40",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Metal"
+  ],
+  "hp": 110,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Fire",
+  "resistance": "Grass",
+  "rule_box": false,
+  "regulation_mark": "H",
+  "abilities": [
+   {
+    "name": "ACE Nullifier",
+    "type": "static",
+    "text": "If this Pokémon has a Pokémon Tool attached, your opponent can't play any ACE SPEC cards from their hand.",
+    "effects": [
+     {
+      "op": "static_lock_acespec_if_tool"
+     }
+    ]
+   }
+  ],
+  "attacks": [
+   {
+    "name": "Magnetic Blast",
+    "cost": [
+     "Metal",
+     "Colorless",
+     "Colorless"
+    ],
+    "damage": 100,
+    "text": "",
+    "effects": []
+   }
+  ]
+ },
+ "ASC-39": {
+  "name": "Psyduck",
+  "set": "ASC",
+  "number": "39",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Water"
+  ],
+  "hp": 70,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Lightning",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [
+   {
+    "name": "Damp",
+    "type": "static",
+    "text": "Pokémon in play (both yours and your opponent's) lose any Ability that requires the Pokémon using it to Knock Out itself.",
+    "effects": [
+     {
+      "op": "static_disable_self_ko_abilities"
+     }
+    ]
+   }
+  ],
+  "attacks": [
+   {
+    "name": "Ram",
+    "cost": [
+     "Colorless",
+     "Colorless"
+    ],
+    "damage": 20,
+    "text": "",
+    "effects": []
+   }
+  ]
+ },
+ "PFL-87": {
+  "name": "Dawn",
+  "set": "PFL",
+  "number": "87",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Supporter"
+  ],
+  "regulation_mark": "I",
+  "text": "Search your deck for a Basic Pokémon, a Stage 1 Pokémon, and a Stage 2 Pokémon, reveal them, and put them into your hand. Then, shuffle your deck.",
+  "effects": [
+   {
+    "op": "search_deck_to_hand",
+    "filter": {
+     "supertype": "Pokémon",
+     "subtype": "Basic"
+    },
+    "count": 1
+   },
+   {
+    "op": "search_deck_to_hand",
+    "filter": {
+     "supertype": "Pokémon",
+     "subtype": "Stage 1"
+    },
+    "count": 1
+   },
+   {
+    "op": "search_deck_to_hand",
+    "filter": {
+     "supertype": "Pokémon",
+     "subtype": "Stage 2"
+    },
+    "count": 1
+   },
+   {
+    "op": "shuffle_deck"
+   }
+  ]
+ },
+ "WHT-84": {
+  "name": "Hilda",
+  "set": "WHT",
+  "number": "84",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Supporter"
+  ],
+  "regulation_mark": "I",
+  "text": "Search your deck for an Evolution Pokémon and an Energy card, reveal them, and put them into your hand. Then, shuffle your deck.",
+  "effects": [
+   {
+    "op": "search_deck_to_hand",
+    "filter": {
+     "supertype": "Pokémon",
+     "subtype": "Evolution"
+    },
+    "count": 1
+   },
+   {
+    "op": "search_deck_to_hand",
+    "filter": {
+     "supertype": "Energy"
+    },
+    "count": 1
+   },
+   {
+    "op": "shuffle_deck"
+   }
+  ]
+ },
+ "MEG-114": {
+  "name": "Boss's Orders",
+  "set": "MEG",
+  "number": "114",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Supporter"
+  ],
+  "regulation_mark": "I",
+  "text": "Switch 1 of your opponent's Benched Pokémon with their Active Pokémon.",
+  "effects": [
+   {
+    "op": "gust_opponent_bench"
+   }
+  ]
+ },
+ "TWM-155": {
+  "name": "Lana's Aid",
+  "set": "TWM",
+  "number": "155",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Supporter"
+  ],
+  "regulation_mark": "H",
+  "text": "Put up to 3 in any combination of Pokémon that don't have a Rule Box and Basic Energy cards from your discard pile into your hand. (Pokémon ex, Pokémon V, etc. have Rule Boxes.)",
+  "effects": [
+   {
+    "op": "recover_from_discard",
+    "filter": {
+     "any_of": [
+      {
+       "supertype": "Pokémon",
+       "no_rule_box": true
+      },
+      {
+       "supertype": "Energy",
+       "subtype": "Basic"
+      }
+     ]
+    },
+    "count": 3,
+    "to": "hand"
+   }
+  ]
+ },
+ "TEF-144": {
+  "name": "Buddy-Buddy Poffin",
+  "set": "TEF",
+  "number": "144",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Item"
+  ],
+  "regulation_mark": "H",
+  "text": "Search your deck for up to 2 Basic Pokémon with 70 HP or less and put them onto your Bench. Then, shuffle your deck.",
+  "effects": [
+   {
+    "op": "search_deck_to_bench",
+    "filter": {
+     "supertype": "Pokémon",
+     "subtype": "Basic",
+     "hp_max": 70
+    },
+    "count": 2
+   },
+   {
+    "op": "shuffle_deck"
+   }
+  ]
+ },
+ "POR-81": {
+  "name": "Poké Pad",
+  "set": "POR",
+  "number": "81",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Item"
+  ],
+  "regulation_mark": "J",
+  "text": "Search your deck for a Pokémon that doesn't have a Rule Box, reveal it, and put it into your hand. Then, shuffle your deck. (Pokémon ex, Pokémon V, etc. have Rule Boxes.)",
+  "effects": [
+   {
+    "op": "search_deck_to_hand",
+    "filter": {
+     "supertype": "Pokémon",
+     "no_rule_box": true
+    },
+    "count": 1
+   },
+   {
+    "op": "shuffle_deck"
+   }
+  ]
+ },
+ "MEG-125": {
+  "name": "Rare Candy",
+  "set": "MEG",
+  "number": "125",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Item"
+  ],
+  "regulation_mark": "I",
+  "text": "Choose 1 of your Basic Pokémon in play. If you have a Stage 2 card in your hand that evolves from that Pokémon, put that card onto the Basic Pokémon to evolve it, skipping the Stage 1. You can't use this card during your first turn or on a Basic Pokémon that was put into play this turn.",
+  "effects": [
+   {
+    "op": "rare_candy_evolve"
+   }
+  ]
+ },
+ "TWM-148": {
+  "name": "Enhanced Hammer",
+  "set": "TWM",
+  "number": "148",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Item"
+  ],
+  "regulation_mark": "H",
+  "text": "Discard a Special Energy from 1 of your opponent's Pokémon.",
+  "effects": [
+   {
+    "op": "discard_special_energy_opponent",
+    "count": 1
+   }
+  ]
+ },
+ "DRI-168": {
+  "name": "Sacred Ash",
+  "set": "DRI",
+  "number": "168",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Item"
+  ],
+  "regulation_mark": "I",
+  "text": "Shuffle 5 Pokémon from your discard pile into your deck.",
+  "effects": [
+   {
+    "op": "shuffle_from_discard_to_deck",
+    "filter": {
+     "supertype": "Pokémon"
+    },
+    "count": 5
+   }
+  ]
+ },
+ "ASC-196": {
+  "name": "Night Stretcher",
+  "set": "ASC",
+  "number": "196",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Item"
+  ],
+  "regulation_mark": "H",
+  "text": "Put a Pokémon or a Basic Energy card from your discard pile into your hand.",
+  "effects": [
+   {
+    "op": "recover_from_discard",
+    "filter": {
+     "any_of": [
+      {
+       "supertype": "Pokémon"
+      },
+      {
+       "supertype": "Energy",
+       "subtype": "Basic"
+      }
+     ]
+    },
+    "count": 1,
+    "to": "hand"
+   }
+  ]
+ },
+ "TWM-150": {
+  "name": "Handheld Fan",
+  "set": "TWM",
+  "number": "150",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Tool"
+  ],
+  "regulation_mark": "H",
+  "text": "If the Pokémon this card is attached to is in the Active Spot and is damaged by an attack from your opponent's Pokémon (even if this Pokémon is Knocked Out), move an Energy from the Attacking Pokémon to 1 of your opponent's Benched Pokémon.",
+  "tool_trigger": "on_damaged_active",
+  "effects": [
+   {
+    "op": "move_energy_from_attacker_to_their_bench"
+   }
+  ]
+ },
+ "TWM-158": {
+  "name": "Lucky Helmet",
+  "set": "TWM",
+  "number": "158",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Tool"
+  ],
+  "regulation_mark": "H",
+  "text": "Whenever the Pokémon this card is attached to is your Active Pokémon and is damaged by an opponent's attack (even if that Pokémon is Knocked Out), draw 2 cards.",
+  "tool_trigger": "on_damaged_active",
+  "effects": [
+   {
+    "op": "draw",
+    "n": 2
+   }
+  ]
+ },
+ "ASC-197": {
+  "name": "Nighttime Mine",
+  "set": "ASC",
+  "number": "197",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Stadium"
+  ],
+  "regulation_mark": "I",
+  "text": "Attacks used by each Tera Pokémon in play (both yours and your opponent's) cost [C] more.",
+  "effects": [
+   {
+    "op": "stadium_tera_attack_tax",
+    "amount": 1
+   }
+  ]
+ },
+ "POR-88": {
+  "name": "Telepathic Psychic Energy",
+  "set": "POR",
+  "number": "88",
+  "supertype": "Energy",
+  "subtypes": [
+   "Special"
+  ],
+  "provides": [
+   "Psychic"
+  ],
+  "regulation_mark": "J",
+  "text": "As long as this card is attached to a Pokémon, it provides [P] Energy. When you attach this card from your hand to a [P] Pokémon, search your deck for up to 2 Basic [P] Pokémon and put them onto your Bench. Then, shuffle your deck.",
+  "on_attach": {
+   "condition": "attached_to_type:Psychic",
+   "effects": [
+    {
+     "op": "search_deck_to_bench",
+     "filter": {
+      "supertype": "Pokémon",
+      "subtype": "Basic",
+      "type": "Psychic"
+     },
+     "count": 2
+    },
+    {
+     "op": "shuffle_deck"
+    }
+   ]
+  }
+ },
+ "MEE-5": {
+  "name": "Psychic Energy",
+  "set": "MEE",
+  "number": "5",
+  "supertype": "Energy",
+  "subtypes": [
+   "Basic"
+  ],
+  "provides": [
+   "Psychic"
+  ],
+  "regulation_mark": null,
+  "text": "Basic Psychic Energy."
+ },
+ "SSP-191": {
+  "name": "Enriching Energy",
+  "set": "SSP",
+  "number": "191",
+  "supertype": "Energy",
+  "subtypes": [
+   "Special"
+  ],
+  "provides": [
+   "Colorless"
+  ],
+  "regulation_mark": "H",
+  "text": "As long as this card is attached to a Pokémon, it provides [C] Energy. When you attach this card from your hand to a Pokémon, draw 4 cards.",
+  "on_attach": {
+   "condition": null,
+   "effects": [
+    {
+     "op": "draw",
+     "n": 4
+    }
+   ]
+  }
+ },
+ "MEG-104": {
+  "name": "Mega Kangaskhan ex",
+  "set": "MEG",
+  "number": "104",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic",
+   "Mega",
+   "ex"
+  ],
+  "types": [
+   "Colorless"
+  ],
+  "hp": 300,
+  "evolves_from": null,
+  "retreat": 3,
+  "weakness": "Fighting",
+  "resistance": null,
+  "rule_box": true,
+  "mega": true,
+  "regulation_mark": "I",
+  "abilities": [
+   {
+    "name": "Run Errand",
+    "type": "activated",
+    "once_per_turn": true,
+    "condition": "active_only",
+    "text": "Once during your turn, if this Pokémon is in the Active Spot, you may use this Ability. Draw 2 cards. You can't use more than 1 Run Errand Ability each turn.",
+    "effects": [
+     {
+      "op": "draw",
+      "n": 2
+     }
+    ]
+   }
+  ],
+  "attacks": [
+   {
+    "name": "Rapid-Fire Combo",
+    "cost": [
+     "Colorless",
+     "Colorless",
+     "Colorless"
+    ],
+    "damage": 200,
+    "text": "Flip a coin until you get tails. This attack does 50 more damage for each heads.",
+    "effects": [
+     {
+      "op": "coin_flips_until_tails_bonus",
+      "per_heads": 50
+     }
+    ]
+   }
+  ]
+ },
+ "DRI-11": {
+  "name": "Dwebble",
+  "set": "DRI",
+  "number": "11",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Grass"
+  ],
+  "hp": 70,
+  "evolves_from": null,
+  "retreat": 2,
+  "weakness": "Fire",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Ascension",
+    "cost": [
+     "Colorless"
+    ],
+    "damage": 0,
+    "text": "Search your deck for a card that evolves from this Pokémon and put it onto this Pokémon to evolve it. Then, shuffle your deck.",
+    "effects": [
+     {
+      "op": "ascension_evolve"
+     }
+    ]
+   }
+  ]
+ },
+ "DRI-12": {
+  "name": "Crustle",
+  "set": "DRI",
+  "number": "12",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 1"
+  ],
+  "types": [
+   "Grass"
+  ],
+  "hp": 150,
+  "evolves_from": "Dwebble",
+  "retreat": 3,
+  "weakness": "Fire",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [
+   {
+    "name": "Mysterious Rock Inn",
+    "type": "static",
+    "static_kind": "prevent_damage_from_ex",
+    "text": "Prevent all damage done to this Pokémon by attacks from your opponent's Pokémon ex."
+   }
+  ],
+  "attacks": [
+   {
+    "name": "Superb Scissors",
+    "cost": [
+     "Grass",
+     "Colorless",
+     "Colorless"
+    ],
+    "damage": 120,
+    "text": "This attack's damage isn't affected by any effects on your opponent's Active Pokémon.",
+    "effects": [
+     {
+      "op": "set_flag_ignore_defender_effects"
+     }
+    ]
+   }
+  ]
+ },
+ "TWM-112": {
+  "name": "Cornerstone Mask Ogerpon ex",
+  "set": "TWM",
+  "number": "112",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic",
+   "Tera",
+   "ex"
+  ],
+  "types": [
+   "Fighting"
+  ],
+  "hp": 210,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Grass",
+  "resistance": null,
+  "rule_box": true,
+  "regulation_mark": "H",
+  "abilities": [
+   {
+    "name": "Cornerstone Stance",
+    "type": "static",
+    "static_kind": "prevent_damage_from_ability_mon",
+    "text": "Prevent all damage from attacks done to this Pokémon by your opponent's Pokémon that have an Ability."
+   }
+  ],
+  "tera_bench_immunity": true,
+  "attacks": [
+   {
+    "name": "Demolish",
+    "cost": [
+     "Fighting",
+     "Colorless",
+     "Colorless"
+    ],
+    "damage": 140,
+    "text": "This attack's damage isn't affected by Weakness or Resistance, or by any effects on your opponent's Active Pokémon.",
+    "effects": [
+     {
+      "op": "set_flag_ignore_wr_and_effects"
+     }
+    ]
+   }
+  ]
+ },
+ "MEG-119": {
+  "name": "Lillie's Determination",
+  "set": "MEG",
+  "number": "119",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Supporter"
+  ],
+  "regulation_mark": "I",
+  "text": "Shuffle your hand into your deck. Then, draw 6 cards. If you have exactly 6 Prize cards remaining, draw 8 cards instead.",
+  "effects": [
+   {
+    "op": "shuffle_hand_draw",
+    "n": 6,
+    "bonus_n": 8,
+    "bonus_if_prizes": 6
+   }
+  ]
+ },
+ "DRI-176": {
+  "name": "Team Rocket's Petrel",
+  "set": "DRI",
+  "number": "176",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Supporter"
+  ],
+  "regulation_mark": "I",
+  "text": "Search your deck for a Trainer card, reveal it, and put it into your hand. Then, shuffle your deck.",
+  "effects": [
+   {
+    "op": "search_deck_to_hand",
+    "filter": {
+     "supertype": "Trainer"
+    },
+    "count": 1
+   },
+   {
+    "op": "shuffle_deck"
+   }
+  ]
+ },
+ "TEF-146": {
+  "name": "Eri",
+  "set": "TEF",
+  "number": "146",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Supporter"
+  ],
+  "regulation_mark": "H",
+  "text": "Your opponent reveals their hand, and you discard up to 2 Item cards you find there.",
+  "effects": [
+   {
+    "op": "opponent_discard_from_hand",
+    "filter": {
+     "supertype": "Trainer",
+     "subtype": "Item"
+    },
+    "count": 2
+   }
+  ]
+ },
+ "SFA-64": {
+  "name": "Xerosic's Machinations",
+  "set": "SFA",
+  "number": "64",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Supporter"
+  ],
+  "regulation_mark": "H",
+  "text": "Your opponent discards cards from their hand until they have 3 cards in their hand.",
+  "effects": [
+   {
+    "op": "opponent_discard_down_to",
+    "n": 3
+   }
+  ]
+ },
+ "MEG-123": {
+  "name": "Pokémon Center Lady",
+  "set": "MEG",
+  "number": "123",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Supporter"
+  ],
+  "regulation_mark": "I",
+  "text": "Heal 60 damage and remove all Special Conditions from 1 of your Pokémon.",
+  "effects": [
+   {
+    "op": "heal_and_clear_status",
+    "amount": 60
+   }
+  ]
+ },
+ "TEF-142": {
+  "name": "Bianca's Devotion",
+  "set": "TEF",
+  "number": "142",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Supporter"
+  ],
+  "regulation_mark": "H",
+  "text": "Heal all damage from 1 of your Pokémon that has 30 HP or less remaining.",
+  "effects": [
+   {
+    "op": "heal_full_if_low",
+    "threshold": 30
+   }
+  ]
+ },
+ "POR-71": {
+  "name": "Crushing Hammer",
+  "set": "POR",
+  "number": "71",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Item"
+  ],
+  "regulation_mark": "J",
+  "text": "Flip a coin. If heads, discard an Energy attached to 1 of your opponent's Pokémon.",
+  "effects": [
+   {
+    "op": "coin_flip_discard_energy_opponent"
+   }
+  ]
+ },
+ "PFL-91": {
+  "name": "Jumbo Ice Cream",
+  "set": "PFL",
+  "number": "91",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Item"
+  ],
+  "regulation_mark": "I",
+  "text": "Heal 80 damage from your Active Pokémon that has 3 or more Energy attached.",
+  "effects": [
+   {
+    "op": "heal_active_if_energy",
+    "amount": 80,
+    "min_energy": 3
+   }
+  ]
+ },
+ "SVI-186": {
+  "name": "Pokégear 3.0",
+  "set": "SVI",
+  "number": "186",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Item"
+  ],
+  "regulation_mark": "G",
+  "text": "Look at the top 7 cards of your deck. You may reveal a Supporter card you find there and put it into your hand. Shuffle the other cards back into your deck.",
+  "effects": [
+   {
+    "op": "dig_top_reveal",
+    "n": 7,
+    "filter": {
+     "supertype": "Trainer",
+     "subtype": "Supporter"
+    }
+   }
+  ]
+ },
+ "MEG-131": {
+  "name": "Ultra Ball",
+  "set": "MEG",
+  "number": "131",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Item"
+  ],
+  "regulation_mark": "I",
+  "text": "You can use this card only if you discard 2 other cards from your hand. Search your deck for a Pokémon, reveal it, and put it into your hand. Then, shuffle your deck.",
+  "effects": [
+   {
+    "op": "discard_from_hand_cost",
+    "n": 2
+   },
+   {
+    "op": "search_deck_to_hand",
+    "filter": {
+     "supertype": "Pokémon"
+    },
+    "count": 1
+   },
+   {
+    "op": "shuffle_deck"
+   }
+  ]
+ },
+ "MEG-130": {
+  "name": "Switch",
+  "set": "MEG",
+  "number": "130",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Item"
+  ],
+  "regulation_mark": "I",
+  "text": "Switch your Active Pokémon with 1 of your Benched Pokémon.",
+  "effects": [
+   {
+    "op": "switch_self_with_bench"
+   }
+  ]
+ },
+ "TEF-152": {
+  "name": "Hero's Cape",
+  "set": "TEF",
+  "number": "152",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Tool"
+  ],
+  "regulation_mark": "H",
+  "hp_bonus": 100,
+  "text": "The Pokémon this card is attached to gets +100 HP."
+ },
+ "DRI-173": {
+  "name": "Team Rocket's Factory",
+  "set": "DRI",
+  "number": "173",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Stadium"
+  ],
+  "regulation_mark": "I",
+  "text": "Once during each player's turn, if they played a Supporter card that has \"Team Rocket\" in its name from their hand this turn, they may draw 2 cards.",
+  "effects": [
+   {
+    "op": "stadium_team_rocket_factory"
+   }
+  ]
+ },
+ "JTG-159": {
+  "name": "Spiky Energy",
+  "set": "JTG",
+  "number": "159",
+  "supertype": "Energy",
+  "subtypes": [
+   "Special"
+  ],
+  "provides": [
+   "Colorless"
+  ],
+  "regulation_mark": "I",
+  "tool_trigger": "on_damaged_active",
+  "text": "As long as this card is attached to a Pokémon, it provides [C] Energy. If the Pokémon this card is attached to is in the Active Spot and is damaged by an attack from your opponent's Pokémon (even if this Pokémon is Knocked Out), put 2 damage counters on the Attacking Pokémon.",
+  "effects": [
+   {
+    "op": "place_counters_on_attacker",
+    "counters": 2
+   }
+  ]
+ },
+ "POR-86": {
+  "name": "Growing Grass Energy",
+  "set": "POR",
+  "number": "86",
+  "supertype": "Energy",
+  "subtypes": [
+   "Special"
+  ],
+  "provides": [
+   "Grass"
+  ],
+  "regulation_mark": "J",
+  "hp_bonus": 20,
+  "hp_bonus_type": "Grass",
+  "text": "As long as this card is attached to a Pokémon, it provides [G] Energy. The [G] Pokémon this card is attached to gets +20 HP."
+ },
+ "TEF-161": {
+  "name": "Mist Energy",
+  "set": "TEF",
+  "number": "161",
+  "supertype": "Energy",
+  "subtypes": [
+   "Special"
+  ],
+  "provides": [
+   "Colorless"
+  ],
+  "regulation_mark": "H",
+  "prevents_attack_effects": true,
+  "text": "As long as this card is attached to a Pokémon, it provides [C] Energy. Prevent all effects of attacks used by your opponent's Pokémon done to the Pokémon this card is attached to. (Existing effects are not removed. Damage is not an effect.)"
+ },
+ "MEE-6": {
+  "name": "Fighting Energy",
+  "set": "MEE",
+  "number": "6",
+  "supertype": "Energy",
+  "subtypes": [
+   "Basic"
+  ],
+  "provides": [
+   "Fighting"
+  ],
+  "regulation_mark": null,
+  "text": "Basic Fighting Energy."
+ },
+ "TWM-128": {
+  "name": "Dreepy",
+  "set": "TWM",
+  "number": "128",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Dragon"
+  ],
+  "hp": 70,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": null,
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "H",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Petty Grudge",
+    "cost": [
+     "Psychic"
+    ],
+    "damage": 10,
+    "text": "",
+    "effects": []
+   },
+   {
+    "name": "Bite",
+    "cost": [
+     "Fire",
+     "Psychic"
+    ],
+    "damage": 40,
+    "text": "",
+    "effects": []
+   }
+  ]
+ },
+ "TWM-129": {
+  "name": "Drakloak",
+  "set": "TWM",
+  "number": "129",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 1"
+  ],
+  "types": [
+   "Dragon"
+  ],
+  "hp": 90,
+  "evolves_from": "Dreepy",
+  "retreat": 1,
+  "weakness": null,
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "H",
+  "abilities": [
+   {
+    "name": "Recon Directive",
+    "type": "activated",
+    "once_per_turn": true,
+    "text": "Once during your turn, you may look at the top 2 cards of your deck and put 1 of them into your hand. Put the other card on the bottom of your deck.",
+    "effects": [
+     {
+      "op": "recon_directive",
+      "n": 2
+     }
+    ]
+   }
+  ],
+  "attacks": [
+   {
+    "name": "Dragon Headbutt",
+    "cost": [
+     "Fire",
+     "Psychic"
+    ],
+    "damage": 70,
+    "text": "",
+    "effects": []
+   }
+  ]
+ },
+ "TWM-130": {
+  "name": "Dragapult ex",
+  "set": "TWM",
+  "number": "130",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 2",
+   "Tera",
+   "ex"
+  ],
+  "types": [
+   "Dragon"
+  ],
+  "hp": 320,
+  "evolves_from": "Drakloak",
+  "retreat": 1,
+  "weakness": null,
+  "resistance": null,
+  "rule_box": true,
+  "regulation_mark": "H",
+  "tera_bench_immunity": true,
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Jet Headbutt",
+    "cost": [
+     "Colorless"
+    ],
+    "damage": 70,
+    "text": "",
+    "effects": []
+   },
+   {
+    "name": "Phantom Dive",
+    "cost": [
+     "Fire",
+     "Psychic"
+    ],
+    "damage": 200,
+    "text": "Put 6 damage counters on your opponent's Benched Pokémon in any way you like.",
+    "effects": [
+     {
+      "op": "spread_counters_opponent_bench",
+      "counters": 6
+     }
+    ]
+   }
+  ]
+ },
+ "PRE-35": {
+  "name": "Duskull",
+  "set": "PRE",
+  "number": "35",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Psychic"
+  ],
+  "hp": 60,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Darkness",
+  "resistance": "Fighting",
+  "rule_box": false,
+  "regulation_mark": "H",
+  "abilities": [],
+  "attacks": [],
+  "note": "intermediate evolution; attack text not individually modeled"
+ },
+ "PRE-36": {
+  "name": "Dusclops",
+  "set": "PRE",
+  "number": "36",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 1"
+  ],
+  "types": [
+   "Psychic"
+  ],
+  "hp": 90,
+  "evolves_from": "Duskull",
+  "retreat": 2,
+  "weakness": "Darkness",
+  "resistance": "Fighting",
+  "rule_box": false,
+  "regulation_mark": "H",
+  "abilities": [],
+  "attacks": [],
+  "note": "intermediate evolution; attack text not individually modeled"
+ },
+ "PRE-37": {
+  "name": "Dusknoir",
+  "set": "PRE",
+  "number": "37",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 2"
+  ],
+  "types": [
+   "Psychic"
+  ],
+  "hp": 160,
+  "evolves_from": "Dusclops",
+  "retreat": 3,
+  "weakness": "Darkness",
+  "resistance": "Fighting",
+  "rule_box": false,
+  "regulation_mark": "H",
+  "abilities": [
+   {
+    "name": "Cursed Blast",
+    "type": "activated",
+    "once_per_turn": true,
+    "self_ko": true,
+    "text": "Once during your turn, you may put 13 damage counters on 1 of your opponent's Pokémon. If you use this Ability, this Pokémon is Knocked Out.",
+    "effects": [
+     {
+      "op": "place_counters_opponent_choice",
+      "counters": 13
+     },
+     {
+      "op": "ko_self"
+     }
+    ]
+   }
+  ],
+  "attacks": [
+   {
+    "name": "Shadow Bind",
+    "cost": [
+     "Psychic",
+     "Psychic",
+     "Colorless"
+    ],
+    "damage": 150,
+    "text": "During your opponent's next turn, the Defending Pokémon can't retreat.",
+    "effects": [
+     {
+      "op": "opponent_active_cant_retreat"
+     }
+    ]
+   }
+  ]
+ },
+ "TWM-95": {
+  "name": "Munkidori",
+  "set": "TWM",
+  "number": "95",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Psychic"
+  ],
+  "hp": 110,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Darkness",
+  "resistance": "Fighting",
+  "rule_box": false,
+  "regulation_mark": "H",
+  "abilities": [
+   {
+    "name": "Adrena-Brain",
+    "type": "activated",
+    "once_per_turn": true,
+    "condition": "self_has_darkness_energy",
+    "text": "Once during your turn, if this Pokémon has any [D] Energy attached, you may move up to 3 damage counters from 1 of your Pokémon to 1 of your opponent's Pokémon.",
+    "effects": [
+     {
+      "op": "move_damage_counters_to_opponent",
+      "max": 3
+     }
+    ]
+   }
+  ],
+  "attacks": [
+   {
+    "name": "Mind Bend",
+    "cost": [
+     "Psychic",
+     "Colorless"
+    ],
+    "damage": 60,
+    "text": "Your opponent's Active Pokémon is now Confused.",
+    "effects": [
+     {
+      "op": "status_opponent_active",
+      "status": "Confused"
+     }
+    ]
+   }
+  ]
+ },
+ "ASC-16": {
+  "name": "Budew",
+  "set": "ASC",
+  "number": "16",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Grass"
+  ],
+  "hp": 30,
+  "evolves_from": null,
+  "retreat": 0,
+  "weakness": "Fire",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "H",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Itchy Pollen",
+    "cost": [],
+    "damage": 10,
+    "text": "During your opponent's next turn, they can't play any Item cards from their hand.",
+    "effects": [
+     {
+      "op": "opponent_item_lock_next_turn"
+     }
+    ]
+   }
+  ]
+ },
+ "POR-62": {
+  "name": "Meowth ex",
+  "set": "POR",
+  "number": "62",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic",
+   "ex"
+  ],
+  "types": [
+   "Colorless"
+  ],
+  "hp": 170,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Fighting",
+  "resistance": null,
+  "rule_box": true,
+  "regulation_mark": "J",
+  "abilities": [
+   {
+    "name": "Last-Ditch Catch",
+    "type": "on_bench",
+    "text": "Once during your turn, when you play this Pokémon from your hand onto your Bench, you may use this Ability. Search your deck for a Supporter card, reveal it, and put it into your hand. Then, shuffle your deck.",
+    "effects": [
+     {
+      "op": "search_deck_to_hand",
+      "filter": {
+       "supertype": "Trainer",
+       "subtype": "Supporter"
+      },
+      "count": 1
+     },
+     {
+      "op": "shuffle_deck"
+     }
+    ]
+   }
+  ],
+  "attacks": [
+   {
+    "name": "Tuck Tail",
+    "cost": [
+     "Colorless",
+     "Colorless",
+     "Colorless"
+    ],
+    "damage": 60,
+    "text": "Put this Pokémon and all attached cards into your hand.",
+    "effects": [
+     {
+      "op": "return_self_to_hand"
+     }
+    ]
+   }
+  ]
+ },
+ "PFL-14": {
+  "name": "Moltres",
+  "set": "PFL",
+  "number": "14",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Fire"
+  ],
+  "hp": 120,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Water",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Fighting Wings",
+    "cost": [
+     "Fire"
+    ],
+    "damage": 20,
+    "text": "If your opponent's Active Pokémon is a Pokémon ex, this attack does 90 more damage.",
+    "effects": [
+     {
+      "op": "bonus_if_opponent_active_ex",
+      "amount": 90
+     }
+    ]
+   }
+  ]
+ },
+ "SCR-133": {
+  "name": "Crispin",
+  "set": "SCR",
+  "number": "133",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Supporter"
+  ],
+  "regulation_mark": "H",
+  "text": "Search your deck for up to 2 Basic Energy cards of different types, reveal them, and put 1 of them into your hand. Attach the other to 1 of your Pokémon. Then, shuffle your deck.",
+  "effects": [
+   {
+    "op": "crispin_energy"
+   },
+   {
+    "op": "shuffle_deck"
+   }
+  ]
+ },
+ "POR-76": {
+  "name": "Judge",
+  "set": "POR",
+  "number": "76",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Supporter"
+  ],
+  "regulation_mark": "J",
+  "text": "Each player shuffles their hand into their deck and draws 4 cards.",
+  "effects": [
+   {
+    "op": "each_player_shuffle_draw",
+    "n": 4
+   }
+  ]
+ },
+ "TWM-165": {
+  "name": "Unfair Stamp",
+  "set": "TWM",
+  "number": "165",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Item",
+   "ACE SPEC"
+  ],
+  "regulation_mark": "H",
+  "condition": "own_pokemon_ko_last_opponent_turn",
+  "text": "You can use this card only if any of your Pokémon were Knocked Out during your opponent's last turn. Each player shuffles their hand into their deck. Then, you draw 5 cards, and your opponent draws 2 cards.",
+  "effects": [
+   {
+    "op": "unfair_stamp",
+    "you": 5,
+    "opp": 2
+   }
+  ]
+ },
+ "DRI-180": {
+  "name": "Team Rocket's Watchtower",
+  "set": "DRI",
+  "number": "180",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Stadium"
+  ],
+  "regulation_mark": "I",
+  "stadium_kind": "colorless_no_abilities",
+  "text": "[C] Pokémon in play (both yours and your opponent's) have no Abilities.",
+  "effects": [
+   {
+    "op": "stadium_passive"
+   }
+  ]
+ },
+ "MEG-127": {
+  "name": "Risky Ruins",
+  "set": "MEG",
+  "number": "127",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Stadium"
+  ],
+  "regulation_mark": "I",
+  "stadium_kind": "bench_punish_non_dark",
+  "text": "Whenever any player puts a Basic non-[D] Pokémon onto their Bench during their turn, place 2 damage counters on that Pokémon.",
+  "effects": [
+   {
+    "op": "stadium_passive"
+   }
+  ]
+ },
+ "MEE-2": {
+  "name": "Fire Energy",
+  "set": "MEE",
+  "number": "2",
+  "supertype": "Energy",
+  "subtypes": [
+   "Basic"
+  ],
+  "provides": [
+   "Fire"
+  ],
+  "regulation_mark": null,
+  "text": "Basic Fire Energy."
+ },
+ "MEE-7": {
+  "name": "Darkness Energy",
+  "set": "MEE",
+  "number": "7",
+  "supertype": "Energy",
+  "subtypes": [
+   "Basic"
+  ],
+  "provides": [
+   "Darkness"
+  ],
+  "regulation_mark": null,
+  "text": "Basic Darkness Energy."
+ },
+ "JTG-121": {
+  "name": "Dudunsparce ex",
+  "set": "JTG",
+  "number": "121",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 1",
+   "ex"
+  ],
+  "types": [
+   "Colorless"
+  ],
+  "hp": 270,
+  "evolves_from": "Dunsparce",
+  "retreat": 3,
+  "weakness": "Fighting",
+  "resistance": null,
+  "rule_box": true,
+  "regulation_mark": "I",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Tenacious Tail",
+    "cost": [
+     "Colorless"
+    ],
+    "damage": 0,
+    "text": "This attack does 60 damage for each of your opponent's Pokémon ex in play.",
+    "effects": [
+     {
+      "op": "damage_per_opponent_ex",
+      "amount": 60
+     }
+    ]
+   },
+   {
+    "name": "Destructive Drill",
+    "cost": [
+     "Colorless",
+     "Colorless",
+     "Colorless"
+    ],
+    "damage": 150,
+    "text": "This attack's damage isn't affected by any effects on your opponent's Active Pokémon.",
+    "effects": [
+     {
+      "op": "set_flag_ignore_defender_effects"
+     }
+    ]
+   }
+  ]
+ },
+ "TWM-25": {
+  "name": "Teal Mask Ogerpon ex",
+  "set": "TWM",
+  "number": "25",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic",
+   "Tera",
+   "ex"
+  ],
+  "types": [
+   "Grass"
+  ],
+  "hp": 210,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Fire",
+  "resistance": null,
+  "rule_box": true,
+  "regulation_mark": "H",
+  "tera_bench_immunity": true,
+  "abilities": [
+   {
+    "name": "Teal Dance",
+    "type": "activated",
+    "once_per_turn": true,
+    "text": "Once during your turn, you may attach a Basic [G] Energy card from your hand to this Pokémon. If you attached Energy to a Pokémon in this way, draw a card.",
+    "effects": [
+     {
+      "op": "ability_attach_grass",
+      "target": "self",
+      "then": "draw",
+      "amount": 1
+     }
+    ]
+   }
+  ],
+  "attacks": [
+   {
+    "name": "Myriad Leaf Shower",
+    "cost": [
+     "Grass",
+     "Grass",
+     "Grass"
+    ],
+    "damage": 30,
+    "text": "This attack does 30 more damage for each Energy attached to both Active Pokémon.",
+    "effects": [
+     {
+      "op": "damage_per_energy_both_active",
+      "amount": 30
+     }
+    ]
+   }
+  ]
+ },
+ "MEG-8": {
+  "name": "Chikorita",
+  "set": "MEG",
+  "number": "8",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Grass"
+  ],
+  "hp": 60,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Fire",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [],
+  "attacks": [],
+  "note": "intermediate evolution; attack text not individually modeled"
+ },
+ "MEG-9": {
+  "name": "Bayleef",
+  "set": "MEG",
+  "number": "9",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 1"
+  ],
+  "types": [
+   "Grass"
+  ],
+  "hp": 90,
+  "evolves_from": "Chikorita",
+  "retreat": 2,
+  "weakness": "Fire",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [],
+  "attacks": [],
+  "note": "intermediate evolution; attack text not individually modeled"
+ },
+ "MEG-10": {
+  "name": "Meganium",
+  "set": "MEG",
+  "number": "10",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 2"
+  ],
+  "types": [
+   "Grass"
+  ],
+  "hp": 160,
+  "evolves_from": "Bayleef",
+  "retreat": 2,
+  "weakness": "Fire",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [
+   {
+    "name": "Wild Growth",
+    "type": "static",
+    "static_kind": "basic_grass_provides_double",
+    "text": "Each Basic [G] Energy attached to all of your Pokémon provides [G][G] Energy. The effect of Wild Growth doesn't stack."
+   }
+  ],
+  "attacks": [
+   {
+    "name": "Solar Beam",
+    "cost": [
+     "Grass",
+     "Grass",
+     "Colorless",
+     "Colorless"
+    ],
+    "damage": 140,
+    "text": "",
+    "effects": []
+   }
+  ]
+ },
+ "TWM-17": {
+  "name": "Applin",
+  "set": "TWM",
+  "number": "17",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Grass"
+  ],
+  "hp": 40,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Fire",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "H",
+  "abilities": [],
+  "attacks": [],
+  "note": "intermediate evolution; attack text not individually modeled"
+ },
+ "TWM-18": {
+  "name": "Dipplin",
+  "set": "TWM",
+  "number": "18",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 1"
+  ],
+  "types": [
+   "Grass"
+  ],
+  "hp": 80,
+  "evolves_from": "Applin",
+  "retreat": 2,
+  "weakness": "Fire",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "H",
+  "abilities": [
+   {
+    "name": "Festival Lead",
+    "type": "static",
+    "static_kind": "festival_lead",
+    "text": "If Festival Grounds is in play, this Pokémon may use an attack it has twice. If the first attack Knocks Out your opponent's Active Pokémon, you may attack again after your opponent chooses a new Active Pokémon."
+   }
+  ],
+  "attacks": [
+   {
+    "name": "Do the Wave",
+    "cost": [
+     "Grass"
+    ],
+    "damage": 0,
+    "text": "This attack does 20 damage for each of your Benched Pokémon.",
+    "effects": [
+     {
+      "op": "damage_per_own_bench",
+      "amount": 20
+     }
+    ]
+   }
+  ]
+ },
+ "SCR-14": {
+  "name": "Hydrapple ex",
+  "set": "SCR",
+  "number": "14",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 2",
+   "ex"
+  ],
+  "types": [
+   "Grass"
+  ],
+  "hp": 330,
+  "evolves_from": "Dipplin",
+  "retreat": 3,
+  "weakness": "Fire",
+  "resistance": null,
+  "rule_box": true,
+  "regulation_mark": "H",
+  "abilities": [
+   {
+    "name": "Ripening Charge",
+    "type": "activated",
+    "once_per_turn": true,
+    "text": "Once during your turn, you may attach a Basic [G] Energy card from your hand to 1 of your Pokémon. If you attached Energy to a Pokémon in this way, heal 30 damage from that Pokémon.",
+    "effects": [
+     {
+      "op": "ability_attach_grass",
+      "target": "any",
+      "then": "heal",
+      "amount": 30
+     }
+    ]
+   }
+  ],
+  "attacks": [
+   {
+    "name": "Syrup Storm",
+    "cost": [
+     "Colorless",
+     "Colorless"
+    ],
+    "damage": 30,
+    "text": "This attack does 30 more damage for each [G] Energy attached to all of your Pokémon.",
+    "effects": [
+     {
+      "op": "damage_per_grass_energy_yours",
+      "amount": 30
+     }
+    ]
+   }
+  ]
+ },
+ "MEG-12": {
+  "name": "Celebi",
+  "set": "MEG",
+  "number": "12",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Grass"
+  ],
+  "hp": 80,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Fire",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Traverse Time",
+    "cost": [
+     "Grass"
+    ],
+    "damage": 0,
+    "text": "Search your deck for up to 3 in any combination of [G] Pokémon and Stadium cards, reveal them, and put them into your hand. Then, shuffle your deck.",
+    "effects": [
+     {
+      "op": "search_deck_to_hand",
+      "filter": {
+       "any_of": [
+        {
+         "supertype": "Pokémon",
+         "type": "Grass"
+        },
+        {
+         "supertype": "Trainer",
+         "subtype": "Stadium"
+        }
+       ]
+      },
+      "count": 3
+     },
+     {
+      "op": "shuffle_deck"
+     }
+    ]
+   },
+   {
+    "name": "Solar Cutter",
+    "cost": [
+     "Grass"
+    ],
+    "damage": 30,
+    "text": "",
+    "effects": []
+   }
+  ]
+ },
+ "SFA-6": {
+  "name": "Tapu Bulu",
+  "set": "SFA",
+  "number": "6",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Grass"
+  ],
+  "hp": 140,
+  "evolves_from": null,
+  "retreat": 3,
+  "weakness": "Fire",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "H",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Wood Hammer",
+    "cost": [
+     "Grass",
+     "Grass",
+     "Colorless",
+     "Colorless"
+    ],
+    "damage": 220,
+    "text": "This Pokémon also does 30 damage to itself.",
+    "effects": [
+     {
+      "op": "self_damage",
+      "amount": 30
+     }
+    ]
+   }
+  ]
+ },
+ "SCR-132": {
+  "name": "Briar",
+  "set": "SCR",
+  "number": "132",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Supporter"
+  ],
+  "regulation_mark": "H",
+  "condition": "opponent_two_prizes",
+  "text": "You can use this card only if your opponent has exactly 2 Prize cards remaining. During this turn, if your opponent's Active Pokémon is Knocked Out by damage from an attack used by your Tera Pokémon, take 1 more Prize card.",
+  "effects": [
+   {
+    "op": "briar_arm"
+   }
+  ]
+ },
+ "TEF-145": {
+  "name": "Ciphermaniac's Codebreaking",
+  "set": "TEF",
+  "number": "145",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Supporter"
+  ],
+  "regulation_mark": "H",
+  "text": "Search your deck for 2 cards, shuffle your deck, then put those cards on top of it in any order.",
+  "effects": [
+   {
+    "op": "tutor_to_top",
+    "count": 2
+   }
+  ]
+ },
+ "TWM-143": {
+  "name": "Bug Catching Set",
+  "set": "TWM",
+  "number": "143",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Item"
+  ],
+  "regulation_mark": "H",
+  "text": "Look at the top 7 cards of your deck. You may reveal up to 2 in any combination of [G] Pokémon and Basic [G] Energy cards you find there and put them into your hand. Shuffle the other cards back into your deck.",
+  "effects": [
+   {
+    "op": "dig_top_take_multi",
+    "n": 7,
+    "max": 2,
+    "filter": {
+     "any_of": [
+      {
+       "supertype": "Pokémon",
+       "type": "Grass"
+      },
+      {
+       "supertype": "Energy",
+       "subtype": "Basic",
+       "type": "Grass"
+      }
+     ]
+    }
+   }
+  ]
+ },
+ "MEG-117": {
+  "name": "Forest of Vitality",
+  "set": "MEG",
+  "number": "117",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Stadium"
+  ],
+  "regulation_mark": "I",
+  "stadium_kind": "grass_rush_evo",
+  "text": "Each player's [G] Pokémon can evolve into [G] Pokémon during the turn they play those Pokémon, except during their first turn.",
+  "effects": [
+   {
+    "op": "stadium_passive"
+   }
+  ]
+ },
+ "MEE-1": {
+  "name": "Grass Energy",
+  "set": "MEE",
+  "number": "1",
+  "supertype": "Energy",
+  "subtypes": [
+   "Basic"
+  ],
+  "provides": [
+   "Grass"
+  ],
+  "regulation_mark": null,
+  "text": "Basic Grass Energy."
+ },
+ "DRI-10": {
+  "name": "Shaymin",
+  "set": "DRI",
+  "number": "10",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Grass"
+  ],
+  "hp": 80,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Fire",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [
+   {
+    "name": "Flower Curtain",
+    "type": "static",
+    "static_kind": "protect_bench_no_rulebox",
+    "text": "Prevent all damage done to your Benched Pokémon that don't have a Rule Box by attacks from your opponent's Pokémon."
+   }
+  ],
+  "attacks": [
+   {
+    "name": "Smash Kick",
+    "cost": [
+     "Colorless",
+     "Colorless"
+    ],
+    "damage": 30,
+    "text": "",
+    "effects": []
+   }
+  ]
+ },
+ "ASC-181": {
+  "name": "Air Balloon",
+  "set": "ASC",
+  "number": "181",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Tool"
+  ],
+  "regulation_mark": "I",
+  "retreat_reduction": 2,
+  "text": "The Retreat Cost of the Pokémon this card is attached to is [C][C] less."
+ },
+ "PFL-85": {
+  "name": "Battle Cage",
+  "set": "PFL",
+  "number": "85",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Stadium"
+  ],
+  "regulation_mark": "I",
+  "stadium_kind": "block_bench_counters",
+  "text": "Prevent all damage counters from being placed on Benched Pokémon (both yours and your opponent's) by effects of attacks and Abilities from the opponent's Pokémon. (Damage from attacks is still taken.)"
+ },
+ "DRI-40": {
+  "name": "Torchic",
+  "set": "DRI",
+  "number": "40",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Fire"
+  ],
+  "hp": 60,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Water",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [],
+  "attacks": [],
+  "note": "intermediate evolution; attack text not individually modeled"
+ },
+ "DRI-41": {
+  "name": "Combusken",
+  "set": "DRI",
+  "number": "41",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 1"
+  ],
+  "types": [
+   "Fire"
+  ],
+  "hp": 100,
+  "evolves_from": "Torchic",
+  "retreat": 2,
+  "weakness": "Water",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [],
+  "attacks": [],
+  "note": "intermediate evolution; attack text not individually modeled"
+ },
+ "JTG-24": {
+  "name": "Blaziken ex",
+  "set": "JTG",
+  "number": "24",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 2",
+   "ex"
+  ],
+  "types": [
+   "Fire"
+  ],
+  "hp": 320,
+  "evolves_from": "Combusken",
+  "retreat": 2,
+  "weakness": "Water",
+  "resistance": null,
+  "rule_box": true,
+  "regulation_mark": "H",
+  "abilities": [
+   {
+    "name": "Seething Spirit",
+    "type": "activated",
+    "once_per_turn": true,
+    "text": "Once during your turn, you may attach a Basic Energy card from your discard pile to 1 of your Pokémon.",
+    "effects": [
+     {
+      "op": "ability_attach_energy_from_discard"
+     }
+    ]
+   }
+  ],
+  "attacks": [
+   {
+    "name": "Smolder-sault",
+    "cost": [
+     "Fire",
+     "Colorless"
+    ],
+    "damage": 200,
+    "text": "During your next turn, this Pokémon can't attack.",
+    "effects": [
+     {
+      "op": "self_cant_attack_next_turn"
+     }
+    ]
+   }
+  ]
+ },
+ "JTG-56": {
+  "name": "Lillie's Clefairy ex",
+  "set": "JTG",
+  "number": "56",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic",
+   "ex"
+  ],
+  "types": [
+   "Psychic"
+  ],
+  "hp": 190,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Metal",
+  "resistance": null,
+  "rule_box": true,
+  "regulation_mark": "I",
+  "abilities": [
+   {
+    "name": "Fairy Zone",
+    "type": "static",
+    "static_kind": "opp_dragon_weakness_psychic",
+    "text": "The Weakness of each of your opponent's [N] Pokémon in play is now [P]. (Apply Weakness as ×2.)"
+   }
+  ],
+  "attacks": [
+   {
+    "name": "Full Moon Rondo",
+    "cost": [
+     "Psychic",
+     "Colorless"
+    ],
+    "damage": 20,
+    "text": "This attack does 20 more damage for each Benched Pokémon (both yours and your opponent's).",
+    "effects": [
+     {
+      "op": "damage_per_bench_both",
+      "amount": 20
+     }
+    ]
+   }
+  ]
+ },
+ "SCR-131": {
+  "name": "Area Zero Underdepths",
+  "set": "SCR",
+  "number": "131",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Stadium"
+  ],
+  "regulation_mark": "H",
+  "stadium_kind": "tera_bench_8",
+  "text": "Each player who has any Tera Pokémon in play can have up to 8 Pokémon on their Bench. If a player no longer has any Tera Pokémon in play, that player discards Pokémon from their Bench until they have 5. When this card leaves play, both players discard Pokémon from their Bench until they have 5, and the player who played this card discards first."
+ },
+ "SSP-76": {
+  "name": "Latias ex",
+  "set": "SSP",
+  "number": "76",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic",
+   "ex"
+  ],
+  "types": [
+   "Psychic"
+  ],
+  "hp": 210,
+  "evolves_from": null,
+  "retreat": 2,
+  "weakness": "Darkness",
+  "resistance": "Fighting",
+  "rule_box": true,
+  "regulation_mark": "H",
+  "abilities": [
+   {
+    "name": "Skyliner",
+    "type": "static",
+    "static_kind": "basics_no_retreat",
+    "text": "Your Basic Pokémon in play have no Retreat Cost."
+   }
+  ],
+  "attacks": [
+   {
+    "name": "Eon Blade",
+    "cost": [
+     "Psychic",
+     "Psychic",
+     "Colorless"
+    ],
+    "damage": 200,
+    "text": "During your next turn, this Pokémon can't attack.",
+    "effects": [
+     {
+      "op": "self_cant_attack_next_turn"
+     }
+    ]
+   }
+  ]
+ },
+ "TWM-64": {
+  "name": "Wellspring Mask Ogerpon ex",
+  "set": "TWM",
+  "number": "64",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic",
+   "Tera",
+   "ex"
+  ],
+  "types": [
+   "Water"
+  ],
+  "hp": 210,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Lightning",
+  "resistance": null,
+  "rule_box": true,
+  "regulation_mark": "H",
+  "tera_bench_immunity": true,
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Sob",
+    "cost": [
+     "Colorless"
+    ],
+    "damage": 20,
+    "text": "During your opponent's next turn, the Defending Pokémon can't retreat.",
+    "effects": [
+     {
+      "op": "opponent_active_cant_retreat"
+     }
+    ]
+   },
+   {
+    "name": "Torrential Pump",
+    "cost": [
+     "Water",
+     "Colorless",
+     "Colorless"
+    ],
+    "damage": 100,
+    "text": "You may shuffle 3 Energy attached to this Pokémon into your deck. If you do, this attack also does 120 damage to 1 of your opponent's Benched Pokémon.",
+    "effects": [
+     {
+      "op": "torrential_pump",
+      "shuffle": 3,
+      "bench_damage": 120
+     }
+    ]
+   }
+  ]
+ },
+ "SSP-56": {
+  "name": "Chien-Pao",
+  "set": "SSP",
+  "number": "56",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Water"
+  ],
+  "hp": 120,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Metal",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "H",
+  "abilities": [
+   {
+    "name": "Snow Sink",
+    "type": "on_bench",
+    "text": "When you play this Pokémon from your hand onto your Bench during your turn, you may discard a Stadium in play.",
+    "effects": [
+     {
+      "op": "discard_stadium"
+     }
+    ]
+   }
+  ],
+  "attacks": [
+   {
+    "name": "Icicle Loop",
+    "cost": [
+     "Water",
+     "Water",
+     "Colorless"
+    ],
+    "damage": 120,
+    "text": "Put an Energy attached to this Pokémon into your hand.",
+    "effects": [
+     {
+      "op": "return_energy_to_hand_self"
+     }
+    ]
+   }
+  ]
+ },
+ "TEF-123": {
+  "name": "Raging Bolt ex",
+  "set": "TEF",
+  "number": "123",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic",
+   "ex"
+  ],
+  "types": [
+   "Dragon"
+  ],
+  "hp": 240,
+  "evolves_from": null,
+  "retreat": 3,
+  "weakness": null,
+  "resistance": null,
+  "rule_box": true,
+  "regulation_mark": "H",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Burst Roar",
+    "cost": [
+     "Colorless"
+    ],
+    "damage": 0,
+    "text": "Discard your hand and draw 6 cards.",
+    "effects": [
+     {
+      "op": "discard_hand_draw",
+      "n": 6
+     }
+    ]
+   },
+   {
+    "name": "Bellowing Thunder",
+    "cost": [
+     "Lightning",
+     "Fighting"
+    ],
+    "damage": 0,
+    "text": "You may discard any amount of Basic Energy from your Pokémon. This attack does 70 damage for each card you discarded in this way.",
+    "effects": [
+     {
+      "op": "discard_basic_energy_for_damage",
+      "per": 70
+     }
+    ]
+   }
+  ]
+ },
+ "ASC-121": {
+  "name": "Koraidon ex",
+  "set": "ASC",
+  "number": "121",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic",
+   "Tera",
+   "ex"
+  ],
+  "types": [
+   "Fighting"
+  ],
+  "hp": 230,
+  "evolves_from": null,
+  "retreat": 2,
+  "weakness": "Psychic",
+  "resistance": null,
+  "rule_box": true,
+  "regulation_mark": "J",
+  "tera_bench_immunity": true,
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Orichalcum Fang",
+    "cost": [
+     "Fighting",
+     "Colorless"
+    ],
+    "damage": 50,
+    "text": "If any of your Pokémon were Knocked Out by damage from an attack during your opponent's last turn, this attack does 120 more damage.",
+    "effects": [
+     {
+      "op": "bonus_if_own_ko_last_turn",
+      "amount": 120
+     }
+    ]
+   },
+   {
+    "name": "Impact Blow",
+    "cost": [
+     "Fighting",
+     "Fighting",
+     "Colorless"
+    ],
+    "damage": 200,
+    "text": "During your next turn, this Pokémon can't use Impact Blow.",
+    "effects": [
+     {
+      "op": "self_cant_attack_next_turn"
+     }
+    ]
+   }
+  ]
+ },
+ "SSP-170": {
+  "name": "Cyrano",
+  "set": "SSP",
+  "number": "170",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Supporter"
+  ],
+  "regulation_mark": "H",
+  "text": "Search your deck for up to 3 Pokémon ex, reveal them, and put them into your hand. Then, shuffle your deck.",
+  "effects": [
+   {
+    "op": "search_deck_to_hand",
+    "filter": {
+     "supertype": "Pokémon",
+     "is_ex": true
+    },
+    "count": 3
+   },
+   {
+    "op": "shuffle_deck"
+   }
+  ]
+ },
+ "WHT-83": {
+  "name": "Harlequin",
+  "set": "WHT",
+  "number": "83",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Supporter"
+  ],
+  "regulation_mark": "I",
+  "text": "Each player shuffles their hand into their deck. Then, flip a coin. If heads, you draw 5 cards, and your opponent draws 3 cards. If tails, you draw 3 cards, and your opponent draws 5 cards.",
+  "effects": [
+   {
+    "op": "harlequin",
+    "heads_you": 5,
+    "heads_opp": 3,
+    "tails_you": 3,
+    "tails_opp": 5
+   }
+  ]
+ },
+ "MEG-115": {
+  "name": "Energy Switch",
+  "set": "MEG",
+  "number": "115",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Item"
+  ],
+  "regulation_mark": "I",
+  "text": "Move a basic Energy from 1 of your Pokémon to another of your Pokémon.",
+  "effects": [
+   {
+    "op": "energy_switch"
+   }
+  ]
+ },
+ "SCR-135": {
+  "name": "Glass Trumpet",
+  "set": "SCR",
+  "number": "135",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Item"
+  ],
+  "regulation_mark": "H",
+  "condition": "self_has_tera",
+  "text": "You can use this card only if you have any Tera Pokémon in play. Choose up to 2 of your Benched [C] Pokémon and attach a Basic Energy card from your discard pile to each of them.",
+  "effects": [
+   {
+    "op": "glass_trumpet",
+    "count": 2
+   }
+  ]
+ },
+ "MEE-4": {
+  "name": "Lightning Energy",
+  "set": "MEE",
+  "number": "4",
+  "supertype": "Energy",
+  "subtypes": [
+   "Basic"
+  ],
+  "provides": [
+   "Lightning"
+  ],
+  "regulation_mark": null,
+  "text": "Basic Lightning Energy."
+ },
+ "MEE-3": {
+  "name": "Water Energy",
+  "set": "MEE",
+  "number": "3",
+  "supertype": "Energy",
+  "subtypes": [
+   "Basic"
+  ],
+  "provides": [
+   "Water"
+  ],
+  "regulation_mark": null,
+  "text": "Basic Water Energy."
+ },
+ "SSP-175": {
+  "name": "Dusk Ball",
+  "set": "SSP",
+  "number": "175",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Item"
+  ],
+  "regulation_mark": "H",
+  "text": "Look at the 7 cards from the bottom of your deck. Choose 1 Pokémon you find there, show it to your opponent, and put it into your hand. Put the remaining cards back on top of your deck. Shuffle your deck afterward.",
+  "effects": [
+   {
+    "op": "search_deck_to_hand",
+    "filter": {
+     "supertype": "Pokémon"
+    },
+    "count": 1
+   },
+   {
+    "op": "shuffle_deck"
+   }
+  ]
+ },
+ "PFL-94": {
+  "name": "Wondrous Patch",
+  "set": "PFL",
+  "number": "94",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Item"
+  ],
+  "regulation_mark": "I",
+  "text": "Attach a Basic [P] Energy card from your discard pile to 1 of your Benched [P] Pokémon.",
+  "effects": [
+   {
+    "op": "attach_energy_from_discard_to_bench",
+    "type": "Psychic"
+   }
+  ]
+ },
+ "TEF-157": {
+  "name": "Prime Catcher",
+  "set": "TEF",
+  "number": "157",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Item",
+   "ACE SPEC"
+  ],
+  "regulation_mark": "H",
+  "text": "Switch in 1 of your opponent's Benched Pokémon to the Active Spot. If you do, switch your Active Pokémon with 1 of your Benched Pokémon.",
+  "effects": [
+   {
+    "op": "gust_opponent_bench"
+   },
+   {
+    "op": "switch_self_with_bench"
+   }
+  ]
+ },
+ "JTG-151": {
+  "name": "Lillie's Pearl",
+  "set": "JTG",
+  "number": "151",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Tool"
+  ],
+  "regulation_mark": "I",
+  "prize_reduction": 1,
+  "holder_prefix": "Lillie's",
+  "text": "If the Lillie's Pokémon this card is attached to is Knocked Out by damage from an attack from your opponent's Pokémon, that player takes 1 fewer Prize card."
+ },
+ "MEG-77": {
+  "name": "Mega Lucario ex",
+  "set": "MEG",
+  "number": "77",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 1",
+   "Mega",
+   "ex"
+  ],
+  "types": [
+   "Fighting"
+  ],
+  "hp": 340,
+  "evolves_from": "Riolu",
+  "retreat": 2,
+  "weakness": "Psychic",
+  "resistance": null,
+  "rule_box": true,
+  "regulation_mark": "I",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Aura Jab",
+    "cost": [
+     "Fighting"
+    ],
+    "damage": 130,
+    "text": "Attach up to 3 Basic [F] Energy cards from your discard pile to your Benched Pokémon in any way you like.",
+    "effects": [
+     {
+      "op": "attach_basic_energy_from_discard_to_bench_multi",
+      "type": "Fighting",
+      "count": 3
+     }
+    ]
+   },
+   {
+    "name": "Mega Brave",
+    "cost": [
+     "Fighting",
+     "Fighting"
+    ],
+    "damage": 270,
+    "text": "During your next turn, this Pokémon can't use Mega Brave.",
+    "effects": [
+     {
+      "op": "self_cant_attack_next_turn"
+     }
+    ]
+   }
+  ]
+ },
+ "MEG-76": {
+  "name": "Riolu",
+  "set": "MEG",
+  "number": "76",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Fighting"
+  ],
+  "hp": 80,
+  "evolves_from": null,
+  "retreat": 2,
+  "weakness": "Psychic",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Accelerating Stab",
+    "cost": [
+     "Fighting"
+    ],
+    "damage": 30,
+    "text": "During your next turn, this Pokémon can't use Accelerating Stab.",
+    "effects": [
+     {
+      "op": "self_cant_attack_next_turn"
+     }
+    ]
+   }
+  ]
+ },
+ "MEG-75": {
+  "name": "Solrock",
+  "set": "MEG",
+  "number": "75",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Fighting"
+  ],
+  "hp": 110,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Grass",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Cosmic Beam",
+    "cost": [
+     "Fighting"
+    ],
+    "damage": 0,
+    "text": "If you don't have Lunatone on your Bench, this attack does nothing. This attack's damage isn't affected by Weakness or Resistance.",
+    "effects": [
+     {
+      "op": "cosmic_beam",
+      "requires_bench": "Lunatone",
+      "amount": 70
+     }
+    ]
+   }
+  ]
+ },
+ "MEG-74": {
+  "name": "Lunatone",
+  "set": "MEG",
+  "number": "74",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Fighting"
+  ],
+  "hp": 110,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Grass",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [
+   {
+    "name": "Lunar Cycle",
+    "type": "activated",
+    "once_per_turn": true,
+    "condition": "lunar_cycle",
+    "text": "Once during your turn, if you have Solrock in play, you may discard a Basic [F] Energy card from your hand in order to use this Ability. Draw 3 cards.",
+    "effects": [
+     {
+      "op": "discard_basic_energy_type_from_hand",
+      "type": "Fighting"
+     },
+     {
+      "op": "draw",
+      "n": 3
+     }
+    ]
+   }
+  ],
+  "attacks": [
+   {
+    "name": "Power Gem",
+    "cost": [
+     "Fighting",
+     "Fighting"
+    ],
+    "damage": 50,
+    "text": "",
+    "effects": []
+   }
+  ]
+ },
+ "MEG-72": {
+  "name": "Makuhita",
+  "set": "MEG",
+  "number": "72",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Fighting"
+  ],
+  "hp": 90,
+  "evolves_from": null,
+  "retreat": 2,
+  "weakness": "Psychic",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [],
+  "attacks": [],
+  "note": "intermediate evolution; attack text not individually modeled"
+ },
+ "MEG-73": {
+  "name": "Hariyama",
+  "set": "MEG",
+  "number": "73",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 1"
+  ],
+  "types": [
+   "Fighting"
+  ],
+  "hp": 150,
+  "evolves_from": "Makuhita",
+  "retreat": 3,
+  "weakness": "Psychic",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [
+   {
+    "name": "Heave-Ho Catcher",
+    "type": "on_evolve",
+    "text": "Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may use this Ability. Switch in 1 of your opponent's Benched Pokémon to the Active Spot.",
+    "effects": [
+     {
+      "op": "gust_opponent_bench"
+     }
+    ]
+   }
+  ],
+  "attacks": [
+   {
+    "name": "Wild Press",
+    "cost": [
+     "Fighting",
+     "Fighting",
+     "Fighting"
+    ],
+    "damage": 210,
+    "text": "This Pokémon also does 70 damage to itself.",
+    "effects": [
+     {
+      "op": "self_damage",
+      "amount": 70
+     }
+    ]
+   }
+  ]
+ },
+ "MEG-116": {
+  "name": "Fighting Gong",
+  "set": "MEG",
+  "number": "116",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Item"
+  ],
+  "regulation_mark": "I",
+  "text": "Search your deck for a Basic [F] Energy card or a Basic [F] Pokémon, reveal it, and put it into your hand. Then, shuffle your deck.",
+  "effects": [
+   {
+    "op": "search_deck_to_hand",
+    "filter": {
+     "any_of": [
+      {
+       "supertype": "Energy",
+       "subtype": "Basic",
+       "type": "Fighting"
+      },
+      {
+       "supertype": "Pokémon",
+       "subtype": "Basic",
+       "type": "Fighting"
+      }
+     ]
+    },
+    "count": 1
+   },
+   {
+    "op": "shuffle_deck"
+   }
+  ]
+ },
+ "MEG-124": {
+  "name": "Premium Power Pro",
+  "set": "MEG",
+  "number": "124",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Item"
+  ],
+  "regulation_mark": "I",
+  "text": "During this turn, attacks used by your [F] Pokémon do 30 more damage to your opponent's Active Pokémon (before applying Weakness and Resistance).",
+  "effects": [
+   {
+    "op": "set_fighting_boost",
+    "amount": 30
+   }
+  ]
+ },
+ "SCR-139": {
+  "name": "Lacey",
+  "set": "SCR",
+  "number": "139",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Supporter"
+  ],
+  "regulation_mark": "H",
+  "text": "Shuffle your hand into your deck. Then, draw 4 cards. If your opponent has 3 or fewer Prize cards remaining, draw 8 cards instead.",
+  "effects": [
+   {
+    "op": "lacey_draw",
+    "n": 4,
+    "bonus_n": 8,
+    "opp_prizes_max": 3
+   }
+  ]
+ },
+ "TEF-154": {
+  "name": "Maximum Belt",
+  "set": "TEF",
+  "number": "154",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Tool"
+  ],
+  "regulation_mark": "H",
+  "damage_boost_vs_ex": 50,
+  "text": "Attacks used by the Pokémon this card is attached to do 50 more damage to your opponent's Active Pokémon ex (before applying Weakness and Resistance)."
+ },
+ "SSP-177": {
+  "name": "Gravity Mountain",
+  "set": "SSP",
+  "number": "177",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Stadium"
+  ],
+  "regulation_mark": "H",
+  "stadium_kind": "stage2_minus30",
+  "text": "Each Stage 2 Pokémon in play (both yours and your opponent's) gets -30 HP."
+ },
+ "CRI-82": {
+  "name": "Special Red Card",
+  "set": "CRI",
+  "number": "82",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Item"
+  ],
+  "regulation_mark": "J",
+  "condition": "opponent_three_or_fewer_prizes",
+  "text": "You can use this card only if your opponent has 3 or fewer Prize cards remaining. Your opponent shuffles their hand and puts it on the bottom of their deck. If they put any cards on the bottom of their deck in this way, they draw 3 cards.",
+  "effects": [
+   {
+    "op": "opponent_hand_to_bottom_draw",
+    "n": 3
+   }
+  ]
+ },
+ "TWM-153": {
+  "name": "Jamming Tower",
+  "set": "TWM",
+  "number": "153",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Stadium"
+  ],
+  "regulation_mark": "H",
+  "stadium_kind": "tools_disabled",
+  "text": "Pokémon Tools attached to each Pokémon (both yours and your opponent's) have no effect."
+ },
+ "CRI-20": {
+  "name": "Froakie",
+  "set": "CRI",
+  "number": "20",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Water"
+  ],
+  "hp": 50,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Lightning",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "J",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Collect",
+    "cost": [
+     "Water"
+    ],
+    "damage": 0,
+    "text": "Draw a card.",
+    "effects": [
+     {
+      "op": "draw",
+      "amount": 1
+     }
+    ]
+   }
+  ],
+  "note": "intermediate evolution; attack text not individually modeled"
+ },
+ "CRI-21": {
+  "name": "Frogadier",
+  "set": "CRI",
+  "number": "21",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 1"
+  ],
+  "types": [
+   "Water"
+  ],
+  "hp": 90,
+  "evolves_from": "Froakie",
+  "retreat": 1,
+  "weakness": "Lightning",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "J",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Summoning Jutsu",
+    "cost": [
+     "Water"
+    ],
+    "damage": 0,
+    "text": "Search your deck for up to 3 Pokémon, reveal them, and put them into your hand. Then, shuffle your deck.",
+    "effects": [
+     {
+      "op": "search_deck_to_hand",
+      "filter": {
+       "supertype": "Pokémon"
+      },
+      "count": 3
+     },
+     {
+      "op": "shuffle_deck"
+     }
+    ]
+   },
+   {
+    "name": "Aqua Edge",
+    "cost": [
+     "Water",
+     "Water"
+    ],
+    "damage": 50,
+    "effects": []
+   }
+  ],
+  "note": "intermediate evolution; attack text not individually modeled"
+ },
+ "TWM-106": {
+  "name": "Greninja ex",
+  "set": "TWM",
+  "number": "106",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 2",
+   "Tera",
+   "ex"
+  ],
+  "types": [
+   "Fighting"
+  ],
+  "hp": 310,
+  "evolves_from": "Frogadier",
+  "retreat": 1,
+  "weakness": "Psychic",
+  "resistance": null,
+  "rule_box": true,
+  "regulation_mark": "H",
+  "tera_bench_immunity": true,
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Shinobi Blade",
+    "cost": [
+     "Water"
+    ],
+    "damage": 170,
+    "text": "You may search your deck for a card and put it into your hand. Then, shuffle your deck.",
+    "effects": [
+     {
+      "op": "search_deck_to_hand",
+      "filter": {},
+      "count": 1
+     },
+     {
+      "op": "shuffle_deck"
+     }
+    ]
+   },
+   {
+    "name": "Mirage Barrage",
+    "cost": [
+     "Water",
+     "Colorless",
+     "Colorless"
+    ],
+    "damage": 0,
+    "text": "Discard 2 Energy from this Pokémon. This attack does 120 damage to 2 of your opponent's Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+    "effects": [
+     {
+      "op": "mirage_barrage",
+      "discard": 2,
+      "amount": 120,
+      "targets": 2
+     }
+    ]
+   }
+  ]
+ },
+ "CRI-22": {
+  "name": "Mega Greninja ex",
+  "set": "CRI",
+  "number": "22",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 2",
+   "Mega",
+   "ex"
+  ],
+  "types": [
+   "Water"
+  ],
+  "hp": 350,
+  "evolves_from": "Frogadier",
+  "retreat": 1,
+  "weakness": "Lightning",
+  "resistance": null,
+  "rule_box": true,
+  "regulation_mark": "J",
+  "abilities": [
+   {
+    "name": "Mortal Shuriken",
+    "type": "activated",
+    "once_per_turn": true,
+    "condition": "mortal_shuriken",
+    "text": "Once during your turn, if this Pokémon is in the Active Spot, you may discard a Basic [W] Energy card from your hand in order to use this Ability. Place 6 damage counters on 1 of your opponent's Pokémon.",
+    "effects": [
+     {
+      "op": "discard_basic_energy_type_from_hand",
+      "type": "Water"
+     },
+     {
+      "op": "place_counters_opponent_choice",
+      "counters": 6
+     }
+    ]
+   }
+  ],
+  "attacks": [
+   {
+    "name": "Ninja Spinner",
+    "cost": [
+     "Water",
+     "Water"
+    ],
+    "damage": 120,
+    "text": "You may put a [W] Energy attached to this Pokémon into your hand and have this attack do 80 more damage.",
+    "effects": [
+     {
+      "op": "ninja_spinner",
+      "type": "Water",
+      "bonus": 80
+     }
+    ]
+   }
+  ]
+ },
+ "ASC-46": {
+  "name": "Snorunt",
+  "set": "ASC",
+  "number": "46",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Water"
+  ],
+  "hp": 70,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Metal",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Chilly",
+    "cost": [
+     "Water"
+    ],
+    "damage": 10,
+    "text": "",
+    "effects": []
+   }
+  ]
+ },
+ "ASC-47": {
+  "name": "Mega Froslass ex",
+  "set": "ASC",
+  "number": "47",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 1",
+   "Mega",
+   "ex"
+  ],
+  "types": [
+   "Water"
+  ],
+  "hp": 310,
+  "evolves_from": "Snorunt",
+  "retreat": 1,
+  "weakness": "Metal",
+  "resistance": null,
+  "rule_box": true,
+  "regulation_mark": "I",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Resentful Refrain",
+    "cost": [
+     "Water"
+    ],
+    "damage": 0,
+    "text": "This attack does 50 damage for each card in your opponent's hand.",
+    "effects": [
+     {
+      "op": "damage_per_opponent_hand",
+      "amount": 50
+     }
+    ]
+   },
+   {
+    "name": "Absolute Snow",
+    "cost": [
+     "Water",
+     "Colorless",
+     "Colorless"
+    ],
+    "damage": 150,
+    "text": "Your opponent's Active Pokémon is now Asleep.",
+    "effects": [
+     {
+      "op": "status_opponent_active",
+      "status": "Asleep"
+     }
+    ]
+   }
+  ]
+ },
+ "SFA-57": {
+  "name": "Colress's Tenacity",
+  "set": "SFA",
+  "number": "57",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Supporter"
+  ],
+  "regulation_mark": "H",
+  "text": "Search your deck for a Stadium card and an Energy card, reveal them, and put them into your hand. Then, shuffle your deck.",
+  "effects": [
+   {
+    "op": "search_deck_to_hand",
+    "filter": {
+     "supertype": "Trainer",
+     "subtype": "Stadium"
+    },
+    "count": 1
+   },
+   {
+    "op": "search_deck_to_hand",
+    "filter": {
+     "supertype": "Energy"
+    },
+    "count": 1
+   },
+   {
+    "op": "shuffle_deck"
+   }
+  ]
+ },
+ "MEG-129": {
+  "name": "Surfing Beach",
+  "set": "MEG",
+  "number": "129",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Stadium"
+  ],
+  "regulation_mark": "I",
+  "stadium_kind": "water_switch",
+  "effects": [
+   {
+    "op": "stadium_passive"
+   }
+  ],
+  "text": "Once during each player's turn, that player may switch their Active [W] Pokémon with 1 of their Benched [W] Pokémon."
+ },
+ "SCR-136": {
+  "name": "Grand Tree",
+  "set": "SCR",
+  "number": "136",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Stadium"
+  ],
+  "regulation_mark": "H",
+  "stadium_kind": "grand_tree_evo",
+  "effects": [
+   {
+    "op": "stadium_passive"
+   }
+  ],
+  "text": "Once during each player's turn, that player may search their deck for a Stage 1 Pokémon that evolves from 1 of their Basic Pokémon and put it onto that Pokémon to evolve it. If that Pokémon was evolved in this way, that player may search their deck for a Stage 2 Pokémon that evolves from that Pokémon and put it onto that Pokémon to evolve it. Then, that player shuffles their deck."
+ },
+ "WHT-86": {
+  "name": "Ignition Energy",
+  "set": "WHT",
+  "number": "86",
+  "supertype": "Energy",
+  "subtypes": [
+   "Special"
+  ],
+  "provides": [
+   "Colorless"
+  ],
+  "evolution_provides": [
+   "Colorless",
+   "Colorless",
+   "Colorless"
+  ],
+  "discard_end_of_turn": true,
+  "regulation_mark": "I",
+  "text": "If this card is attached to 1 of your Pokémon, discard it at the end of your turn. As long as this card is attached to a Pokémon, it provides [C] Energy. If this card is attached to an Evolution Pokémon, it provides [C][C][C] Energy instead."
+ },
+ "POR-84": {
+  "name": "Rosa's Encouragement",
+  "set": "POR",
+  "number": "84",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Supporter"
+  ],
+  "regulation_mark": "J",
+  "condition": "self_more_prizes",
+  "text": "You can use this card only if you have more Prize cards remaining than your opponent. Attach up to 2 Basic Energy cards from your discard pile to 1 of your Stage 2 Pokémon.",
+  "effects": [
+   {
+    "op": "rosa_attach",
+    "count": 2
+   }
+  ]
+ },
+ "DRI-134": {
+  "name": "Marnie's Impidimp",
+  "set": "DRI",
+  "number": "134",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Darkness"
+  ],
+  "hp": 70,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Grass",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Filch",
+    "cost": [
+     "Colorless"
+    ],
+    "damage": 0,
+    "text": "Draw a card.",
+    "effects": [
+     {
+      "op": "draw",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "name": "Corkscrew Punch",
+    "cost": [
+     "Darkness"
+    ],
+    "damage": 10,
+    "text": "",
+    "effects": []
+   }
+  ]
+ },
+ "DRI-135": {
+  "name": "Marnie's Morgrem",
+  "set": "DRI",
+  "number": "135",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 1"
+  ],
+  "types": [
+   "Darkness"
+  ],
+  "hp": 100,
+  "evolves_from": "Marnie's Impidimp",
+  "retreat": 1,
+  "weakness": "Grass",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Corkscrew Punch",
+    "cost": [
+     "Darkness",
+     "Darkness"
+    ],
+    "damage": 60,
+    "text": "",
+    "effects": []
+   }
+  ]
+ },
+ "DRI-136": {
+  "name": "Marnie's Grimmsnarl ex",
+  "set": "DRI",
+  "number": "136",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 2",
+   "ex"
+  ],
+  "types": [
+   "Darkness"
+  ],
+  "hp": 320,
+  "evolves_from": "Marnie's Morgrem",
+  "retreat": 2,
+  "weakness": "Grass",
+  "resistance": null,
+  "rule_box": true,
+  "regulation_mark": "I",
+  "abilities": [
+   {
+    "name": "Punk Up",
+    "type": "on_evolve",
+    "text": "When you play this Pokémon from your hand to evolve 1 of your Pokémon during your turn, you may search your deck for up to 5 Basic [D] Energy cards and attach them to your Marnie's Pokémon in any way you like. Then, shuffle your deck.",
+    "effects": [
+     {
+      "op": "punk_up",
+      "count": 5,
+      "type": "Darkness"
+     }
+    ]
+   }
+  ],
+  "attacks": [
+   {
+    "name": "Shadow Bullet",
+    "cost": [
+     "Darkness",
+     "Darkness"
+    ],
+    "damage": 180,
+    "text": "This attack also does 30 damage to 1 of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+    "effects": [
+     {
+      "op": "bench_snipe",
+      "amount": 30
+     }
+    ]
+   }
+  ]
+ },
+ "TWM-53": {
+  "name": "Froslass",
+  "set": "TWM",
+  "number": "53",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 1"
+  ],
+  "types": [
+   "Water"
+  ],
+  "hp": 90,
+  "evolves_from": "Snorunt",
+  "retreat": 1,
+  "weakness": "Metal",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "H",
+  "abilities": [
+   {
+    "name": "Freezing Shroud",
+    "type": "static",
+    "static_kind": "freezing_shroud",
+    "text": "During Pokémon Checkup, put 1 damage counter on each Pokémon that has an Ability (both yours and your opponent's), except any Froslass."
+   }
+  ],
+  "attacks": [
+   {
+    "name": "Frost Smash",
+    "cost": [
+     "Water",
+     "Colorless"
+    ],
+    "damage": 60,
+    "text": "",
+    "effects": []
+   }
+  ]
+ },
+ "MEG-88": {
+  "name": "Yveltal",
+  "set": "MEG",
+  "number": "88",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Darkness"
+  ],
+  "hp": 110,
+  "evolves_from": null,
+  "retreat": 0,
+  "weakness": "Lightning",
+  "resistance": "Fighting",
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Clutch",
+    "cost": [
+     "Darkness"
+    ],
+    "damage": 20,
+    "text": "During your opponent's next turn, the Defending Pokémon can't retreat.",
+    "effects": [
+     {
+      "op": "opponent_active_cant_retreat"
+     }
+    ]
+   },
+   {
+    "name": "Dark Feather",
+    "cost": [
+     "Darkness",
+     "Darkness",
+     "Colorless"
+    ],
+    "damage": 110,
+    "text": "",
+    "effects": []
+   }
+  ]
+ },
+ "JTG-149": {
+  "name": "Iris's Fighting Spirit",
+  "set": "JTG",
+  "number": "149",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Supporter"
+  ],
+  "regulation_mark": "I",
+  "text": "You can use this card only if you discard another card from your hand. Draw cards until you have 6 cards in your hand.",
+  "effects": [
+   {
+    "op": "discard_from_hand_cost",
+    "n": 1
+   },
+   {
+    "op": "draw_to",
+    "n": 6
+   }
+  ]
+ },
+ "DRI-169": {
+  "name": "Spikemuth Gym",
+  "set": "DRI",
+  "number": "169",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Stadium"
+  ],
+  "regulation_mark": "I",
+  "stadium_kind": "marnie_search",
+  "effects": [
+   {
+    "op": "stadium_passive"
+   }
+  ],
+  "text": "Once during each player's turn, that player may search their deck for a Marnie's Pokémon, reveal it, and put it into their hand. Then, that player shuffles their deck."
+ },
+ "ASC-95": {
+  "name": "Hop's Phantump",
+  "set": "ASC",
+  "number": "95",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Psychic"
+  ],
+  "hp": 70,
+  "evolves_from": null,
+  "retreat": 2,
+  "weakness": "Darkness",
+  "resistance": "Fighting",
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Splashing Dodge",
+    "cost": [
+     "Colorless"
+    ],
+    "damage": 10,
+    "text": "Flip a coin. If heads, during your opponent's next turn, prevent all damage from and effects of attacks done to this Pokémon.",
+    "effects": [
+     {
+      "op": "splashing_dodge"
+     }
+    ]
+   }
+  ]
+ },
+ "ASC-96": {
+  "name": "Hop's Trevenant",
+  "set": "ASC",
+  "number": "96",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 1"
+  ],
+  "types": [
+   "Psychic"
+  ],
+  "hp": 140,
+  "evolves_from": "Hop's Phantump",
+  "retreat": 2,
+  "weakness": "Darkness",
+  "resistance": "Fighting",
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Horrifying Revenge",
+    "cost": [
+     "Colorless"
+    ],
+    "damage": 30,
+    "text": "If any of your Hop's Pokémon were Knocked Out by damage from an attack during your opponent's last turn, this attack does 100 more damage.",
+    "effects": [
+     {
+      "op": "bonus_if_own_ko_last_turn",
+      "amount": 100
+     }
+    ]
+   },
+   {
+    "name": "Corner",
+    "cost": [
+     "Psychic",
+     "Colorless",
+     "Colorless"
+    ],
+    "damage": 90,
+    "text": "During your opponent's next turn, the Defending Pokémon can't retreat.",
+    "effects": [
+     {
+      "op": "opponent_active_cant_retreat"
+     }
+    ]
+   }
+  ]
+ },
+ "JTG-117": {
+  "name": "Hop's Snorlax",
+  "set": "JTG",
+  "number": "117",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Colorless"
+  ],
+  "hp": 150,
+  "evolves_from": null,
+  "retreat": 4,
+  "weakness": "Fighting",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [
+   {
+    "name": "Extra Helpings",
+    "type": "static",
+    "static_kind": "extra_helpings",
+    "text": "Attacks used by your Hop's Pokémon do 30 more damage to your opponent's Active Pokémon (before applying Weakness and Resistance). The effect of Extra Helpings doesn't stack."
+   }
+  ],
+  "attacks": [
+   {
+    "name": "Dynamic Press",
+    "cost": [
+     "Colorless",
+     "Colorless",
+     "Colorless"
+    ],
+    "damage": 140,
+    "text": "This Pokémon also does 80 damage to itself.",
+    "effects": [
+     {
+      "op": "self_damage",
+      "amount": 80
+     }
+    ]
+   }
+  ]
+ },
+ "TWM-141": {
+  "name": "Bloodmoon Ursaluna ex",
+  "set": "TWM",
+  "number": "141",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic",
+   "ex"
+  ],
+  "types": [
+   "Colorless"
+  ],
+  "hp": 260,
+  "evolves_from": null,
+  "retreat": 3,
+  "weakness": "Fighting",
+  "resistance": null,
+  "rule_box": true,
+  "regulation_mark": "H",
+  "abilities": [
+   {
+    "name": "Seasoned Skill",
+    "type": "static",
+    "static_kind": "seasoned_skill",
+    "text": "Blood Moon used by this Pokémon costs [C] less for each Prize card your opponent has taken."
+   }
+  ],
+  "attacks": [
+   {
+    "name": "Blood Moon",
+    "cost": [
+     "Colorless",
+     "Colorless",
+     "Colorless",
+     "Colorless",
+     "Colorless"
+    ],
+    "damage": 240,
+    "text": "During your next turn, this Pokémon can't attack.",
+    "effects": [
+     {
+      "op": "self_cant_attack_next_turn"
+     }
+    ]
+   }
+  ]
+ },
+ "TWM-163": {
+  "name": "Secret Box",
+  "set": "TWM",
+  "number": "163",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Item",
+   "ACE SPEC"
+  ],
+  "regulation_mark": "H",
+  "text": "You can use this card only if you discard 3 other cards from your hand. Search your deck for an Item card, a Pokémon Tool card, a Supporter card, and a Stadium card, reveal them, and put them into your hand. Then, shuffle your deck.",
+  "effects": [
+   {
+    "op": "discard_from_hand_cost",
+    "n": 3
+   },
+   {
+    "op": "search_deck_to_hand",
+    "filter": {
+     "supertype": "Trainer",
+     "subtype": "Item"
+    },
+    "count": 1
+   },
+   {
+    "op": "search_deck_to_hand",
+    "filter": {
+     "supertype": "Trainer",
+     "subtype": "Tool"
+    },
+    "count": 1
+   },
+   {
+    "op": "search_deck_to_hand",
+    "filter": {
+     "supertype": "Trainer",
+     "subtype": "Supporter"
+    },
+    "count": 1
+   },
+   {
+    "op": "search_deck_to_hand",
+    "filter": {
+     "supertype": "Trainer",
+     "subtype": "Stadium"
+    },
+    "count": 1
+   },
+   {
+    "op": "shuffle_deck"
+   }
+  ]
+ },
+ "JTG-148": {
+  "name": "Hop's Choice Band",
+  "set": "JTG",
+  "number": "148",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Tool"
+  ],
+  "regulation_mark": "I",
+  "hops_choice_band": true,
+  "damage_boost": 30,
+  "cost_reduction": 1,
+  "text": "Attacks used by the Hop's Pokémon this card is attached to cost [C] less and do 30 more damage to your opponent's Active Pokémon (before applying Weakness and Resistance)."
+ },
+ "JTG-154": {
+  "name": "Postwick",
+  "set": "JTG",
+  "number": "154",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Stadium"
+  ],
+  "regulation_mark": "I",
+  "stadium_kind": "postwick_boost",
+  "text": "Attacks used by Hop's Pokémon (both yours and your opponent's) do 30 more damage to the opponent's Active Pokémon (before applying Weakness and Resistance)."
+ },
+ "JTG-97": {
+  "name": "N's Zorua",
+  "set": "JTG",
+  "number": "97",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Darkness"
+  ],
+  "hp": 70,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Grass",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [],
+  "attacks": [],
+  "note": "intermediate evolution; attack text not individually modeled"
+ },
+ "JTG-98": {
+  "name": "N's Zoroark ex",
+  "set": "JTG",
+  "number": "98",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 1",
+   "ex"
+  ],
+  "types": [
+   "Darkness"
+  ],
+  "hp": 280,
+  "evolves_from": "N's Zorua",
+  "retreat": 2,
+  "weakness": "Grass",
+  "resistance": null,
+  "rule_box": true,
+  "regulation_mark": "I",
+  "abilities": [
+   {
+    "name": "Trade",
+    "type": "activated",
+    "once_per_turn": true,
+    "condition": "trade",
+    "text": "You must discard a card from your hand in order to use this Ability. Once during your turn, you may draw 2 cards.",
+    "effects": [
+     {
+      "op": "discard_any_from_hand",
+      "n": 1
+     },
+     {
+      "op": "draw",
+      "n": 2
+     }
+    ]
+   }
+  ],
+  "attacks": [
+   {
+    "name": "Night Joker",
+    "cost": [
+     "Darkness",
+     "Darkness"
+    ],
+    "damage": 0,
+    "text": "Choose 1 of your Benched N's Pokémon's attacks and use it as this attack.",
+    "effects": [
+     {
+      "op": "night_joker"
+     }
+    ]
+   }
+  ]
+ },
+ "JTG-116": {
+  "name": "N's Reshiram",
+  "set": "JTG",
+  "number": "116",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Dragon"
+  ],
+  "hp": 130,
+  "evolves_from": null,
+  "retreat": 2,
+  "weakness": null,
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Powerful Rage",
+    "cost": [
+     "Fire",
+     "Lightning"
+    ],
+    "damage": 0,
+    "text": "This attack does 20 damage for each damage counter on this Pokémon.",
+    "effects": [
+     {
+      "op": "damage_per_self_counter",
+      "amount": 20
+     }
+    ]
+   },
+   {
+    "name": "Virtuous Flame",
+    "cost": [
+     "Fire",
+     "Fire",
+     "Lightning",
+     "Colorless"
+    ],
+    "damage": 170,
+    "text": "",
+    "effects": []
+   }
+  ]
+ },
+ "ASC-155": {
+  "name": "N's Zekrom",
+  "set": "ASC",
+  "number": "155",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Dragon"
+  ],
+  "hp": 130,
+  "evolves_from": null,
+  "retreat": 2,
+  "weakness": null,
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Shred",
+    "cost": [
+     "Colorless",
+     "Colorless",
+     "Colorless"
+    ],
+    "damage": 70,
+    "text": "This attack's damage isn't affected by any effects on your opponent's Active Pokémon.",
+    "effects": [
+     {
+      "op": "set_flag_ignore_defender_effects"
+     }
+    ]
+   },
+   {
+    "name": "Rampaging Thunder",
+    "cost": [
+     "Fire",
+     "Lightning",
+     "Lightning",
+     "Colorless"
+    ],
+    "damage": 250,
+    "text": "During your next turn, this Pokémon can't use attacks.",
+    "effects": [
+     {
+      "op": "self_cant_attack_next_turn"
+     }
+    ]
+   }
+  ]
+ },
+ "PFL-84": {
+  "name": "Mega Lopunny ex",
+  "set": "PFL",
+  "number": "84",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 1",
+   "Mega",
+   "ex"
+  ],
+  "types": [
+   "Colorless"
+  ],
+  "hp": 330,
+  "evolves_from": "Buneary",
+  "retreat": 1,
+  "weakness": "Fighting",
+  "resistance": null,
+  "rule_box": true,
+  "regulation_mark": "I",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Gale Thrust",
+    "cost": [
+     "Colorless"
+    ],
+    "damage": 60,
+    "text": "If this Pokémon moved from your Bench to the Active Spot this turn, this attack does 170 more damage.",
+    "effects": [
+     {
+      "op": "bonus_if_came_active_this_turn",
+      "amount": 170
+     }
+    ]
+   },
+   {
+    "name": "Spiky Hopper",
+    "cost": [
+     "Colorless",
+     "Colorless"
+    ],
+    "damage": 160,
+    "text": "This attack's damage isn't affected by any effects on your opponent's Active Pokémon.",
+    "effects": [
+     {
+      "op": "set_flag_ignore_defender_effects"
+     }
+    ]
+   }
+  ]
+ },
+ "SFA-39": {
+  "name": "Pecharunt ex",
+  "set": "SFA",
+  "number": "39",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic",
+   "ex"
+  ],
+  "types": [
+   "Darkness"
+  ],
+  "hp": 190,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Fighting",
+  "resistance": null,
+  "rule_box": true,
+  "regulation_mark": "H",
+  "abilities": [
+   {
+    "name": "Subjugating Chains",
+    "type": "activated",
+    "once_per_turn": true,
+    "text": "Once during your turn, you may switch 1 of your Benched [D] Pokémon, except any Pecharunt ex, with your Active Pokémon. If you do, the new Active Pokémon is now Poisoned. You can't use more than 1 Subjugating Chains Ability each turn.",
+    "effects": [
+     {
+      "op": "subjugating_chains"
+     }
+    ]
+   }
+  ],
+  "attacks": [
+   {
+    "name": "Irritated Outburst",
+    "cost": [
+     "Darkness",
+     "Darkness"
+    ],
+    "damage": 0,
+    "text": "This attack does 60 damage for each Prize card your opponent has taken.",
+    "effects": [
+     {
+      "op": "damage_per_opponent_prizes_taken",
+      "amount": 60
+     }
+    ]
+   }
+  ]
+ },
+ "MEG-107": {
+  "name": "Buneary",
+  "set": "MEG",
+  "number": "107",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Colorless"
+  ],
+  "hp": 60,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Fighting",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [],
+  "attacks": [],
+  "note": "intermediate evolution; attack text not individually modeled"
+ },
+ "JTG-143": {
+  "name": "Black Belt's Training",
+  "set": "JTG",
+  "number": "143",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Supporter"
+  ],
+  "regulation_mark": "H",
+  "text": "During this turn, attacks used by your Pokémon do 40 more damage to your opponent's Active Pokémon ex (before applying Weakness and Resistance).",
+  "effects": [
+   {
+    "op": "set_ex_boost",
+    "amount": 40
+   }
+  ]
+ },
+ "JTG-153": {
+  "name": "N's PP Up",
+  "set": "JTG",
+  "number": "153",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Item"
+  ],
+  "regulation_mark": "I",
+  "text": "Attach a Basic Energy card from your discard pile to 1 of your Benched N's Pokémon.",
+  "effects": [
+   {
+    "op": "attach_basic_energy_from_discard_to_bench_named",
+    "name": "N's"
+   }
+  ]
+ },
+ "JTG-152": {
+  "name": "N's Castle",
+  "set": "JTG",
+  "number": "152",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Stadium"
+  ],
+  "regulation_mark": "I",
+  "stadium_kind": "ns_no_retreat",
+  "effects": [
+   {
+    "op": "stadium_passive"
+   }
+  ],
+  "text": "N's Pokémon in play (both yours and your opponent's) have no Retreat Cost."
+ },
+ "PRE-95": {
+  "name": "Binding Mochi",
+  "set": "PRE",
+  "number": "95",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Tool"
+  ],
+  "regulation_mark": "H",
+  "poison_damage_boost": 40,
+  "text": "Attacks used by the Poisoned Pokémon this card is attached to do 40 more damage to your opponent's Active Pokémon (before applying Weakness and Resistance)."
+ },
+ "TWM-57": {
+  "name": "Frogadier",
+  "set": "TWM",
+  "number": "57",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 1"
+  ],
+  "types": [
+   "Water"
+  ],
+  "hp": 90,
+  "evolves_from": "Froakie",
+  "retreat": 1,
+  "weakness": "Lightning",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "H",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Numbing Water",
+    "cost": [
+     "Water"
+    ],
+    "damage": 20,
+    "text": "Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed.",
+    "effects": [
+     {
+      "op": "coin_status_opponent_active",
+      "status": "Paralyzed"
+     }
+    ]
+   }
+  ]
+ },
+ "CRI-1": {
+  "name": "Weedle",
+  "set": "CRI",
+  "number": "1",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Grass"
+  ],
+  "hp": 50,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Fire",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "J",
+  "abilities": [],
+  "attacks": [],
+  "note": "intermediate evolution; attack text not individually modeled"
+ },
+ "CRI-2": {
+  "name": "Kakuna",
+  "set": "CRI",
+  "number": "2",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 1"
+  ],
+  "types": [
+   "Grass"
+  ],
+  "hp": 90,
+  "evolves_from": "Weedle",
+  "retreat": 2,
+  "weakness": "Fire",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "J",
+  "abilities": [
+   {
+    "name": "Exoskeleton",
+    "type": "static",
+    "static_kind": "reduce_damage_taken",
+    "amount": 20,
+    "text": "This Pokémon takes 20 less damage from attacks (after applying Weakness and Resistance)."
+   }
+  ],
+  "attacks": [],
+  "note": "intermediate evolution; attack text not individually modeled"
+ },
+ "CRI-3": {
+  "name": "Beedrill ex",
+  "set": "CRI",
+  "number": "3",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 2",
+   "ex"
+  ],
+  "types": [
+   "Grass"
+  ],
+  "hp": 310,
+  "evolves_from": "Kakuna",
+  "retreat": 1,
+  "weakness": "Fire",
+  "resistance": null,
+  "rule_box": true,
+  "regulation_mark": "J",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Rumbling Bees",
+    "cost": [
+     "Grass"
+    ],
+    "damage": 0,
+    "text": "This attack does 110 damage for each of your Beedrill and Beedrill ex in play.",
+    "effects": [
+     {
+      "op": "damage_per_named_in_play",
+      "amount": 110,
+      "name": "Beedrill"
+     }
+    ]
+   }
+  ]
+ },
+ "TEF-155": {
+  "name": "Morty's Conviction",
+  "set": "TEF",
+  "number": "155",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Supporter"
+  ],
+  "regulation_mark": "H",
+  "text": "You can use this card only if you discard another card from your hand. Draw a card for each of your opponent's Benched Pokémon.",
+  "effects": [
+   {
+    "op": "discard_from_hand_cost",
+    "n": 1
+   },
+   {
+    "op": "draw_per_opponent_bench"
+   }
+  ]
+ },
+ "JTG-156": {
+  "name": "Redeemable Ticket",
+  "set": "JTG",
+  "number": "156",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Item"
+  ],
+  "regulation_mark": "I",
+  "text": "Count your Prize cards, shuffle them, and put them on the bottom of your deck. Then, take that many cards from the top of your deck and put them face down as your Prize cards.",
+  "effects": [
+   {
+    "op": "redeemable_ticket"
+   }
+  ]
+ },
+ "MEG-132": {
+  "name": "Wally's Compassion",
+  "set": "MEG",
+  "number": "132",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Supporter"
+  ],
+  "regulation_mark": "I",
+  "text": "Heal all damage from 1 of your Mega Evolution Pokémon ex. If you healed any damage in this way, put all Energy attached to that Pokémon into your hand.",
+  "effects": [
+   {
+    "op": "wallys_compassion"
+   }
+  ]
+ },
+ "POR-77": {
+  "name": "Lumiose City",
+  "set": "POR",
+  "number": "77",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Stadium"
+  ],
+  "regulation_mark": "J",
+  "stadium_kind": "lumiose_city",
+  "effects": [
+   {
+    "op": "stadium_passive"
+   }
+  ],
+  "text": "Once during each player's turn, that player may search their deck for a Basic Pokémon and put it onto their Bench. Then, that player shuffles their deck. If a player searches their deck in this way, their turn ends."
+ },
+ "TEF-162": {
+  "name": "Neo Upper Energy",
+  "set": "TEF",
+  "number": "162",
+  "supertype": "Energy",
+  "subtypes": [
+   "Special"
+  ],
+  "provides": [
+   "Colorless"
+  ],
+  "stage2_any2": true,
+  "regulation_mark": "H",
+  "text": "As long as this card is attached to a Pokémon, it provides [C] Energy. If this card is attached to a Stage 2 Pokémon, this card provides every type of Energy but provides only 2 Energy at a time."
+ },
+ "POR-20": {
+  "name": "Staryu",
+  "set": "POR",
+  "number": "20",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Water"
+  ],
+  "hp": 60,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Lightning",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "J",
+  "abilities": [],
+  "attacks": [],
+  "note": "intermediate evolution; attack text not individually modeled"
+ },
+ "POR-21": {
+  "name": "Mega Starmie ex",
+  "set": "POR",
+  "number": "21",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 1",
+   "Mega",
+   "ex"
+  ],
+  "types": [
+   "Water"
+  ],
+  "hp": 330,
+  "evolves_from": "Staryu",
+  "retreat": 2,
+  "weakness": "Lightning",
+  "resistance": null,
+  "rule_box": true,
+  "regulation_mark": "J",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Jetting Blow",
+    "cost": [
+     "Water"
+    ],
+    "damage": 120,
+    "text": "This attack also does 50 damage to 1 of your opponent's Benched Pokémon.",
+    "effects": [
+     {
+      "op": "bench_snipe",
+      "amount": 50
+     }
+    ]
+   },
+   {
+    "name": "Nebula Beam",
+    "cost": [
+     "Colorless",
+     "Colorless",
+     "Colorless"
+    ],
+    "damage": 210,
+    "text": "This attack's damage isn't affected by Weakness or Resistance, or by any effects on your opponent's Active Pokémon.",
+    "effects": [
+     {
+      "op": "set_flag_ignore_wr_and_effects"
+     }
+    ]
+   }
+  ]
+ },
+ "TWM-52": {
+  "name": "Glalie",
+  "set": "TWM",
+  "number": "52",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 1"
+  ],
+  "types": [
+   "Water"
+  ],
+  "hp": 120,
+  "evolves_from": "Snorunt",
+  "retreat": 2,
+  "weakness": "Metal",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "H",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Damage Beat",
+    "cost": [
+     "Water"
+    ],
+    "damage": 0,
+    "text": "This attack does 20 damage for each damage counter on your opponent's Active Pokémon.",
+    "effects": [
+     {
+      "op": "damage_per_opponent_active_counter",
+      "amount": 20
+     }
+    ]
+   },
+   {
+    "name": "Crazy Headbutt",
+    "cost": [
+     "Water",
+     "Colorless",
+     "Colorless"
+    ],
+    "damage": 140,
+    "text": "Discard an Energy from this Pokémon.",
+    "effects": [
+     {
+      "op": "discard_own_energy",
+      "n": 1
+     }
+    ]
+   }
+  ]
+ },
+ "PRE-115": {
+  "name": "Larry's Skill",
+  "set": "PRE",
+  "number": "115",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Supporter"
+  ],
+  "regulation_mark": "H",
+  "text": "Discard your hand and search your deck for a Pokémon, a Supporter card, and a Basic Energy card, reveal them, and put them into your hand. Then, shuffle your deck.",
+  "effects": [
+   {
+    "op": "discard_whole_hand"
+   },
+   {
+    "op": "search_deck_to_hand",
+    "filter": {
+     "supertype": "Pokémon"
+    },
+    "count": 1
+   },
+   {
+    "op": "search_deck_to_hand",
+    "filter": {
+     "supertype": "Trainer",
+     "subtype": "Supporter"
+    },
+    "count": 1
+   },
+   {
+    "op": "search_deck_to_hand",
+    "filter": {
+     "supertype": "Energy",
+     "subtype": "Basic"
+    },
+    "count": 1
+   },
+   {
+    "op": "shuffle_deck"
+   }
+  ]
+ },
+ "TEF-160": {
+  "name": "Salvatore",
+  "set": "TEF",
+  "number": "160",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Supporter"
+  ],
+  "regulation_mark": "H",
+  "text": "Search your deck for a card that has no Abilities and evolves from 1 of your Pokémon, and put it onto that Pokémon to evolve it. Then, shuffle your deck. You can use this card on a Pokémon you put down when you were setting up to play or on a Pokémon that was put into play this turn.",
+  "effects": [
+   {
+    "op": "salvatore_evolve"
+   }
+  ]
+ },
+ "TWM-167": {
+  "name": "Legacy Energy",
+  "set": "TWM",
+  "number": "167",
+  "supertype": "Energy",
+  "subtypes": [
+   "Special",
+   "ACE SPEC"
+  ],
+  "provides": [
+   "Any"
+  ],
+  "legacy_prize": true,
+  "regulation_mark": "H",
+  "text": "As long as this card is attached to a Pokémon, it provides every type of Energy but provides only 1 Energy at a time. If the Pokémon this card is attached to is Knocked Out by damage from an attack from your opponent's Pokémon, that player takes 1 fewer Prize card. This effect can't be applied more than once per game."
+ },
+ "MEG-86": {
+  "name": "Mega Absol ex",
+  "set": "MEG",
+  "number": "86",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic",
+   "Mega",
+   "ex"
+  ],
+  "types": [
+   "Darkness"
+  ],
+  "hp": 280,
+  "evolves_from": null,
+  "retreat": 2,
+  "weakness": "Grass",
+  "resistance": null,
+  "rule_box": true,
+  "regulation_mark": "I",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Terminal Period",
+    "cost": [
+     "Darkness",
+     "Colorless"
+    ],
+    "damage": 0,
+    "text": "If your opponent's Active Pokémon has exactly 6 damage counters on it, that Pokémon is Knocked Out.",
+    "effects": [
+     {
+      "op": "ko_opponent_if_exactly_counters",
+      "counters": 6
+     }
+    ]
+   },
+   {
+    "name": "Claw of Darkness",
+    "cost": [
+     "Darkness",
+     "Darkness",
+     "Colorless"
+    ],
+    "damage": 200,
+    "text": "Your opponent reveals their hand, and you discard a card you find there.",
+    "effects": [
+     {
+      "op": "opponent_discard_from_hand",
+      "filter": {},
+      "count": 1
+     }
+    ]
+   }
+  ]
+ },
+ "TEF-25": {
+  "name": "Iron Leaves ex",
+  "set": "TEF",
+  "number": "25",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic",
+   "ex"
+  ],
+  "types": [
+   "Grass"
+  ],
+  "hp": 220,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Fire",
+  "resistance": null,
+  "rule_box": true,
+  "regulation_mark": "H",
+  "abilities": [
+   {
+    "name": "Rapid Vernier",
+    "text": "When you play this Pokémon from your hand onto your Bench during your turn, you may switch it with your Active Pokémon. If you do, you may move any amount of Energy from your other Pokémon to this Pokémon.",
+    "kind": "on_play_optional",
+    "note": "on-play switch/energy-move not auto-triggered by sim"
+   }
+  ],
+  "attacks": [
+   {
+    "name": "Prism Edge",
+    "cost": [
+     "Grass",
+     "Grass",
+     "Colorless"
+    ],
+    "damage": 180,
+    "text": "During your next turn, this Pokémon can't attack.",
+    "effects": [
+     {
+      "op": "self_cant_attack_next_turn"
+     }
+    ]
+   }
+  ]
+ },
+ "DRI-87": {
+  "name": "Team Rocket's Mimikyu",
+  "set": "DRI",
+  "number": "87",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Psychic"
+  ],
+  "hp": 60,
+  "evolves_from": null,
+  "retreat": 0,
+  "weakness": "Darkness",
+  "resistance": "Fighting",
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Gemstone Mimicry",
+    "cost": [
+     "Psychic",
+     "Colorless"
+    ],
+    "damage": 0,
+    "text": "Choose 1 of your opponent's Active Tera Pokémon's attacks and use it as this attack.",
+    "effects": [],
+    "note": "copy-attack not modeled; resolves as no-op"
+   }
+  ]
+ },
+ "JTG-146": {
+  "name": "Brock's Scouting",
+  "set": "JTG",
+  "number": "146",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Supporter"
+  ],
+  "regulation_mark": "I",
+  "text": "Search your deck for up to 2 Basic Pokémon or 1 Evolution Pokémon, reveal them, and put them into your hand. Then, shuffle your deck.",
+  "effects": [
+   {
+    "op": "search_deck_to_hand",
+    "filter": {
+     "supertype": "Pokémon",
+     "subtype": "Basic"
+    },
+    "count": 2
+   },
+   {
+    "op": "shuffle_deck"
+   }
+  ]
+ },
+ "ASC-216": {
+  "name": "Prism Energy",
+  "set": "ASC",
+  "number": "216",
+  "supertype": "Energy",
+  "subtypes": [
+   "Special"
+  ],
+  "prism_energy": true,
+  "provides": [
+   "Colorless"
+  ],
+  "regulation_mark": "I",
+  "text": "This card provides [C] Energy. If the Pokémon this card is attached to is a Basic Pokémon, this card provides every type of Energy but provides only 1 Energy at a time."
+ },
+ "DRI-102": {
+  "name": "Cynthia's Gible",
+  "set": "DRI",
+  "number": "102",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Fighting"
+  ],
+  "hp": 70,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Grass",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Rock Hurl",
+    "cost": [
+     "Fighting"
+    ],
+    "damage": 20,
+    "text": "This attack's damage isn't affected by Resistance.",
+    "effects": [
+     {
+      "op": "set_flag_ignore_wr"
+     }
+    ]
+   }
+  ]
+ },
+ "DRI-103": {
+  "name": "Cynthia's Gabite",
+  "set": "DRI",
+  "number": "103",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 1"
+  ],
+  "types": [
+   "Fighting"
+  ],
+  "hp": 100,
+  "evolves_from": "Cynthia's Gible",
+  "retreat": 1,
+  "weakness": "Grass",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [
+   {
+    "name": "Champion's Call",
+    "type": "activated",
+    "once_per_turn": true,
+    "text": "Once during your turn, you may search your deck for a Cynthia's Pokémon, reveal it, and put it into your hand. Then, shuffle your deck.",
+    "effects": [
+     {
+      "op": "search_deck_to_hand",
+      "filter": {
+       "supertype": "Pokémon",
+       "name_prefix": "Cynthia's"
+      },
+      "count": 1
+     },
+     {
+      "op": "shuffle_deck"
+     }
+    ]
+   }
+  ],
+  "attacks": [
+   {
+    "name": "Dragonslice",
+    "cost": [
+     "Fighting"
+    ],
+    "damage": 40,
+    "effects": []
+   }
+  ]
+ },
+ "DRI-104": {
+  "name": "Cynthia's Garchomp ex",
+  "set": "DRI",
+  "number": "104",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 2",
+   "ex"
+  ],
+  "types": [
+   "Fighting"
+  ],
+  "hp": 330,
+  "evolves_from": "Cynthia's Gabite",
+  "retreat": 0,
+  "weakness": "Grass",
+  "resistance": null,
+  "rule_box": true,
+  "regulation_mark": "I",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Corkscrew Dive",
+    "cost": [
+     "Fighting"
+    ],
+    "damage": 100,
+    "text": "You may draw cards until you have 6 cards in your hand.",
+    "effects": [
+     {
+      "op": "draw_until",
+      "n": 6
+     }
+    ]
+   },
+   {
+    "name": "Draconic Buster",
+    "cost": [
+     "Fighting",
+     "Fighting"
+    ],
+    "damage": 260,
+    "text": "Discard all Energy from this Pokémon.",
+    "effects": [
+     {
+      "op": "discard_all_energy_self"
+     }
+    ]
+   }
+  ]
+ },
+ "DRI-7": {
+  "name": "Cynthia's Roselia",
+  "set": "DRI",
+  "number": "7",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Grass"
+  ],
+  "hp": 70,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Fire",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Spike Sting",
+    "cost": [
+     "Colorless"
+    ],
+    "damage": 20,
+    "effects": []
+   }
+  ]
+ },
+ "DRI-8": {
+  "name": "Cynthia's Roserade",
+  "set": "DRI",
+  "number": "8",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 1"
+  ],
+  "types": [
+   "Grass"
+  ],
+  "hp": 130,
+  "evolves_from": "Cynthia's Roselia",
+  "retreat": 1,
+  "weakness": "Fire",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [
+   {
+    "name": "Cheer On to Glory",
+    "type": "static",
+    "static_kind": "cynthia_cheer",
+    "text": "Attacks used by your Cynthia's Pokémon do 30 more damage to your opponent's Active Pokémon (before applying Weakness and Resistance)."
+   }
+  ],
+  "attacks": [
+   {
+    "name": "Leaf Step",
+    "cost": [
+     "Grass",
+     "Colorless",
+     "Colorless"
+    ],
+    "damage": 80,
+    "effects": []
+   }
+  ]
+ },
+ "DRI-129": {
+  "name": "Cynthia's Spiritomb",
+  "set": "DRI",
+  "number": "129",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Darkness"
+  ],
+  "hp": 70,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Grass",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Raging Curse",
+    "cost": [
+     "Colorless"
+    ],
+    "damage": 0,
+    "text": "This attack does 10 damage for each damage counter on all of your Benched Cynthia's Pokémon. This attack's damage isn't affected by Weakness.",
+    "effects": [
+     {
+      "op": "set_flag_ignore_wr"
+     },
+     {
+      "op": "damage_per_counter_on_bench_named",
+      "prefix": "Cynthia's",
+      "amount": 10
+     }
+    ]
+   }
+  ]
+ },
+ "DRI-162": {
+  "name": "Cynthia's Power Weight",
+  "set": "DRI",
+  "number": "162",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Tool"
+  ],
+  "regulation_mark": "I",
+  "hp_bonus": 70,
+  "hp_bonus_prefix": "Cynthia's",
+  "text": "The Cynthia's Pokémon this card is attached to gets +70 HP."
+ },
+ "POR-87": {
+  "name": "Rocky Fighting Energy",
+  "set": "POR",
+  "number": "87",
+  "supertype": "Energy",
+  "subtypes": [
+   "Special"
+  ],
+  "provides": [
+   "Fighting"
+  ],
+  "regulation_mark": "J",
+  "prevents_attack_effects_on_fighting": true,
+  "text": "Provides [F]. Prevent all effects of attacks from your opponent's Pokémon done to the [F] Pokémon this card is attached to. (Damage is not an effect.)"
+ },
+ "MEG-1": {
+  "name": "Bulbasaur",
+  "set": "MEG",
+  "number": "1",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Grass"
+  ],
+  "hp": 80,
+  "evolves_from": null,
+  "retreat": 2,
+  "weakness": "Fire",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Bind Down",
+    "cost": [
+     "Grass"
+    ],
+    "damage": 10,
+    "text": "During your opponent's next turn, the Defending Pokémon can't retreat.",
+    "effects": [
+     {
+      "op": "opponent_active_cant_retreat"
+     }
+    ]
+   }
+  ]
+ },
+ "MEG-2": {
+  "name": "Ivysaur",
+  "set": "MEG",
+  "number": "2",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 1"
+  ],
+  "types": [
+   "Grass"
+  ],
+  "hp": 110,
+  "evolves_from": "Bulbasaur",
+  "retreat": 3,
+  "weakness": "Fire",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Razor Leaf",
+    "cost": [
+     "Grass",
+     "Grass"
+    ],
+    "damage": 60,
+    "effects": []
+   }
+  ]
+ },
+ "MEG-3": {
+  "name": "Mega Venusaur ex",
+  "set": "MEG",
+  "number": "3",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 2",
+   "Mega",
+   "ex"
+  ],
+  "types": [
+   "Grass"
+  ],
+  "hp": 380,
+  "evolves_from": "Ivysaur",
+  "retreat": 4,
+  "weakness": "Fire",
+  "resistance": null,
+  "rule_box": true,
+  "regulation_mark": "I",
+  "abilities": [
+   {
+    "name": "Solar Transfer",
+    "type": "activated",
+    "text": "As often as you like during your turn, you may move a Basic [G] Energy from 1 of your Pokémon to another of your Pokémon.",
+    "effects": [
+     {
+      "op": "solar_transfer"
+     }
+    ]
+   }
+  ],
+  "attacks": [
+   {
+    "name": "Jungle Dump",
+    "cost": [
+     "Grass",
+     "Grass",
+     "Grass",
+     "Grass"
+    ],
+    "damage": 240,
+    "text": "Heal 30 damage from this Pokémon.",
+    "effects": [
+     {
+      "op": "heal_self",
+      "amount": 30
+     }
+    ]
+   }
+  ]
+ },
+ "MEG-11": {
+  "name": "Shuckle",
+  "set": "MEG",
+  "number": "11",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Grass"
+  ],
+  "hp": 80,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Fire",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [
+   {
+    "name": "Fermented Juice",
+    "type": "activated",
+    "once_per_turn": true,
+    "text": "Once during your turn, if this Pokémon has any [G] Energy attached, you may heal 30 damage from 1 of your Pokémon.",
+    "effects": [
+     {
+      "op": "heal_team_if_self_grass",
+      "amount": 30
+     }
+    ]
+   }
+  ],
+  "attacks": [
+   {
+    "name": "Rollout",
+    "cost": [
+     "Grass",
+     "Colorless"
+    ],
+    "damage": 30,
+    "effects": []
+   }
+  ]
+ },
+ "DRI-19": {
+  "name": "Team Rocket's Tarountula",
+  "set": "DRI",
+  "number": "19",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Grass"
+  ],
+  "hp": 50,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Fire",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Take Down",
+    "cost": [
+     "Grass"
+    ],
+    "damage": 30,
+    "text": "This Pokémon also does 10 damage to itself.",
+    "effects": [
+     {
+      "op": "self_damage",
+      "amount": 10
+     }
+    ]
+   }
+  ]
+ },
+ "DRI-20": {
+  "name": "Team Rocket's Spidops",
+  "set": "DRI",
+  "number": "20",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 1"
+  ],
+  "types": [
+   "Grass"
+  ],
+  "hp": 130,
+  "evolves_from": "Team Rocket's Tarountula",
+  "retreat": 2,
+  "weakness": "Fire",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [
+   {
+    "name": "Charging Up",
+    "type": "activated",
+    "once_per_turn": true,
+    "text": "Once during your turn, you may attach a Basic Energy card from your discard pile to this Pokémon.",
+    "effects": [
+     {
+      "op": "attach_basic_energy_from_discard_to_self"
+     }
+    ]
+   }
+  ],
+  "attacks": [
+   {
+    "name": "Rocket Rush",
+    "cost": [
+     "Grass",
+     "Colorless"
+    ],
+    "damage": 0,
+    "text": "This attack does 30 damage for each of your Team Rocket's Pokémon in play.",
+    "effects": [
+     {
+      "op": "damage_per_named_in_play",
+      "name": "Team Rocket's",
+      "amount": 30
+     }
+    ]
+   }
+  ]
+ },
+ "DRI-81": {
+  "name": "Team Rocket's Mewtwo ex",
+  "set": "DRI",
+  "number": "81",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic",
+   "ex"
+  ],
+  "types": [
+   "Psychic"
+  ],
+  "hp": 280,
+  "evolves_from": null,
+  "retreat": 3,
+  "weakness": "Darkness",
+  "resistance": "Fighting",
+  "rule_box": true,
+  "regulation_mark": "I",
+  "abilities": [
+   {
+    "name": "Power Saver",
+    "type": "static",
+    "static_kind": "needs_4_team_rocket",
+    "text": "This Pokémon can't attack unless you have 4 or more Team Rocket's Pokémon in play."
+   }
+  ],
+  "attacks": [
+   {
+    "name": "Erasure Ball",
+    "cost": [
+     "Psychic",
+     "Psychic",
+     "Colorless"
+    ],
+    "damage": 160,
+    "text": "You may discard up to 2 Energy from your Benched Pokémon. This attack does 60 more damage for each card you discarded in this way.",
+    "effects": [
+     {
+      "op": "discard_bench_energy_for_damage",
+      "max": 2,
+      "per": 60
+     }
+    ]
+   }
+  ]
+ },
+ "DRI-51": {
+  "name": "Team Rocket's Articuno",
+  "set": "DRI",
+  "number": "51",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Water"
+  ],
+  "hp": 120,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Lightning",
+  "resistance": "Fighting",
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [
+   {
+    "name": "Repelling Veil",
+    "type": "static",
+    "static_kind": "repelling_veil",
+    "text": "Prevent all effects of attacks done to your Basic Team Rocket's Pokémon. (Damage is not an effect.)",
+    "note": "effect-prevention not fully modeled"
+   }
+  ],
+  "attacks": [
+   {
+    "name": "Dark Frost",
+    "cost": [
+     "Water",
+     "Colorless",
+     "Colorless"
+    ],
+    "damage": 60,
+    "text": "If this Pokémon has any Team Rocket's Energy attached, this attack does 60 more damage.",
+    "effects": [
+     {
+      "op": "bonus_if_team_rocket_energy",
+      "amount": 60
+     }
+    ]
+   }
+  ]
+ },
+ "DRI-128": {
+  "name": "Team Rocket's Sneasel",
+  "set": "DRI",
+  "number": "128",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Darkness"
+  ],
+  "hp": 80,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Grass",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Scratch",
+    "cost": [
+     "Darkness"
+    ],
+    "damage": 20,
+    "effects": []
+   },
+   {
+    "name": "Strike the Sleeper",
+    "cost": [
+     "Darkness",
+     "Darkness"
+    ],
+    "damage": 0,
+    "text": "This attack does 20 damage to 1 of your opponent's Benched Pokémon for each damage counter on that Pokémon.",
+    "effects": [
+     {
+      "op": "bench_snipe_per_counter",
+      "amount": 20
+     }
+    ]
+   }
+  ]
+ },
+ "DRI-171": {
+  "name": "Team Rocket's Ariana",
+  "set": "DRI",
+  "number": "171",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Supporter"
+  ],
+  "regulation_mark": "I",
+  "text": "Draw cards until you have 5 cards in your hand. If all of your Pokémon in play are Team Rocket's Pokémon, draw until you have 8 instead.",
+  "effects": [
+   {
+    "op": "ariana_draw"
+   }
+  ]
+ },
+ "DRI-177": {
+  "name": "Team Rocket's Proton",
+  "set": "DRI",
+  "number": "177",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Supporter"
+  ],
+  "regulation_mark": "I",
+  "text": "Search your deck for up to 3 Basic Team Rocket's Pokémon, reveal them, and put them into your hand. Then, shuffle your deck.",
+  "effects": [
+   {
+    "op": "search_deck_to_hand",
+    "filter": {
+     "supertype": "Pokémon",
+     "subtype": "Basic",
+     "name_prefix": "Team Rocket's"
+    },
+    "count": 3
+   },
+   {
+    "op": "shuffle_deck"
+   }
+  ]
+ },
+ "DRI-174": {
+  "name": "Team Rocket's Giovanni",
+  "set": "DRI",
+  "number": "174",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Supporter"
+  ],
+  "regulation_mark": "I",
+  "text": "Switch your Active Team Rocket's Pokémon with 1 of your Benched Team Rocket's Pokémon. If you do, switch in 1 of your opponent's Benched Pokémon to the Active Spot.",
+  "effects": [
+   {
+    "op": "switch_self_with_bench"
+   },
+   {
+    "op": "gust_opponent_bench"
+   }
+  ]
+ },
+ "DRI-170": {
+  "name": "Team Rocket's Archer",
+  "set": "DRI",
+  "number": "170",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Supporter"
+  ],
+  "regulation_mark": "I",
+  "text": "Use only if a Team Rocket's Pokémon was KO'd during your opponent's last turn. Each player shuffles their hand into their deck. Then you draw 5 cards and your opponent draws 3.",
+  "effects": [
+   {
+    "op": "team_rocket_archer",
+    "you": 5,
+    "opp": 3
+   }
+  ]
+ },
+ "DRI-178": {
+  "name": "Team Rocket's Transceiver",
+  "set": "DRI",
+  "number": "178",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Item"
+  ],
+  "regulation_mark": "I",
+  "text": "Search your deck for a Supporter card that has Team Rocket in its name, reveal it, and put it into your hand. Then, shuffle your deck.",
+  "effects": [
+   {
+    "op": "search_deck_to_hand",
+    "filter": {
+     "supertype": "Trainer",
+     "subtype": "Supporter",
+     "name_prefix": "Team Rocket's"
+    },
+    "count": 1
+   },
+   {
+    "op": "shuffle_deck"
+   }
+  ]
+ },
+ "WHT-80": {
+  "name": "Brave Bangle",
+  "set": "WHT",
+  "number": "80",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Tool"
+  ],
+  "regulation_mark": "I",
+  "damage_boost_vs_ex_no_rulebox": 30,
+  "text": "If the Pokémon this card is attached to doesn't have a Rule Box, its attacks do 30 more damage to your opponent's Active Pokémon ex (before Weakness and Resistance)."
+ },
+ "SSP-169": {
+  "name": "Counter Gain",
+  "set": "SSP",
+  "number": "169",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Tool"
+  ],
+  "regulation_mark": "H",
+  "counter_gain_reduction": 1,
+  "text": "If you have more Prize cards remaining than your opponent, the attacks of the Pokémon this card is attached to cost [C] less."
+ },
+ "CRI-80": {
+  "name": "Prism Tower",
+  "set": "CRI",
+  "number": "80",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Stadium"
+  ],
+  "regulation_mark": "J",
+  "stadium_kind": "prism_tower",
+  "stadium_passive": true,
+  "text": "Once during each player's turn, that player may discard 2 cards from their hand to draw a card.",
+  "effects": [
+   {
+    "op": "stadium_passive"
+   }
+  ]
+ },
+ "DRI-182": {
+  "name": "Team Rocket's Energy",
+  "set": "DRI",
+  "number": "182",
+  "supertype": "Energy",
+  "subtypes": [
+   "Special"
+  ],
+  "provides": [
+   "Psychic",
+   "Darkness"
+  ],
+  "team_rocket_energy": true,
+  "regulation_mark": "I",
+  "text": "Can only be attached to a Team Rocket's Pokémon. Provides 2 in any combination of [P] and [D]."
+ },
+ "SSP-32": {
+  "name": "Charcadet",
+  "set": "SSP",
+  "number": "32",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Fire"
+  ],
+  "hp": 70,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Water",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "H",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Will-O-Wisp",
+    "cost": [
+     "Fire"
+    ],
+    "damage": 20,
+    "effects": []
+   }
+  ]
+ },
+ "SSP-33": {
+  "name": "Charcadet",
+  "set": "SSP",
+  "number": "33",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Fire"
+  ],
+  "hp": 80,
+  "evolves_from": null,
+  "retreat": 2,
+  "weakness": "Water",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "H",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Light Punch",
+    "cost": [
+     "Fire"
+    ],
+    "damage": 10,
+    "effects": []
+   },
+   {
+    "name": "Flamethrower",
+    "cost": [
+     "Fire",
+     "Fire",
+     "Colorless"
+    ],
+    "damage": 70,
+    "text": "Discard an Energy from this Pokémon.",
+    "effects": [
+     {
+      "op": "discard_own_energy",
+      "n": 1
+     }
+    ]
+   }
+  ]
+ },
+ "PFL-19": {
+  "name": "Charcadet",
+  "set": "PFL",
+  "number": "19",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Fire"
+  ],
+  "hp": 70,
+  "evolves_from": null,
+  "retreat": 2,
+  "weakness": "Water",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Gather Strength",
+    "cost": [
+     "Fire"
+    ],
+    "damage": 0,
+    "text": "Search your deck for up to 2 Basic Energy cards, reveal them, and put them into your hand. Then, shuffle your deck.",
+    "effects": [
+     {
+      "op": "search_deck_to_hand",
+      "filter": {
+       "supertype": "Energy",
+       "subtype": "Basic"
+      },
+      "count": 2
+     },
+     {
+      "op": "shuffle_deck"
+     }
+    ]
+   },
+   {
+    "name": "Chop",
+    "cost": [
+     "Fire"
+    ],
+    "damage": 10,
+    "effects": []
+   }
+  ]
+ },
+ "SSP-36": {
+  "name": "Ceruledge ex",
+  "set": "SSP",
+  "number": "36",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 1",
+   "ex",
+   "Tera"
+  ],
+  "types": [
+   "Fire"
+  ],
+  "hp": 270,
+  "evolves_from": "Charcadet",
+  "retreat": 2,
+  "weakness": "Water",
+  "resistance": null,
+  "rule_box": true,
+  "regulation_mark": "H",
+  "tera_bench_immunity": true,
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Abyssal Flames",
+    "cost": [
+     "Fire"
+    ],
+    "damage": 30,
+    "text": "This attack does 20 more damage for each Energy card in your discard pile.",
+    "effects": [
+     {
+      "op": "damage_per_energy_in_discard",
+      "amount": 20
+     }
+    ]
+   },
+   {
+    "name": "Raging Amethyst",
+    "cost": [
+     "Fire",
+     "Psychic",
+     "Metal"
+    ],
+    "damage": 280,
+    "text": "Discard all Energy from this Pokémon.",
+    "effects": [
+     {
+      "op": "discard_all_energy_self"
+     }
+    ]
+   }
+  ]
+ },
+ "TEF-85": {
+  "name": "Drilbur",
+  "set": "TEF",
+  "number": "85",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Fighting"
+  ],
+  "hp": 70,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Grass",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "H",
+  "abilities": [
+   {
+    "name": "Dig Dig Dig",
+    "type": "on_bench",
+    "text": "When you play this Pokémon from your hand onto your Bench during your turn, you may search your deck for up to 3 Basic [F] Energy cards and discard them. Then, shuffle your deck.",
+    "effects": [
+     {
+      "op": "search_discard_from_deck",
+      "filter": {
+       "supertype": "Energy",
+       "subtype": "Basic",
+       "type": "Fighting"
+      },
+      "count": 3
+     },
+     {
+      "op": "shuffle_deck"
+     }
+    ]
+   }
+  ],
+  "attacks": [
+   {
+    "name": "Sand Spray",
+    "cost": [
+     "Fighting",
+     "Colorless"
+    ],
+    "damage": 20,
+    "effects": []
+   }
+  ]
+ },
+ "TWM-145": {
+  "name": "Carmine",
+  "set": "TWM",
+  "number": "145",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Supporter"
+  ],
+  "regulation_mark": "H",
+  "text": "If you go first, you may use this card during your first turn. Discard your hand and draw 5 cards.",
+  "effects": [
+   {
+    "op": "discard_hand_draw",
+    "n": 5
+   }
+  ]
+ },
+ "TEF-147": {
+  "name": "Explorer's Guidance",
+  "set": "TEF",
+  "number": "147",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Supporter"
+  ],
+  "regulation_mark": "H",
+  "text": "Look at the top 6 cards of your deck and put 2 of them into your hand. Discard the other cards.",
+  "effects": [
+   {
+    "op": "explorers_guidance",
+    "look": 6,
+    "take": 2
+   }
+  ]
+ },
+ "SSP-164": {
+  "name": "Brilliant Blender",
+  "set": "SSP",
+  "number": "164",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Item"
+  ],
+  "regulation_mark": "H",
+  "text": "Search your deck for up to 5 cards and discard them. Then, shuffle your deck.",
+  "effects": [
+   {
+    "op": "search_discard_from_deck",
+    "filter": {
+     "supertype": "Energy"
+    },
+    "count": 5
+   },
+   {
+    "op": "shuffle_deck"
+   }
+  ]
+ },
+ "JTG-51": {
+  "name": "Tapu Koko ex",
+  "set": "JTG",
+  "number": "51",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic",
+   "ex"
+  ],
+  "types": [
+   "Lightning"
+  ],
+  "hp": 200,
+  "evolves_from": null,
+  "retreat": 0,
+  "weakness": "Fighting",
+  "resistance": null,
+  "rule_box": true,
+  "regulation_mark": "H",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Linked Lightning",
+    "cost": [
+     "Lightning",
+     "Colorless"
+    ],
+    "damage": 60,
+    "text": "This attack does 20 more damage for each of your Benched Pokémon.",
+    "effects": [
+     {
+      "op": "damage_per_own_bench",
+      "amount": 20
+     }
+    ]
+   }
+  ]
+ },
+ "TWM-39": {
+  "name": "Chi-Yu",
+  "set": "TWM",
+  "number": "39",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Fire"
+  ],
+  "hp": 110,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Water",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "H",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Allure",
+    "cost": [
+     "Colorless"
+    ],
+    "damage": 0,
+    "text": "Draw 2 cards.",
+    "effects": [
+     {
+      "op": "draw",
+      "amount": 2
+     }
+    ]
+   },
+   {
+    "name": "Ground Melter",
+    "cost": [
+     "Fire",
+     "Colorless"
+    ],
+    "damage": 60,
+    "text": "If a Stadium is in play, this attack does 60 more damage. Then, discard that Stadium.",
+    "effects": [
+     {
+      "op": "bonus_if_stadium",
+      "amount": 60
+     },
+     {
+      "op": "discard_stadium"
+     }
+    ]
+   }
+  ]
+ },
+ "SVP-149": {
+  "name": "Pecharunt",
+  "set": "SVP",
+  "number": "149",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Darkness"
+  ],
+  "hp": 80,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Fighting",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "H",
+  "abilities": [
+   {
+    "name": "Toxic Subjugation",
+    "type": "static",
+    "static_kind": "toxic_subjugation",
+    "text": "As long as this Pokémon is in the Active Spot, put 5 more damage counters on your opponent's Poisoned Pokémon during Pokémon Checkup."
+   }
+  ],
+  "attacks": [
+   {
+    "name": "Poison Chain",
+    "cost": [
+     "Darkness",
+     "Colorless"
+    ],
+    "damage": 10,
+    "text": "Your opponent's Active Pokémon is now Poisoned. During your opponent's next turn, that Pokémon can't retreat.",
+    "effects": [
+     {
+      "op": "status_opponent_active",
+      "status": "Poisoned"
+     },
+     {
+      "op": "opponent_active_cant_retreat"
+     }
+    ]
+   }
+  ]
+ },
+ "SCR-57": {
+  "name": "Slowpoke",
+  "set": "SCR",
+  "number": "57",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Psychic"
+  ],
+  "hp": 80,
+  "evolves_from": null,
+  "retreat": 2,
+  "weakness": "Darkness",
+  "resistance": "Fighting",
+  "rule_box": false,
+  "regulation_mark": "H",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Dangle Tail",
+    "cost": [
+     "Colorless"
+    ],
+    "damage": 0,
+    "text": "Put a Pokémon from your discard pile into your hand.",
+    "effects": [
+     {
+      "op": "return_pokemon_from_discard_to_hand"
+     }
+    ]
+   },
+   {
+    "name": "Tackle",
+    "cost": [
+     "Psychic",
+     "Colorless"
+    ],
+    "damage": 30,
+    "effects": []
+   }
+  ]
+ },
+ "SCR-58": {
+  "name": "Slowking",
+  "set": "SCR",
+  "number": "58",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 1"
+  ],
+  "types": [
+   "Psychic"
+  ],
+  "hp": 120,
+  "evolves_from": "Slowpoke",
+  "retreat": 3,
+  "weakness": "Darkness",
+  "resistance": "Fighting",
+  "rule_box": false,
+  "regulation_mark": "H",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Seek Inspiration",
+    "cost": [
+     "Psychic",
+     "Colorless"
+    ],
+    "damage": 0,
+    "text": "Discard the top card of your deck, and if that card is a Pokémon that doesn't have a Rule Box, choose 1 of its attacks and use it as this attack.",
+    "effects": [
+     {
+      "op": "seek_inspiration"
+     }
+    ]
+   },
+   {
+    "name": "Super Psy Bolt",
+    "cost": [
+     "Psychic",
+     "Psychic",
+     "Colorless"
+    ],
+    "damage": 120,
+    "effects": []
+   }
+  ]
+ },
+ "SFA-47": {
+  "name": "Kyurem",
+  "set": "SFA",
+  "number": "47",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Dragon"
+  ],
+  "hp": 130,
+  "evolves_from": null,
+  "retreat": 2,
+  "weakness": null,
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "H",
+  "abilities": [
+   {
+    "name": "Plasma Bane",
+    "type": "static",
+    "static_kind": "plasma_bane",
+    "text": "If your opponent has any cards with Colress in the name in their discard pile, this Pokémon can use Trifrost for [C]."
+   }
+  ],
+  "attacks": [
+   {
+    "name": "Trifrost",
+    "cost": [
+     "Water",
+     "Water",
+     "Metal",
+     "Metal",
+     "Colorless"
+    ],
+    "damage": 0,
+    "text": "Discard all Energy from this Pokémon. This attack does 110 damage to 3 of your opponent's Pokémon.",
+    "effects": [
+     {
+      "op": "discard_all_energy_self"
+     },
+     {
+      "op": "damage_multi_opponent",
+      "amount": 110,
+      "targets": 3
+     }
+    ]
+   }
+  ]
+ },
+ "SSP-75": {
+  "name": "Smoochum",
+  "set": "SSP",
+  "number": "75",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Psychic"
+  ],
+  "hp": 30,
+  "evolves_from": null,
+  "retreat": 0,
+  "weakness": "Darkness",
+  "resistance": "Fighting",
+  "rule_box": false,
+  "regulation_mark": "H",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Delightful Kiss",
+    "cost": [],
+    "damage": 0,
+    "text": "Search your deck for up to 2 Basic [P] Energy cards and attach them to 1 of your Benched Pokémon. Then, shuffle your deck.",
+    "effects": [
+     {
+      "op": "search_basic_energy_to_bench",
+      "type": "Psychic",
+      "count": 2
+     },
+     {
+      "op": "shuffle_deck"
+     }
+    ]
+   }
+  ]
+ },
+ "CRI-61": {
+  "name": "Metagross",
+  "set": "CRI",
+  "number": "61",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 2"
+  ],
+  "types": [
+   "Metal"
+  ],
+  "hp": 180,
+  "evolves_from": "Metang",
+  "retreat": 3,
+  "weakness": "Fire",
+  "resistance": "Grass",
+  "rule_box": false,
+  "regulation_mark": "J",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Bounce Back",
+    "cost": [
+     "Metal"
+    ],
+    "damage": 60,
+    "text": "Switch out your opponent's Active Pokémon to the Bench. (Your opponent chooses the new Active Pokémon.)",
+    "effects": [
+     {
+      "op": "gust_opponent_bench"
+     }
+    ]
+   },
+   {
+    "name": "Metallic Hammer",
+    "cost": [
+     "Metal",
+     "Metal",
+     "Metal",
+     "Colorless"
+    ],
+    "damage": 150,
+    "text": "You may discard 3 [M] Energy from this Pokémon and have this attack do 150 more damage.",
+    "effects": [
+     {
+      "op": "discard_energy_type_for_bonus",
+      "type": "Metal",
+      "count": 3,
+      "amount": 150
+     }
+    ]
+   }
+  ]
+ },
+ "WHT-40": {
+  "name": "Cofagrigus",
+  "set": "WHT",
+  "number": "40",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 1"
+  ],
+  "types": [
+   "Psychic"
+  ],
+  "hp": 120,
+  "evolves_from": "Yamask",
+  "retreat": 2,
+  "weakness": "Darkness",
+  "resistance": "Fighting",
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Extended Damagriiigus",
+    "cost": [
+     "Psychic",
+     "Colorless"
+    ],
+    "damage": 0,
+    "text": "Move all damage counters from 1 of your Benched Pokémon to 1 of your opponent's Pokémon.",
+    "effects": [
+     {
+      "op": "move_all_damage_bench_to_opponent"
+     }
+    ]
+   },
+   {
+    "name": "Perplex",
+    "cost": [
+     "Psychic",
+     "Colorless",
+     "Colorless"
+    ],
+    "damage": 60,
+    "text": "Your opponent's Active Pokémon is now Confused.",
+    "effects": [
+     {
+      "op": "status_opponent_active",
+      "status": "Confused"
+     }
+    ]
+   }
+  ]
+ },
+ "SSP-187": {
+  "name": "Surfer",
+  "set": "SSP",
+  "number": "187",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Supporter"
+  ],
+  "regulation_mark": "H",
+  "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. If you do, draw cards until you have 5 cards in your hand.",
+  "effects": [
+   {
+    "op": "switch_self_with_bench"
+   },
+   {
+    "op": "draw_to_hand_size",
+    "n": 5
+   }
+  ]
+ },
+ "SFA-54": {
+  "name": "Academy at Night",
+  "set": "SFA",
+  "number": "54",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Stadium"
+  ],
+  "regulation_mark": "H",
+  "stadium_kind": "academy_at_night",
+  "stadium_passive": true,
+  "text": "Once during each player's turn, that player may put a card from their hand on top of their deck.",
+  "effects": [
+   {
+    "op": "stadium_passive"
+   }
+  ]
+ },
+ "SCR-118": {
+  "name": "Fan Rotom",
+  "set": "SCR",
+  "number": "118",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Colorless"
+  ],
+  "hp": 70,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Lightning",
+  "resistance": "Fighting",
+  "rule_box": false,
+  "regulation_mark": "H",
+  "abilities": [
+   {
+    "name": "Fan Call",
+    "type": "activated",
+    "once_per_turn": true,
+    "condition": "first_turn",
+    "text": "Once during your first turn, you may search your deck for up to 3 [C] Pokémon with 100 HP or less, reveal them, and put them into your hand. Then, shuffle your deck.",
+    "effects": [
+     {
+      "op": "search_deck_to_hand",
+      "filter": {
+       "supertype": "Pokémon",
+       "type": "Colorless",
+       "hp_max": 100
+      },
+      "count": 3
+     },
+     {
+      "op": "shuffle_deck"
+     }
+    ]
+   }
+  ],
+  "attacks": [
+   {
+    "name": "Assault Landing",
+    "cost": [
+     "Colorless"
+    ],
+    "damage": 0,
+    "text": "If there is no Stadium in play, this attack does nothing.",
+    "effects": [
+     {
+      "op": "bonus_if_stadium",
+      "amount": 70
+     }
+    ]
+   }
+  ]
+ },
+ "PRE-116": {
+  "name": "Max Rod",
+  "set": "PRE",
+  "number": "116",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Item"
+  ],
+  "regulation_mark": "H",
+  "text": "Put up to 5 in any combination of Pokémon and Basic Energy cards from your discard pile into your hand.",
+  "effects": [
+   {
+    "op": "max_rod",
+    "count": 5
+   }
+  ]
+ },
+ "TEF-128": {
+  "name": "Dunsparce",
+  "set": "TEF",
+  "number": "128",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Colorless"
+  ],
+  "hp": 60,
+  "evolves_from": null,
+  "retreat": 0,
+  "weakness": "Fighting",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "H",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Gnaw",
+    "cost": [
+     "Colorless"
+    ],
+    "damage": 10,
+    "effects": []
+   },
+   {
+    "name": "Dig",
+    "cost": [
+     "Colorless",
+     "Colorless"
+    ],
+    "damage": 30,
+    "text": "Flip a coin. If heads, during your opponent's next turn, prevent all damage from and effects of attacks done to this Pokémon.",
+    "effects": [
+     {
+      "op": "splashing_dodge"
+     }
+    ]
+   }
+  ]
+ },
+ "CRI-40": {
+  "name": "Pumpkaboo",
+  "set": "CRI",
+  "number": "40",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Psychic"
+  ],
+  "hp": 60,
+  "evolves_from": null,
+  "retreat": 2,
+  "weakness": "Darkness",
+  "resistance": "Fighting",
+  "rule_box": false,
+  "regulation_mark": "J",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Stampede",
+    "cost": [
+     "Psychic"
+    ],
+    "damage": 20,
+    "effects": []
+   }
+  ]
+ },
+ "CRI-41": {
+  "name": "Gourgeist ex",
+  "set": "CRI",
+  "number": "41",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 1",
+   "ex"
+  ],
+  "types": [
+   "Psychic"
+  ],
+  "hp": 270,
+  "evolves_from": "Pumpkaboo",
+  "retreat": 2,
+  "weakness": "Darkness",
+  "resistance": "Fighting",
+  "rule_box": true,
+  "regulation_mark": "J",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Horrifying Rondo",
+    "cost": [
+     "Psychic"
+    ],
+    "damage": 30,
+    "text": "This attack does 50 more damage for each of your Benched Pokémon that has any damage counters on it.",
+    "effects": [
+     {
+      "op": "damage_per_own_damaged_bench",
+      "amount": 50
+     }
+    ]
+   },
+   {
+    "name": "Ghostly Touch",
+    "cost": [
+     "Psychic",
+     "Psychic"
+    ],
+    "damage": 140,
+    "text": "Discard a random card from your opponent's hand.",
+    "effects": [
+     {
+      "op": "opponent_discard_from_hand",
+      "filter": {},
+      "count": 1
+     }
+    ]
+   }
+  ]
+ },
+ "TEF-23": {
+  "name": "Rellor",
+  "set": "TEF",
+  "number": "23",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Grass"
+  ],
+  "hp": 50,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Fire",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "H",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Slight Intrusion",
+    "cost": [
+     "Colorless"
+    ],
+    "damage": 30,
+    "text": "This Pokémon also does 10 damage to itself.",
+    "effects": [
+     {
+      "op": "self_damage",
+      "amount": 10
+     }
+    ]
+   }
+  ]
+ },
+ "TEF-24": {
+  "name": "Rabsca",
+  "set": "TEF",
+  "number": "24",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 1"
+  ],
+  "types": [
+   "Grass"
+  ],
+  "hp": 70,
+  "evolves_from": "Rellor",
+  "retreat": 1,
+  "weakness": "Fire",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "H",
+  "abilities": [
+   {
+    "name": "Spherical Shield",
+    "type": "static",
+    "static_kind": "spherical_shield",
+    "text": "Prevent all damage from and effects of attacks from your opponent's Pokémon done to your Benched Pokémon."
+   }
+  ],
+  "attacks": [
+   {
+    "name": "Psychic",
+    "cost": [
+     "Grass"
+    ],
+    "damage": 10,
+    "text": "This attack does 30 more damage for each Energy attached to your opponent's Active Pokémon.",
+    "effects": [
+     {
+      "op": "damage_per_opponent_active_energy",
+      "amount": 30
+     }
+    ]
+   }
+  ]
+ },
+ "DRI-127": {
+  "name": "Team Rocket's Murkrow",
+  "set": "DRI",
+  "number": "127",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Darkness"
+  ],
+  "hp": 80,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Lightning",
+  "resistance": "Fighting",
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Deceit",
+    "cost": [
+     "Colorless"
+    ],
+    "damage": 0,
+    "text": "Search your deck for a Supporter card and put it into your hand. Then, shuffle your deck.",
+    "effects": [
+     {
+      "op": "search_deck_to_hand",
+      "filter": {
+       "supertype": "Trainer",
+       "subtype": "Supporter"
+      },
+      "count": 1
+     },
+     {
+      "op": "shuffle_deck"
+     }
+    ]
+   },
+   {
+    "name": "Torment",
+    "cost": [
+     "Darkness",
+     "Colorless"
+    ],
+    "damage": 30,
+    "text": "Choose 1 of your opponent's Active Pokémon's attacks. During your opponent's next turn, that Pokémon can't use that attack.",
+    "effects": []
+   }
+  ]
+ },
+ "ASC-127": {
+  "name": "Team Rocket's Honchkrow",
+  "set": "ASC",
+  "number": "127",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 1"
+  ],
+  "types": [
+   "Darkness"
+  ],
+  "hp": 130,
+  "evolves_from": "Team Rocket's Murkrow",
+  "retreat": 1,
+  "weakness": "Lightning",
+  "resistance": "Fighting",
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Rocket Feathers",
+    "cost": [
+     "Colorless",
+     "Colorless"
+    ],
+    "damage": 0,
+    "text": "You may discard any number of Supporter cards that have Team Rocket in their name from your hand; this attack does 60 damage for each card discarded this way.",
+    "effects": [
+     {
+      "op": "rocket_feathers",
+      "amount": 60
+     }
+    ]
+   },
+   {
+    "name": "Hammer In",
+    "cost": [
+     "Darkness",
+     "Colorless",
+     "Colorless"
+    ],
+    "damage": 100,
+    "effects": []
+   }
+  ]
+ },
+ "DRI-153": {
+  "name": "Team Rocket's Porygon",
+  "set": "DRI",
+  "number": "153",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Colorless"
+  ],
+  "hp": 60,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Fighting",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Hacking",
+    "cost": [
+     "Colorless"
+    ],
+    "damage": 0,
+    "text": "Discard a card from your hand. If you do, your opponent discards a card from their hand.",
+    "effects": [
+     {
+      "op": "discard_any_from_hand",
+      "n": 1
+     },
+     {
+      "op": "opponent_discard_from_hand",
+      "filter": {},
+      "count": 1
+     }
+    ]
+   }
+  ]
+ },
+ "DRI-154": {
+  "name": "Team Rocket's Porygon2",
+  "set": "DRI",
+  "number": "154",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 1"
+  ],
+  "types": [
+   "Colorless"
+  ],
+  "hp": 90,
+  "evolves_from": "Team Rocket's Porygon",
+  "retreat": 1,
+  "weakness": "Fighting",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "R Command",
+    "cost": [
+     "Colorless",
+     "Colorless",
+     "Colorless"
+    ],
+    "damage": 0,
+    "text": "This attack does 20 damage for each Supporter card that has Team Rocket in its name in your discard pile.",
+    "effects": [
+     {
+      "op": "damage_per_tr_supporter_in_discard",
+      "amount": 20
+     }
+    ]
+   }
+  ]
+ },
+ "CRI-108": {
+  "name": "Energy Retrieval",
+  "set": "CRI",
+  "number": "108",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Item"
+  ],
+  "regulation_mark": "J",
+  "text": "Put up to 2 Basic Energy cards from your discard pile into your hand.",
+  "effects": [
+   {
+    "op": "energy_retrieval",
+    "count": 2
+   }
+  ]
+ },
+ "DRI-149": {
+  "name": "Team Rocket's Meowth",
+  "set": "DRI",
+  "number": "149",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Colorless"
+  ],
+  "hp": 70,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Fighting",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "I",
+  "text": "",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Paw-cket Pilfer",
+    "cost": [
+     "Colorless"
+    ],
+    "damage": 0,
+    "text": "Choose a random card from your opponent's hand. Your opponent reveals that card and shuffles it into their deck.",
+    "effects": [
+     {
+      "op": "opponent_shuffle_random_from_hand",
+      "count": 1
+     }
+    ]
+   },
+   {
+    "name": "Fury Swipes",
+    "cost": [
+     "Colorless",
+     "Colorless"
+    ],
+    "damage": 0,
+    "text": "Flip 3 coins. This attack does 20 damage for each heads.",
+    "effects": [
+     {
+      "op": "damage_per_heads",
+      "flips": 3,
+      "amount": 20
+     }
+    ]
+   }
+  ]
+ },
+ "DRI-150": {
+  "name": "Team Rocket's Persian ex",
+  "set": "DRI",
+  "number": "150",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 1",
+   "ex"
+  ],
+  "types": [
+   "Colorless"
+  ],
+  "hp": 260,
+  "evolves_from": "Team Rocket's Meowth",
+  "retreat": 2,
+  "weakness": "Fighting",
+  "resistance": null,
+  "rule_box": true,
+  "regulation_mark": "I",
+  "text": "",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Haughty Order",
+    "cost": [
+     "Colorless",
+     "Colorless"
+    ],
+    "damage": 0,
+    "text": "Reveal the top 10 cards of your opponent's deck. You may choose an attack from a Pokémon you find there and use it as this attack. Shuffle the revealed cards into your opponent's deck.",
+    "effects": [
+     {
+      "op": "haughty_order",
+      "look": 10
+     }
+    ]
+   },
+   {
+    "name": "Cruel Slash",
+    "cost": [
+     "Colorless",
+     "Colorless",
+     "Colorless"
+    ],
+    "damage": 140,
+    "text": "Your opponent's Active Pokémon is now Confused.",
+    "effects": [
+     {
+      "op": "status_opponent_active",
+      "status": "Confused"
+     }
+    ]
+   }
+  ]
+ },
+ "DRI-155": {
+  "name": "Team Rocket's Porygon-Z",
+  "set": "DRI",
+  "number": "155",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 2"
+  ],
+  "types": [
+   "Colorless"
+  ],
+  "hp": 140,
+  "evolves_from": "Team Rocket's Porygon2",
+  "retreat": 1,
+  "weakness": "Fighting",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "I",
+  "text": "",
+  "abilities": [
+   {
+    "name": "Reconstitute",
+    "type": "activated",
+    "text": "You must discard 2 cards from your hand in order to use this Ability. Once during your turn, you may draw a card.",
+    "effects": [
+     {
+      "op": "reconstitute"
+     }
+    ]
+   }
+  ],
+  "attacks": [
+   {
+    "name": "R Command",
+    "cost": [
+     "Colorless",
+     "Colorless"
+    ],
+    "damage": 0,
+    "text": "This attack does 20 damage for each Supporter card that has Team Rocket in its name in your discard pile.",
+    "effects": [
+     {
+      "op": "damage_per_tr_supporter_in_discard",
+      "amount": 20
+     }
+    ]
+   }
+  ]
+ }
+}

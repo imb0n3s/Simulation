@@ -1,0 +1,3 @@
+# Core engine + agents + tournaments: standard library only.
+# Optional (only for iterate.py value-model experiments):
+numpy
