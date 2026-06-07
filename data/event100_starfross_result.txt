@@ -1,0 +1,11 @@
+100 FULL 2500-PLAYER TOURNAMENTS — exact Swiss + Top64 cut, ALL Bo3, matchup table (~92k sims) + real-results calibration layer
+YOUR deck piloted (in its matchup measurements) by the spread-skilled DeepSearchAgent
+
+YOUR Swiss records: {'9-3': 21, '8-4': 27, '7-5': 9, '6-6': 3, '5-7': 2, '10-2': 22, '11-1': 15, '12-0': 1}
+median placement: 118
+best: 1   worst: 1925
+25th-75th pct: 11 - 352
+made Top 64: 40/100   made Top 8: 21/100
+typical cut line (wins of 64th seed): min 9, median 9.0, max 9
+
+Event champions by archetype: {'starmie_froslass_munkidori': 9, 'greninja_dragapult': 8, 'dragapult_dusknoir_v2': 7, 'dragapult_blaziken': 6, 'dragapult_blaziken_v2': 6, 'hydrapple_meganium': 5, 'sinistcha_ogerpon': 5, 'beedrill_dudunsparce_v2': 4, 'dragapult_dudunsparce_ex': 4, 'beedrill_ex_dudunsparce': 4, 'dragapult_dudunsparce_ex_v2': 4, 'dragapult_dusknoir_budew': 4, 'froslass_lopunny': 3, 'dragapult_dusknoir': 3, 'dragapult_toolbox': 2, 'festival_lead': 2, 'alakazam_dudunsparce': 2, 'dragapult_ex': 2, 'dragapult_hammers': 2, 'alakazam_dudunsparce_v2': 2, 'tera_box_raging_bolt': 2, 'ns_zoroark_v2': 2, 'ns_zoroark': 2, 'alakazam_v3': 1, 'mega_diancie_dusknoir': 1, 'dragapult_dudunsparce': 1, 'blaziken_greninja_zoroark': 1, 'user_greninja_froslass': 1, 'dragapult_dusknoir_v3': 1, 'dragapult_starmie': 1, 'greninja_froslass': 1, 'cynthia_garchomp': 1, 'greninja_noctowl': 1}
