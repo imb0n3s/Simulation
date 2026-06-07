@@ -420,6 +420,8 @@ class Effects:
                             reach = max(reach, min(30, own_dmg))
                 unreachable = [m for m in koable if _remaining(game, m) > reach]
                 pool2 = unreachable or koable
+                if getattr(self.policy, "_gust_slip", False):
+                    pool2 = koable   # human slip: grabs the biggest KO, forgets the reach check
                 tgt = max(pool2, key=lambda m: (_prize(m), -_remaining(game, m)))
         if tgt is None:
             # no KO available: NEVER gust up a ready attacker (the "bossed the wrong
@@ -622,7 +624,33 @@ class Effects:
 
     def _op_discard_from_hand_cost(self, game, player, op, source, ctx):
         others = [c for c in player.hand if c is not source]
-        for c in others[:op["n"]]:
+        if getattr(self.policy, "_discard_slip", False):
+            picks = others[:op["n"]]   # human slip: pays the cost with whatever's first
+        else:
+            def expendability(c):
+                # higher = safer to discard
+                v = 5.0
+                copies_in_deck = sum(1 for d in player.deck if d.name == c.name)
+                if c.is_energy:
+                    v = 7.0 if copies_in_deck >= 2 else 4.0
+                elif c.is_pokemon:
+                    in_play = {m.card.name for m in player.all_pokemon()}
+                    v = 3.0 if c.evolves_from in in_play else 6.0
+                    if copies_in_deck >= 1: v += 1.5
+                elif c.is_trainer:
+                    ops = {e.get("op") for e in c.data.get("effects", [])}
+                    if "wallys_compassion" in ops and \
+                       any("Mega" in m.card.subtypes for m in player.all_pokemon()):
+                        v = 0.5    # the answer card — the Ultra Ball lesson
+                    elif ops & {"opponent_hand_to_bottom_draw", "unfair_stamp"}:
+                        v = 1.0    # disruption bullets are answers too
+                    elif "gust_opponent_bench" in ops:
+                        v = 2.0
+                    else:
+                        v = 6.0 if copies_in_deck >= 1 else 4.5
+                return v
+            picks = sorted(others, key=expendability, reverse=True)[:op["n"]]
+        for c in picks:
             player.hand.remove(c); player.discard.append(c)
 
     def _op_place_counters_on_attacker(self, game, player, op, source, ctx):

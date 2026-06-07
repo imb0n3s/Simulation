@@ -37,9 +37,14 @@ def build_deck(path):
 
 class HeuristicAgent:
     """Plays a turn with a fixed priority order. Best-effort, never crashes."""
-    def __init__(self, fx: Effects):
+    def __init__(self, fx: Effects, err=0.10):
         self.fx = fx
+        self.err = err          # human-error rate per decision point (log-derived slips)
         self._skip_ops = set()  # op names whose trainer cards dev should defer
+
+    def _slip(self, game):
+        """One human mistake, reproducibly seeded by the game's own RNG."""
+        return self.err > 0 and game.rng.random() < self.err
 
     def _try(self, fn):
         try: fn(); return True
@@ -162,7 +167,7 @@ class HeuristicAgent:
             if any(0 < rem(m) <= best for m in opp.bench):
                 self._try(lambda c=gusts[0]: self.fx.play_trainer(game, p, c)); return
         # 1.5) Refrain defence: every card held is 50 incoming — never balloon the hand
-        if self._opp_hand_punisher(game, p):
+        if self._opp_hand_punisher(game, p) and not self._slip(game):
             if additive:
                 self._try(lambda c=additive[0]: self.fx.play_trainer(game, p, c))
             elif resets and len(p.hand) <= 2:
@@ -172,7 +177,7 @@ class HeuristicAgent:
         # disruption bullet (Special Red Card / Unfair Stamp) wins the late game.
         # Once their prizes are low enough that the bullet is (nearly) live,
         # NEVER reset it away — additive supporters only.
-        if self._opp_own_hand_scaler(game, p):
+        if self._opp_own_hand_scaler(game, p) and not self._slip(game):
             opp = game.players[1 - game.players.index(p)]
             has_bullet = any(c.is_trainer and any(e.get("op") in self._DISRUPT_OPS
                                                   for e in c.data.get("effects", []))
@@ -271,6 +276,10 @@ class HeuristicAgent:
     def take_turn(self, game: Game, p: Player):
         self._cur_player = p
         self._cur_game = game
+        # gust slip: the "Bossed up the wrong Pokemon" mistake, made at human rate
+        self.fx.policy._gust_slip = self._slip(game)
+        # discard slip: the "Ultra Balled away the Wally's Compassion" mistake
+        self.fx.policy._discard_slip = self._slip(game)
         # 1) play Items (the Supporter waits until after draw abilities — info first)
         self._play_items(game, p)
         # 2) play a stadium if we have one and none is ours
@@ -281,8 +290,8 @@ class HeuristicAgent:
         # 3) bench basics — deliberately, not by reflex
         for card in list(p.hand):
             if card.is_basic_pokemon and game.bench_has_room(p):
-                if not self._should_bench(game, p, card):
-                    continue
+                if not self._should_bench(game, p, card) and not self._slip(game):
+                    continue   # (slip = the "Meowth ex for one draw vs a spread deck" mistake)
                 if self._try(lambda c=card: game.play_basic_to_bench(p, c)):
                     benched = p.bench[-1]
                     self._try(lambda m=benched: self.fx.trigger_on_bench(game, p, m))
@@ -573,10 +582,10 @@ class DeepSearchAgent(HeuristicAgent):
     This makes *spreading damage now* valuable, because the rollout converts that
     spread into KOs on later turns."""
     import copy as _copy
-    def __init__(self, fx, depth=3, samples=3):
-        super().__init__(fx)
+    def __init__(self, fx, depth=3, samples=3, err=0.05):
+        super().__init__(fx, err=err)
         self.depth = depth; self.samples = samples
-        self._roller = HeuristicAgent(fx)   # fast policy used inside rollouts
+        self._roller = HeuristicAgent(fx, err=0.0)   # rollouts stay clean (value estimates)
 
     def take_turn(self, game, p):
         self._skip_ops = {"gust_opponent_bench"}   # defer Boss's; search decides it
@@ -653,14 +662,20 @@ class DeepSearchAgent(HeuristicAgent):
                     branches.append((g, a, pr))
         if not branches: return
         best, bestval = None, (-1e18, -1e18)
+        second = None
         for (g, a, pr) in branches:
             mean, worst = self._eval(game, pi, g, a, promote=pr)
             # value already encodes speed (1e6 - turn): a win NOW beats a win
             # next turn — the "could have won a turn earlier" lesson. No early
             # break: rank every guaranteed win and take the fastest.
-            if (worst, mean) > bestval: bestval, best = (worst, mean), (g, a, pr)
+            if (worst, mean) > bestval:
+                second = best
+                bestval, best = (worst, mean), (g, a, pr)
             if worst > 9e5 and bestval[0] >= 1e6 - game.turn - 1:
                 break                        # immediate win found — nothing beats it
+        # human slip: even strong players fumble a found line sometimes
+        if self._slip(game) and second is not None:
+            best = second
         g, a, pr = best
         if pr is not None:
             self._try(lambda i=pr: game.retreat(p, i))
