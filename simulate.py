@@ -48,6 +48,17 @@ class HeuristicAgent:
             return False
 
     def _defer(self, card):
+        # hand-disruption bullets (Special Red Card / Unfair Stamp): vs a
+        # Powerful-Hand-style scaler, fire only when their hand is BIG (>=7);
+        # vs everyone else keep the old behavior (play freely).
+        if any(e.get("op") in ("opponent_hand_to_bottom_draw", "unfair_stamp")
+               for e in card.data.get("effects", [])):
+            p = getattr(self, "_cur_player", None)
+            g = getattr(self, "_cur_game", None)
+            if p is not None and g is not None and self._opp_own_hand_scaler(g, p):
+                opp = g.players[1 - g.players.index(p)]
+                if len(opp.hand) < 7:
+                    return True   # hold the bullet until it deletes a real hand
         # never switch our own ready attacker out with a Switch-style item
         if any(e.get("op") == "switch_self_with_bench" for e in card.data.get("effects", [])):
             act = getattr(self, "_cur_player", None) and self._cur_player.active
@@ -112,6 +123,12 @@ class HeuristicAgent:
         if any(c.card_id == "MEG-125" for c in p.hand) and \
            any(c.is_pokemon and "Stage 2" in c.subtypes for c in p.hand):
             v += 0.6
+        if self._opp_own_hand_scaler(game, p):
+            # the Alakazam lesson: hand disruption is the answer — never reset it away
+            for c in p.hand:
+                if c.is_trainer and any(e.get("op") in self._DISRUPT_OPS
+                                        for e in c.data.get("effects", [])):
+                    v += 1.2
         return v
 
     def _racing_pressure(self, game, p):
@@ -151,6 +168,19 @@ class HeuristicAgent:
             elif resets and len(p.hand) <= 2:
                 self._try(lambda c=resets[0]: self.fx.play_trainer(game, p, c))
             return
+        # 1.6) the Alakazam lesson: vs a Powerful-Hand-style scaler, a held
+        # disruption bullet (Special Red Card / Unfair Stamp) wins the late game.
+        # Once their prizes are low enough that the bullet is (nearly) live,
+        # NEVER reset it away — additive supporters only.
+        if self._opp_own_hand_scaler(game, p):
+            opp = game.players[1 - game.players.index(p)]
+            has_bullet = any(c.is_trainer and any(e.get("op") in self._DISRUPT_OPS
+                                                  for e in c.data.get("effects", []))
+                             for c in p.hand)
+            if has_bullet and len(opp.prizes) <= 4:
+                if additive:
+                    self._try(lambda c=additive[0]: self.fx.play_trainer(game, p, c))
+                return
         # 2) balanced greed: dig when the race demands it, protect when the hand is working
         kv = self._keeper_value(game, p)
         pressure = self._racing_pressure(game, p)
@@ -213,6 +243,22 @@ class HeuristicAgent:
                     return True
         return False
 
+    def _opp_own_hand_scaler(self, game, p):
+        """True when the OPPONENT has an attacker that scales with THEIR OWN hand
+        (Powerful Hand): their ballooning hand is incoming placed damage, and
+        hand disruption (Special Red Card / Judge / Unfair Stamp / Lucian) is
+        the counter-play."""
+        opp = game.players[1 - game.players.index(p)]
+        for mon in opp.all_pokemon():
+            for atk in mon.card.data.get("attacks", []):
+                for e in atk.get("effects", []) or []:
+                    if e.get("op") in ("damage_per_own_hand", "place_counters_per_hand"):
+                        return True
+        return False
+
+    _DISRUPT_OPS = ("opponent_hand_to_bottom_draw", "each_player_shuffle_draw",
+                    "unfair_stamp", "lucian_reset")
+
     def _play_items(self, game, p):
         for card in list(p.hand):
             if card.is_trainer and "Item" in card.subtypes \
@@ -224,6 +270,7 @@ class HeuristicAgent:
 
     def take_turn(self, game: Game, p: Player):
         self._cur_player = p
+        self._cur_game = game
         # 1) play Items (the Supporter waits until after draw abilities — info first)
         self._play_items(game, p)
         # 2) play a stadium if we have one and none is ours
