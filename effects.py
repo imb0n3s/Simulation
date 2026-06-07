@@ -368,6 +368,33 @@ class Effects:
             pl.draw(n)
             game.log(f"  Lucian: {pl.name} draws {n}.")
 
+    def _op_salvatore_evolve(self, game, player, op, source, ctx):
+        for m in player.all_pokemon():
+            for cd in list(player.deck):
+                if cd.is_pokemon and cd.evolves_from == m.card.name \
+                   and not cd.data.get("abilities"):
+                    player.deck.remove(cd)
+                    game.evolve_in_place(player, m, cd) if hasattr(game, "evolve_in_place") else None
+                    if not hasattr(game, "evolve_in_place"):
+                        m.card = cd; m.status.clear()
+                    player.shuffle(game.rng)
+                    game.log(f"  Salvatore evolves into {cd.name}.")
+                    return
+        game.log("  Salvatore: no target.")
+
+    def _op_larrys_skill(self, game, player, op, source, ctx):
+        player.discard += player.hand; player.hand = []
+        got = []
+        for want in ("pokemon", "supporter", "energy"):
+            for cd in list(player.deck):
+                ok = (want == "pokemon" and cd.is_pokemon) or \
+                     (want == "supporter" and cd.is_trainer and "Supporter" in cd.subtypes) or \
+                     (want == "energy" and cd.is_energy and "Basic" in (cd.subtypes or ["Basic"]))
+                if ok:
+                    player.deck.remove(cd); player.hand.append(cd); got.append(cd.name); break
+        player.shuffle(game.rng)
+        game.log(f"  Larry's Skill: discards hand, fetches {', '.join(got) or 'nothing'}.")
+
     def _op_gust_opponent_bench(self, game, player, op, source, ctx):
         opp = game.players[1 - game.players.index(player)]
         if not opp.bench: return

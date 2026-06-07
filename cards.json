@@ -4893,23 +4893,17 @@
  },
  "TWM-52": {
   "name": "Glalie",
-  "set": "TWM",
-  "number": "52",
-  "supertype": "Pokémon",
+  "supertype": "Pokemon",
   "subtypes": [
    "Stage 1"
   ],
+  "evolves_from": "Snorunt",
+  "hp": 120,
   "types": [
    "Water"
   ],
-  "hp": 120,
-  "evolves_from": "Snorunt",
-  "retreat": 2,
   "weakness": "Metal",
-  "resistance": null,
-  "rule_box": false,
-  "regulation_mark": "H",
-  "abilities": [],
+  "retreat": 2,
   "attacks": [
    {
     "name": "Damage Beat",
@@ -4917,11 +4911,10 @@
      "Water"
     ],
     "damage": 0,
-    "text": "This attack does 20 damage for each damage counter on your opponent's Active Pokémon.",
     "effects": [
      {
       "op": "damage_per_opponent_active_counter",
-      "amount": 20
+      "per": 20
      }
     ]
    },
@@ -4933,7 +4926,6 @@
      "Colorless"
     ],
     "damage": 140,
-    "text": "Discard an Energy from this Pokémon.",
     "effects": [
      {
       "op": "discard_own_energy",
@@ -10280,5 +10272,425 @@
   "abilities": [],
   "attacks": [],
   "note": "intermediate evolution; attack text not individually modeled"
+ },
+ "TEF-202": {
+  "name": "Salvatore",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Supporter"
+  ],
+  "text": "Search deck for a no-Abilities evolution of 1 of your Pokemon and evolve it (works on Pokemon played this turn).",
+  "effects": [
+   {
+    "op": "salvatore_evolve"
+   }
+  ]
+ },
+ "PRE-139": {
+  "name": "Larry's Skill",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Supporter"
+  ],
+  "text": "Discard your hand; search deck for a Pokemon, a Supporter, and a Basic Energy into hand.",
+  "effects": [
+   {
+    "op": "larrys_skill"
+   }
+  ]
+ },
+ "POR-121": {
+  "name": "Meowth ex",
+  "set": "POR",
+  "number": "62",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic",
+   "ex"
+  ],
+  "types": [
+   "Colorless"
+  ],
+  "hp": 170,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Fighting",
+  "resistance": null,
+  "rule_box": true,
+  "regulation_mark": "J",
+  "abilities": [
+   {
+    "name": "Last-Ditch Catch",
+    "type": "on_bench",
+    "text": "Once during your turn, when you play this Pokémon from your hand onto your Bench, you may use this Ability. Search your deck for a Supporter card, reveal it, and put it into your hand. Then, shuffle your deck.",
+    "effects": [
+     {
+      "op": "search_deck_to_hand",
+      "filter": {
+       "supertype": "Trainer",
+       "subtype": "Supporter"
+      },
+      "count": 1
+     },
+     {
+      "op": "shuffle_deck"
+     }
+    ]
+   }
+  ],
+  "attacks": [
+   {
+    "name": "Tuck Tail",
+    "cost": [
+     "Colorless",
+     "Colorless",
+     "Colorless"
+    ],
+    "damage": 60,
+    "text": "Put this Pokémon and all attached cards into your hand.",
+    "effects": [
+     {
+      "op": "return_self_to_hand"
+     }
+    ]
+   }
+  ]
+ },
+ "ASC-265": {
+  "name": "Mega Froslass ex",
+  "set": "ASC",
+  "number": "47",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 1",
+   "Mega",
+   "ex"
+  ],
+  "types": [
+   "Water"
+  ],
+  "hp": 310,
+  "evolves_from": "Snorunt",
+  "retreat": 1,
+  "weakness": "Metal",
+  "resistance": null,
+  "rule_box": true,
+  "regulation_mark": "I",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Resentful Refrain",
+    "cost": [
+     "Water"
+    ],
+    "damage": 0,
+    "text": "This attack does 50 damage for each card in your opponent's hand.",
+    "effects": [
+     {
+      "op": "damage_per_opponent_hand",
+      "amount": 50
+     }
+    ]
+   },
+   {
+    "name": "Absolute Snow",
+    "cost": [
+     "Water",
+     "Colorless",
+     "Colorless"
+    ],
+    "damage": 150,
+    "text": "Your opponent's Active Pokémon is now Asleep.",
+    "effects": [
+     {
+      "op": "status_opponent_active",
+      "status": "Asleep"
+     }
+    ]
+   }
+  ]
+ },
+ "EVO-88": {
+  "name": "Switch",
+  "set": "MEG",
+  "number": "130",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Item"
+  ],
+  "regulation_mark": "I",
+  "text": "Switch your Active Pokémon with 1 of your Benched Pokémon.",
+  "effects": [
+   {
+    "op": "switch_self_with_bench"
+   }
+  ]
+ },
+ "WHT-164": {
+  "name": "Hilda",
+  "set": "WHT",
+  "number": "84",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Supporter"
+  ],
+  "regulation_mark": "I",
+  "text": "Search your deck for an Evolution Pokémon and an Energy card, reveal them, and put them into your hand. Then, shuffle your deck.",
+  "effects": [
+   {
+    "op": "search_deck_to_hand",
+    "filter": {
+     "supertype": "Pokémon",
+     "subtype": "Evolution"
+    },
+    "count": 1
+   },
+   {
+    "op": "search_deck_to_hand",
+    "filter": {
+     "supertype": "Energy"
+    },
+    "count": 1
+   },
+   {
+    "op": "shuffle_deck"
+   }
+  ]
+ },
+ "MEG-169": {
+  "name": "Lillie's Determination",
+  "set": "MEG",
+  "number": "119",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Supporter"
+  ],
+  "regulation_mark": "I",
+  "text": "Shuffle your hand into your deck. Then, draw 6 cards. If you have exactly 6 Prize cards remaining, draw 8 cards instead.",
+  "effects": [
+   {
+    "op": "shuffle_hand_draw",
+    "n": 6,
+    "bonus_n": 8,
+    "bonus_if_prizes": 6
+   }
+  ]
+ },
+ "MEG-166": {
+  "name": "Air Balloon",
+  "set": "ASC",
+  "number": "181",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Tool"
+  ],
+  "regulation_mark": "I",
+  "retreat_reduction": 2,
+  "text": "The Retreat Cost of the Pokémon this card is attached to is [C][C] less."
+ },
+ "MEG-167": {
+  "name": "Buddy-Buddy Poffin",
+  "set": "TEF",
+  "number": "144",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Item"
+  ],
+  "regulation_mark": "H",
+  "text": "Search your deck for up to 2 Basic Pokémon with 70 HP or less and put them onto your Bench. Then, shuffle your deck.",
+  "effects": [
+   {
+    "op": "search_deck_to_bench",
+    "filter": {
+     "supertype": "Pokémon",
+     "subtype": "Basic",
+     "hp_max": 70
+    },
+    "count": 2
+   },
+   {
+    "op": "shuffle_deck"
+   }
+  ]
+ },
+ "PAL-265": {
+  "name": "Boss's Orders",
+  "set": "MEG",
+  "number": "114",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Supporter"
+  ],
+  "regulation_mark": "I",
+  "text": "Switch 1 of your opponent's Benched Pokémon with their Active Pokémon.",
+  "effects": [
+   {
+    "op": "gust_opponent_bench"
+   }
+  ]
+ },
+ "MEG-173": {
+  "name": "Night Stretcher",
+  "set": "ASC",
+  "number": "196",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Item"
+  ],
+  "regulation_mark": "H",
+  "text": "Put a Pokémon or a Basic Energy card from your discard pile into your hand.",
+  "effects": [
+   {
+    "op": "recover_from_discard",
+    "filter": {
+     "any_of": [
+      {
+       "supertype": "Pokémon"
+      },
+      {
+       "supertype": "Energy",
+       "subtype": "Basic"
+      }
+     ]
+    },
+    "count": 1,
+    "to": "hand"
+   }
+  ]
+ },
+ "MEG-176": {
+  "name": "Wally's Compassion",
+  "set": "MEG",
+  "number": "132",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Supporter"
+  ],
+  "regulation_mark": "I",
+  "text": "Heal all damage from 1 of your Mega Evolution Pokémon ex. If you healed any damage in this way, put all Energy attached to that Pokémon into your hand.",
+  "effects": [
+   {
+    "op": "wallys_compassion"
+   }
+  ]
+ },
+ "BRS-186": {
+  "name": "Ultra Ball",
+  "set": "MEG",
+  "number": "131",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Item"
+  ],
+  "regulation_mark": "I",
+  "text": "You can use this card only if you discard 2 other cards from your hand. Search your deck for a Pokémon, reveal it, and put it into your hand. Then, shuffle your deck.",
+  "effects": [
+   {
+    "op": "discard_from_hand_cost",
+    "n": 2
+   },
+   {
+    "op": "search_deck_to_hand",
+    "filter": {
+     "supertype": "Pokémon"
+    },
+    "count": 1
+   },
+   {
+    "op": "shuffle_deck"
+   }
+  ]
+ },
+ "PFL-124": {
+  "name": "Ignition Energy",
+  "set": "WHT",
+  "number": "86",
+  "supertype": "Energy",
+  "subtypes": [
+   "Special"
+  ],
+  "provides": [
+   "Colorless"
+  ],
+  "evolution_provides": [
+   "Colorless",
+   "Colorless",
+   "Colorless"
+  ],
+  "discard_end_of_turn": true,
+  "regulation_mark": "I",
+  "text": "If this card is attached to 1 of your Pokémon, discard it at the end of your turn. As long as this card is attached to a Pokémon, it provides [C] Energy. If this card is attached to an Evolution Pokémon, it provides [C][C][C] Energy instead."
+ },
+ "POR-118": {
+  "name": "Mega Starmie ex",
+  "set": "POR",
+  "number": "21",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 1",
+   "Mega",
+   "ex"
+  ],
+  "types": [
+   "Water"
+  ],
+  "hp": 330,
+  "evolves_from": "Staryu",
+  "retreat": 2,
+  "weakness": "Lightning",
+  "resistance": null,
+  "rule_box": true,
+  "regulation_mark": "J",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Jetting Blow",
+    "cost": [
+     "Water"
+    ],
+    "damage": 120,
+    "text": "This attack also does 50 damage to 1 of your opponent's Benched Pokémon.",
+    "effects": [
+     {
+      "op": "bench_snipe",
+      "amount": 50
+     }
+    ]
+   },
+   {
+    "name": "Nebula Beam",
+    "cost": [
+     "Colorless",
+     "Colorless",
+     "Colorless"
+    ],
+    "damage": 210,
+    "text": "This attack's damage isn't affected by Weakness or Resistance, or by any effects on your opponent's Active Pokémon.",
+    "effects": [
+     {
+      "op": "set_flag_ignore_wr_and_effects"
+     }
+    ]
+   }
+  ]
+ },
+ "SCR-164": {
+  "name": "Crispin",
+  "set": "SCR",
+  "number": "133",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Supporter"
+  ],
+  "regulation_mark": "H",
+  "text": "Search your deck for up to 2 Basic Energy cards of different types, reveal them, and put 1 of them into your hand. Attach the other to 1 of your Pokémon. Then, shuffle your deck.",
+  "effects": [
+   {
+    "op": "crispin_energy"
+   },
+   {
+    "op": "shuffle_deck"
+   }
+  ]
  }
 }
