@@ -1,0 +1,221 @@
+{
+  "total": 1071,
+  "agg": {
+    "Dragapult": {
+      "count": 391,
+      "points": 1694,
+      "share": 36.507936507936506,
+      "pts_per_deck": 4.332480818414322
+    },
+    "Raging Bolt": {
+      "count": 94,
+      "points": 371,
+      "share": 8.776844070961719,
+      "pts_per_deck": 3.9468085106382977
+    },
+    "Mega Lopunny": {
+      "count": 64,
+      "points": 205,
+      "share": 5.975723622782446,
+      "pts_per_deck": 3.203125
+    },
+    "Alakazam": {
+      "count": 56,
+      "points": 286,
+      "share": 5.228758169934641,
+      "pts_per_deck": 5.107142857142857
+    },
+    "Festival Lead": {
+      "count": 49,
+      "points": 125,
+      "share": 4.57516339869281,
+      "pts_per_deck": 2.5510204081632653
+    },
+    "Mega Lucario": {
+      "count": 48,
+      "points": 117,
+      "share": 4.481792717086835,
+      "pts_per_deck": 2.4375
+    },
+    "Rocket's Mewtwo": {
+      "count": 39,
+      "points": 127,
+      "share": 3.641456582633053,
+      "pts_per_deck": 3.2564102564102564
+    },
+    "Hydrapple": {
+      "count": 48,
+      "points": 225,
+      "share": 4.481792717086835,
+      "pts_per_deck": 4.6875
+    },
+    "N's Zoroark": {
+      "count": 38,
+      "points": 119,
+      "share": 3.5480859010270773,
+      "pts_per_deck": 3.1315789473684212
+    },
+    "Mega Starmie": {
+      "count": 26,
+      "points": 63,
+      "share": 2.4276377217553686,
+      "pts_per_deck": 2.423076923076923
+    },
+    "Ogerpon Meganium": {
+      "count": 18,
+      "points": 45,
+      "share": 1.680672268907563,
+      "pts_per_deck": 2.5
+    },
+    "Rocket's Honchkrow": {
+      "count": 26,
+      "points": 100,
+      "share": 2.4276377217553686,
+      "pts_per_deck": 3.8461538461538463
+    },
+    "Cynthia's Garchomp": {
+      "count": 33,
+      "points": 97,
+      "share": 3.081232492997199,
+      "pts_per_deck": 2.9393939393939394
+    },
+    "Ogerpon Box": {
+      "count": 34,
+      "points": 143,
+      "share": 3.1746031746031744,
+      "pts_per_deck": 4.205882352941177
+    },
+    "Greninja": {
+      "count": 11,
+      "points": 31,
+      "share": 1.0270774976657329,
+      "pts_per_deck": 2.8181818181818183
+    },
+    "Lillie's Clefairy": {
+      "count": 13,
+      "points": 55,
+      "share": 1.2138188608776843,
+      "pts_per_deck": 4.230769230769231
+    },
+    "Crustle": {
+      "count": 17,
+      "points": 80,
+      "share": 1.5873015873015872,
+      "pts_per_deck": 4.705882352941177
+    },
+    "Okidogi": {
+      "count": 7,
+      "points": 6,
+      "share": 0.6535947712418301,
+      "pts_per_deck": 0.8571428571428571
+    },
+    "Slowking": {
+      "count": 18,
+      "points": 57,
+      "share": 1.680672268907563,
+      "pts_per_deck": 3.1666666666666665
+    },
+    "Marnie's Grimmsnarl": {
+      "count": 6,
+      "points": 11,
+      "share": 0.5602240896358543,
+      "pts_per_deck": 1.8333333333333333
+    },
+    "Mega Kangaskhan": {
+      "count": 7,
+      "points": 21,
+      "share": 0.6535947712418301,
+      "pts_per_deck": 3.0
+    },
+    "Hop's Trevenant": {
+      "count": 2,
+      "points": 3,
+      "share": 0.18674136321195145,
+      "pts_per_deck": 1.5
+    },
+    "Archaludon": {
+      "count": 4,
+      "points": 0,
+      "share": 0.3734827264239029,
+      "pts_per_deck": 0.0
+    },
+    "Mega Diancie": {
+      "count": 2,
+      "points": 17,
+      "share": 0.18674136321195145,
+      "pts_per_deck": 8.5
+    },
+    "Ethan's Typhlosion": {
+      "count": 3,
+      "points": 10,
+      "share": 0.2801120448179272,
+      "pts_per_deck": 3.3333333333333335
+    },
+    "Froslass Munkidori": {
+      "count": 1,
+      "points": 3,
+      "share": 0.09337068160597572,
+      "pts_per_deck": 3.0
+    },
+    "Tera Box": {
+      "count": 3,
+      "points": 9,
+      "share": 0.2801120448179272,
+      "pts_per_deck": 3.0
+    },
+    "Mega Sharpedo": {
+      "count": 1,
+      "points": 3,
+      "share": 0.09337068160597572,
+      "pts_per_deck": 3.0
+    },
+    "Mega Gardevoir": {
+      "count": 1,
+      "points": 0,
+      "share": 0.09337068160597572,
+      "pts_per_deck": 0.0
+    },
+    "Steven's Metagross": {
+      "count": 2,
+      "points": 6,
+      "share": 0.18674136321195145,
+      "pts_per_deck": 3.0
+    },
+    "Flareon": {
+      "count": 3,
+      "points": 0,
+      "share": 0.2801120448179272,
+      "pts_per_deck": 0.0
+    },
+    "Yanmega": {
+      "count": 1,
+      "points": 7,
+      "share": 0.09337068160597572,
+      "pts_per_deck": 7.0
+    },
+    "Bloodmoon Ursaluna": {
+      "count": 2,
+      "points": 8,
+      "share": 0.18674136321195145,
+      "pts_per_deck": 4.0
+    },
+    "Rocket's Spidops": {
+      "count": 1,
+      "points": 3,
+      "share": 0.09337068160597572,
+      "pts_per_deck": 3.0
+    },
+    "Ceruledge": {
+      "count": 1,
+      "points": 0,
+      "share": 0.09337068160597572,
+      "pts_per_deck": 0.0
+    },
+    "Mega Venusaur": {
+      "count": 1,
+      "points": 0,
+      "share": 0.09337068160597572,
+      "pts_per_deck": 0.0
+    }
+  }
+}
