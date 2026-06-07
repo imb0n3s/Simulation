@@ -313,6 +313,49 @@ class Effects:
         player.shuffle(game.rng)
         game.log(f"  shuffles {len(chosen)} card(s) from discard into deck.")
 
+    def _op_salvo_picks(self, game, player, op, source, ctx):
+        """Oil Salvo: N picks x M attack damage, repeatable targets, no W/R.
+        Human targeting: finish KOs first (cheapest), then grind the biggest
+        threat — and never waste picks on attack-damage-protected bodies."""
+        opp = game.players[1 - game.players.index(player)]
+        picks, per = op["picks"], op["per"]
+        def legal():
+            return [m for m in opp.all_pokemon()
+                    if not game.damage_prevented(m, source, player)]
+        while picks > 0:
+            pool = legal()
+            if not pool: break
+            koable = [m for m in pool if 0 < _remaining(game, m) <= picks * per]
+            if koable:
+                t = min(koable, key=lambda m: (_remaining(game, m), -_prize(m)))
+                need = -(-_remaining(game, t) // per)   # ceil
+            else:
+                t = max(pool, key=lambda m: (_prize(m), m.card.data.get("hp") or 0))
+                need = picks
+            n = min(need, picks); picks -= n
+            amt = max(0, n * per - game.damage_reduction(t))   # no W/R applies
+            t.damage += amt
+            game.log(f"  Oil Salvo hits {t.name} {n}x{per} ({amt}).")
+        game.check_kos()
+
+    def _op_counters_on_each_opponent(self, game, player, op, source, ctx):
+        opp = game.players[1 - game.players.index(player)]
+        for m in opp.all_pokemon():
+            if game.bench_counters_blocked(m) and m is not opp.active: continue
+            m.damage += op["counters"] * 10
+        game.log(f"  puts {op['counters']} damage counters on each opposing Pokemon.")
+        game.check_kos()
+
+    def _op_cure_own_status(self, game, player, op, source, ctx):
+        if isinstance(source, PokemonInPlay): source.status.clear()
+
+    def _op_heal_own(self, game, player, op, source, ctx):
+        mons = [m for m in player.all_pokemon() if m.damage > 0]
+        if not mons: return
+        t = max(mons, key=lambda m: min(m.damage, op["amount"]) * _prize(m))
+        t.damage = max(0, t.damage - op["amount"])
+        game.log(f"  heals {op['amount']} from {t.name}.")
+
     def _op_gust_opponent_bench(self, game, player, op, source, ctx):
         opp = game.players[1 - game.players.index(player)]
         if not opp.bench: return

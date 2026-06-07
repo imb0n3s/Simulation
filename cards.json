@@ -10086,5 +10086,142 @@
     "op": "shuffle_deck"
    }
   ]
+ },
+ "DRI-21": {
+  "name": "Smoliv",
+  "supertype": "Pokemon",
+  "subtypes": [
+   "Basic"
+  ],
+  "hp": 60,
+  "types": [
+   "Grass"
+  ],
+  "weakness": "Fire",
+  "retreat": 1,
+  "attacks": [
+   {
+    "name": "Ram",
+    "cost": [
+     "Colorless"
+    ],
+    "damage": 10,
+    "effects": []
+   }
+  ]
+ },
+ "DRI-22": {
+  "name": "Dolliv",
+  "supertype": "Pokemon",
+  "subtypes": [
+   "Stage 1"
+  ],
+  "evolves_from": "Smoliv",
+  "hp": 90,
+  "types": [
+   "Grass"
+  ],
+  "weakness": "Fire",
+  "retreat": 1,
+  "attacks": [
+   {
+    "name": "Nutrients",
+    "cost": [
+     "Grass"
+    ],
+    "damage": 0,
+    "effects": [
+     {
+      "op": "heal_own",
+      "amount": 40
+     }
+    ]
+   },
+   {
+    "name": "Tackle",
+    "cost": [
+     "Colorless",
+     "Colorless"
+    ],
+    "damage": 40,
+    "effects": []
+   }
+  ]
+ },
+ "DRI-23": {
+  "name": "Arboliva ex",
+  "supertype": "Pokemon",
+  "subtypes": [
+   "Stage 2",
+   "ex"
+  ],
+  "evolves_from": "Dolliv",
+  "hp": 310,
+  "types": [
+   "Grass"
+  ],
+  "weakness": "Fire",
+  "retreat": 2,
+  "prizes": 2,
+  "attacks": [
+   {
+    "name": "Oil Salvo",
+    "cost": [
+     "Grass"
+    ],
+    "damage": 0,
+    "text": "Choose 1 of your opponent's Pokemon 6 times. For each time, do 20 damage to it. Not affected by Weakness or Resistance.",
+    "effects": [
+     {
+      "op": "salvo_picks",
+      "picks": 6,
+      "per": 20
+     }
+    ]
+   },
+   {
+    "name": "Aroma Shot",
+    "cost": [
+     "Colorless",
+     "Colorless",
+     "Colorless"
+    ],
+    "damage": 160,
+    "effects": [
+     {
+      "op": "cure_own_status"
+     }
+    ]
+   }
+  ]
+ },
+ "SSP-78": {
+  "name": "Uxie",
+  "supertype": "Pokemon",
+  "subtypes": [
+   "Basic"
+  ],
+  "hp": 70,
+  "types": [
+   "Psychic"
+  ],
+  "weakness": "Darkness",
+  "resistance": "Fighting",
+  "retreat": 1,
+  "attacks": [
+   {
+    "name": "Painful Memories",
+    "cost": [
+     "Psychic"
+    ],
+    "damage": 0,
+    "effects": [
+     {
+      "op": "counters_on_each_opponent",
+      "counters": 2
+     }
+    ]
+   }
+  ]
  }
 }
