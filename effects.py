@@ -356,6 +356,18 @@ class Effects:
         t.damage = max(0, t.damage - op["amount"])
         game.log(f"  heals {op['amount']} from {t.name}.")
 
+    def _op_lucian_reset(self, game, player, op, source, ctx):
+        for pl in game.players:
+            put = len(pl.hand)
+            if put:
+                game.rng.shuffle(pl.hand)
+                pl.deck = pl.deck + pl.hand   # bottom of deck
+                pl.hand = []
+        for pl in game.players:
+            n = 6 if game.rng.random() < 0.5 else 3
+            pl.draw(n)
+            game.log(f"  Lucian: {pl.name} draws {n}.")
+
     def _op_gust_opponent_bench(self, game, player, op, source, ctx):
         opp = game.players[1 - game.players.index(player)]
         if not opp.bench: return

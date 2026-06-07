@@ -10223,5 +10223,62 @@
     ]
    }
   ]
+ },
+ "TWM-157": {
+  "name": "Lucian",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Supporter"
+  ],
+  "text": "Each player shuffles their hand and puts it on the bottom of their deck. If either player put any cards on the bottom in this way, each player flips a coin. If heads, that player draws 6 cards; if tails, 3.",
+  "effects": [
+   {
+    "op": "lucian_reset"
+   }
+  ]
+ },
+ "ASC-8": {
+  "name": "Chikorita",
+  "set": "MEG",
+  "number": "8",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Grass"
+  ],
+  "hp": 60,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Fire",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [],
+  "attacks": [],
+  "note": "intermediate evolution; attack text not individually modeled"
+ },
+ "ASC-9": {
+  "name": "Bayleef",
+  "set": "MEG",
+  "number": "9",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 1"
+  ],
+  "types": [
+   "Grass"
+  ],
+  "hp": 90,
+  "evolves_from": "Chikorita",
+  "retreat": 2,
+  "weakness": "Fire",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "I",
+  "abilities": [],
+  "attacks": [],
+  "note": "intermediate evolution; attack text not individually modeled"
  }
 }
