@@ -48,6 +48,12 @@ class HeuristicAgent:
             return False
 
     def _defer(self, card):
+        # never switch our own ready attacker out with a Switch-style item
+        if any(e.get("op") == "switch_self_with_bench" for e in card.data.get("effects", [])):
+            act = getattr(self, "_cur_player", None) and self._cur_player.active
+            if act and any((a.get("damage") or 0) >= 50 for a in act.card.data.get("attacks", [])) \
+               and not self._is_utility_lead(act):
+                return True
         if not self._skip_ops: return False
         return any(e.get("op") in self._skip_ops for e in card.data.get("effects", []))
 
@@ -217,6 +223,7 @@ class HeuristicAgent:
                     self._try(lambda c=card: self.fx.play_trainer(game, p, c))
 
     def take_turn(self, game: Game, p: Player):
+        self._cur_player = p
         # 1) play Items (the Supporter waits until after draw abilities — info first)
         self._play_items(game, p)
         # 2) play a stadium if we have one and none is ours
@@ -287,6 +294,44 @@ class HeuristicAgent:
             if ready and game.turn >= 3:
                 best = max(ready, key=lambda i: self._best_dmg(p.bench[i]))
                 self._try(lambda i=best: game.retreat(p, i))
+        # 7.51) Grand Tree: once per turn, evolve a Basic from the deck (then Stage 2)
+        if (game.stadium and game.stadium.data.get("stadium_kind") == "grand_tree"
+                and not getattr(p, "grand_tree_used", False) and game.turn > 1):
+            for mon in p.all_pokemon():
+                if mon.turn_played >= game.turn: continue
+                evo = next((x for x in p.deck if x.evolves_from == mon.card.name), None)
+                if evo:
+                    p.deck.remove(evo); prev = mon.card.name
+                    mon.stack.append(evo); mon.turn_played = game.turn; mon.status = set()
+                    game.log(f"{p.name} uses Grand Tree: {prev} -> {evo.name}.")
+                    evo2 = next((x for x in p.deck if x.evolves_from == evo.name), None)
+                    if evo2:
+                        p.deck.remove(evo2); mon.stack.append(evo2)
+                        game.log(f"  ...and {evo.name} -> {evo2.name}!")
+                    p.shuffle(game.rng); p.grand_tree_used = True
+                    break
+        # 7.52) Levincia: once per turn, 2 Basic [L] Energy from discard to hand
+        if (game.stadium and game.stadium.data.get("stadium_kind") == "levincia"
+                and not getattr(p, "levincia_used", False)):
+            got = 0
+            for x in list(p.discard):
+                if got >= 2: break
+                if x.is_energy and "Basic" in x.subtypes and "Lightning" in x.provides():
+                    p.discard.remove(x); p.hand.append(x); got += 1
+            if got:
+                p.levincia_used = True
+                game.log(f"{p.name} uses Levincia: returns {got} [L] Energy to hand.")
+        # 7.53) Mystery Garden: discard an energy to draw up to your Psychic count
+        if (game.stadium and game.stadium.data.get("stadium_kind") == "psychic_garden"
+                and not getattr(p, "garden_used", False)):
+            n_psy = sum(1 for m in p.all_pokemon() if "Psychic" in m.card.types)
+            spare = [x for x in p.hand if x.is_energy]
+            if n_psy - (len(p.hand) - 1) >= 2 and spare:
+                p.hand.remove(spare[0]); p.discard.append(spare[0])
+                need = n_psy - len(p.hand)
+                if need > 0: p.draw(need)
+                p.garden_used = True
+                game.log(f"{p.name} uses Mystery Garden: discards {spare[0].name}, draws {max(0,need)}.")
         # 7.55) Surfing Beach: free once-per-turn Water switch (humans use it as a free pivot)
         if (game.stadium and game.stadium.data.get("stadium_kind") == "water_switch"
                 and p.active and "Water" in p.active.card.types and p.bench
@@ -405,6 +450,15 @@ class HeuristicAgent:
             for i in order:
                 if game._cost_met(p.active, atks[i]["cost"], atks[i]):
                     self._try(lambda i=i: game.attack(p, i, self.fx))
+                    # Festival Lead: attack twice while Festival Grounds is up
+                    if (not game.winner and p.active and game.stadium
+                            and game.stadium.data.get("stadium_kind") == "festival_grounds"
+                            and any(ab.get("static_kind") == "festival_lead"
+                                    for ab in p.active.card.data.get("abilities", []))
+                            and game.abilities_enabled(p.active)
+                            and game._cost_met(p.active, atks[i]["cost"], atks[i])):
+                        game.log(f"{p.name}'s {p.active.name} attacks AGAIN (Festival Lead).")
+                        self._try(lambda i=i: game.attack(p, i, self.fx))
                     break
 
     def _do_evolutions(self, game, p):

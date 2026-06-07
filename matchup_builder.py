@@ -15,13 +15,7 @@ TAB=os.path.join(HERE,"data","matchup_table.json")
 fx=Effects(SkilledPolicy())
 heur=HeuristicAgent(fx)
 deep=DeepSearchAgent(fx, depth=3, samples=2)
-FIELD=["dragapult_dudunsparce_ex","dragapult_dudunsparce_ex_v2","dragapult_blaziken","dragapult_ex",
- "dragapult_dusknoir","dragapult_dusknoir_v2","dragapult_dudunsparce","greninja_dragapult",
- "alakazam_dudunsparce","alakazam_dudunsparce_v2","mega_lucario","mega_lucario_v2",
- "team_rockets_mewtwo","ns_zoroark","cynthia_garchomp","mega_starmie_froslass","meganium_ogerpon",
- "slowking_box","mega_kangaskhan_crustle","lillies_clefairy_box","greninja","greninja_dusknoir",
- "greninja_froslass","mega_kangaskhan_box","marnies_grimmsnarl","tera_box","tera_box_kangaskhan",
- "hops_trevenant","ceruledge_ex","mega_venusaur","team_rockets_porygon"]
+FIELD=["alakazam_dudunsparce","alakazam_dudunsparce_v2","alakazam_v3","beedrill_dudunsparce_v2","beedrill_ex","beedrill_ex_dudunsparce","blaziken_greninja_zoroark","ceruledge_ex","cynthia_garchomp","dragapult_blaziken","dragapult_blaziken_v2","dragapult_blaziken_v3","dragapult_dudunsparce","dragapult_dudunsparce_ex","dragapult_dudunsparce_ex_v2","dragapult_dusknoir","dragapult_dusknoir_budew","dragapult_dusknoir_v2","dragapult_dusknoir_v3","dragapult_ex","dragapult_hammers","dragapult_starmie","dragapult_toolbox","festival_greninja","festival_lead","froslass_lopunny","greninja","greninja_dragapult","greninja_dusknoir","greninja_froslass","greninja_noctowl","hops_trevenant","hydrapple_meganium","hydreigon_cinderace","ionos_bellibolt","jellicent_control","lillies_clefairy_box","lopunny_froslass_box","marnies_grimmsnarl","mega_diancie_dusknoir","mega_feraligatr","mega_kangaskhan_box","mega_kangaskhan_crustle","mega_lopunny_dudunsparce","mega_lucario","mega_lucario_v2","mega_lucario_v3","mega_lucario_v4","mega_lucario_v5","mega_pyroar","mega_starmie_froslass","mega_venusaur","meganium_ogerpon","metagross_cinccino","ns_zoroark","ns_zoroark_v2","rockets_honchkrow","sinistcha_ogerpon","slowking_box","slowking_latias","slowking_latias_v2","starmie_dusknoir","starmie_froslass_v2","team_rockets_mewtwo","team_rockets_porygon","tera_box","tera_box_kangaskhan","tera_box_raging_bolt","user_greninja_dragapult","user_greninja_dudunsparce","user_greninja_froslass","user_greninja_v2","zoroark_greninja_dusknoir"]
 USER="user_greninja"
 DECKS={d:[c.card_id for c in build_deck(os.path.join(HERE,"decks",d+".txt"))] for d in FIELD+[USER]}
 
@@ -38,7 +32,7 @@ tab=json.load(open(TAB)) if os.path.exists(TAB) else {}
 jobs=[]
 for i,a in enumerate(FIELD):
     for b in FIELD[i:]:
-        n = 20 if a==b else 25
+        n = 12 if a==b else 15
         jobs.append((a,b,n,"hh"))
 for b in FIELD:
     jobs.append((USER,b,50,"dh"))

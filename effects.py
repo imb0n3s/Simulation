@@ -165,6 +165,14 @@ class Effects:
             raise RuleError(f"{name} is disabled (Team Rocket's Watchtower).")
         if ability.get("self_ko") and game.self_ko_abilities_disabled():
             raise RuleError(f"{name} is disabled by Damp.")
+        if ability.get("condition") == "tera_in_play":
+            if not any("Tera" in m.card.subtypes for m in player.all_pokemon()):
+                raise RuleError("Jewel Seeker: no Tera Pokemon in play.")
+        if ability.get("condition") == "active_festival_lead":
+            act = player.active
+            if not (act and any(a.get("static_kind") == "festival_lead"
+                                for a in act.card.data.get("abilities", []))):
+                raise RuleError("Boom Boom Groove: Active has no Festival Lead.")
         if ability.get("condition") == "self_has_darkness_energy":
             if "Darkness" not in mon.energy_count():
                 raise RuleError(f"{name} requires a Darkness Energy attached.")
@@ -299,7 +307,19 @@ class Effects:
             koable = [m for m in opp.bench if 0 < _remaining(game, m) <= best]
             if koable:   # human line: gust up the biggest prize we can actually KO
                 tgt = max(koable, key=lambda m: (_prize(m), -_remaining(game, m)))
-        tgt = tgt or self.policy.choose_pokemon(game, opp.bench) or opp.bench[0]
+        if tgt is None:
+            # no KO available: NEVER gust up a ready attacker (the "bossed the wrong
+            # Pokemon" lesson) — pull the most STRANDED body to waste their turn
+            def stranded(m):
+                # "ready" = can PAY for any attack at all — printed damage is
+                # irrelevant (copy/scaling attacks print 0 and hit hardest)
+                ready = any(game._cost_met(m, a["cost"], a)
+                            for a in m.card.data.get("attacks", []))
+                return (not ready,                       # can't attack right now
+                        m.card.data.get("retreat") or 0, # expensive to escape
+                        -len(m.energy))                  # uninvested
+            tgt = max(opp.bench, key=stranded)
+        tgt = tgt or opp.bench[0]
         idx = opp.bench.index(tgt)
         if opp.active is not None: opp.bench.append(opp.active)
         opp.active = opp.bench.pop(idx)
@@ -896,11 +916,15 @@ class Effects:
 
     def _op_bench_snipe(self, game, player, op, source, ctx):
         opp = game.players[1 - game.players.index(player)]
-        tgt = self.policy.choose_pokemon(game, opp.bench) if opp.bench else None
-        if tgt and not game.damage_prevented(tgt, source, player):
-            amt = max(0, op["amount"] - game.damage_reduction(tgt))
-            tgt.damage += amt
-            game.log(f"  also does {amt} to benched {tgt.name}.")
+        pool = list(opp.bench)
+        for _ in range(op.get("targets", 1)):
+            tgt = self.policy.choose_pokemon(game, pool) if pool else None
+            if not tgt: break
+            pool.remove(tgt)
+            if not game.damage_prevented(tgt, source, player):
+                amt = max(0, op["amount"] - game.damage_reduction(tgt))
+                tgt.damage += amt
+                game.log(f"  also does {amt} to benched {tgt.name}.")
 
     def _op_splashing_dodge(self, game, player, op, source, ctx):
         if isinstance(source, PokemonInPlay) and game.rng.random() < 0.5:
@@ -1311,6 +1335,277 @@ class Effects:
             player.hand.remove(card); player.discard.append(card)
         player.draw(1)
         game.log(f"  Reconstitute discards {[x.name for x in picks]}, draws 1.")
+
+    def _op_status_self(self, game, player, op, source, ctx):
+        from engine import PokemonInPlay
+        if isinstance(source, PokemonInPlay):
+            source.status.add(op["status"])
+            game.log(f"  {source.name} is now {op['status']}.")
+
+    def _op_damage_per_opponent_bench(self, game, player, op, source, ctx):
+        opp = game.players[1 - game.players.index(player)]
+        n = len(opp.bench)
+        game._atk_bonus = getattr(game, "_atk_bonus", 0) + n * op["amount"]
+        game.log(f"  +{n*op['amount']} ({n} opponent Benched Pokemon).")
+
+    def _op_foul_play(self, game, player, op, source, ctx):
+        opp = game.players[1 - game.players.index(player)]
+        if not opp.active: return
+        best, bd = None, -1
+        for atk in opp.active.card.data.get("attacks", []):
+            d = atk.get("damage") or 0
+            if d > bd: best, bd = atk, d
+        if not best or bd <= 0:
+            game.log("  Foul Play: no usable attack to copy."); return
+        game._atk_bonus = getattr(game, "_atk_bonus", 0) + bd
+        game.log(f"  Foul Play copies {best['name']} for {bd}.")
+
+    def _op_both_actives_ko(self, game, player, op, source, ctx):
+        opp = game.players[1 - game.players.index(player)]
+        for side, m in ((player, player.active), (opp, opp.active)):
+            if m is not None:
+                try: m.damage = game.effective_max_hp(m)
+                except Exception: m.damage = m.max_hp
+        game.log("  Destined Fight: both Active Pokemon are Knocked Out.")
+
+    def _op_garland_ray(self, game, player, op, source, ctx):
+        from engine import PokemonInPlay
+        if not isinstance(source, PokemonInPlay): return
+        n = 0
+        while n < op.get("max", 2) and source.energy:
+            player.discard.append(source.energy.pop()); n += 1
+        game._atk_bonus = getattr(game, "_atk_bonus", 0) + n * op.get("per", 120)
+        game.log(f"  Garland Ray discards {n} Energy -> {n*op.get('per',120)} damage.")
+
+    def _op_heal_pokemon_of_type(self, game, player, op, source, ctx):
+        typ = op.get("type")
+        cands = [m for m in player.all_pokemon() if m.damage > 0 and typ in m.card.types]
+        if not cands:
+            game.log(f"  nothing to heal."); return
+        tgt = max(cands, key=lambda m: m.damage)
+        healed = min(tgt.damage, op["amount"]); tgt.damage -= healed
+        game.log(f"  heals {healed} from {tgt.name}.")
+
+    def _op_bonus_if_opponent_active_damaged(self, game, player, op, source, ctx):
+        opp = game.players[1 - game.players.index(player)]
+        if opp.active and opp.active.damage > 0:
+            game._atk_bonus = getattr(game, "_atk_bonus", 0) + op["amount"]
+            game.log(f"  +{op['amount']} (opponent's Active is damaged).")
+
+    def _op_recoil(self, game, player, op, source, ctx):
+        from engine import PokemonInPlay
+        if isinstance(source, PokemonInPlay):
+            source.damage += op["amount"]
+            game.log(f"  {source.name} does {op['amount']} damage to itself.")
+
+    def _op_damage_per_own_energy(self, game, player, op, source, ctx):
+        from engine import PokemonInPlay
+        if isinstance(source, PokemonInPlay):
+            n = len(source.energy)
+            game._atk_bonus = getattr(game, "_atk_bonus", 0) + n * op["amount"]
+            game.log(f"  +{n*op['amount']} ({n} Energy attached).")
+
+    def _op_torrential_heart(self, game, player, op, source, ctx):
+        from engine import PokemonInPlay
+        if not isinstance(source, PokemonInPlay): return
+        source.damage += 50; player.th_bonus = getattr(player, "th_bonus", 0) + 120
+        game.log(f"  Torrential Heart: 5 counters on {source.name}, attacks do +120 this turn.")
+
+    def _op_metal_maker(self, game, player, op, source, ctx):
+        top = player.deck[:4]
+        ens = [c for c in top if c.is_energy and "Basic" in c.subtypes and "Metal" in c.provides()]
+        rest = [c for c in top if c not in ens]
+        for c in top: player.deck.remove(c)
+        mons = player.all_pokemon()
+        for i, en in enumerate(ens):
+            mons[i % len(mons)].energy.append(en) if mons else player.discard.append(en)
+        game.rng.shuffle(rest); player.deck += rest
+        game.log(f"  Metal Maker attaches {len(ens)} Metal Energy (top 4 checked).")
+
+    def _op_protect_charge(self, game, player, op, source, ctx):
+        from engine import PokemonInPlay
+        if isinstance(source, PokemonInPlay):
+            source._reduce_next = op.get("amount", 30)
+            game.log(f"  Protect Charge: takes {op.get('amount',30)} less next turn.")
+
+    def _op_fill_bench_from_deck(self, game, player, op, source, ctx):
+        put = []
+        for c in list(player.deck):
+            if not game.bench_has_room(player): break
+            if c.is_basic_pokemon:
+                player.deck.remove(c); player.hand.append(c)
+                if game.play_basic_to_bench(player, c): put.append(c.name)
+                else: player.hand.remove(c); player.deck.append(c); break
+        player.shuffle(game.rng)
+        game.log(f"  Precious Trolley benches {put or 'nothing'}.")
+
+    def _op_energy_recycler_shuffle(self, game, player, op, source, ctx):
+        got = []
+        for c in list(player.discard):
+            if len(got) >= op.get("count", 5): break
+            if c.is_energy and "Basic" in c.subtypes:
+                player.discard.remove(c); player.deck.append(c); got.append(c.name)
+        player.shuffle(game.rng)
+        game.log(f"  Energy Recycler shuffles {len(got)} Energy into the deck.")
+
+    def _op_discard_tools_in_play(self, game, player, op, source, ctx):
+        opp = game.players[1 - game.players.index(player)]
+        n = 0
+        for side in (opp, player):           # opponent's tools first (that's the play)
+            for m in side.all_pokemon():
+                while m.tools and n < op.get("count", 2):
+                    t = m.tools.pop(); side.discard.append(t); n += 1
+                    game.log(f"  Tool Scrapper discards {t.name} from {m.name}.")
+                if n >= op.get("count", 2): break
+            if n >= op.get("count", 2): break
+        if n == 0: game.log("  Tool Scrapper: no Tools in play.")
+
+    def _op_kieran(self, game, player, op, source, ctx):
+        opp = game.players[1 - game.players.index(player)]
+        if opp.active and ("ex" in opp.active.card.subtypes or "V" in opp.active.card.subtypes):
+            player.ex_boost = max(getattr(player, "ex_boost", 0), 30)
+            game.log("  Kieran: +30 vs the opponent's Active ex this turn.")
+        elif player.bench:
+            best = max(range(len(player.bench)),
+                       key=lambda i: max((a.get("damage") or 0) for a in player.bench[i].card.data.get("attacks",[{"damage":0}])))
+            player.bench.append(player.active); player.active = player.bench.pop(best)
+            player.active._came_active = True
+            game.log(f"  Kieran switches {player.active.name} into the Active Spot.")
+
+    def _op_spill_the_tea(self, game, player, op, source, ctx):
+        n = 0
+        for m in player.all_pokemon():
+            for en in list(m.energy):
+                if n >= op.get("max", 3): break
+                if "Grass" in en.provides():
+                    m.energy.remove(en); player.discard.append(en); n += 1
+        game._atk_bonus = getattr(game, "_atk_bonus", 0) + n * op.get("per", 70)
+        game.log(f"  Spill the Tea: discards {n} [G] -> {n*op.get('per',70)} damage.")
+
+    def _op_rebrew(self, game, player, op, source, ctx):
+        ens = [x for x in player.discard if x.is_energy and "Basic" in x.subtypes and "Grass" in x.provides()]
+        if not ens: game.log("  Re-Brew: no [G] Energy in discard."); return
+        opp = game.players[1 - game.players.index(player)]
+        tgt = self.policy.choose_pokemon(game, opp.all_pokemon())
+        if tgt and not game.bench_counters_blocked(tgt):
+            tgt.damage += 20 * len(ens)
+            game.log(f"  Re-Brew: {20*len(ens)} counters on {tgt.name}.")
+        for x in ens: player.discard.remove(x); player.deck.append(x)
+        player.shuffle(game.rng)
+
+    def _op_heal_team_each(self, game, player, op, source, ctx):
+        for m in player.all_pokemon():
+            m.damage = max(0, m.damage - op["amount"])
+        game.log(f"  heals {op['amount']} from each of your Pokemon.")
+
+    def _op_heal_all_each(self, game, player, op, source, ctx):
+        for pl in game.players:
+            for m in pl.all_pokemon():
+                m.damage = max(0, m.damage - op["amount"])
+        game.log(f"  heals {op['amount']} from every Pokemon in play.")
+
+    def _op_minus_per_self_counter(self, game, player, op, source, ctx):
+        from engine import PokemonInPlay
+        if isinstance(source, PokemonInPlay):
+            game._atk_bonus = getattr(game, "_atk_bonus", 0) - (source.damage // 10) * op.get("per", 10)
+
+    def _op_mill_opponent(self, game, player, op, source, ctx):
+        opp = game.players[1 - game.players.index(player)]
+        for _ in range(op.get("n", 1)):
+            if opp.deck: opp.discard.append(opp.deck.pop(0))
+        game.log(f"  discards top {op.get('n',1)} of opponent's deck.")
+
+    def _op_search_basic_energy_attach_bench_multi(self, game, player, op, source, ctx):
+        typ = op.get("type"); n = 0
+        for _ in range(op.get("count", 3)):
+            en = next((x for x in player.deck if x.is_energy and "Basic" in x.subtypes
+                       and (not typ or typ in x.provides())), None)
+            if not en or not player.bench: break
+            player.deck.remove(en)
+            tgt = max(player.bench, key=lambda m: max((a.get("damage") or 0) for a in m.card.data.get("attacks",[{"damage":0}])))
+            tgt.energy.append(en); n += 1
+        player.shuffle(game.rng)
+        if n: game.log(f"  attaches {n} Energy to the Bench.")
+
+    def _op_excited_turbo(self, game, player, op, source, ctx):
+        if not any("Mega" in m.card.subtypes and "Fire" in m.card.types for m in player.all_pokemon()):
+            from engine import RuleError; raise RuleError("Excited Turbo: no [R] Mega in play.")
+        n = 0
+        for en in [x for x in list(player.hand) if x.is_energy and "Basic" in x.subtypes and "Fire" in x.provides()]:
+            tgt = next((m for m in player.bench if "Fire" in m.card.types), None)
+            if not tgt: break
+            player.hand.remove(en); tgt.energy.append(en); n += 1
+        if n: game.log(f"  Excited Turbo attaches {n} [R] Energy.")
+
+    def _op_ninetailed_transfer(self, game, player, op, source, ctx):
+        opp = game.players[1 - game.players.index(player)]
+        srcs = [m for m in player.bench if m.damage > 0]
+        if not srcs or not opp.active: game.log("  Nine-Tailed Transfer: nothing to move."); return
+        mv = max(srcs, key=lambda m: m.damage)
+        opp.active.damage += mv.damage
+        game.log(f"  moves {mv.damage} damage from {mv.name} to {opp.active.name}.")
+        mv.damage = 0
+
+    def _op_damage_per_own_basics(self, game, player, op, source, ctx):
+        n = sum(1 for m in player.all_pokemon() if "Basic" in m.card.subtypes)
+        game._atk_bonus = getattr(game, "_atk_bonus", 0) + n * op["amount"]
+        game.log(f"  +{n*op['amount']} ({n} of your Basic Pokemon).")
+
+    def _op_ko_if_exact_counters(self, game, player, op, source, ctx):
+        opp = game.players[1 - game.players.index(player)]
+        if opp.active and opp.active.damage == op.get("n", 6) * 10:
+            try: opp.active.damage = game.effective_max_hp(opp.active)
+            except Exception: opp.active.damage = opp.active.max_hp
+            game.log("  Terminal Period: exactly 6 counters — Knocked Out!")
+        else:
+            game.log("  Terminal Period: condition not met.")
+
+    def _op_power_press(self, game, player, op, source, ctx):
+        from engine import PokemonInPlay
+        if isinstance(source, PokemonInPlay) and len(source.energy) >= 2 + op.get("extra", 2):
+            game._atk_bonus = getattr(game, "_atk_bonus", 0) + op["amount"]
+            game.log(f"  +{op['amount']} (extra Energy attached).")
+
+    def _op_electric_streamer(self, game, player, op, source, ctx):
+        n = 0
+        for en in [x for x in list(player.hand) if x.is_energy and "Basic" in x.subtypes and "Lightning" in x.provides()]:
+            tgt = next((m for m in player.all_pokemon() if "Iono's" in m.card.name), None)
+            if not tgt: break
+            player.hand.remove(en); tgt.energy.append(en); n += 1
+        if n: game.log(f"  Electric Streamer attaches {n} [L] Energy.")
+        else:
+            from engine import RuleError; raise RuleError("Electric Streamer: nothing to attach.")
+
+    def _op_flashing_draw(self, game, player, op, source, ctx):
+        from engine import PokemonInPlay, RuleError
+        if not isinstance(source, PokemonInPlay): raise RuleError("no source")
+        en = next((x for x in source.energy if "Lightning" in x.provides() and "Basic" in x.subtypes), None)
+        if not en: raise RuleError("Flashing Draw: no [L] Energy to discard.")
+        source.energy.remove(en); player.discard.append(en)
+        need = op.get("n", 6) - len(player.hand)
+        if need > 0: player.draw(need)
+        game.log(f"  Flashing Draw: discards {en.name}, draws to {op.get('n',6)}.")
+
+    def _op_roto_stick(self, game, player, op, source, ctx):
+        top = player.deck[:op.get("look", 4)]
+        sups = [x for x in top if x.supertype == "Trainer" and "Supporter" in x.subtypes]
+        for x in sups: player.deck.remove(x); player.hand.append(x)
+        player.shuffle(game.rng)
+        game.log(f"  Roto-Stick takes {[x.name for x in sups] or 'nothing'}.")
+
+    def _op_supporters_from_discard(self, game, player, op, source, ctx):
+        got = []
+        for x in list(player.discard):
+            if len(got) >= op.get("count", 2): break
+            if x.supertype == "Trainer" and "Supporter" in x.subtypes:
+                player.discard.remove(x); player.hand.append(x); got.append(x.name)
+        game.log(f"  Miracle Headset returns {got or 'nothing'}.")
+
+    def _op_coin_gust(self, game, player, op, source, ctx):
+        if game.rng.random() < 0.5:
+            self._op_gust_opponent_bench(game, player, op, source, ctx)
+        else:
+            game.log("  Pokemon Catcher: tails.")
 
     def _op_static_lock_acespec_if_tool(self, *a): pass
     def _op_static_disable_self_ko_abilities(self, *a): pass

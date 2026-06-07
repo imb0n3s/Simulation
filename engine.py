@@ -238,7 +238,8 @@ class Game:
         p.energy_attached_this_turn = False
         p.supporter_played_this_turn = False
         p.retreated_this_turn = False
-        p.stadium_switch_used = False
+        p.stadium_switch_used = False; p.garden_used = False; p.th_bonus = 0; p.grand_tree_used = False; p.levincia_used = False
+        for _m in p.all_pokemon(): _m._reduce_next = 0
         for mon in p.all_pokemon():
             mon.ability_used_this_turn = set()
             mon._dodge_active = False
@@ -255,6 +256,17 @@ class Game:
     def end_turn(self):
         # between-turns: simplified status checks (Poison/Burn) on active
         p = self.current
+        if self.stadium and self.stadium.data.get("stadium_kind") == "festival_grounds":
+            for pl in self.players:
+                for m in pl.all_pokemon():
+                    if m.energy and m.status:
+                        m.status = set()
+        # Powerglass: at end of your turn, Active holder pulls a Basic Energy from discard
+        if p.active and any(t.data.get("tool_kind") == "powerglass" for t in p.active.tools):
+            en = next((c for c in p.discard if c.is_energy and "Basic" in c.subtypes), None)
+            if en:
+                p.discard.remove(en); p.active.energy.append(en)
+                self.log(f"Powerglass attaches {en.name} to {p.active.name}.")
         for mon in [p.active]:
             if not mon: continue
             if "Poisoned" in mon.status:
@@ -307,6 +319,9 @@ class Game:
         target.energy.append(energy_card)
         p.energy_attached_this_turn = True
         self.log(f"{p.name} attaches {energy_card.name} to {target.name}.")
+        n = energy_card.data.get("draw_on_attach")
+        if n:
+            p.draw(n); self.log(f"  {energy_card.name}: draws {n}.")
 
     def play_basic_to_bench(self, p, card: Card):
         if not self.bench_has_room(p): raise RuleError("Bench full.")
@@ -418,6 +433,14 @@ class Game:
                     dmg += 30
             if "ex" in def_mon.card.subtypes and atk_player.ex_boost and def_mon is self.opponent.active:
                 dmg += atk_player.ex_boost
+            if getattr(atk_player, "th_bonus", 0) and def_mon is self.opponent.active:
+                dmg += atk_player.th_bonus
+            if def_mon is self.opponent.active and \
+               any(t in ("Grass", "Fire") for t in atk_mon.card.types):
+                for m in atk_player.all_pokemon():
+                    for ab in m.card.data.get("abilities", []):
+                        if ab.get("static_kind") == "sunny_day" and self.abilities_enabled(m):
+                            dmg += ab.get("amount", 20)
             if self.tools_active() and "Poisoned" in atk_mon.status and def_mon is self.opponent.active:
                 dmg += sum(t.data.get("poison_damage_boost", 0) for t in atk_mon.tools)
         # Weakness / Resistance on the Active (defending) Pokemon
@@ -528,7 +551,7 @@ class Game:
         placed counters bypass it."""
         if getattr(self, "_dmg_source", "attack") != "attack":
             return 0
-        red = 0
+        red = getattr(defender, "_reduce_next", 0)   # Protect Charge etc.
         for ab in defender.card.data.get("abilities", []):
             if ab.get("static_kind") == "reduce_damage_taken" and self.abilities_enabled(defender):
                 red += ab.get("amount", 0)
@@ -540,6 +563,17 @@ class Game:
         therefore bypass every prevention below."""
         if getattr(self, "_dmg_source", "attack") != "attack":
             return False
+        owner2 = next((pl for pl in self.players if defender in pl.bench), None)
+        if owner2 is not None:
+            for ab in defender.card.data.get("abilities", []):
+                if ab.get("static_kind") == "bench_attack_immunity" and self.abilities_enabled(defender):
+                    self.log(f"  {defender.name} is protected on the Bench (Ability).")
+                    return True
+        for ab in defender.card.data.get("abilities", []):
+            if ab.get("static_kind") == "flip_prevent_attack_damage" and self.abilities_enabled(defender):
+                if self.rng.random() < 0.5:
+                    self.log(f"  (Ability) {ab.get('name','Smooth Coat')}: heads — damage prevented!")
+                    return True
         if getattr(defender, "_dodge_active", False):
             return True
         try:

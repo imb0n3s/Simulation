@@ -1,4 +1,6 @@
-# PTCG Sim — a log-trained Pokémon TCG simulator
+# Simulation — Version 0.01
+
+A log-trained Pokémon TCG simulator.
 
 A Pokémon Trading Card Game rules engine, card database, and AI pilot trained on
 real PTCG Live game logs. The goal isn't just legal play — it's **human-like**
@@ -7,6 +9,10 @@ time, including losses and the lessons inside them.
 
 Built around the current Standard metagame (Mega Evolution era: TWM → ASC sets,
 231 cards, 35 competitive decklists).
+
+## What's new in 0.01
+
+74 decks, 301 cards, a real-results calibration layer (`calibrate.py` + `feedback_tune.py`) that fits per-archetype strength to 1,071 real tournament decks, validated against the Utrecht/Indianapolis/Aichi top cuts (mean error 0.51% per archetype), and a 2,500-player Bo3 tournament pipeline.
 
 ## What's in the box
 

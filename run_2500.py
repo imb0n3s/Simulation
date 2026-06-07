@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""900-player event, EVERYTHING Bo3. Field = real aggregated meta shares.
+"""2500-player event, EVERYTHING Bo3. Field = real aggregated meta shares.
 YOU pilot user_greninja with the spread-skilled DeepSearchAgent; the field is
 heuristic. Cut: Top 64 -> 32 -> 16 -> 8 (re-seeded rounds), then a FIXED seeded
 Top 8 bracket: QF 1v8 / 2v7 / 3v6 / 4v5, SF w(1v8) vs w(4v5) and w(2v7) vs
@@ -13,8 +13,8 @@ HERE = os.path.dirname(os.path.abspath(__file__)); CAT = load_catalog()
 fx = Effects(SkilledPolicy())
 agent = HeuristicAgent(fx)
 you_agent = DeepSearchAgent(fx, depth=3, samples=2)
-MAXT = 60; ROUNDS = 10; FIELD = 900; BUDGET = 34
-ST = os.path.join(HERE, "data", "event900.json")
+MAXT = 60; ROUNDS = 12; FIELD = 2500; BUDGET = 34
+ST = os.path.join(HERE, "data", "event2500.json")
 
 W = {
  "dragapult_dudunsparce_ex":3.32,"dragapult_dudunsparce_ex_v2":3.32,"dragapult_blaziken":3.32,
@@ -57,7 +57,7 @@ def match(rng, a, b):  # ALWAYS Bo3
 if os.path.exists(ST) and json.load(open(ST)).get("players"):
     st = json.load(open(ST))
 else:
-    rng = random.Random(900900)
+    rng = random.Random(25002500)
     pool = list(W); wts = [W[d] for d in pool]
     picks = rng.choices(pool, weights=wts, k=FIELD - 1)
     players = [{"id": i, "deck": d, "w": 0, "l": 0, "opp": []} for i, d in enumerate(picks)]
@@ -94,7 +94,7 @@ standings = sorted(players, key=lambda p: (-p["w"], -p["res"], p["id"]))
 for s, p in enumerate(standings, 1): p["seed"] = s
 YOU = next(p for p in players if p.get("you"))
 brng = random.Random(987654)
-L = [f"900-PLAYER EVENT — real meta shares, ALL matches Bo3 ({ROUNDS} Swiss + Top 64 cut)",
+L = [f"2500-PLAYER EVENT — real meta shares, ALL matches Bo3 ({ROUNDS} Swiss + Top 64 cut)",
      f"YOUR deck: user_greninja, piloted by the spread-skilled DeepSearchAgent",
      f"Swiss record: {YOU['w']}-{YOU['l']}   Resistance: {100*YOU['res']:.1f}%   Swiss seed: {YOU['seed']}/{FIELD}", ""]
 place = None
@@ -147,5 +147,5 @@ cl = standings[63]
 L.append(f"\nCut line: seed 64 at {cl['w']}-{cl['l']} (res {100*cl['res']:.1f}%)")
 dist = collections.Counter(p["deck"] for p in players)
 L.append(f"field: {dist.most_common(6)}")
-open(os.path.join(HERE, "data", "event900_result.txt"), "w").write("\n".join(L))
+open(os.path.join(HERE, "data", "event2500_result.txt"), "w").write("\n".join(L))
 print("\n".join(L)); print("FINAL")
