@@ -1,0 +1,289 @@
+Setup
+im_bon3z chose tails for the opening coin flip.
+ghezio won the coin toss.
+ghezio decided to go first.
+im_bon3z drew 7 cards for the opening hand.
+- 7 drawn cards.
+   • Team Rocket's Watchtower, Froakie, Basic Water Energy, Greninja ex, Rare Candy, Frogadier, Basic Water Energy
+ghezio drew 7 cards for the opening hand.
+- 7 drawn cards.
+im_bon3z played Froakie to the Active Spot.
+ghezio played Yveltal to the Active Spot.
+ghezio's Turn
+ghezio drew a card.
+ghezio played Snorunt to the Bench.
+ghezio played Smoliv to the Bench.
+ghezio played Buddy-Buddy Poffin.
+- ghezio drew 2 cards and played them to the Bench.
+   • Snorunt, Snorunt
+- ghezio shuffled their deck.
+ghezio ended their turn.
+im_bon3z's Turn
+im_bon3z drew Mega Greninja ex.
+im_bon3z attached Basic Water Energy to Froakie in the Active Spot.
+im_bon3z played Team Rocket's Watchtower to the Stadium spot.
+im_bon3z's Froakie used Collect.
+- im_bon3z drew Energy Retrieval.
+ghezio's Turn
+ghezio drew a card.
+ghezio played Forest of Vitality to the Stadium spot.
+- ghezio discarded Team Rocket's Watchtower.
+ghezio played Carmine.
+- ghezio discarded 3 cards.
+   • Colress's Tenacity, Moltres, Prism Energy
+- ghezio drew 5 cards.
+ghezio attached Prism Energy to Yveltal in the Active Spot.
+ghezio's Yveltal used Clutch on im_bon3z's Froakie for 20 damage.
+im_bon3z's Turn
+im_bon3z drew Buddy-Buddy Poffin.
+im_bon3z played Buddy-Buddy Poffin.
+- im_bon3z drew 2 cards and played them to the Bench.
+   • Froakie, Froakie
+- im_bon3z shuffled their deck.
+im_bon3z played Rare Candy.
+- im_bon3z evolved Froakie to Greninja ex in the Active Spot.
+im_bon3z attached Basic Water Energy to Froakie on the Bench.
+im_bon3z's Greninja ex used Shinobi Blade on ghezio's Yveltal for 140 damage. ghezio's Yveltal took -30 less damage because of Fighting Resistance.
+- Damage breakdown:
+   • Base damage: 170 damage
+   • Resistance to Fighting: -30 damage
+   • Total damage: 140 damage
+- im_bon3z drew Lillie's Determination.
+- im_bon3z shuffled their deck.
+ghezio's Yveltal was Knocked Out!
+Prism Energy was discarded from ghezio's Yveltal.
+im_bon3z took a Prize card.
+Dreepy was added to im_bon3z's hand.
+ghezio's Smoliv is now in the Active Spot.
+ghezio's Turn
+ghezio drew a card.
+ghezio attached Air Balloon to Smoliv in the Active Spot.
+ghezio played Ultra Ball.
+- ghezio discarded 2 cards.
+   • Carmine, Carmine
+- ghezio drew Dolliv.
+- ghezio shuffled their deck.
+ghezio evolved Smoliv to Dolliv in the Active Spot.
+ghezio played Lillie's Determination.
+- ghezio drew 8 cards.
+ghezio evolved Dolliv to Arboliva ex in the Active Spot.
+ghezio ended their turn.
+im_bon3z's Turn
+im_bon3z drew Hilda.
+im_bon3z played Dreepy to the Bench.
+im_bon3z evolved Froakie to Frogadier on the Bench.
+im_bon3z played Hilda.
+- im_bon3z drew 2 cards.
+   • Frogadier, Ignition Energy
+- im_bon3z shuffled their deck.
+im_bon3z evolved Froakie to Frogadier on the Bench.
+im_bon3z attached Ignition Energy to Greninja ex in the Active Spot.
+im_bon3z's Greninja ex used Mirage Barrage.
+- ghezio's Snorunt took 120 damage.
+- ghezio's Snorunt took 120 damage.
+- Ignition Energy was discarded from im_bon3z's Greninja ex.
+ghezio's Snorunt was Knocked Out!
+ghezio's Snorunt was Knocked Out!
+im_bon3z took 2 Prize cards.
+Hilda was added to im_bon3z's hand.
+Frogadier was added to im_bon3z's hand.
+ghezio's Turn
+ghezio drew a card.
+ghezio played Hilda.
+- ghezio drew 2 cards.
+   • Mega Froslass ex, Legacy Energy
+- ghezio shuffled their deck.
+ghezio evolved Snorunt to Mega Froslass ex on the Bench.
+ghezio attached Legacy Energy to Mega Froslass ex on the Bench.
+ghezio attached Air Balloon to Mega Froslass ex on the Bench.
+ghezio retreated Arboliva ex to the Bench.
+ghezio's Mega Froslass ex is now in the Active Spot.
+ghezio's Mega Froslass ex used Resentful Refrain on im_bon3z's Greninja ex for 250 damage.
+- Damage breakdown:
+   • 5 cards in hand: 250 damage
+im_bon3z's Turn
+im_bon3z drew Basic Water Energy.
+im_bon3z evolved Frogadier to Mega Greninja ex on the Bench.
+im_bon3z played Hilda.
+- im_bon3z drew 2 cards.
+   • Drakloak, Neo Upper Energy
+- im_bon3z shuffled their deck.
+im_bon3z evolved Dreepy to Drakloak on the Bench.
+im_bon3z attached Basic Water Energy to Frogadier on the Bench.
+im_bon3z's Greninja ex used Shinobi Blade on ghezio's Mega Froslass ex for 170 damage.
+- im_bon3z drew Hilda.
+- im_bon3z shuffled their deck.
+ghezio's Turn
+ghezio drew a card.
+ghezio played Uxie to the Bench.
+ghezio played Team Rocket's Watchtower to the Stadium spot.
+- ghezio discarded Forest of Vitality.
+ghezio played Lillie's Determination.
+- ghezio shuffled 4 cards into their deck.
+- ghezio drew 8 cards.
+ghezio attached Basic Grass Energy to Arboliva ex on the Bench.
+ghezio retreated Mega Froslass ex to the Bench.
+ghezio's Arboliva ex is now in the Active Spot.
+ghezio played Buddy-Buddy Poffin.
+- ghezio shuffled their deck.
+ghezio's Arboliva ex used Oil Salvo on im_bon3z's Greninja ex for 40 damage.
+- im_bon3z's Drakloak took 40 damage.
+- im_bon3z's Frogadier took 40 damage.
+im_bon3z's Greninja ex was Knocked Out!
+- 2 cards were discarded from im_bon3z's Greninja ex.
+   • Basic Water Energy, Froakie
+ghezio took 2 Prize cards.
+A card was added to ghezio's hand.
+A card was added to ghezio's hand.
+im_bon3z's Frogadier is now in the Active Spot.
+im_bon3z's Turn
+im_bon3z drew Dreepy.
+im_bon3z played Dreepy to the Bench.
+im_bon3z played Hilda.
+- im_bon3z drew 2 cards.
+   • Mega Greninja ex, Basic Water Energy
+- im_bon3z shuffled their deck.
+im_bon3z evolved Frogadier to Mega Greninja ex in the Active Spot.
+im_bon3z's Mega Greninja ex used Mortal Shuriken.
+- im_bon3z discarded Basic Water Energy.
+- im_bon3z put 6 damage counters on im_bon3z's Arboliva ex.
+im_bon3z retreated Mega Greninja ex to the Bench.
+- Basic Water Energy was discarded from im_bon3z's Mega Greninja ex.
+im_bon3z's Mega Greninja ex is now in the Active Spot.
+im_bon3z played Energy Retrieval.
+- im_bon3z moved im_bon3z's 2 cards to their hand.
+   • Basic Water Energy, Basic Water Energy
+im_bon3z's Mega Greninja ex used Mortal Shuriken.
+- im_bon3z discarded Basic Water Energy.
+- im_bon3z put 6 damage counters on im_bon3z's Arboliva ex.
+im_bon3z attached Neo Upper Energy to Mega Greninja ex in the Active Spot.
+im_bon3z's Drakloak used Recon Directive.
+- im_bon3z drew Poké Pad.
+im_bon3z played Poké Pad.
+- im_bon3z drew Froakie.
+- im_bon3z shuffled their deck.
+im_bon3z played Froakie to the Bench.
+im_bon3z's Mega Greninja ex used Ninja Spinner on ghezio's Arboliva ex for 200 damage.
+- Damage breakdown:
+   • Base damage: 120 damage
+   • Total damage: 200 damage
+- im_bon3z moved im_bon3z's Neo Upper Energy to their hand.
+ghezio's Arboliva ex was Knocked Out!
+- 4 cards were discarded from ghezio's Arboliva ex.
+   • Basic Grass Energy, Dolliv, Smoliv, Air Balloon
+im_bon3z took 2 Prize cards.
+Basic Water Energy was added to im_bon3z's hand.
+Ultra Ball was added to im_bon3z's hand.
+ghezio's Mega Froslass ex is now in the Active Spot.
+ghezio's Turn
+ghezio drew a card.
+ghezio played Buddy-Buddy Poffin.
+- ghezio drew Smoliv and played it to the Bench.
+- ghezio shuffled their deck.
+ghezio played Forest of Vitality to the Stadium spot.
+- ghezio discarded Team Rocket's Watchtower.
+ghezio evolved Smoliv to Dolliv on the Bench.
+ghezio played Buddy-Buddy Poffin.
+- ghezio shuffled their deck.
+ghezio played Special Red Card.
+- im_bon3z shuffled their hand.
+- ghezio put 6 cards on the bottom of their deck.
+   • Lillie's Determination, Ultra Ball, Basic Water Energy, Frogadier, Basic Water Energy, Neo Upper Energy
+- ghezio drew 3 cards.
+   • Poké Pad, Buddy-Buddy Poffin, Meowth ex
+ghezio played Lillie's Determination.
+- ghezio shuffled 3 cards into their deck.
+- ghezio drew 6 cards.
+ghezio evolved Dolliv to Arboliva ex on the Bench.
+ghezio attached Basic Grass Energy to Arboliva ex on the Bench.
+ghezio played Night Stretcher.
+- ghezio moved ghezio's Snorunt to their hand.
+ghezio played Snorunt to the Bench.
+ghezio retreated Mega Froslass ex to the Bench.
+ghezio's Arboliva ex is now in the Active Spot.
+ghezio's Arboliva ex used Oil Salvo.
+- im_bon3z's Mega Greninja ex took 80 damage.
+- im_bon3z's Drakloak took 40 damage.
+im_bon3z's Turn
+im_bon3z drew Dreepy.
+im_bon3z played Poké Pad.
+- im_bon3z drew Drakloak.
+- im_bon3z shuffled their deck.
+im_bon3z evolved Dreepy to Drakloak on the Bench.
+im_bon3z played Buddy-Buddy Poffin.
+- im_bon3z shuffled their deck.
+im_bon3z's Drakloak used Recon Directive.
+- im_bon3z drew Boss's Orders.
+im_bon3z's Drakloak used Recon Directive.
+- im_bon3z drew Poké Pad.
+im_bon3z played Poké Pad.
+- im_bon3z drew Frogadier.
+- im_bon3z shuffled their deck.
+im_bon3z evolved Froakie to Frogadier on the Bench.
+im_bon3z played Meowth ex to the Bench.
+im_bon3z's Meowth ex used Last-Ditch Catch.
+- im_bon3z drew Lillie's Determination.
+- im_bon3z shuffled their deck.
+im_bon3z played Lillie's Determination.
+- im_bon3z shuffled 2 cards into their deck.
+   • Dreepy, Boss's Orders
+- im_bon3z drew 6 cards.
+   • Dreepy, Ultra Ball, Ultra Ball, Team Rocket's Watchtower, Boss's Orders, Ignition Energy
+im_bon3z played Team Rocket's Watchtower to the Stadium spot.
+- im_bon3z discarded Forest of Vitality.
+im_bon3z ended their turn.
+ghezio's Turn
+ghezio drew a card.
+ghezio evolved Snorunt to Froslass on the Bench.
+ghezio attached Prism Energy to Arboliva ex in the Active Spot.
+ghezio's Arboliva ex used Oil Salvo.
+- im_bon3z's Mega Greninja ex took 120 damage.
+Pokémon Checkup
+im_bon3z's Drakloak was Knocked Out!
+Dreepy was discarded from im_bon3z's Drakloak.
+ghezio's Froslass used Freezing Shroud.
+- ghezio put a damage counter on ghezio's Mega Greninja ex.
+- ghezio put a damage counter on ghezio's Drakloak.
+- ghezio put a damage counter on ghezio's Mega Greninja ex.
+- ghezio put a damage counter on ghezio's Drakloak.
+ghezio took a Prize card.
+A card was added to ghezio's hand.
+im_bon3z's Turn
+im_bon3z drew Special Red Card.
+im_bon3z's Drakloak used Recon Directive.
+- im_bon3z drew Lillie's Determination.
+im_bon3z played Dreepy to the Bench.
+im_bon3z played Lillie's Determination.
+- im_bon3z shuffled 5 cards into their deck.
+   • Ultra Ball, Ultra Ball, Boss's Orders, Ignition Energy, Special Red Card
+- im_bon3z drew 6 cards.
+   • Basic Water Energy, Ultra Ball, Drakloak, Dragapult ex, Surfing Beach, Rare Candy
+im_bon3z attached Basic Water Energy to Mega Greninja ex in the Active Spot.
+im_bon3z's Mega Greninja ex used Ninja Spinner on ghezio's Arboliva ex for 200 damage.
+- Damage breakdown:
+   • Base damage: 120 damage
+   • Total damage: 200 damage
+- im_bon3z moved im_bon3z's Basic Water Energy to their hand.
+Pokémon Checkup
+ghezio's Froslass used Freezing Shroud.
+- im_bon3z put a damage counter on ghezio's Mega Greninja ex.
+- im_bon3z put a damage counter on ghezio's Mega Greninja ex.
+- im_bon3z put a damage counter on ghezio's Drakloak.
+ghezio's Turn
+ghezio drew a card.
+ghezio's Arboliva ex used Oil Salvo.
+- im_bon3z's Drakloak took 40 damage.
+- im_bon3z's Mega Greninja ex took 80 damage.
+Pokémon Checkup
+im_bon3z's Mega Greninja ex was Knocked Out!
+- 2 cards were discarded from im_bon3z's Mega Greninja ex.
+   • Frogadier, Froakie
+ghezio took 3 Prize cards.
+A card was added to ghezio's hand.
+A card was added to ghezio's hand.
+A card was added to ghezio's hand.
+Opponent took all of their Prize cards. ghezio wins.
+ghezio's Froslass used Freezing Shroud.
+- ghezio put a damage counter on ghezio's Mega Greninja ex.
+- ghezio put a damage counter on ghezio's Mega Greninja ex.
+- ghezio put a damage counter on ghezio's Drakloak.
