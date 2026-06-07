@@ -1,0 +1,29 @@
+Pokémon: 16
+4 Team Rocket's Tarountula DRI 19
+4 Team Rocket's Spidops DRI 20
+2 Team Rocket's Mewtwo ex DRI 81
+2 Team Rocket's Mimikyu DRI 87
+2 Team Rocket's Articuno DRI 51
+1 Team Rocket's Sneasel DRI 128
+1 Lillie's Clefairy ex JTG 56
+Trainer: 34
+3 Lillie's Determination MEG 119
+3 Team Rocket's Ariana DRI 171
+3 Team Rocket's Proton DRI 177
+3 Team Rocket's Giovanni DRI 174
+2 Team Rocket's Archer DRI 170
+1 Team Rocket's Petrel DRI 176
+4 Team Rocket's Transceiver DRI 178
+4 Ultra Ball MEG 131
+2 Bug Catching Set TWM 143
+2 Night Stretcher ASC 196
+1 Energy Switch MEG 115
+1 Maximum Belt TEF 154
+1 Brave Bangle WHT 80
+1 Counter Gain SSP 169
+2 Team Rocket's Factory DRI 173
+1 Prism Tower CRI 80
+Energy: 10
+5 Grass Energy MEE 1
+4 Team Rocket's Energy DRI 182
+1 Psychic Energy MEE 5

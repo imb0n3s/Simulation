@@ -1,0 +1,25 @@
+Pokémon: 22
+4 Weedle CRI 1
+4 Kakuna CRI 2
+4 Beedrill ex CRI 3
+3 Dunsparce JTG 120
+2 Dudunsparce TEF 129
+3 Celebi MEG 12
+1 Meowth ex POR 62
+1 Fezandipiti ex ASC 142
+Trainer: 32
+4 Lillie's Determination MEG 119
+2 Morty's Conviction TEF 155
+1 Team Rocket's Petrel DRI 176
+1 Boss's Orders MEG 114
+4 Buddy-Buddy Poffin TEF 144
+4 Bug Catching Set TWM 143
+3 Ultra Ball MEG 131
+3 Poké Pad POR 81
+2 Redeemable Ticket JTG 156
+2 Sacred Ash DRI 168
+1 Special Red Card CRI 82
+1 Unfair Stamp TWM 165
+4 Forest of Vitality MEG 117
+Energy: 6
+6 Grass Energy MEE 1

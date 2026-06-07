@@ -1,0 +1,25 @@
+Pokémon: 14
+2 Charcadet SSP 32
+1 Charcadet PFL 19
+1 Charcadet SSP 33
+3 Ceruledge ex SSP 36
+3 Solrock MEG 75
+2 Lunatone MEG 74
+1 Drilbur TEF 85
+1 Fezandipiti ex ASC 142
+Trainer: 26
+4 Carmine TWM 145
+3 Explorer's Guidance TEF 147
+2 Boss's Orders MEG 114
+4 Ultra Ball MEG 131
+4 Fighting Gong MEG 116
+3 Night Stretcher ASC 196
+2 Poké Pad POR 81
+1 Special Red Card CRI 82
+1 Brilliant Blender SSP 164
+1 Prism Tower CRI 80
+1 Team Rocket's Watchtower DRI 180
+Energy: 20
+12 Fighting Energy MEE 6
+6 Fire Energy MEE 2
+2 Mist Energy TEF 161

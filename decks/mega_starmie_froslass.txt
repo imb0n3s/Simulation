@@ -1,0 +1,30 @@
+Pokémon: 18
+4 Snorunt ASC 46
+2 Mega Froslass ex ASC 47
+1 Froslass TWM 53
+1 Glalie TWM 52
+3 Staryu POR 20
+2 Mega Starmie ex POR 21
+2 Munkidori TWM 95
+1 Duskull PRE 35
+1 Dusclops PRE 36
+1 Meowth ex POR 62
+Trainer: 32
+4 Larry's Skill PRE 115
+3 Lillie's Determination MEG 119
+2 Boss's Orders MEG 114
+2 Hilda WHT 84
+1 Salvatore TEF 160
+1 Wally's Compassion MEG 132
+1 Crispin SCR 133
+4 Buddy-Buddy Poffin TEF 144
+4 Poké Pad POR 81
+4 Ultra Ball MEG 131
+1 Switch MEG 130
+1 Air Balloon ASC 181
+4 Risky Ruins MEG 127
+Energy: 10
+6 Water Energy MEE 3
+2 Darkness Energy MEE 7
+1 Ignition Energy WHT 86
+1 Legacy Energy TWM 167

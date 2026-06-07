@@ -1,0 +1,29 @@
+Pokémon: 20
+4 Froakie CRI 20
+3 Frogadier CRI 21
+2 Greninja ex TWM 106
+2 Mega Greninja ex CRI 22
+2 Dunsparce JTG 120
+2 Dudunsparce TEF 129
+1 Snorunt ASC 46
+1 Mega Froslass ex ASC 47
+1 Budew ASC 16
+1 Fezandipiti ex ASC 142
+1 Meowth ex POR 62
+Trainer: 30
+4 Lillie's Determination MEG 119
+2 Colress's Tenacity SFA 57
+2 Boss's Orders MEG 114
+1 Hilda WHT 84
+4 Buddy-Buddy Poffin TEF 144
+4 Poké Pad POR 81
+3 Ultra Ball MEG 131
+2 Rare Candy MEG 125
+2 Special Red Card CRI 82
+1 Night Stretcher ASC 196
+2 Air Balloon ASC 181
+2 Surfing Beach MEG 129
+1 Grand Tree SCR 136
+Energy: 10
+8 Water Energy MEE 3
+2 Ignition Energy WHT 86

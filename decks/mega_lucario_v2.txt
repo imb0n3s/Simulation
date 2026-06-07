@@ -1,0 +1,23 @@
+Pokémon: 16
+3 Riolu MEG 76
+3 Mega Lucario ex MEG 77
+3 Solrock MEG 75
+2 Makuhita MEG 72
+2 Hariyama MEG 73
+2 Lunatone MEG 74
+1 Meowth ex POR 62
+Trainer: 33
+4 Lillie's Determination MEG 119
+4 Judge POR 76
+2 Boss's Orders MEG 114
+4 Premium Power Pro MEG 124
+4 Fighting Gong MEG 116
+4 Ultra Ball MEG 131
+2 Night Stretcher ASC 196
+2 Poké Pad POR 81
+1 Switch MEG 130
+1 Air Balloon ASC 181
+1 Maximum Belt TEF 154
+4 Team Rocket's Watchtower DRI 180
+Energy: 11
+11 Fighting Energy MEE 6

@@ -1,0 +1,24 @@
+Pokémon: 21
+4 Weedle CRI 1
+4 Kakuna CRI 2
+4 Beedrill ex CRI 3
+3 Dunsparce TEF 128
+3 Dudunsparce TEF 129
+1 Meowth ex POR 62
+1 Fezandipiti ex ASC 142
+1 Fan Rotom SCR 118
+Trainer: 34
+4 Dawn PFL 87
+3 Lillie's Determination MEG 119
+3 Boss's Orders MEG 114
+4 Bug Catching Set TWM 143
+4 Buddy-Buddy Poffin TEF 144
+4 Poké Pad POR 81
+3 Ultra Ball MEG 131
+2 Special Red Card CRI 82
+1 Max Rod PRE 116
+1 Redeemable Ticket JTG 156
+1 Night Stretcher ASC 196
+4 Forest of Vitality MEG 117
+Energy: 5
+5 Grass Energy MEE 1

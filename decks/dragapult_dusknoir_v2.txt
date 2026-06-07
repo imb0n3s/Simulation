@@ -1,0 +1,32 @@
+Pokémon: 23
+4 Dreepy TWM 128
+4 Drakloak TWM 129
+3 Dragapult ex TWM 130
+2 Duskull PRE 35
+1 Dusclops PRE 36
+1 Dusknoir PRE 37
+2 Dunsparce JTG 120
+1 Dudunsparce TEF 129
+2 Meowth ex POR 62
+1 Budew ASC 16
+1 Munkidori TWM 95
+1 Fezandipiti ex ASC 142
+Trainer: 29
+4 Lillie's Determination MEG 119
+3 Boss's Orders MEG 114
+1 Crispin SCR 133
+1 Rosa's Encouragement POR 84
+1 Judge POR 76
+1 Team Rocket's Petrel DRI 176
+4 Ultra Ball MEG 131
+4 Buddy-Buddy Poffin TEF 144
+4 Poké Pad POR 81
+2 Rare Candy MEG 125
+1 Night Stretcher ASC 196
+1 Unfair Stamp TWM 165
+1 Jamming Tower TWM 153
+1 Risky Ruins MEG 127
+Energy: 8
+3 Fire Energy MEE 2
+3 Psychic Energy MEE 5
+2 Darkness Energy MEE 7
