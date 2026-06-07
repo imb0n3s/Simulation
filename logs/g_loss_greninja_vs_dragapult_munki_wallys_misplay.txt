@@ -1,0 +1,68 @@
+Setup
+elo__fi chose tails for the opening coin flip.
+im_bon3z won the coin toss.
+im_bon3z decided to go first.
+elo__fi drew 7 cards for the opening hand.
+im_bon3z drew 7 cards for the opening hand.
+- 7 drawn cards.
+   • Buddy-Buddy Poffin, Lillie's Determination, Air Balloon, Basic Water Energy, Night Stretcher, Buddy-Buddy Poffin, Greninja ex
+im_bon3z took a mulligan.
+elo__fi drew 1 more card because im_bon3z took at least 1 mulligan.
+elo__fi played Duskull to the Active Spot.
+elo__fi played Dreepy to the Bench.
+elo__fi played Munkidori to the Bench.
+elo__fi played Munkidori to the Bench.
+im_bon3z played Froakie to the Active Spot.
+im_bon3z's Turn
+im_bon3z drew Surfing Beach.
+im_bon3z ended their turn.
+elo__fi's Turn
+elo__fi drew a card.
+elo__fi played Lillie's Determination.
+- elo__fi drew 8 cards.
+elo__fi played Dreepy to the Bench.
+elo__fi played Dreepy to the Bench.
+elo__fi ended their turn.
+im_bon3z's Turn
+im_bon3z drew Ignition Energy.
+im_bon3z played Hilda.
+- im_bon3z drew 2 cards.
+   • Mega Greninja ex, Neo Upper Energy
+im_bon3z played Rare Candy.
+- im_bon3z evolved Froakie to Mega Greninja ex in the Active Spot.
+im_bon3z attached Neo Upper Energy to Mega Greninja ex in the Active Spot.
+im_bon3z's Mega Greninja ex used Ninja Spinner on elo__fi's Duskull for 200 damage.
+elo__fi's Duskull was Knocked Out!
+im_bon3z took a Prize card.
+elo__fi's Munkidori is now in the Active Spot.
+elo__fi's Turn
+(elo develops triple Drakloak engine, Judge resets im_bon3z's hand, rebenches Duskull)
+im_bon3z's Turn
+im_bon3z's Mega Greninja ex used Mortal Shuriken.
+- 6 counters KO elo's benched Duskull. im_bon3z took a Prize card.
+im_bon3z played Meowth ex to the Bench (Last-Ditch Catch for 1 draw).
+im_bon3z played Ultra Ball.
+- im_bon3z discarded 2 cards.
+   • Wally's Compassion, Frogadier      <<<< THE MISPLAY: Wally's heals a Mega ex to full.
+im_bon3z played Froakie to the Bench.
+im_bon3z's Mega Greninja ex used Ninja Spinner — KO Munkidori, third Prize. 3-0 lead.
+elo__fi's Turn
+elo evolves Dragapult ex, Phantom Dive: 200 onto Mega Greninja ex (now 200/350).
+im_bon3z's Turn
+(no Wally's to heal the Mega — it stays at 200)
+im_bon3z benches+evolves Frogadier, Shuriken + Ninja Spinner into Dragapult (260/320, no KO).
+elo__fi's Turn
+elo's Munkidori Adrena-Brain repositions counters; Phantom Dive: Mega Greninja ex KO'd (3)
++ spread finishes im_bon3z's benched spare Froakie (1) = FOUR prizes, 3-4.
+im_bon3z's Turn
+Mega Greninja #2 evolves, Ninja Spinner KOs Dragapult #1 (2 prizes, 5-4).
+elo__fi's Turn
+Second Dragapult + Risky Ruins + SPECIAL RED CARD (bottoms im_bon3z's Neo Upper/Boss/Candy)
++ Rosa's Encouragement double-attach, Phantom Dive 200 on Mega #2.
+im_bon3z's Turn
+drew Poke Pad, played it, NO energy, NO attack — hand was the win condition and it's gone.
+elo__fi's Turn
+Phantom Dive: Mega #2 KO'd + accumulated spread finishes Meowth ex. elo__fi wins.
+(Lessons: 1. discard discipline — Wally's was the answer card, Ultra Ball cost should
+have been paid with anything else; holding it wins the game. 2. hand-stored win
+conditions die to Red Card. 3. spread decks tax benched bonus prizes.)
