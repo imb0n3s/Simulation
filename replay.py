@@ -68,7 +68,7 @@ class Replay:
 
     def run(self):
         for raw in open(self.path, encoding="utf-8"):
-            line = raw.rstrip("\n")
+            line = raw.rstrip("\n").replace("\u2019", "'")  # PTCG Live curly apostrophes
             s = line.strip().lstrip("-").strip()
             self.handle(s)
         return self

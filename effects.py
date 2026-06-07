@@ -423,7 +423,24 @@ class Effects:
         for c in mon.attached_cards():
             player.deck.append(c)
         if mon is player.active:
-            player.active = player.bench.pop(0) if player.bench else None
+            # Run Away Draw from the Active is a FREE pivot (human log pattern:
+            # vacate into Budew to re-establish the item lock; else a ready attacker)
+            def promo(i_m):
+                i, m = i_m
+                locker = any(e.get("op") == "opponent_item_lock_next_turn"
+                             for a in m.card.data.get("attacks", [])
+                             for e in a.get("effects", []) or [])
+                ready = any(game._cost_met(m, a["cost"], a)
+                            for a in m.card.data.get("attacks", []))
+                best = max(((a.get("damage") or 0) for a in m.card.data.get("attacks", [])
+                            if game._cost_met(m, a["cost"], a)), default=0)
+                return (locker and game.turn <= 10, ready, best,
+                        -(m.card.data.get("retreat") or 0))
+            if player.bench:
+                i, _ = max(enumerate(player.bench), key=promo)
+                player.active = player.bench.pop(i)
+            else:
+                player.active = None
         elif mon in player.bench:
             player.bench.remove(mon)
         player.shuffle(game.rng)
