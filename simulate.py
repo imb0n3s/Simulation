@@ -206,6 +206,21 @@ class HeuristicAgent:
         elif resets:
             self._try(lambda c=resets[0]: self.fx.play_trainer(game, p, c))
 
+    @staticmethod
+    def _opp_spread_amount(game, p):
+        """Max bench damage-counter spread the opponent can place this turn
+        (Phantom Dive etc). 0 if none. Used for spread bench-hygiene."""
+        opp = game.players[1 - game.players.index(p)]
+        amt = 0
+        for m in opp.all_pokemon():
+            for atk in m.card.data.get("attacks", []):
+                for e in atk.get("effects", []) or []:
+                    op = e.get("op", "")
+                    if "spread" in op or op in ("phantom_dive", "place_counters_bench",
+                                                "bench_snipe", "mirage_barrage"):
+                        amt = max(amt, (e.get("counters", 0) * 10) or e.get("amount", 0))
+        return amt
+
     def _should_bench(self, game, p, card):
         """Humans bench with a plan: insurance, evolution lines, attackers, needed utility.
         They do NOT gift multi-prize liabilities or overfill the bench."""
@@ -221,8 +236,14 @@ class HeuristicAgent:
             return False                                  # late lock-lead = spread food
         has_util = bool(card.data.get("abilities"))
         best = max(((x.get("damage") or 0) for x in card.data.get("attacks", [])), default=0)
+        spread = self._opp_spread_amount(game, p)
         if has_util:
-            if pv == 1: return len(p.bench) < 4          # cheap engine (Munkidori etc.)
+            if pv == 1:
+                # spread bench hygiene: vs Phantom-Dive-style decks, one engine copy in
+                # play is enough — extra fragile 1-prize bodies are just free spread prizes
+                if spread and any(m.card.name == card.name for m in p.all_pokemon()):
+                    return False
+                return len(p.bench) < 4                  # cheap engine (Munkidori etc.)
             # 2-prize utility (Meowth ex...): only when we actually need the gas
             return len(p.hand) <= 4 and len(p.bench) < 4
         if best >= 60: return len(p.bench) < 4           # genuine attacker
@@ -618,7 +639,18 @@ class DeepSearchAgent(HeuristicAgent):
         if clone.winner is opp: return -1e6 + clone.turn
         my_taken = 6 - len(me.prizes); opp_taken = 6 - len(opp.prizes)
         board = sum(m.damage for m in opp.all_pokemon()) - sum(m.damage for m in me.all_pokemon())
-        return (my_taken - opp_taken) * 1000 + board
+        val = (my_taken - opp_taken) * 1000 + board
+        # spread bench hygiene: if the opponent can spread, our chipped 1-prize benched
+        # bodies are prizes-in-waiting — discourage leaving them in snipe range.
+        spread = DeepSearchAgent._opp_spread_amount(clone, me)
+        if spread:
+            for m in me.bench:
+                pz = 3 if "Mega" in m.card.subtypes else (2 if "ex" in m.card.subtypes else 1)
+                try: rem = clone.effective_max_hp(m) - m.damage
+                except Exception: rem = (m.card.hp or 60) - m.damage
+                if pz == 1 and 0 < rem <= spread:
+                    val -= 250    # a free prize the spreader can cash next turn
+        return val
 
     def _eval(self, game, pi, g, a, promote=None):
         vals = []
