@@ -60,6 +60,16 @@ class AutoPolicy:
 
 
 
+def _is_count_scaler(mon):
+    """A Pokemon whose attack damage scales with how many of its NAME are in play
+    (Beedrill ex Rumbling Bees, etc). Each copy removed weakens every future hit."""
+    for a in mon.card.data.get("attacks", []):
+        for e in a.get("effects", []) or []:
+            if e.get("op") in ("damage_per_named_in_play", "damage_per_own_bench",
+                               "damage_per_benched"):
+                return True
+    return False
+
 def _remote_reach(game, player):
     """Max counters/snipe damage we can deliver WITHOUT the active attack landing
     on the target: spread ops, bench snipes, and an unused Munkidori."""
@@ -780,6 +790,24 @@ class Effects:
                     key = (_prize(t), -need, s.damage)   # biggest prize, cheapest finish, heal-richest source
                     if best is None or key > best[0]:
                         best = (key, s, t, need)
+        # 1b) threat denial: if we can KO a count-scaling attacker (Beedrill etc),
+        # prefer THAT over a bigger-prize KO — dropping their count cuts every
+        # future hit (3 Beedrill=330 OHKO -> 2 Beedrill=220, our 310s survive).
+        scaler_ko = None
+        for s in froms:
+            mv_max = min(cap, s.damage)
+            for t in legal:
+                if not _is_count_scaler(t): continue
+                need = _remaining(game, t)
+                if 0 < need <= mv_max:
+                    key = (-need, s.damage)
+                    if scaler_ko is None or key > scaler_ko[0]:
+                        scaler_ko = (key, s, t, need)
+        if scaler_ko:
+            _, s, t, need = scaler_ko
+            s.damage -= need; t.damage += need
+            game.log(f"  moves {need//10} counters from {s.name} to {t.name} — KO'd a count-scaler!")
+            return
         if best:
             _, s, t, need = best
             s.damage -= need; t.damage += need
@@ -795,7 +823,8 @@ class Effects:
         def fkey(m):
             rem_after = _remaining(game, m) - move
             converts = 0 < rem_after <= reach
-            return (converts, _prize(m) if converts else 0, m is not opp_active, -max(rem_after, 0))
+            scaler = _is_count_scaler(m)
+            return (converts, scaler, _prize(m) if converts else 0, m is not opp_active, -max(rem_after, 0))
         t = max(legal, key=fkey)
         s.damage -= move; t.damage += move
         game.log(f"  moves {move//10} counters from {s.name} to {t.name}.")
@@ -1158,7 +1187,8 @@ class Effects:
                 lethal = [m for m in live
                           if 0 < _remaining(game, m) <= max(0, op["amount"] - game.damage_reduction(m))]
                 if lethal:
-                    tgt = max(lethal, key=lambda m: (_prize(m), -_remaining(game, m)))
+                    # threat denial first: kill a count-scaler if we can, else biggest prize
+                    tgt = max(lethal, key=lambda m: (_is_count_scaler(m), _prize(m), -_remaining(game, m)))
             if tgt is None:
                 tgt = self.policy.choose_pokemon(game, pool) if pool else None
             if not tgt: break
