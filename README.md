@@ -1,164 +1,94 @@
-# Simulation — Version 0.01
+# Simulation — log-trained Pokémon TCG engine + AI pilots
 
-A log-trained Pokémon TCG simulator.
-
-A Pokémon Trading Card Game rules engine, card database, and AI pilot trained on
-real PTCG Live game logs. The goal isn't just legal play — it's **human-like**
-play: the bot's behaviors were reverse-engineered from real games, one log at a
+A Pokémon Trading Card Game rules engine, machine-readable card database, and AI
+pilots reverse-engineered from real PTCG Live game logs. The goal isn't just legal
+play — it's **human-like** play: behaviors (and *mistakes*) extracted one log at a
 time, including losses and the lessons inside them.
 
-Built around the current Standard metagame (Mega Evolution era: TWM → ASC sets,
-301 cards, 74 competitive decklists).
-
-## What's new in 0.01
-
-74 decks, 301 cards, a real-results calibration layer (`calibrate.py` + `feedback_tune.py`) that fits per-archetype strength to 1,071 real tournament decks, validated against the Utrecht/Indianapolis/Aichi top cuts (mean error 0.51% per archetype), and a 2,500-player Bo3 tournament pipeline.
-
-### Build update (June 2026): the multi-turn planner
-
-`DeepSearchAgent` is now a true multi-turn planner: it branches over **every
-gust target x every affordable attack x bench-promotion lines**, rolls each
-branch 3 turns into the future (3 sampled rollouts, piloted by the full
-human-pattern heuristic), and ranks branches by **(worst-case, mean)** — taking
-guaranteed wins by the FASTEST route. This overturned an earlier negative
-result: with a strong rollout policy, depth pays (+67 wins/400 vs the
-heuristic alone in A/B).
-
-Two lessons trained straight from real misplays in the logs:
-
-- **"Bossed up the wrong Pokemon"** — the gust never wastes itself on a body
-  that counters/spread already reach (`_remote_reach`); it pulls up what ONLY
-  the gust can reach, and lets Munkidori/spread finish the damaged one.
-  A reconstructed game state (Boss + Munkidori + Phantom Dive, near-dead
-  Zoroark + healthy Pecharunt benched) is the regression test: both agents now
-  find the 4-prize, win-a-turn-earlier line.
-- **"Could have won a turn earlier"** — guaranteed wins race each other:
-  branch value is `1e6 - turn`, so a win NOW always outranks a win next turn.
-
-Munkidori's Adrena-Brain is conversion-aware: it first checks whether moving
-counters *finishes* a KO; otherwise it banks them where this turn's spread can
-finish the job.
+Built for the current Standard metagame (Mega Evolution era): **336 cards**, **74
+competitive archetypes**, calibrated to real tournament results.
 
 ## What's in the box
 
 | File | What it does |
 |---|---|
-| `engine.py` | Core rules engine: turn structure, energy/retreat/evolution, status, weakness, prizes (Mega ex = 3!), win conditions incl. deck-out |
-| `cards.json` | 301 cards with structured, machine-readable effects (researched card-by-card from limitlesstcg.com) |
-| `effects.py` | ~115 effect ops interpreter — every attack/ability/trainer is data, not code |
-| `simulate.py` | The AI pilots: `HeuristicAgent` (human-pattern library), `SearchAgent` (1-ply), `DeepSearchAgent` (3-turn branch-and-rollout planner) |
-| `replay.py` | PTCG Live log verification harness — checks the engine against real games |
-| `build_db.py` | Builds a queryable SQLite card/deck database from `cards.json` + decklists |
-| `decks/` | 74 decklists in PTCG Live export format |
-| `logs/` | Real anonymized-ish PTCG Live game logs used as training data |
-| `matchup_builder.py` | Builds a first/second-player matchup table from real sims (resumable) |
-| `tournament.py`, `bracket.py`, `run_2500.py`, `run100_2500.py` | Tournament tools: round robins, 2,500-player Swiss + Top-64 single-elim events (all Bo3), 100-event Monte Carlo |
-| `calibrate.py`, `feedback_tune.py` | Real-results calibration: Bradley-Terry offsets fit to 1,071 real tournament decks + top-cut feedback |
-| `self_play.py`, `iterate.py`, `measure_v2.py` | Self-play stats, value-model experiments, agent A/B measurement |
+| `engine.py` | Rules engine: turn structure, energy/retreat/evolution, status, weakness, prizes (Mega ex = 3!), deck-out, the place-vs-do damage distinction, survive-the-hit promotion |
+| `cards.json` | 336 cards as structured, machine-readable effects (researched card-by-card from limitlesstcg.com), ACE SPEC flags |
+| `effects.py` | ~120 effect ops — every attack/ability/trainer is data, not code |
+| `simulate.py` | AI pilots: `HeuristicAgent` (human-pattern library), `DeepSearchAgent` (3-turn branch-and-rollout planner). Includes a log-derived **human-error model** |
+| `replay.py` | PTCG Live log verification harness (audits damage/KO math against real games) |
+| `build_db.py` | Builds a queryable SQLite card/deck database |
+| `decks/` | 74 metagame decklists in PTCG Live export format |
+| `logs/` | Real anonymized PTCG Live game logs used as training data |
+| `matchup_builder.py` | Builds a first/second-player matchup table from sims (resumable) |
+| `calibrate.py`, `feedback_tune.py` | Real-results calibration: Bradley-Terry offsets + top-cut feedback, fit to 1,071 real tournament decks |
+| `run_2500.py`, `run100_2500.py`, `run_900.py`, `run100_900.py` | Tournament engines: 2,500-player Swiss + Top-64 cut, all Bo3, 100-event Monte Carlo |
 
-## Quick start
+## The AI: a human-pattern library (21 behaviors)
 
-Python 3.10+. No dependencies for the core (only `iterate.py` wants `numpy`).
+`HeuristicAgent` and the planner carry behaviors traceable to specific logged moments —
+each one added because a real game (often a loss) revealed it:
 
-```bash
-# build the card/deck database
-python build_db.py
+1. Lock-leads & item-lock preference   2. Smart energy routing
+3. Sacrificial pivots                  4. Benching discipline (don't gift prizes)
+5. Supporter choice discipline …       6. …balanced with situational greed
+7. Information before commitment (draw abilities before choosing the supporter)
+8. Prize-aware attack selection        9. Spread targeting (skip protected; bench KOs first)
+10. Closer promotion                   11. Refrain defence (don't balloon the hand vs hand-punishers)
+12. Laundering-aware counter placement (vs Munkidori)
+13. Balanced greed (scarcity-weighted keepers)
+14. Boss/gust discipline (never gust what counters already reach)
+15. Counter conversion (Adrena-Brain finishes KOs first, sets up spread-KOs second)
+16. Fastest-win racing (a win this turn beats a win next turn)
+17. The answer-card is in your trainers: hand-disruption vs scaling-engine decks
+18. Survive-the-hit promotion (wall with a body that lives through the known attack)
+19. Succession-aware search (fetch the next attacker + energy when the active is dying)
+20. Threat-denial targeting (KO count-scaling attackers like Beedrill — drop their multiplier)
+21. Spread bench hygiene (keep chipped 1-prize bodies out of Phantom-Dive range)
 
-# verify the engine against a real game log
-python replay.py logs/g_win_vs_venusaur.txt
+### The human-error model
 
-# watch two decks play one game
-python - <<'PY'
-from engine import Game, Player, Card, load_catalog
-from simulate import build_deck, HeuristicAgent
-from effects import Effects, SkilledPolicy
+Real tournaments are played by people who slip — so the sim's pilots do too. Five
+log-derived mistake modes fire at a tunable rate (5% per decision for the planner,
+10% for the field): discard slips (paying a cost with the answer card), gust slips
+(bossing the wrong target), hand hoarding, bench greed, and fumbling a found line.
+Modeling error made the sim's top-cut composition fit reality *better*, not worse.
 
-cat = load_catalog()
-agent = HeuristicAgent(Effects(SkilledPolicy()))
-a = [c.card_id for c in build_deck("decks/greninja_dragapult.txt")]
-b = [c.card_id for c in build_deck("decks/dragapult_dudunsparce_ex.txt")]
-g = Game(Player("P1", [Card(c, cat) for c in a]),
-         Player("P2", [Card(c, cat) for c in b]), seed=42)
-g.setup()
-while not g.winner and g.turn < 60:
-    if not g.start_turn(): break
-    agent.take_turn(g, g.current)
-    g.end_turn()
-print("\n".join(g.log_lines))
-PY
+## Real-results calibration
 
-# run a full 2,500-player Bo3 event (Swiss + Top 64 cut, resumable — rerun until FINAL)
-python run_2500.py
-
-# 100 full events -> placement distribution (needs the matchup table)
-python matchup_builder.py   # rerun until it prints TABLE COMPLETE
-python run100_2500.py
-```
+Raw win rates over-rate beatsticks and under-rate control/combo. The calibration layer
+fits per-archetype strength to **1,071 real tournament decks** and is validated against
+the Utrecht / Indianapolis / Aichi Regional top cuts at **0.37% mean error per
+archetype** — better than uncalibrated, and better with the human-error model on than off.
 
 ## The design idea: place vs. do
 
-The engine's central distinction — learned the hard way from real logs — is that
-**doing damage** (attacks) and **placing damage counters** (abilities, trainers,
-poison) are different events that different cards prevent:
+The engine's central distinction — learned the hard way from logs — is that **doing
+damage** (attacks) and **placing damage counters** (abilities, trainers, spread) are
+different events that different cards prevent. Mysterious Rock Inn / Tera bench immunity
+stop *attack damage* but not placed counters; Mortal Shuriken and Adrena-Brain sail
+through walls that hard-counter ex attackers. Every damage event carries a `_dmg_source`
+tag and every prevention checks it; `replay.py` audits the do-vs-place census per game.
 
-- Tera bench immunity, Mysterious Rock Inn, Cornerstone's stance block **attack
-  damage** — but Mortal Shuriken's placed counters sail through.
-- Battle Cage blocks **placed counters** on benches — but Jetting Blow's bench
-  snipe goes right past it.
+## Quick start
 
-Every damage event carries a `_dmg_source` tag and every prevention effect
-checks it. `replay.py` audits this against real logs (it reports a
-do-damage vs place-counter census per game).
-
-## The human-pattern library
-
-`HeuristicAgent` carries behaviors extracted from real games, each traceable to
-a specific log moment:
-
-1. Lock-leads (open with the item-locker, pivot out when attackers are ready)
-2. Early Itchy Pollen item-lock preference over chip damage
-3. Smart energy routing (fund the bench attacker once the active is paid up)
-4. Sacrificial pivots (feed a cheap 1-prize body to protect the engine)
-5. Benching discipline (don't bench what you don't need — gust bait control)
-6. Supporter choice discipline (don't Lillie's away a working hand…)
-7. …balanced with situational greed (dig when behind, keepers are replaceable, or the opponent is closing)
-8. Information before commitment (draw abilities BEFORE choosing the supporter)
-9. Prize-aware attack selection (a 2-prize bench double-KO beats a 1-prize active KO)
-10. Spread targeting (never waste a hit on a protected body; bench KOs over active KOs; kill evolving engine pieces)
-11. Closer promotion (retreat into the bench attacker when it wins now)
-12. Refrain defence (vs hand-punish attackers, never balloon your hand)
-13. Laundering-aware counter placement (vs Munkidori, place where it can't profitably move)
-14. Gust discipline (never Boss up what counters already reach; pull what only the gust reaches)
-15. Counter conversion (Adrena-Brain finishes KOs first, sets up spread-KOs second)
-16. Fastest-win racing (a win this turn always beats a win next turn)
+```bash
+python build_db.py                              # build the card/deck database
+python replay.py logs/<somelog>.txt             # verify the engine against a real game
+python matchup_builder.py                        # build the matchup table (rerun until COMPLETE)
+python run100_2500.py                            # 100 x 2,500-player Bo3 events -> placement distribution
+```
 
 ## Honest limitations
 
-- Raw sim win rates over-perform beatsticks and under-perform control/combo;
-  the calibration layer (`calibrate.py` + `feedback_tune.py`) corrects archetype
-  strength against 1,071 real tournament decks and is validated to a 0.51% mean
-  abs error per archetype vs three real Regional top cuts. Use calibrated
-  tournament results, not raw win rates.
-- Negative results are kept honest — and revisited: an early "rollout-policy
-  ceiling" result was overturned once the rollout policy got strong (the
-  multi-turn planner now beats the heuristic +67/400). A linear value model +
-  greedy policy iteration still *regressed* vs. the heuristic (see `iterate.py`).
-- Card coverage is the 301 cards used by the included 74 decks, not the full set.
-
-## Extending it
-
-- **New cards**: add an entry to `cards.json` (copy a similar card's structure).
-  If it needs a new mechanic, add an `_op_<name>` method in `effects.py`.
-- **New decks**: drop a PTCG Live export in `decks/`, run `python build_db.py`.
-- **Train from your logs**: save a PTCG Live log as text, run
-  `python replay.py logs/yourlog.txt` — it flags any card the catalog is
-  missing and audits damage math against the engine.
+- Win rates are calibrated estimates, not guarantees; read calibrated tournament output, not raw rows.
+- A handful of cards are marked `[approx]` in `cards.json` where full rider text wasn't available.
+- Card coverage is the 336 cards used by the included 74 decks, not the full Standard pool.
 
 ## Legal
 
-This is a non-commercial fan project for AI research and deck testing.
-Pokémon, the Pokémon TCG, card names, and card text are © The Pokémon Company,
-Nintendo, Game Freak, and Creatures. This project is not produced by, endorsed
-by, or affiliated with them. Card text was referenced from the excellent
-[Limitless TCG](https://limitlesstcg.com) database. The code is MIT-licensed;
-the card data remains the property of its owners.
+Non-commercial fan project for AI research and deck testing. Pokémon, the Pokémon TCG,
+card names, and card text are © The Pokémon Company, Nintendo, Game Freak, and Creatures.
+Not produced by, endorsed by, or affiliated with them. Card text referenced from
+[Limitless TCG](https://limitlesstcg.com). Code is MIT-licensed; card data remains the
+property of its owners.

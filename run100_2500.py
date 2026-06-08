@@ -37,7 +37,7 @@ W = {
  "mega_kangaskhan_box":0.7,"marnies_grimmsnarl":0.6,"tera_box":0.15,"tera_box_kangaskhan":0.15,
  "hops_trevenant":0.2,"ceruledge_ex":0.1,"mega_venusaur":0.1,
 }
-USER="user_greninja"
+USER="ns_zoroark"
 def gprob(x,y,x_first):
     if x==y: return 0.52 if x_first else 0.48, 0.01   # mirror: slight first-player edge
     k1,k2=f"{x}|{y}",f"{y}|{x}"
