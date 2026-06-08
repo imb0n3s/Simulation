@@ -10704,5 +10704,347 @@
     "op": "shuffle_deck"
    }
   ]
+ },
+ "CRI-88": {
+  "name": "Froakie",
+  "set": "CRI",
+  "number": "20",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Basic"
+  ],
+  "types": [
+   "Water"
+  ],
+  "hp": 50,
+  "evolves_from": null,
+  "retreat": 1,
+  "weakness": "Lightning",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "J",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Collect",
+    "cost": [
+     "Water"
+    ],
+    "damage": 0,
+    "text": "Draw a card.",
+    "effects": [
+     {
+      "op": "draw",
+      "amount": 1
+     }
+    ]
+   }
+  ],
+  "note": "intermediate evolution; attack text not individually modeled"
+ },
+ "CRI-89": {
+  "name": "Frogadier",
+  "set": "CRI",
+  "number": "21",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 1"
+  ],
+  "types": [
+   "Water"
+  ],
+  "hp": 90,
+  "evolves_from": "Froakie",
+  "retreat": 1,
+  "weakness": "Lightning",
+  "resistance": null,
+  "rule_box": false,
+  "regulation_mark": "J",
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Summoning Jutsu",
+    "cost": [
+     "Water"
+    ],
+    "damage": 0,
+    "text": "Search your deck for up to 3 Pokémon, reveal them, and put them into your hand. Then, shuffle your deck.",
+    "effects": [
+     {
+      "op": "search_deck_to_hand",
+      "filter": {
+       "supertype": "Pokémon"
+      },
+      "count": 3
+     },
+     {
+      "op": "shuffle_deck"
+     }
+    ]
+   },
+   {
+    "name": "Aqua Edge",
+    "cost": [
+     "Water",
+     "Water"
+    ],
+    "damage": 50,
+    "effects": []
+   }
+  ],
+  "note": "intermediate evolution; attack text not individually modeled"
+ },
+ "TWM-214": {
+  "name": "Greninja ex",
+  "set": "TWM",
+  "number": "106",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 2",
+   "Tera",
+   "ex"
+  ],
+  "types": [
+   "Fighting"
+  ],
+  "hp": 310,
+  "evolves_from": "Frogadier",
+  "retreat": 1,
+  "weakness": "Psychic",
+  "resistance": null,
+  "rule_box": true,
+  "regulation_mark": "H",
+  "tera_bench_immunity": true,
+  "abilities": [],
+  "attacks": [
+   {
+    "name": "Shinobi Blade",
+    "cost": [
+     "Water"
+    ],
+    "damage": 170,
+    "text": "You may search your deck for a card and put it into your hand. Then, shuffle your deck.",
+    "effects": [
+     {
+      "op": "search_deck_to_hand",
+      "filter": {},
+      "count": 1
+     },
+     {
+      "op": "shuffle_deck"
+     }
+    ]
+   },
+   {
+    "name": "Mirage Barrage",
+    "cost": [
+     "Water",
+     "Colorless",
+     "Colorless"
+    ],
+    "damage": 0,
+    "text": "Discard 2 Energy from this Pokémon. This attack does 120 damage to 2 of your opponent's Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+    "effects": [
+     {
+      "op": "mirage_barrage",
+      "discard": 2,
+      "amount": 120,
+      "targets": 2
+     }
+    ]
+   }
+  ]
+ },
+ "CRI-116": {
+  "name": "Mega Greninja ex",
+  "set": "CRI",
+  "number": "22",
+  "supertype": "Pokémon",
+  "subtypes": [
+   "Stage 2",
+   "Mega",
+   "ex"
+  ],
+  "types": [
+   "Water"
+  ],
+  "hp": 350,
+  "evolves_from": "Frogadier",
+  "retreat": 1,
+  "weakness": "Lightning",
+  "resistance": null,
+  "rule_box": true,
+  "regulation_mark": "J",
+  "abilities": [
+   {
+    "name": "Mortal Shuriken",
+    "type": "activated",
+    "once_per_turn": true,
+    "condition": "mortal_shuriken",
+    "text": "Once during your turn, if this Pokémon is in the Active Spot, you may discard a Basic [W] Energy card from your hand in order to use this Ability. Place 6 damage counters on 1 of your opponent's Pokémon.",
+    "effects": [
+     {
+      "op": "discard_basic_energy_type_from_hand",
+      "type": "Water"
+     },
+     {
+      "op": "place_counters_opponent_choice",
+      "counters": 6
+     }
+    ]
+   }
+  ],
+  "attacks": [
+   {
+    "name": "Ninja Spinner",
+    "cost": [
+     "Water",
+     "Water"
+    ],
+    "damage": 120,
+    "text": "You may put a [W] Energy attached to this Pokémon into your hand and have this attack do 80 more damage.",
+    "effects": [
+     {
+      "op": "ninja_spinner",
+      "type": "Water",
+      "bonus": 80
+     }
+    ]
+   }
+  ]
+ },
+ "PLB-105": {
+  "name": "Rare Candy",
+  "set": "MEG",
+  "number": "125",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Item"
+  ],
+  "regulation_mark": "I",
+  "text": "Choose 1 of your Basic Pokémon in play. If you have a Stage 2 card in your hand that evolves from that Pokémon, put that card onto the Basic Pokémon to evolve it, skipping the Stage 1. You can't use this card during your first turn or on a Basic Pokémon that was put into play this turn.",
+  "effects": [
+   {
+    "op": "rare_candy_evolve"
+   }
+  ]
+ },
+ "EVO-77": {
+  "name": "Energy Retrieval",
+  "set": "CRI",
+  "number": "108",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Item"
+  ],
+  "regulation_mark": "J",
+  "text": "Put up to 2 Basic Energy cards from your discard pile into your hand.",
+  "effects": [
+   {
+    "op": "energy_retrieval",
+    "count": 2
+   }
+  ]
+ },
+ "EVO-93": {
+  "name": "Water Energy",
+  "set": "MEE",
+  "number": "3",
+  "supertype": "Energy",
+  "subtypes": [
+   "Basic"
+  ],
+  "provides": [
+   "Water"
+  ],
+  "regulation_mark": null,
+  "text": "Basic Water Energy."
+ },
+ "GEN-81": {
+  "name": "Darkness Energy",
+  "set": "MEE",
+  "number": "7",
+  "supertype": "Energy",
+  "subtypes": [
+   "Basic"
+  ],
+  "provides": [
+   "Darkness"
+  ],
+  "regulation_mark": null,
+  "text": "Basic Darkness Energy."
+ },
+ "CRI-113": {
+  "name": "Special Red Card",
+  "set": "CRI",
+  "number": "82",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Item"
+  ],
+  "regulation_mark": "J",
+  "condition": "opponent_three_or_fewer_prizes",
+  "text": "You can use this card only if your opponent has 3 or fewer Prize cards remaining. Your opponent shuffles their hand and puts it on the bottom of their deck. If they put any cards on the bottom of their deck in this way, they draw 3 cards.",
+  "effects": [
+   {
+    "op": "opponent_hand_to_bottom_draw",
+    "n": 3
+   }
+  ]
+ },
+ "ASC-210": {
+  "name": "Team Rocket's Watchtower",
+  "set": "DRI",
+  "number": "180",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Stadium"
+  ],
+  "regulation_mark": "I",
+  "stadium_kind": "colorless_no_abilities",
+  "text": "[C] Pokémon in play (both yours and your opponent's) have no Abilities.",
+  "effects": [
+   {
+    "op": "stadium_passive"
+   }
+  ]
+ },
+ "TWM-131": {
+  "name": "Tatsugiri",
+  "supertype": "Pokemon",
+  "subtypes": [
+   "Basic"
+  ],
+  "hp": 70,
+  "types": [
+   "Dragon"
+  ],
+  "retreat": 1,
+  "abilities": [
+   {
+    "name": "Attract Customers",
+    "type": "activated",
+    "once_per_turn": true,
+    "condition": "active_only",
+    "text": "Once during your turn, if this Pokemon is Active, look at the top 6 cards of your deck; reveal a Supporter there and put it into your hand. Shuffle the rest back.",
+    "effects": [
+     {
+      "op": "attract_customers",
+      "n": 6
+     }
+    ]
+   }
+  ],
+  "attacks": [
+   {
+    "name": "Surf",
+    "cost": [
+     "Fire",
+     "Water"
+    ],
+    "damage": 50,
+    "effects": []
+   }
+  ]
  }
 }

@@ -395,6 +395,14 @@ class Effects:
         player.shuffle(game.rng)
         game.log(f"  Larry's Skill: discards hand, fetches {', '.join(got) or 'nothing'}.")
 
+    def _op_attract_customers(self, game, player, op, source, ctx):
+        top = player.deck[:op.get("n", 6)]
+        sup = next((c for c in top if c.is_trainer and "Supporter" in c.subtypes), None)
+        if sup:
+            player.deck.remove(sup); player.hand.append(sup)
+            game.log(f"  Attract Customers fetches {sup.name}.")
+        player.shuffle(game.rng)
+
     def _op_gust_opponent_bench(self, game, player, op, source, ctx):
         opp = game.players[1 - game.players.index(player)]
         if not opp.bench: return
