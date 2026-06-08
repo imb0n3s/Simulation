@@ -670,10 +670,32 @@ class Game:
                 taker.hand.append(taker.prizes.pop())
         if not taker.prizes:
             self.win(taker, reason="took all prizes"); return
-        # promote a benched Pokemon if active was KO'd
+        # promote a benched Pokemon if active was KO'd.
+        # Human pattern (the Munkidori-wall play): prefer a body that SURVIVES the
+        # opponent's best available hit — denying prize tempo — and among
+        # survivors prefer damage-launderers (Adrena-Brain ammo) over engine pieces.
         if owner.active is None:
             if owner.bench:
-                owner.active = owner.bench.pop(0)
+                opp = self.players[1 - self.players.index(owner)]
+                threat = 60
+                if opp.active:
+                    for a in opp.active.card.data.get("attacks", []):
+                        amt = a.get("damage") or 0
+                        for e in a.get("effects", []) or []:
+                            amt = max(amt, e.get("amount", 0) or 0)
+                        threat = max(threat, amt)
+                def promo_key(m):
+                    hp_left = (m.card.hp or 0) - m.damage
+                    survives = hp_left > threat
+                    launders = any(e.get("op") == "move_damage_counters_to_opponent"
+                                   for ab in m.card.data.get("abilities", [])
+                                   for e in ab.get("effects", []))
+                    ready = any(self._cost_met(m, a["cost"], a)
+                                for a in m.card.data.get("attacks", []))
+                    pz = 3 if "Mega" in m.card.subtypes else (2 if "ex" in m.card.subtypes else 1)
+                    return (survives, ready, survives and launders, -pz, hp_left)
+                pick = max(owner.bench, key=promo_key)
+                owner.bench.remove(pick); owner.active = pick
                 self.log(f"{owner.name} promotes {owner.active.name} to Active.")
             else:
                 self.win(taker, reason=f"{owner.name} has no Pokemon in play")
