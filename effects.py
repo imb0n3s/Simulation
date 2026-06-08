@@ -1149,7 +1149,18 @@ class Effects:
         opp = game.players[1 - game.players.index(player)]
         pool = list(opp.bench)
         for _ in range(op.get("targets", 1)):
-            tgt = self.policy.choose_pokemon(game, pool) if pool else None
+            tgt = None
+            if pool and not getattr(self.policy, "_gust_slip", False):
+                # prize-aware lethality (the "sniped the Staryu, not the 210 Fez"
+                # lesson): among bodies this snipe KILLS, take the biggest prize;
+                # proximity only breaks ties / guides non-lethal chip.
+                live = [m for m in pool if not game.damage_prevented(m, source, player)]
+                lethal = [m for m in live
+                          if 0 < _remaining(game, m) <= max(0, op["amount"] - game.damage_reduction(m))]
+                if lethal:
+                    tgt = max(lethal, key=lambda m: (_prize(m), -_remaining(game, m)))
+            if tgt is None:
+                tgt = self.policy.choose_pokemon(game, pool) if pool else None
             if not tgt: break
             pool.remove(tgt)
             if not game.damage_prevented(tgt, source, player):
