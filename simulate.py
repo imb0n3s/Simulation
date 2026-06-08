@@ -32,6 +32,9 @@ def build_deck(path):
             print("skip (not in catalog):", line); continue
         for _ in range(int(n)):
             cards.append(Card(cid, CAT))
+    aces = [c.name for c in cards if c.data.get("ace_spec")]
+    if len(aces) > 1:
+        print(f"ILLEGAL DECK {path}: multiple ACE SPEC cards: {sorted(set(aces))}")
     return cards
 
 

@@ -786,7 +786,8 @@
   ],
   "regulation_mark": "H",
   "text": "Provides [C]. When attached from hand, draw 4 cards.",
-  "draw_on_attach": 4
+  "draw_on_attach": 4,
+  "ace_spec": true
  },
  "MEG-104": {
   "name": "Mega Kangaskhan ex",
@@ -1191,7 +1192,8 @@
   ],
   "regulation_mark": "H",
   "hp_bonus": 100,
-  "text": "The Pokémon this card is attached to gets +100 HP."
+  "text": "The Pokémon this card is attached to gets +100 HP.",
+  "ace_spec": true
  },
  "DRI-173": {
   "name": "Team Rocket's Factory",
@@ -1738,7 +1740,8 @@
     "you": 5,
     "opp": 2
    }
-  ]
+  ],
+  "ace_spec": true
  },
  "DRI-180": {
   "name": "Team Rocket's Watchtower",
@@ -2940,7 +2943,8 @@
    {
     "op": "switch_self_with_bench"
    }
-  ]
+  ],
+  "ace_spec": true
  },
  "JTG-151": {
   "name": "Lillie's Pearl",
@@ -3281,7 +3285,8 @@
   ],
   "regulation_mark": "H",
   "damage_boost_vs_ex": 50,
-  "text": "Attacks used by the Pokémon this card is attached to do 50 more damage to your opponent's Active Pokémon ex (before applying Weakness and Resistance)."
+  "text": "Attacks used by the Pokémon this card is attached to do 50 more damage to your opponent's Active Pokémon ex (before applying Weakness and Resistance).",
+  "ace_spec": true
  },
  "SSP-177": {
   "name": "Gravity Mountain",
@@ -3688,7 +3693,8 @@
     "op": "stadium_passive"
    }
   ],
-  "stadium_kind": "grand_tree"
+  "stadium_kind": "grand_tree",
+  "ace_spec": true
  },
  "WHT-86": {
   "name": "Ignition Energy",
@@ -4208,7 +4214,8 @@
    {
     "op": "shuffle_deck"
    }
-  ]
+  ],
+  "ace_spec": true
  },
  "JTG-148": {
   "name": "Hop's Choice Band",
@@ -4814,7 +4821,8 @@
   ],
   "stage2_any2": true,
   "regulation_mark": "H",
-  "text": "As long as this card is attached to a Pokémon, it provides [C] Energy. If this card is attached to a Stage 2 Pokémon, this card provides every type of Energy but provides only 2 Energy at a time."
+  "text": "As long as this card is attached to a Pokémon, it provides [C] Energy. If this card is attached to a Stage 2 Pokémon, this card provides every type of Energy but provides only 2 Energy at a time.",
+  "ace_spec": true
  },
  "POR-20": {
   "name": "Staryu",
@@ -5007,7 +5015,8 @@
   ],
   "legacy_prize": true,
   "regulation_mark": "H",
-  "text": "As long as this card is attached to a Pokémon, it provides every type of Energy but provides only 1 Energy at a time. If the Pokémon this card is attached to is Knocked Out by damage from an attack from your opponent's Pokémon, that player takes 1 fewer Prize card. This effect can't be applied more than once per game."
+  "text": "As long as this card is attached to a Pokémon, it provides every type of Energy but provides only 1 Energy at a time. If the Pokémon this card is attached to is Knocked Out by damage from an attack from your opponent's Pokémon, that player takes 1 fewer Prize card. This effect can't be applied more than once per game.",
+  "ace_spec": true
  },
  "MEG-86": {
   "name": "Mega Absol ex",
@@ -6298,7 +6307,8 @@
    {
     "op": "shuffle_deck"
    }
-  ]
+  ],
+  "ace_spec": true
  },
  "JTG-51": {
   "name": "Tapu Koko ex",
@@ -8207,7 +8217,8 @@
    {
     "op": "fill_bench_from_deck"
    }
-  ]
+  ],
+  "ace_spec": true
  },
  "DRI-164": {
   "name": "Energy Recycler",
@@ -9649,7 +9660,8 @@
     "op": "supporters_from_discard",
     "count": 2
    }
-  ]
+  ],
+  "ace_spec": true
  },
  "SSP-189": {
   "name": "Tera Orb",
