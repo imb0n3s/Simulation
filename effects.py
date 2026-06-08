@@ -88,6 +88,44 @@ class SkilledPolicy(AutoPolicy):
     """Plays with damage-spread awareness: finish what is closest to a KO,
     value multi-prize threats, and keep attackers energised."""
     _force = None  # when set to an int index, choose_pokemon returns candidates[_force]
+    _search_slip = False
+
+    def choose_search(self, game, player, candidates, filt, count):
+        """Succession-aware search (pattern #19, from a logged misplay:
+        'valued the continued chip damage over fetching another ex').
+        When the active is in kill range and no bench attacker is ready,
+        fetch the SUCCESSOR — the next big attacker and the energy to run it —
+        not more value pieces. Human slip: grabs the first thing that looks good."""
+        if self._search_slip or not candidates:
+            return candidates[:count]
+        opp = game.players[1 - game.players.index(player)]
+        threat = 60
+        if opp.active:
+            for a in opp.active.card.data.get("attacks", []):
+                amt = a.get("damage") or 0
+                for e in a.get("effects", []) or []:
+                    amt = max(amt, e.get("amount", 0) or 0)
+                threat = max(threat, amt)
+        act_rem = _remaining(game, player.active) if player.active else 0
+        ready_backup = any(
+            any(game._cost_met(m, a["cost"], a) and (a.get("damage") or 0) >= 100
+                for a in m.card.data.get("attacks", []))
+            for m in player.bench)
+        emergency = (act_rem <= threat) and not ready_backup
+        in_play = {m.card.name for m in player.all_pokemon()}
+        def best_dmg(c):
+            return max(((a.get("damage") or 0) for a in c.data.get("attacks", [])), default=0)
+        def score(c):
+            s = 1.0
+            if c.is_pokemon:
+                if c.evolves_from in in_play: s = 3.0 + best_dmg(c) / 200.0
+                elif c.is_basic_pokemon: s = 2.0
+                if emergency and best_dmg(c) >= 100: s += 3.0   # the successor
+            elif c.is_energy:
+                s = 1.6 + (2.4 if emergency else 0.0)           # fund the successor
+            return s
+        ranked = sorted(candidates, key=score, reverse=True)
+        return ranked[:count]
     def choose_pokemon(self, game, candidates):
         if not candidates: return None
         if self._force is not None and 0 <= self._force < len(candidates):

@@ -283,6 +283,8 @@ class HeuristicAgent:
         self.fx.policy._gust_slip = self._slip(game)
         # discard slip: the "Ultra Balled away the Wally's Compassion" mistake
         self.fx.policy._discard_slip = self._slip(game)
+        # search slip: the "took the chip piece over the successor ex" mistake
+        self.fx.policy._search_slip = self._slip(game)
         # 1) play Items (the Supporter waits until after draw abilities — info first)
         self._play_items(game, p)
         # 2) play a stadium if we have one and none is ours
