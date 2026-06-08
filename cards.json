@@ -11046,5 +11046,72 @@
     "effects": []
    }
   ]
+ },
+ "CRI-114": {
+  "name": "Surfing Beach",
+  "set": "MEG",
+  "number": "129",
+  "supertype": "Trainer",
+  "subtypes": [
+   "Stadium"
+  ],
+  "regulation_mark": "I",
+  "stadium_kind": "water_switch",
+  "effects": [
+   {
+    "op": "stadium_passive"
+   }
+  ],
+  "text": "Once during each player's turn, that player may switch their Active [W] Pokémon with 1 of their Benched [W] Pokémon."
+ },
+ "TWM-100": {
+  "name": "Bronzor",
+  "supertype": "Pokemon",
+  "subtypes": [
+   "Basic"
+  ],
+  "hp": 70,
+  "types": [
+   "Metal"
+  ],
+  "weakness": "Fire",
+  "retreat": 1,
+  "attacks": [
+   {
+    "name": "Tackle",
+    "cost": [
+     "Colorless"
+    ],
+    "damage": 20,
+    "effects": []
+   }
+  ],
+  "approx": true
+ },
+ "TWM-101": {
+  "name": "Bronzong",
+  "supertype": "Pokemon",
+  "subtypes": [
+   "Stage 1"
+  ],
+  "evolves_from": "Bronzor",
+  "hp": 120,
+  "types": [
+   "Metal"
+  ],
+  "weakness": "Fire",
+  "retreat": 2,
+  "attacks": [
+   {
+    "name": "Evolution Jammer",
+    "cost": [
+     "Psychic"
+    ],
+    "damage": 30,
+    "text": "[approx] 30 damage; disruption rider (evolve-lock) not modeled.",
+    "effects": []
+   }
+  ],
+  "approx": true
  }
 }
