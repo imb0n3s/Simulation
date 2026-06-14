@@ -1451,8 +1451,36 @@
   "resistance": "Fighting",
   "rule_box": false,
   "regulation_mark": "H",
-  "abilities": [],
-  "attacks": [],
+  "abilities": [
+   {
+    "name": "Cursed Blast",
+    "type": "activated",
+    "once_per_turn": true,
+    "self_ko": true,
+    "text": "Once during your turn, you may put 5 damage counters on 1 of your opponent's Pokémon. If you use this Ability, this Pokémon is Knocked Out.",
+    "effects": [
+     {
+      "op": "place_counters_opponent_choice",
+      "counters": 5
+     },
+     {
+      "op": "ko_self"
+     }
+    ]
+   }
+  ],
+  "attacks": [
+   {
+    "name": "Will-O-Wisp",
+    "cost": [
+     "Psychic",
+     "Psychic"
+    ],
+    "damage": 50,
+    "text": "",
+    "effects": []
+   }
+  ],
   "note": "intermediate evolution; attack text not individually modeled"
  },
  "PRE-37": {
@@ -3341,7 +3369,7 @@
   "types": [
    "Water"
   ],
-  "hp": 50,
+  "hp": 70,
   "evolves_from": null,
   "retreat": 1,
   "weakness": "Lightning",
@@ -4901,7 +4929,7 @@
  },
  "TWM-52": {
   "name": "Glalie",
-  "supertype": "Pokemon",
+  "supertype": "Pokémon",
   "subtypes": [
    "Stage 1"
   ],
@@ -6763,7 +6791,7 @@
    "Stadium"
   ],
   "regulation_mark": "H",
-  "stadium_kind": "academy_at_night",
+  "stadium_kind": "academy_night",
   "stadium_passive": true,
   "text": "Once during each player's turn, that player may put a card from their hand on top of their deck.",
   "effects": [
@@ -7901,7 +7929,7 @@
     "name": "Memory Dive",
     "type": "static",
     "static_kind": "memory_dive",
-    "text": "Each of your evolved Pokémon can use any attack from its previous Evolutions. (Simplified: not yet enforced by the engine.)"
+    "text": "Each of your evolved Pokémon can use any attack from its previous Evolutions. (You still need the necessary Energy to use each attack.)"
    }
   ],
   "attacks": [
@@ -10093,7 +10121,7 @@
  },
  "DRI-21": {
   "name": "Smoliv",
-  "supertype": "Pokemon",
+  "supertype": "Pokémon",
   "subtypes": [
    "Basic"
   ],
@@ -10116,7 +10144,7 @@
  },
  "DRI-22": {
   "name": "Dolliv",
-  "supertype": "Pokemon",
+  "supertype": "Pokémon",
   "subtypes": [
    "Stage 1"
   ],
@@ -10154,7 +10182,7 @@
  },
  "DRI-23": {
   "name": "Arboliva ex",
-  "supertype": "Pokemon",
+  "supertype": "Pokémon",
   "subtypes": [
    "Stage 2",
    "ex"
@@ -10201,7 +10229,7 @@
  },
  "SSP-78": {
   "name": "Uxie",
-  "supertype": "Pokemon",
+  "supertype": "Pokémon",
   "subtypes": [
    "Basic"
   ],
@@ -10716,7 +10744,7 @@
   "types": [
    "Water"
   ],
-  "hp": 50,
+  "hp": 70,
   "evolves_from": null,
   "retreat": 1,
   "weakness": "Lightning",
@@ -11011,7 +11039,7 @@
  },
  "TWM-131": {
   "name": "Tatsugiri",
-  "supertype": "Pokemon",
+  "supertype": "Pokémon",
   "subtypes": [
    "Basic"
   ],
@@ -11066,7 +11094,7 @@
  },
  "TWM-100": {
   "name": "Bronzor",
-  "supertype": "Pokemon",
+  "supertype": "Pokémon",
   "subtypes": [
    "Basic"
   ],
@@ -11090,7 +11118,7 @@
  },
  "TWM-101": {
   "name": "Bronzong",
-  "supertype": "Pokemon",
+  "supertype": "Pokémon",
   "subtypes": [
    "Stage 1"
   ],

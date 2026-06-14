@@ -332,7 +332,7 @@ class HeuristicAgent:
         #      abilities first (Recon Directive, Last-Ditch Catch, Summoning Jutsu...)
         for mon in p.all_pokemon():
             for ab in mon.card.data.get("abilities", []):
-                if ab.get("type") == "activated":
+                if ab.get("type") == "activated" and self._ability_worth(game, p, mon, ab):
                     self._try(lambda m=mon, a=ab: self.fx.use_ability(game, p, m, a))
         # 5.6) NOW choose the one Supporter, with full knowledge of the hand
         self._play_supporter(game, p)
@@ -357,6 +357,11 @@ class HeuristicAgent:
         for card in list(p.hand):
             if card.is_energy and not p.energy_attached_this_turn:
                 tgt = p.active
+                if getattr(self, "_force_combo", False):
+                    seekers = [m for m in p.all_pokemon() if self._has_seek(m) and len(m.energy) < 2]
+                    if seekers:
+                        tgt = max(seekers, key=lambda m: (m is p.active, len(m.energy)))
+                        self._try(lambda c=card, t=tgt: self.fx.attach_energy(game, p, c, t)); continue
                 if p.active and self._is_utility_lead(p.active):
                     if len(p.active.energy) >= 1 and p.bench:
                         tgt = max(p.bench, key=lambda m: (self._best_dmg(m), len(m.energy)))
@@ -465,10 +470,16 @@ class HeuristicAgent:
         # 8) use activated abilities (Run Away Draw, Flip the Script)
         for mon in p.all_pokemon():
             for ab in mon.card.data.get("abilities", []):
-                if ab.get("type") == "activated":
+                if ab.get("type") == "activated" and self._ability_worth(game, p, mon, ab):
                     self._try(lambda m=mon, a=ab: self.fx.use_ability(game, p, m, a))
-        # 9) attack (subclasses may override the chooser)
-        self._attack_step(game, p)
+        # 9) attack — planner picks the line; combo only when _force_combo is set
+        if getattr(self, "_force_combo", False):
+            self._promote_combo_attacker(game, p)
+            if not self._seek_setup(game, p):
+                self._attack_step(game, p)
+        else:
+            if not self._seek_setup(game, p):
+                self._attack_step(game, p)
 
     def _attack_prizes(self, game, p, atk, mon=None):
         """Estimate (prizes this attack takes now, total damage) — counts bench
@@ -513,11 +524,76 @@ class HeuristicAgent:
                 total += amt * n
         return prizes, total
 
+    def _has_seek(self, mon):
+        return any(e.get("op") == "seek_inspiration"
+                   for a in mon.card.data.get("attacks", []) for e in a.get("effects", []) or [])
+
+    def _promote_combo_attacker(self, game, p):
+        """Keep the Seek Inspiration attacker (Slowking) in the Active Spot — a
+        skilled control pilot leads the combo piece instead of leaving it benched."""
+        if not p.active or self._has_seek(p.active) or p.retreated_this_turn:
+            return
+        for i, m in enumerate(p.bench):
+            if not self._has_seek(m):
+                continue
+            seek = next((a for a in m.card.data.get("attacks", [])
+                         if any(e.get("op") == "seek_inspiration" for e in a.get("effects", []) or [])), None)
+            # promote ONLY a charged Slowking that can fire Seek Inspiration THIS turn,
+            # so we never expose an uncharged body — charge it on the bench first.
+            if seek and game._cost_met(m, seek["cost"], seek):
+                self._try(lambda i=i: game.retreat(p, i))
+                return
+
+    def _seek_setup(self, game, p):
+        """Slowking/Kyurem combo: if the Active has a Seek Inspiration attack (cost
+        met) and a big non-rule-box attacker (Kyurem/Trifrost) is in hand, use
+        Academy at Night to stack it on top of the deck, then fire Seek Inspiration
+        so it discards that card off the top and performs its attack (110x3 spread).
+        Returns True if it executed the attack (so take_turn skips the normal step)."""
+        act = p.active
+        if not act or game.turn <= 1:
+            return False
+        atks = game.attacks_for(act)
+        seek_i = next((i for i, a in enumerate(atks)
+                       if any(e.get("op") == "seek_inspiration" for e in a.get("effects", []) or [])), None)
+        if seek_i is None or not game._cost_met(act, atks[seek_i]["cost"], atks[seek_i]):
+            return False
+        def power(c):
+            if not (c.is_pokemon and not c.has_rule_box):
+                return 0
+            best = 0
+            for a in c.data.get("attacks", []) or []:
+                d = a.get("damage") or 0
+                for e in a.get("effects", []) or []:
+                    if e.get("op") == "damage_multi_opponent":
+                        d = max(d, (e.get("amount", 0) or 0) * (e.get("targets", 1) or 1))
+                    else:
+                        d = max(d, e.get("amount", 0) or 0)
+                best = max(best, d)
+            return best
+        ktargets = [c for c in p.hand if power(c) >= 150]   # Kyurem Trifrost = 330
+        if not ktargets:
+            return False
+        # get Academy at Night down if we have it and it isn't already our stadium
+        if not (game.stadium and game.stadium.data.get("stadium_kind") == "academy_night"):
+            acad = next((c for c in p.hand if c.is_trainer and "Stadium" in c.subtypes
+                         and c.data.get("stadium_kind") == "academy_night"), None)
+            if acad:
+                self._try(lambda c=acad: self.fx.play_trainer(game, p, c))
+        if not (game.stadium and game.stadium.data.get("stadium_kind") == "academy_night"):
+            return False
+        kcard = max(ktargets, key=power)
+        if kcard not in p.hand:
+            return False
+        p.hand.remove(kcard); p.deck.insert(0, kcard)
+        game.log(f"  Academy at Night: puts {kcard.name} on top of deck.")
+        return self._try(lambda i=seek_i: game.attack(p, i, self.fx))
+
     def _attack_step(self, game, p):
         """Default: most prizes taken NOW, then highest damage; early game a human
         takes the item-lock line (Itchy Pollen) unless a KO is available."""
         if p.active and game.turn > 1:
-            atks = p.active.card.data.get("attacks", [])
+            atks = game.attacks_for(p.active)   # includes Memory Dive borrowed attacks
             score = {i: self._attack_prizes(game, p, atks[i], p.active) for i in range(len(atks))}
             order = sorted(range(len(atks)), key=lambda i: (-score[i][0], -score[i][1]))
             opp = game.players[1 - game.players.index(p)]
@@ -542,6 +618,22 @@ class HeuristicAgent:
                         game.log(f"{p.name}'s {p.active.name} attacks AGAIN (Festival Lead).")
                         self._try(lambda i=i: game.attack(p, i, self.fx))
                     break
+
+    def _ability_worth(self, game, p, mon, ab):
+        """Most activated abilities are free value; self-KO abilities (Dusknoir/
+        Dusclops Cursed Blast) cost a Pokemon + a Prize, so only fire them when
+        they pay off: a KO now, or a big (130) blast loading a 2-prize threat.
+        This stops the bot suiciding a Dusclops before it can become Dusknoir."""
+        if not ab.get("self_ko"):
+            return True
+        opp = game.players[1 - game.players.index(p)]
+        dmg = 10*sum(op.get("counters",0) for op in ab.get("effects",[])
+                     if op.get("op")=="place_counters_opponent_choice")
+        if dmg<=0: return True
+        rem=lambda t: game.effective_max_hp(t)-t.damage
+        if any(0 < rem(t) <= dmg for t in opp.all_pokemon()): return True   # KO now
+        if dmg>=130 and any(t.prize_value()>=2 for t in opp.all_pokemon()): return True
+        return False
 
     def _do_evolutions(self, game, p):
         for card in list(p.hand):
@@ -760,3 +852,70 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+class PlannerAgent(HeuristicAgent):
+    """Forward-planning pilot (research-grade core). Each turn it enumerates candidate
+    full-turn LINES — currently {play the combo, play a normal turn} — executes each on
+    a cloned game, and rolls the rest of the game to a result to score it. The combo
+    line is rolled forward with a combo-CONTINUING policy so the recurring value of a
+    loop (Academy -> Seek Inspiration -> Trifrost -> recover -> re-stack) is measured,
+    not underestimated by a policy that fumbles the follow-up. Commits to the line with
+    the best expected prize swing. Only engages the search for decks that actually run
+    a Seek Inspiration engine; everything else falls back to the fast heuristic turn."""
+    import copy as _copy
+
+    def __init__(self, fx, depth=3, samples=2):
+        super().__init__(fx, err=0.0)
+        self._roller = HeuristicAgent(fx, err=0.0)                      # opponent / normal line
+        self._combo_roller = HeuristicAgent(fx, err=0.0)
+        self._combo_roller._force_combo = True                          # combo line keeps comboing
+        self.depth = depth; self.samples = samples
+
+    def _has_seek_card(self, c):
+        return any(e.get("op") == "seek_inspiration"
+                   for a in c.data.get("attacks", []) or [] for e in a.get("effects", []) or [])
+    def _runs_seek(self, p):
+        return any(self._has_seek(m) for m in p.all_pokemon()) or \
+               any(self._has_seek_card(c) for c in (p.deck + p.hand) if c.is_pokemon)
+
+    def _plan_rollout(self, clone, pi, seed, my_roller):
+        import random
+        clone.rng = random.Random(seed)
+        ags = {id(clone.players[pi]): my_roller, id(clone.players[1 - pi]): self._roller}
+        turns = 0
+        while not clone.winner and turns < self.depth:
+            if not clone.start_turn(): break
+            try: ags[id(clone.current)].take_turn(clone, clone.current)
+            except Exception: break
+            clone.end_turn(); turns += 1
+        me = clone.players[pi]; opp = clone.players[1 - pi]
+        if clone.winner is me: return 1e6 - clone.turn
+        if clone.winner is opp: return -1e6 + clone.turn
+        my_taken = 6 - len(me.prizes); opp_taken = 6 - len(opp.prizes)
+        board = sum(m.damage for m in opp.all_pokemon()) - sum(m.damage for m in me.all_pokemon())
+        return (my_taken - opp_taken) * 1000 + board
+
+    def take_turn(self, game, p):
+        pi = game.players.index(p)
+        if game.turn <= 1 or not self._runs_seek(p):
+            self._force_combo = False
+            return HeuristicAgent.take_turn(self, game, p)
+        best, bestv = False, -1e18
+        for force, roller in ((True, self._combo_roller), (False, self._roller)):
+            clone = PlannerAgent._copy.deepcopy(game); cp = clone.players[pi]
+            self._force_combo = force
+            try:
+                HeuristicAgent.take_turn(self, clone, cp)
+            except Exception:
+                self._force_combo = False; continue
+            self._force_combo = False
+            vals = [self._plan_rollout(PlannerAgent._copy.deepcopy(clone), pi, 7000 + pi * 17 + s, roller)
+                    for s in range(self.samples)]
+            v = sum(vals) / len(vals)
+            if v > bestv:
+                bestv = v; best = force
+        # commit the winning line on the real game
+        self._force_combo = best
+        HeuristicAgent.take_turn(self, game, p)
+        self._force_combo = False

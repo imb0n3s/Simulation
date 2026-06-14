@@ -25,6 +25,26 @@ def load_catalog(path: str | None = None) -> dict:
         return json.load(f)
 
 
+_NAME_ATTACKS = None
+def _name_attacks_index():
+    """name -> {'attacks': {atkname: atkdict}, 'evolves_from': name}, built once from the
+    catalog. Resolves Memory Dive (Relicanth): an evolved Pokemon may use the attacks of
+    its previous Evolutions."""
+    global _NAME_ATTACKS
+    if _NAME_ATTACKS is None:
+        cat = load_catalog(); idx = {}
+        for d in cat.values():
+            if d.get("supertype") != "Pok\u00e9mon": continue
+            nm = d.get("name")
+            slot = idx.setdefault(nm, {"attacks": {}, "evolves_from": d.get("evolves_from")})
+            if slot["evolves_from"] is None and d.get("evolves_from"):
+                slot["evolves_from"] = d.get("evolves_from")
+            for a in d.get("attacks", []) or []:
+                slot["attacks"].setdefault(a["name"], a)
+        _NAME_ATTACKS = idx
+    return _NAME_ATTACKS
+
+
 # --------------------------------------------------------------------------
 # Card instances
 # --------------------------------------------------------------------------
@@ -377,9 +397,38 @@ class Game:
         self.log(f"{p.name} retreats; {p.active.name} is now Active.")
 
     # -- attacking ---------------------------------------------------------
+    def attacks_for(self, mon):
+        """Effective attacks: a Pokemon's own attacks plus, if a Memory Dive (Relicanth)
+        enabler is in the same player's play AND this Pokemon is evolved, the attacks of its
+        previous Evolutions. Own attacks come first so existing attack indices never shift.
+        Energy cost is still checked separately when the attack is used."""
+        own = list(mon.card.data.get("attacks", []) or [])
+        if not mon.card.data.get("evolves_from"):
+            return own
+        owner = next((p for p in self.players if mon in p.all_pokemon()), None)
+        if owner is None:
+            return own
+        has_md = any(ab.get("static_kind") == "memory_dive" and self.abilities_enabled(m)
+                     for m in owner.all_pokemon()
+                     for ab in m.card.data.get("abilities", []) or [])
+        if not has_md:
+            return own
+        idx = _name_attacks_index()
+        seen = {a["name"] for a in own}; borrowed = []
+        ef = mon.card.data.get("evolves_from"); guard = set()
+        while ef and ef not in guard:
+            guard.add(ef)
+            slot = idx.get(ef)
+            if not slot: break
+            for an, atk in slot["attacks"].items():
+                if an not in seen:
+                    seen.add(an); borrowed.append(atk)
+            ef = slot.get("evolves_from")
+        return own + borrowed
+
     def attack(self, attacker_player, attack_index: int, effects_engine):
         atk_mon = attacker_player.active
-        atk = atk_mon.card.data["attacks"][attack_index]
+        atk = self.attacks_for(atk_mon)[attack_index]
         # first player may not attack on the very first turn of the game
         if self.turn == 1:
             raise RuleError("The player going first cannot attack on turn 1.")

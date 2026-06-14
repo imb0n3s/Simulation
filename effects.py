@@ -108,6 +108,24 @@ class SkilledPolicy(AutoPolicy):
         not more value pieces. Human slip: grabs the first thing that looks good."""
         if self._search_slip or not candidates:
             return candidates[:count]
+        # Combo-control: when piloting a Seek Inspiration (Slowking/Kyurem) engine,
+        # fetch the pieces first — get a Slowking online, then keep a Kyurem payload.
+        def _is_seek(c):
+            return any(e.get("op") == "seek_inspiration"
+                       for a in c.data.get("attacks", []) or [] for e in a.get("effects", []) or [])
+        seek_in_play = any(_is_seek(m.card) for m in player.all_pokemon())
+        runs_seek = seek_in_play or any(_is_seek(c) for c in (player.deck + player.hand) if c.is_pokemon)
+        if runs_seek:
+            kyurem_hand = any(c.data.get("name") == "Kyurem" for c in player.hand)
+            def cscore(c):
+                nm = c.data.get("name", "")
+                if not seek_in_play and nm in ("Slowpoke", "Slowking"): return 100
+                if seek_in_play and not kyurem_hand and nm == "Kyurem":   return 90
+                if nm in ("Slowpoke", "Slowking", "Kyurem"):              return 40
+                return 0
+            ranked = sorted(candidates, key=cscore, reverse=True)
+            if cscore(ranked[0]) > 0:
+                return ranked[:count]
         opp = game.players[1 - game.players.index(player)]
         threat = 60
         if opp.active:
@@ -345,9 +363,24 @@ class Effects:
 
     def _bench_card(self, game, player, card):
         pip = PokemonInPlay(card); pip.turn_played = game.turn; player.bench.append(pip)
+        game.after_bench(player, pip)   # bench-punish stadiums (Risky Ruins) trigger on ANY bench placement during your turn, incl. Poffin from deck
 
     def _op_recover_from_discard(self, game, player, op, source, ctx):
         cands = [c for c in player.discard if card_matches(c, op["filter"])]
+        # Combo-control: recover the Seek Inspiration payload (Kyurem) and the
+        # Slowking line first so the Trifrost loop can keep going each turn.
+        runs_seek = any(e.get("op") == "seek_inspiration"
+                        for m in player.all_pokemon()
+                        for a in m.card.data.get("attacks", []) for e in a.get("effects", []) or [])
+        if runs_seek:
+            in_hand_k = sum(1 for c in player.hand if c.data.get("name") == "Kyurem")
+            def pri(c):
+                nm = c.data.get("name", "")
+                if nm == "Kyurem":               return 3 if in_hand_k == 0 else 1
+                if nm in ("Slowking", "Slowpoke"): return 2
+                if c.supertype == "Energy":      return 1
+                return 0
+            cands = sorted(cands, key=pri, reverse=True)
         chosen = cands[:op["count"]]
         for c in chosen:
             player.discard.remove(c); player.hand.append(c)
@@ -1451,12 +1484,28 @@ class Effects:
         game.log(f"  Seek Inspiration discards {top.name}.")
         if not (top.is_pokemon and not top.has_rule_box):
             game.log("  Seek Inspiration: not a non-rule-box Pokemon."); return
-        atks = top.data.get("attacks", [])
-        best = max((a.get("damage") or 0 for a in atks), default=0)
+        atks = top.data.get("attacks", []) or []
+        if not atks: return
+        def _power(a):
+            d = a.get("damage") or 0
+            for e in a.get("effects", []) or []:
+                if e.get("op") == "damage_multi_opponent":
+                    d = max(d, (e.get("amount", 0) or 0) * (e.get("targets", 1) or 1))
+                else:
+                    d = max(d, e.get("amount", 0) or 0)
+            return d
+        atk = max(atks, key=_power)
+        game.log(f"  Seek Inspiration uses {top.name}'s {atk['name']}.")
+        # perform the borrowed attack AS this Pokemon: run its effects (Trifrost =
+        # discard all our Energy + 110 to 3 of the opponent's Pokemon), then base dmg.
+        for e in atk.get("effects", []) or []:
+            self._run_op(game, player, e, source=source)
+        base = atk.get("damage") or 0
         opp = game.players[1 - game.players.index(player)]
-        if best and opp.active and not game.damage_prevented(opp.active, source, player):
-            opp.active.damage += best
-            game.log(f"  Seek Inspiration copies {top.name}'s attack for {best}.")
+        if base and opp.active and not game.damage_prevented(opp.active, source, player):
+            opp.active.damage += base
+            game.log(f"  ...and {base} to {opp.active.name}.")
+        game.check_kos()
 
     def _op_damage_multi_opponent(self, game, player, op, source, ctx):
         opp = game.players[1 - game.players.index(player)]
@@ -1880,30 +1929,7 @@ class Effects:
             game.log("  Pokemon Catcher: tails.")
 
     def _op_static_lock_acespec_if_tool(self, *a): pass
+
     def _op_static_disable_self_ko_abilities(self, *a): pass
+
     def _op_stadium_tera_attack_tax(self, *a): pass
-
-
-def _stage1_between(game, stage2_card: Card, basic: Card):
-    """True if stage2 evolves from a Stage 1 that evolves from `basic`."""
-    s1_name = stage2_card.evolves_from
-    for cid, data in game_catalog(game).items():
-        if data["name"] == s1_name and "Stage 1" in data.get("subtypes", []):
-            if data.get("evolves_from") == basic.name:
-                return True
-    return False
-
-
-def game_catalog(game):
-    # all cards in play share the same catalog dict via their .data; rebuild a view
-    cat = {}
-    for p in game.players:
-        for c in p.deck + p.hand + p.discard + p.prizes:
-            cat[c.card_id] = c.data
-        for m in p.all_pokemon():
-            for c in m.stack: cat[c.card_id] = c.data
-    return cat
-
-
-def _is_first_player_turn1(game):
-    return game.turn == 1
